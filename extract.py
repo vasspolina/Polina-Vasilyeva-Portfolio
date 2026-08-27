@@ -979,8 +979,12 @@ def main():
                 # Explicit slices are already measured, so the automatic trim
                 # has nothing to add and can do harm: a slide header carries a
                 # small wordmark over one tenth of the width, which still reads
-                # as a flat band and gets shaved away row by row.
-                if not opts.get("slices"):
+                # as a flat band and gets shaved away row by row. A page
+                # published whole (crop: False) is the same case at the
+                # extreme — a solid-colour slide ground around a small logo
+                # reads as border on every side, and the trim ate down to the
+                # logo itself.
+                if not opts.get("slices") and opts.get("crop") is not False:
                     piece = trim_edge_lines(piece)
 
                 if opts.get("pad"):
@@ -989,8 +993,15 @@ def main():
                 # Do not publish beyond the resolution the slide actually
                 # holds. A vector page renders at any scale, but the bitmap
                 # placed on it does not, and a rendition wider than that
-                # bitmap is an enlargement wearing a bigger number.
-                if src not in ("IMG", "VID") and not video:
+                # bitmap is an enlargement wearing a bigger number. That
+                # reasoning assumes the bitmap IS the artwork — a photo or a
+                # screenshot filling the piece. A page published whole
+                # (crop: False) is usually a vector composition — a wordmark
+                # on a solid ground — where a small embedded bitmap (a mark
+                # rasterised into the file, a texture fill) is incidental,
+                # not the subject, and would cap a 3840px slide to a 600px
+                # logo's native size.
+                if src not in ("IMG", "VID") and not video and opts.get("crop") is not False:
                     art = embedded_ceiling(docs[src][page - 1])
                     if art and piece.width > art >= 600:
                         share = piece.width / max(im.width, 1)

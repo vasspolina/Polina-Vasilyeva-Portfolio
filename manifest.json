@@ -894,11 +894,13 @@
    "tags": [
     "brand"
    ],
-   "w": 627,
-   "h": 290,
+   "w": 2400,
+   "h": 1350,
    "widths": [
     600,
-    627
+    1200,
+    1600,
+    2400
    ],
    "source": "B",
    "page": 62
@@ -2808,11 +2810,13 @@
     "brand",
     "editorial"
    ],
-   "w": 678,
-   "h": 381,
+   "w": 2400,
+   "h": 1350,
    "widths": [
     600,
-    678
+    1200,
+    1600,
+    2400
    ],
    "source": "E",
    "page": 112,
@@ -5940,23 +5944,6 @@
    ],
    "source": "B",
    "page": 106
-  },
-  {
-   "stem": "drop01",
-   "caption": "Table of contents spread — yellow blob, orange bird",
-   "tags": [
-    "editorial"
-   ],
-   "w": 1994,
-   "h": 1300,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1994
-   ],
-   "source": "DROP",
-   "page": "drop01"
   },
   {
    "stem": "drop02",

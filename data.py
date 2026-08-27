@@ -116,7 +116,10 @@ PROJECTS = [
            "best practice.",
             "Streamlining the standards raised designer productivity, "
            "shortened turnaround on retail projects, and improved print "
-           "quality."],
+           "quality.",
+            "Built components for Verizon's own design library, and ran "
+           "audits and workshops to improve the system from within, "
+           "managing several projects at once across retail and digital."],
   "pages": [
     # The deck's own title slide: the wordmark on the grey slide ground, which
     # is the cover. Sliced off the top of the page, above the poster below it.
@@ -170,9 +173,8 @@ PROJECTS = [
            "Hall of Fame Awards.",
             "The strategy work frames Haworth's shift from furniture "
            "manufacturer to office solutions provider. The brand design "
-           "system sits at the intersection of strategy, design and "
-           "technology, and extends into a social media system spanning "
-           "NeoCon and Orgatec.",
+           "system unites strategy, design, and technology, and extends "
+           "into a social media system spanning NeoCon and Orgatec.",
             "The rebrand reaffirmed Haworth's leadership in contract "
            "furnishings: it won new customers, grew the audience by 20%, "
            "and lifted sales by 10%."],
@@ -181,7 +183,7 @@ PROJECTS = [
      {"dechrome": True, "span": 6}),
     ("A", 60, "Editorial modules — workplace research stories", ["ecommerce", "web"],
      {"dechrome": True, "span": 6}),
-    ("B", 62, "Haworth — logo design", ["brand"]),
+    ("B", 62, "Haworth — logo design", ["brand"], {"crop": False}),
     # b063 and the first half of b064 are dropped: one repeats the shoot, the
     # other carries the "Art Direction" divider band across its foot.
     ("B", 64, "New York headquarters — art direction", ["brand"], {"keep": [2]}),
