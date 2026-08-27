@@ -71,6 +71,8 @@ SOURCES = {
     "C": "/Users/polinavasilyeva/Desktop/Verizon portfolio .pdf",
     "D": "/Users/polinavasilyeva/Desktop/Polina_Vasilyeva_2023_Watson_portfolio.pdf",
     "E": "source/_decks/haworth-brand-guidelines.pdf",
+    "F": "/Volumes/INTENSO/220915 Furniture.com Final design presentation (2).pdf",
+    "G": "/Volumes/INTENSO/220908 Furniture.com input color and typography-SM (3).pdf",
 }
 
 FILTERS = [
@@ -422,7 +424,7 @@ PROJECTS = [
            "through social and email, and the e-commerce side, where I "
            "designed the vault site for special-offer sales."],
   "pages": [
-    ("B", 3,  "bodywear — brand lockup", ["brand"]),
+    ("B", 3,  "bodywear — brand lockup", ["brand"], {"crop": False}),
     ("B", 5,  "The a mark", ["brand"], {"pad": 0.14}),
     ("B", 9,  "Care label — designed and supervised through production", ["brand"]),
     ("B", 13, "Packaging — the Classic Briefs bag", ["brand"], {"split": False}),
@@ -547,7 +549,7 @@ PROJECTS = [
  {
   "slug": "furniture", "title": "Furniture.com",
   "year": "2022",
-  "cover": "a016",
+  "cover": "f012",
   "group": "product", "short": "Web design &amp; digital accessibility",
   "meta": "Furniture.com — with McKinsey &amp; studio Dumbar, 2022 — Web Design &amp; Digital Accessibility",
   "desc": ["Web design and digital accessibility for Furniture.com, with "
@@ -555,20 +557,28 @@ PROJECTS = [
            "built around finding your sofa, browsing rooms, and the chair "
            "that fits, carried by a warm identity and a bespoke furniture "
            "icon system.",
+            "Eight colors, one per furniture category, each icon and "
+           "campaign module built on the same palette and checked against "
+           "black, white, and every neutral base for contrast.",
             "Designed responsively from large-screen heroes down to the "
            "mobile browsing flows."],
   "pages": [
-    ("A", 14, "Find it… — campaign banner", ["brand", "web"]),
-    ("A", 15, "Homepage — find your sofa", ["web"]),
-    ("A", 16, "Kick back and relax", ["web"]),
-    ("A", 17, "Sofas — find the sofa for you", ["web"]),
-    ("A", 18, "Furniture for your little ones", ["web"]),
-    ("A", 19, "Mobile homepage", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
-    ("A", 20, "Browse rooms", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
-    ("A", 21, "Furniture for your little ones — mobile", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
-    ("A", 22, "Featured categories — mobile", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
-    ("A", 23, "The chair that fits", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
-    ("A", 24, "Furniture icon system", ["brand"], {"split": False}),
+    ("F", 1,  "Find it… — campaign banner", ["brand", "web"]),
+    ("F", 3,  "Everything for your living room — campaign", ["brand", "web"], {"crop": False}),
+    ("F", 4,  "Room for the whole family — campaign", ["brand", "web"], {"crop": False}),
+    ("F", 12, "Homepage — find your sofa", ["web"]),
+    ("F", 18, "Featured categories, by color", ["web"]),
+    ("F", 19, "Furniture for your little ones", ["web"]),
+    ("F", 21, "Featured — Sofas &amp; Sectionals", ["web", "product"]),
+    ("F", 22, "Browse rooms", ["web"]),
+    ("F", 23, "Mobile homepage", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
+    ("F", 24, "Featured categories — mobile", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
+    ("F", 25, "Furniture for your little ones — mobile", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
+    ("F", 27, "Browse rooms — mobile", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
+    ("G", 3,  "Color update — before and after", ["brand"], {"split": False, "crop": False}),
+    ("G", 5,  "Color values — furniture, neutral, and action", ["brand"], {"crop": False}),
+    ("G", 6,  "Color contrast, tested across the palette", ["brand"], {"crop": False}),
+    ("G", 7,  "Icons and color — category campaign cards", ["brand", "web"], {"crop": False}),
   ],
  },
  {
@@ -794,7 +804,7 @@ PROJECTS = [
  {
   "slug": "literature-paper", "title": "Literature Paper",
   "year": "2016",
-  "cover": "b104",
+  "cover": "drop01",
   "group": "book", "short": "Publication design &amp; concept",
   "meta": "Yale Literature Paper — Publication Design &amp; Concept",
   "desc": ["Publication design and concept for the first issue of the "
@@ -805,9 +815,8 @@ PROJECTS = [
            "apart: a gourd, a garlic house, a table of contents that "
            "refuses to sit still."],
   "pages": [
-    ("B", 103, "Table of contents spread", ["editorial"], {"cutout": 60}),
-    ("B", 105, "It's a bottle. A gourd. spread", ["editorial"], {"cutout": 60}),
-    ("B", 106, "Leo spread", ["editorial"], {"cutout": 60}),
+    # The four spreads come from drop/ as flat scans; the deck
+    # reproductions of the same pages were lower resolution.
   ],
  },
 ]
