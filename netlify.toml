@@ -1,0 +1,17 @@
+# The site is already built and committed, so there is nothing to run: Netlify
+# serves the repo root as-is. Rebuild locally with
+#   python3 extract.py && python3 build.py
+# and commit the result.
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

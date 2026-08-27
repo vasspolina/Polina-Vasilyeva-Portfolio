@@ -1,0 +1,1013 @@
+/* Polina Vasilyeva — portfolio
+   Type: PP Telegraf 400/500 only. Literal px sizes. 0.01em tracking.
+   Colour / spacing / motion via tokens. */
+
+@font-face {
+  font-family: "PP Telegraf";
+  src: url("../fonts/PPTelegraf-Light.otf") format("opentype");
+  font-weight: 300;
+  font-display: swap;
+}
+:root {
+  --bg: #e3e2dd;
+  --fg: #000000;
+  --muted: #236237;
+  --accent: #103fca;
+  --hairline: #b4654a;   /* terracotta, the 1px rules */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 32px;
+  --space-4: 64px;
+  --rule: #4a3428;   /* the brown the section rules and headings are set in */
+  --chip: #d5d4ce;   /* the ground a filter or tag pill sits on */
+  --ov-h: 456px;      /* every overview cover is shown at this height */
+  --row-h: 620px;    /* the common height a row of pieces is set to */
+  --page-pad: 36px;   /* matches the 36px margin measured on the reference at 1440 */
+  --dur: 160ms;
+  --mobile-nav: #a71dba;
+}
+:root:not([data-theme="light"]) {
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14232a;
+    --fg: #f2f2f2;
+    --muted: #71cc8d;
+    --accent: #62a7f9;
+    --hairline: #c47a5c;
+    --rule: #f2f2f2;
+    --chip: #22343d;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14232a;
+  --fg: #f2f2f2;
+  --muted: #71cc8d;
+  --accent: #62a7f9;
+  --hairline: #c47a5c;
+  --rule: #f2f2f2;
+  --chip: #22343d;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "PP Telegraf", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  padding: 0 var(--page-pad);
+}
+
+a { color: inherit; text-decoration: none; }
+a:not([class]) {
+  color: var(--accent);
+  text-decoration: underline;
+  /* Below the descenders, not through them, and unbroken: skip-ink would
+     notch the line around every p and g rather than clearing them. */
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1.5px;
+  text-decoration-skip-ink: none;
+}
+a:hover { color: var(--accent); }
+a:focus-visible, button:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--bg);
+  padding: var(--space-1) var(--space-2);
+  font-size: 16px;
+}
+.skip:focus { left: 0; z-index: 20; }
+
+/* ---- nav ---- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--bg);
+  padding: var(--space-2) 0;
+  font-size: 36px;
+  line-height: 1.2;
+}
+.nav-name { font-weight: 300; margin-right: auto; }
+.nav-link.is-active { color: var(--accent); }
+/* The about page states the name again as its own h1; the wordmark beside it
+   would say it twice. */
+.nav:has(.nav-link.is-active[href$="about.html"]) .nav-name { display: none; }
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: none;
+  border: 0;
+  color: var(--fg);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  line-height: 1.2;
+  padding: 0;
+}
+/* A switch rather than a word: the track fills and the knob travels when the
+   dark ground is on. role="switch" and aria-checked carry the state to a
+   screen reader, and the label beside it names what the switch does. */
+.switch {
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+  /* A fixed size: tied to the em it grew to 112px against the 36px nav. */
+  width: 56px;
+  height: 32px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: transparent;
+  transition: background var(--dur);
+}
+.knob {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  background: var(--bg);
+  transition: left var(--dur), background var(--dur), border-color var(--dur);
+}
+.theme-toggle[aria-checked="true"] .switch { background: var(--accent); }
+.theme-toggle[aria-checked="true"] .knob {
+  left: calc(100% - 23px);
+  background: var(--bg);
+  border-color: var(--bg);
+}
+.theme-toggle:hover .switch { filter: brightness(0.9); }
+/* No fill on the dark ground: the outline and the knob's travel say enough. */
+:root[data-theme="dark"] .theme-toggle[aria-checked="true"] .switch { background: transparent; }
+:root[data-theme="dark"] .theme-toggle[aria-checked="true"] .knob {
+  background: var(--bg);
+  border-color: var(--accent);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle[aria-checked="true"] .switch { background: transparent; }
+  :root:not([data-theme="light"]) .theme-toggle[aria-checked="true"] .knob {
+    background: var(--bg);
+    border-color: var(--accent);
+  }
+}
+
+@media (max-width: 767px) {
+  /* The switch alone: its shape says what it does and the aria-label names it. */
+  .switch-label { position: absolute; width: 1px; height: 1px; overflow: hidden;
+                  clip-path: inset(50%); white-space: nowrap; }
+  .switch { width: 48px; height: 27px; border-width: 1px; }
+  .knob { width: 18px; height: 18px; border-width: 1px; }
+  .theme-toggle[aria-checked="true"] .knob { left: calc(100% - 21px); }
+}
+.theme-toggle:hover { color: var(--accent); }
+
+/* ---- intro & filters ---- */
+.intro {
+  font-size: 36px;
+  line-height: 1.2;
+  max-width: 25em;
+  margin: var(--space-3) 0;
+}
+.intro-note {
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  max-width: 34em;
+  margin: calc(var(--space-3) * -1 + var(--space-1)) 0 var(--space-3);
+}
+.intro-note a {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1.5px;
+  text-decoration-skip-ink: none;
+}
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+.filter-label {
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+/* A pill rather than a word in a row: the set reads as one control, and the
+   chosen one is filled instead of merely recoloured, so it is legible without
+   relying on the colour alone. */
+.filter {
+  /* Take the button off the UA form-control styling so the ground below is
+     the ground that paints, in both themes. */
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  color: var(--fg);
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  padding: 9px 16px;
+  transition: background var(--dur), color var(--dur);
+}
+.filter:hover { filter: brightness(0.82); }
+
+/* ---- grid ---- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 36px;
+  grid-auto-rows: 8px;
+}
+.grid-item {
+  display: block;
+  padding-bottom: var(--space-3);
+}
+.grid-item.is-hidden { display: none; }
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Phone mockups and posters: show them at their own scale rather than
+   stretching a tall, narrow image across a whole column. Capped by width, not
+   height, so the browser can reserve the box from the width/height attributes
+   before the image loads. */
+.grid-item.is-portrait img {
+  max-width: 240px;
+  margin: 0 auto;
+}
+.grid-item:hover img { opacity: 0.92; transition: opacity var(--dur); }
+.caption {
+  display: block;
+  font-size: 24px;
+  color: var(--muted);
+  padding-top: var(--space-1);
+}
+.grid-item:hover .caption { color: var(--accent); }
+
+@media (max-width: 1023px) {
+  :root { --page-pad: 20px; }
+  .nav { font-size: 24px; }
+  .theme-toggle { font-size: 24px; }
+  .intro { font-size: 24px; }
+  .filter { font-size: 18px; }
+  .caption { font-size: 18px; }
+  .grid { column-gap: var(--space-3); }
+  .project-images { gap: var(--space-4) var(--space-3); }
+
+  .nav-name { display: none; }
+  .nav { justify-content: space-between; gap: 0; }
+  .nav-link { color: var(--mobile-nav); }
+  .nav-link.is-active { color: var(--mobile-nav); }
+  .switch-label { position: absolute; width: 1px; height: 1px; overflow: hidden;
+                  clip-path: inset(50%); white-space: nowrap; }
+  .theme-toggle .switch { border-color: var(--accent); }
+  .theme-toggle .knob { border-color: var(--accent); }
+  .theme-toggle[aria-checked="true"] .switch { background: var(--accent); }
+  .switch { width: 48px; height: 27px; border-width: 1px; }
+  .knob { width: 18px; height: 18px; border-width: 1px; }
+  .theme-toggle[aria-checked="true"] .knob { left: calc(100% - 21px); }
+}
+@media (max-width: 767px) {
+  .nav { font-size: 18px; gap: var(--space-2); }
+  .theme-toggle { font-size: 18px; }
+  .intro { font-size: 24px; }
+  .filter { font-size: 18px; padding: 8px 14px; }
+  .caption { font-size: 16px; }
+  .grid { grid-template-columns: 1fr; }
+  .grid-item.is-portrait img { max-width: 50%; }
+}
+
+/* ---- project pages ---- */
+/* No inner cap: a work page sits on the same 36px margin as the index, so
+   its images line up with the grid on the page you came from. */
+.project { max-width: none; }
+.project-title {
+  font-size: 36px;
+  font-weight: 300;
+  margin: var(--space-3) 0 var(--space-2);
+}
+.project-desc {
+  font-size: 36px;
+  line-height: 1.2;
+  max-width: 30em;
+}
+.project-desc p + p { margin-top: var(--space-2); }
+.project-meta {
+  font-size: 16px;
+  color: var(--muted);
+  margin: var(--space-2) 0 var(--space-4);
+}
+/* Four columns; each piece claims 1, 2 or 4 of them by proportion, so tall
+   photographs sit four to a row instead of towering one per screen. */
+/* Pieces sit on a common baseline and keep their own proportion, so a row of
+   printed sheets lines up along the top and the bottom instead of leaving the
+   holes a mixed-span grid leaves. Width follows from the height. */
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-4) 36px;
+}
+.project-images > .work-figure { flex: 0 1 auto; max-width: 100%; }
+/* A website screenshot runs the whole measure; a deck slide takes half the
+   page and pairs with the next one. Both are sized by width rather than by the
+   common row height, so the page they show keeps its own proportion. */
+/* A website screenshot pairs with the next one, like a deck slide: at the
+   full measure a single screenshot swallowed the page. */
+.project-images > .work-figure.is-site { flex: 0 0 calc(50% - 18px); }
+/* A piece given an explicit width sits alone on its line, centred. */
+.project-images > .work-figure.is-set { margin-left: auto; margin-right: auto; }
+.project-images > .work-figure.is-deck { flex: 0 0 calc(50% - 18px); }
+/* These are sized by width, so the row-height cap must not also apply: with
+   both in force the picture is squashed to fit. */
+.project-images > .work-figure.is-site img,
+.project-images > .work-figure.is-deck img,
+.project-images > .work-figure.is-bleed img,
+.project-images > .work-figure.is-set img {
+  height: auto;
+  width: 100%;
+  max-height: none;
+}
+@media (max-width: 767px) {
+  .project-images > .work-figure.is-deck,
+  .project-images > .work-figure.is-site { flex: 0 0 100%; }
+}
+.project-images > .work-figure img,
+.project-images > .work-figure video {
+  /* Both bounds, never a fixed dimension. Pinning the height and capping the
+     width squashes the picture: a phone screenshot held at 620px tall but
+     limited to 80% of its width was drawn a fifth narrower than it is. */
+  max-height: var(--row-h);
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+/* Twelfths: 3 is four to a row, 4 is three, 6 is two, 12 is the full measure. */
+.work-figure.span-3  { grid-column: span 3; }
+.work-figure.span-4  { grid-column: span 4; }
+.work-figure.span-6  { grid-column: span 6; }
+.work-figure.span-12 { grid-column: span 12; }
+.work-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* The span decides the width on a project page now, so the portrait cap that
+   applies in the index grid must not also apply here. */
+.work-figure.is-portrait img { max-width: 100%; }
+/* A phone screenshot does not need to fill its column; a poster does. The
+   rounded corner reads as the device: the bezel crop leaves a square edge,
+   since the dark wedges the real corners left had to come off. Matched with a
+   substring test because the grid joins its tags with commas and the project
+   pages with spaces. */
+.work-figure[data-tags~="mobile"] img {
+  max-height: calc(var(--row-h) * 0.8);
+  margin: 0 auto;
+}
+/* Only a phone screenshot itself, never an overview cover: an unscoped
+   [data-tags*="mobile"] also matches the card for any project that happens to
+   carry a mobile tag, and rounded every thumbnail. */
+.work-figure[data-tags*="mobile"] img,
+.grid-item[data-tags*="mobile"] img { border-radius: 0; }
+@media (max-width: 767px) {
+  .work-figure[data-tags*="mobile"] img,
+  .grid-item[data-tags*="mobile"] img { border-radius: 0; }
+}
+/* A piece that should sit small and centred on the measure rather than fill
+   its span — a poster reproduced at a readable size, not a wall-sized one. */
+.work-figure.is-frac img { margin: 0 auto; }
+.work-figure figcaption { padding-top: var(--space-1); }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--hairline);
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .project-title { font-size: 24px; }
+  .project-desc { font-size: 18px; }
+  .project-images { grid-template-columns: repeat(2, 1fr); }
+  .work-figure.span-3, .work-figure.span-4,
+  .work-figure.span-6, .work-figure.span-12 { grid-column: span 2; }
+}
+
+/* ---- footer ---- */
+.footer {
+  margin-top: var(--space-4);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--hairline);
+  font-size: 16px;
+}
+.footer p + p { margin-top: var(--space-1); }
+.footer-copy { color: var(--muted); }
+
+/* ---- about ---- */
+.about { max-width: none; }
+.about-role {
+  /* Set wider than the 0.01em the rest of the site uses: this one line is a
+     standfirst and is meant to open up. */
+  font-size: 24px;
+  letter-spacing: 1pt;
+  color: var(--muted);
+  margin-bottom: var(--space-3);
+}
+.about-bio {
+  font-size: 36px;
+  line-height: 1.2;
+  max-width: 32em;
+}
+.about-bio p + p { margin-top: var(--space-2); }
+.about-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--hairline);
+}
+.about-h {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  color: var(--muted);
+  margin-bottom: var(--space-2);
+}
+.about-list {
+  list-style: none;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+.about-list li + li { margin-top: var(--space-1); }
+.about-note {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+.about-list a { text-decoration: none; }
+.about-list a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1.5px;
+  text-decoration-skip-ink: none;
+}
+
+@media (max-width: 1023px) {
+  .about-cols { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .about-bio { font-size: 18px; }
+  .about-cols { grid-template-columns: 1fr; gap: var(--space-3); }
+}
+
+/* ---- type specimen ---- */
+@font-face {
+  font-family: "Dada";
+  src: url("../fonts/Dada-Regular.woff2") format("woff2"),
+       url("../fonts/Dada-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+.spec-name {
+  font-family: "Dada", "PP Telegraf", sans-serif;
+  font-size: clamp(96px, 26vw, 380px);
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin: var(--space-3) 0 var(--space-2);
+}
+.spec-head {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+  padding-bottom: var(--space-4);
+}
+.spec-facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-1) var(--space-2);
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  border-top: 1px solid var(--hairline);
+  padding-top: var(--space-2);
+}
+.spec-facts dt { color: var(--muted); }
+
+.spec-block {
+  border-top: 1px solid var(--hairline);
+  padding: var(--space-3) 0 var(--space-4);
+}
+.spec-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.spec-slider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+.spec-slider input { accent-color: var(--accent); width: 180px; }
+
+.spec-stage {
+  font-family: "Dada", "PP Telegraf", sans-serif;
+  /* The face is capitals and figures only; uppercase whatever is typed so a
+     visitor never sees it fall back to plain Helvetica lowercase. */
+  text-transform: uppercase;
+  font-size: 110px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin-top: var(--space-2);
+  overflow-wrap: anywhere;
+  outline: none;
+}
+.spec-stage:focus-visible { outline: 1px solid var(--accent); outline-offset: 6px; }
+
+.spec-caps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  margin-top: var(--space-2);
+}
+.spec-cap {
+  font-family: "Dada", sans-serif;
+  font-size: 96px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+.spec-charset { margin-top: var(--space-2); }
+.spec-row {
+  font-family: "Dada", sans-serif;
+  font-size: clamp(28px, 6vw, 68px);
+  line-height: 1.2;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+.spec-ladder { margin-top: var(--space-2); }
+.spec-line {
+  font-family: "Dada", sans-serif;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin-bottom: var(--space-2);
+}
+
+@media (max-width: 767px) {
+  .spec-head { grid-template-columns: 1fr; gap: var(--space-3); }
+  .spec-stage { font-size: 56px; }
+  .spec-cap { font-size: 60px; }
+  .spec-slider input { width: 120px; }
+}
+
+/* ---- overview: one cover per project, grouped ---- */
+.overview { margin-bottom: var(--space-4); }
+.ov-group { margin-bottom: var(--space-4); }
+.ov-h {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: var(--rule);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--space-2);
+}
+/* One height, natural widths: every cover is reproduced at the same scale and
+   keeps its own proportion, so a poster sits narrow beside a wide storefront
+   instead of being letterboxed into a common rectangle. */
+.ov-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) 36px;
+}
+.ov-card { flex: 0 0 auto; max-width: 100%; }
+.ov-card { display: block; }
+/* A fixed frame keeps the row tidy even though the covers are every shape;
+   the image fills it and is centre-cropped rather than letterboxed. */
+/* Every card is the same 4:3 frame. The image is contained, not cropped —
+   cover cut the headline off a homepage and sliced wordmarks in half — and
+   each project's cover is chosen near 4:3 so it fills the frame anyway. */
+.ov-frame {
+  display: block;
+  height: var(--ov-h);
+  overflow: hidden;
+}
+.ov-frame img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+.ov-card:hover .ov-frame img { opacity: 0.92; transition: opacity var(--dur); }
+.ov-name {
+  display: block;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  padding-top: var(--space-1);
+}
+.ov-card:hover .ov-name { color: var(--accent); }
+.ov-short {
+  display: block;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  color: var(--fg);
+}
+/* The disciplines a project actually covers, shown on the card so the filter
+   bar above has something visible to act on. */
+.ov-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: var(--space-1);
+  /* Zero width keeps the chips out of the card's max-content measure, so the
+     card is sized by its image alone; min-width then fills that measure. The
+     chip row therefore wraps at exactly the width of the image above it. */
+  width: 0;
+  min-width: 100%;
+}
+.ov-tag {
+  /* To spec: a 1px outline, 8px corner, 4px padding, no fill. The type is
+     darkened from the sampled #26813d, which reads 3.77:1 on the page and is
+     under the bar at this size; #227038 is the same green at 4.7:1. Dark mode
+     needs the opposite move, since that green is 3.29:1 against the dark
+     ground. The border is decorative and keeps the sampled value. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid #8ff681;
+  border-radius: 8px;
+  color: #227038;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  padding: 4px 8px;
+}
+.ov-card.is-hidden, .ov-group.is-hidden { display: none; }
+
+.all-h {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: var(--rule);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--space-2);
+}
+
+@media (max-width: 1023px) { :root { --ov-h: 336px; } }
+@media (max-width: 599px)  { :root { --ov-h: 252px; } }
+
+/* ---- video ---- */
+/* Capped regardless of ratio: the gradient clip is 800x960, which at 0.83
+   sits just outside the portrait rule and would otherwise run 1440px tall. */
+.work-video {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  background: var(--hairline);
+}
+.work-figure.is-portrait .work-video { max-width: 420px; }
+
+/* ---- Light for reading, Medium for naming ---- */
+/* One weight. Medium is not used. */
+h1, h2, h3, h4, h5, h6, .ov-name { font-weight: 300; }
+strong, b { font-weight: inherit; }
+em, i, cite, address, dfn, var { font-style: normal; }
+
+/* ---- equal-height row layout, for a project of a few related pieces ---- */
+.project-images.is-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-4) 36px;
+}
+.project-images.is-row .work-figure { flex: 0 0 auto; max-width: 100%; }
+.project-images.is-row .work-figure img {
+  height: 610px;
+  width: auto;
+  max-width: 100%;
+}
+@media (max-width: 1023px) {
+  .project-images.is-row .work-figure img { height: 380px; }
+}
+@media (max-width: 767px) {
+  .project-images.is-row { display: block; }
+  .project-images.is-row .work-figure img { height: auto; width: 100%; }
+  .project-images.is-row .work-figure + .work-figure { margin-top: var(--space-4); }
+}
+
+/* ---- one colour per filter ---- */
+/* Each pill carries its own colour, so the bar reads as a set of disciplines
+   rather than a row of identical buttons. Light mode runs dark grounds with
+   white type, dark mode lifts the same hues and flips the type; every pair
+   clears AA. The chosen one is marked by a ring as well as by fill, so the
+   state is not carried by colour alone. */
+.filter { color: #ffffff; }   /* replaced by the outline rules below */
+.filter[data-filter="all"] { background: transparent; border: 2px solid #0861ca; color: #0861ca; }
+.filter[data-filter="web"] { background: transparent; border: 2px solid #236237; color: #236237; }
+.filter[data-filter="mobile"] { background: transparent; border: 2px solid #5b3a8e; color: #5b3a8e; }
+.filter[data-filter="ecommerce"] { background: transparent; border: 2px solid #0f5f66; color: #0f5f66; }
+.filter[data-filter="brand"] { background: transparent; border: 2px solid #8a4b2a; color: #8a4b2a; }
+.filter[data-filter="product"] { background: transparent; border: 2px solid #2f4858; color: #2f4858; }
+.filter[data-filter="editorial"] { background: transparent; border: 2px solid #4a3428; color: #4a3428; }
+.filter[data-filter="strategy"] { background: transparent; border: 2px solid #55611f; color: #55611f; }
+.filter[data-filter="social"] { background: transparent; border: 2px solid #8e5400; color: #8e5400; }
+
+.filter:hover { filter: brightness(1.18); background: inherit; }
+/* The chosen one is filled with its own colour, so the state is carried by
+   fill as well as by hue. currentColor cannot do this: it resolves against the
+   element's own colour, which this rule is also setting, so both ended up the
+   page ground and the pill vanished. The fill is named per filter below. */
+.filter.is-active { color: var(--bg); }
+
+@media (prefers-color-scheme: dark) {
+  
+  :root:not([data-theme="light"]) .filter[data-filter="all"] { background: transparent; border: 2px solid #76b2fa; color: #76b2fa; }
+  :root:not([data-theme="light"]) .filter[data-filter="web"] { background: transparent; border: 2px solid #96d9ab; color: #96d9ab; }
+  :root:not([data-theme="light"]) .filter[data-filter="mobile"] { background: transparent; border: 2px solid #b197d8; color: #b197d8; }
+  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"] { background: transparent; border: 2px solid #83e4ed; color: #83e4ed; }
+  :root:not([data-theme="light"]) .filter[data-filter="brand"] { background: transparent; border: 2px solid #deac92; color: #deac92; }
+  :root:not([data-theme="light"]) .filter[data-filter="product"] { background: transparent; border: 2px solid #97bfd8; color: #97bfd8; }
+  :root:not([data-theme="light"]) .filter[data-filter="editorial"] { background: transparent; border: 2px solid #d8ae97; color: #d8ae97; }
+  :root:not([data-theme="light"]) .filter[data-filter="strategy"] { background: transparent; border: 2px solid #cfdc93; color: #cfdc93; }
+  :root:not([data-theme="light"]) .filter[data-filter="social"] { background: transparent; border: 2px solid #ffc570; color: #ffc570; }
+}
+
+:root[data-theme="dark"] { --mobile-nav: #d457e5; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --mobile-nav: #d457e5; }
+}
+:root[data-theme="dark"] .filter[data-filter="all"] { background: transparent; border: 2px solid #76b2fa; color: #76b2fa; }
+:root[data-theme="dark"] .filter[data-filter="web"] { background: transparent; border: 2px solid #96d9ab; color: #96d9ab; }
+:root[data-theme="dark"] .filter[data-filter="mobile"] { background: transparent; border: 2px solid #b197d8; color: #b197d8; }
+:root[data-theme="dark"] .filter[data-filter="ecommerce"] { background: transparent; border: 2px solid #83e4ed; color: #83e4ed; }
+:root[data-theme="dark"] .filter[data-filter="brand"] { background: transparent; border: 2px solid #deac92; color: #deac92; }
+:root[data-theme="dark"] .filter[data-filter="product"] { background: transparent; border: 2px solid #97bfd8; color: #97bfd8; }
+:root[data-theme="dark"] .filter[data-filter="editorial"] { background: transparent; border: 2px solid #d8ae97; color: #d8ae97; }
+:root[data-theme="dark"] .filter[data-filter="strategy"] { background: transparent; border: 2px solid #cfdc93; color: #cfdc93; }
+:root[data-theme="dark"] .filter[data-filter="social"] { background: transparent; border: 2px solid #ffc570; color: #ffc570; }
+
+/* A piece that runs the full window, past the page margin. */
+.work-figure.is-bleed {
+  grid-column: 1 / -1;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+.work-figure.is-bleed figcaption { padding-left: var(--page-pad); }
+
+/* The Dada specimens are drawn black on a transparent ground so the letters
+   sit on the page rather than on a white card. On the dark ground they would
+   be black on near-black, so they are inverted to white. The one specimen that
+   is already reversed out is left alone. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) img[src*="/dada/"]:not([src*="inverted"]) {
+    filter: invert(1);
+  }
+}
+:root[data-theme="dark"] img[src*="/dada/"]:not([src*="inverted"]) {
+  filter: invert(1);
+}
+
+.filter[data-filter="all"].is-active { background-color: #0861ca; }
+.filter[data-filter="web"].is-active { background-color: #236237; }
+.filter[data-filter="mobile"].is-active { background-color: #5b3a8e; }
+.filter[data-filter="ecommerce"].is-active { background-color: #0f5f66; }
+.filter[data-filter="brand"].is-active { background-color: #8a4b2a; }
+.filter[data-filter="product"].is-active { background-color: #2f4858; }
+.filter[data-filter="editorial"].is-active { background-color: #4a3428; }
+.filter[data-filter="strategy"].is-active { background-color: #55611f; }
+.filter[data-filter="social"].is-active { background-color: #8e5400; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .filter[data-filter="all"].is-active { background-color: #76b2fa; }
+  :root:not([data-theme="light"]) .filter[data-filter="web"].is-active { background-color: #96d9ab; }
+  :root:not([data-theme="light"]) .filter[data-filter="mobile"].is-active { background-color: #b197d8; }
+  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"].is-active { background-color: #83e4ed; }
+  :root:not([data-theme="light"]) .filter[data-filter="brand"].is-active { background-color: #deac92; }
+  :root:not([data-theme="light"]) .filter[data-filter="product"].is-active { background-color: #97bfd8; }
+  :root:not([data-theme="light"]) .filter[data-filter="editorial"].is-active { background-color: #d8ae97; }
+  :root:not([data-theme="light"]) .filter[data-filter="strategy"].is-active { background-color: #cfdc93; }
+  :root:not([data-theme="light"]) .filter[data-filter="social"].is-active { background-color: #ffc570; }
+}
+:root[data-theme="dark"] .filter[data-filter="all"].is-active { background-color: #76b2fa; }
+:root[data-theme="dark"] .filter[data-filter="web"].is-active { background-color: #96d9ab; }
+:root[data-theme="dark"] .filter[data-filter="mobile"].is-active { background-color: #b197d8; }
+:root[data-theme="dark"] .filter[data-filter="ecommerce"].is-active { background-color: #83e4ed; }
+:root[data-theme="dark"] .filter[data-filter="brand"].is-active { background-color: #deac92; }
+:root[data-theme="dark"] .filter[data-filter="product"].is-active { background-color: #97bfd8; }
+:root[data-theme="dark"] .filter[data-filter="editorial"].is-active { background-color: #d8ae97; }
+:root[data-theme="dark"] .filter[data-filter="strategy"].is-active { background-color: #cfdc93; }
+:root[data-theme="dark"] .filter[data-filter="social"].is-active { background-color: #ffc570; }
+
+/* The dark palette sets colour at a higher specificity than .is-active can
+   reach, so the chosen pill kept its own hue for both fill and type and went
+   invisible. These match that specificity. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .filter.is-active[data-filter] { color: var(--bg); }
+}
+:root[data-theme="dark"] .filter.is-active[data-filter] { color: var(--bg); }
+
+/* ---- the index: the same work as a list ---- */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+}
+.views { display: flex; gap: var(--space-1); flex: 0 0 auto; }
+.view {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 2px solid var(--muted);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+.view.is-on { background: var(--muted); color: var(--bg); }
+
+.index-view { margin-bottom: var(--space-4); }
+.idx-head, .idx-row {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 9fr) minmax(0, 2fr);
+  gap: var(--space-3);
+  align-items: baseline;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+.idx-head {
+  color: var(--rule);
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+.idx-row { color: var(--fg); text-decoration: none; }
+.idx-row:hover { color: var(--accent); }
+.idx-row:hover .idx-work, .idx-row:hover .idx-year { color: var(--accent); }
+.idx-name { font-size: 24px; letter-spacing: 0.01em; }
+.idx-work { font-size: 18px; color: var(--muted); letter-spacing: 0.01em; }
+.idx-year { font-size: 18px; color: var(--muted); letter-spacing: 0.01em; text-align: right; }
+.idx-row.is-hidden { display: none; }
+
+@media (max-width: 767px) {
+  /* One line to a project: the name, and the year against the right edge. The
+     disciplines are already on the badges and only make the row sprawl here. */
+  .idx-head { display: none; }
+  .idx-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-2);
+    padding: var(--space-1) 0;
+  }
+  .idx-work { display: none; }
+  .idx-year { text-align: right; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .ov-tag { color: #8ff681; }
+}
+:root[data-theme="dark"] .ov-tag { color: #8ff681; }
+
+/* ---- narrow screens: one column, and the index in place of the filters ---- */
+@media (max-width: 767px) {
+  /* Nine coloured pills do not fit a phone. The index does the same job in one
+     control: it lists every project with its disciplines and year. */
+  .filters { display: none; }
+  .filter-label { display: none; }
+  .filter-row { justify-content: flex-start; }
+  .views { gap: var(--space-1); }
+  .view[data-view="grid"],
+  .view[data-view="index"] {
+    border-color: var(--accent);
+    color: var(--accent);
+    border-radius: 8px;
+    padding: 7px 14px;
+  }
+  .view[data-view="grid"].is-on,
+  .view[data-view="index"].is-on { background: var(--accent); color: var(--bg); }
+
+  /* One piece to a row, at the width of the screen, and never squashed:
+     both dimensions stay maxima so the proportion is kept. */
+  .project-images { display: block; }
+  /* One to a row, except a piece given an explicit width: three care labels
+     belong side by side, not stacked at full width. */
+  /* A tight gutter here: at 375px three pinned pieces plus two 32px gaps
+     overflow the measure by 26px and the third wraps. */
+  .project-images { display: flex; flex-wrap: wrap; gap: calc(var(--space-4) * 0.36) var(--space-1); }
+  .project-images > .work-figure { width: 100%; margin: 0 0 calc(var(--space-4) * 0.36); }
+  .project-images > .work-figure.is-set { margin-bottom: var(--space-3); }
+  .project-images > .work-figure img,
+  .project-images > .work-figure video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+  }
+  .work-figure[data-tags~="mobile"] img { max-height: none; width: 62%; }
+  .work-figure.is-bleed { width: 100vw; margin-left: calc(50% - 50vw); }
+
+  /* The overview reads as one card to a row too. */
+  .ov-grid { display: block; }
+  .ov-card { width: 100%; margin-bottom: calc(var(--space-4) * 0.6); }
+  .ov-frame { height: auto; }
+  .ov-frame img { height: auto; width: 100%; }
+}
+
+/* ---- narrow screens: one size ---- */
+/* At 31px a paragraph on a phone ran three words to a line and stranded the
+   last one. Everything that is read sits at 16px; the badge keeps its own 14px,
+   being a label rather than text. */
+@media (max-width: 767px) {
+  .nav-link, .theme-toggle,
+  .intro, .intro-note, .filter, .filter-label, .view,
+  .caption, .project-title, .project-meta,
+  .ov-h, .all-h, .ov-name, .ov-short,
+  .about-role, .about-bio, .about-h, .about-list, .about-note,
+  .footer, .footer-copy, .pager,
+  .idx-name, .idx-work, .idx-year,
+  .spec-facts, .spec-slider {
+    font-size: 16px;
+  }
+  .project-desc { font-size: 14px; }
+  .ov-tag { font-size: 14px; }
+
+  /* The wordmark drops out, since "Polina Vasilyeva" beside three nav links
+     and a switch has nowhere to go at this width; the links carry the page. */
+  .nav-name { display: none; }
+  .nav { justify-content: space-between; gap: 0; }
+  .nav-link { color: var(--mobile-nav); }
+  .nav-link.is-active { color: var(--mobile-nav); }
+  .theme-toggle .switch { border-color: var(--accent); }
+  .theme-toggle .knob { border-color: var(--accent); }
+  .theme-toggle[aria-checked="true"] .switch { background: var(--accent); }
+}
+
+/* ---- no orphans ---- */
+/* text-wrap: pretty asks the browser to avoid leaving a single word on the
+   last line; balance evens the lines of a short heading. Both degrade to
+   ordinary wrapping where unsupported. */
+.intro, .intro-note, .project-desc, .project-desc p,
+.about-bio, .about-bio p, .ov-short, .caption,
+.work-figure figcaption, .idx-work {
+  text-wrap: pretty;
+}
+.project-title, .ov-h, .all-h, .ov-name, .about-role, .idx-name {
+  text-wrap: balance;
+}
