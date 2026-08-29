@@ -71,8 +71,8 @@ SOURCES = {
     "C": "/Users/polinavasilyeva/Desktop/Verizon portfolio .pdf",
     "D": "/Users/polinavasilyeva/Desktop/Polina_Vasilyeva_2023_Watson_portfolio.pdf",
     "E": "source/_decks/haworth-brand-guidelines.pdf",
-    "F": "/Volumes/INTENSO/220915 Furniture.com Final design presentation (2).pdf",
-    "G": "/Volumes/INTENSO/220908 Furniture.com input color and typography-SM (3).pdf",
+    "F": "source/_decks/furniture-final-design.pdf",
+    "G": "source/_decks/furniture-color-typography.pdf",
 }
 
 FILTERS = [
@@ -155,6 +155,9 @@ PROJECTS = [
  {
   "slug": "haworth", "title": "Haworth",
   "year": "2019",
+  # The logo slide reads tighter than 16:9: the wordmark sits in a
+  # narrower field, so the slide ground is taken in from both sides.
+  "piece_crop": {"b062": (0, 0.0875, 0, 0.0875)},
   "cover": "b062",
   "group": "brand", "short": "Brand, e-commerce &amp; strategy",
   "meta": "Haworth — with Apartamento Studios — Brand, E-commerce &amp; Digital Strategy",
@@ -402,6 +405,8 @@ PROJECTS = [
  {
   "slug": "alexander-wang", "title": "Alexander Wang",
   "piece_width": {"b009-1": 40, "b009-2": 40, "b009-3": 40},
+  # The lockup alone: the slide's own caption line sits below it.
+  "piece_crop": {"b003": (0.02, 0.088, 0.10, 0.088)},
   "year": "2021–2022",
   "cover": "b003",
   "group": "brand", "short": "Brand, packaging &amp; art direction",
@@ -563,22 +568,28 @@ PROJECTS = [
             "Designed responsively from large-screen heroes down to the "
            "mobile browsing flows."],
   "pages": [
-    ("F", 1,  "Find it… — campaign banner", ["brand", "web"]),
+    # Published whole. The black slide ground is the deck's own presentation
+    # of the work, not a margin to be trimmed away.
+    ("F", 1,  "Find it… — campaign banner", ["brand", "web"], {"crop": False}),
     ("F", 3,  "Everything for your living room — campaign", ["brand", "web"], {"crop": False}),
     ("F", 4,  "Room for the whole family — campaign", ["brand", "web"], {"crop": False}),
-    ("F", 12, "Homepage — find your sofa", ["web"]),
-    ("F", 18, "Featured categories, by color", ["web"]),
-    ("F", 19, "Furniture for your little ones", ["web"]),
-    ("F", 21, "Featured — Sofas &amp; Sectionals", ["web", "product"]),
-    ("F", 22, "Browse rooms", ["web"]),
-    ("F", 23, "Mobile homepage", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
-    ("F", 24, "Featured categories — mobile", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
-    ("F", 25, "Furniture for your little ones — mobile", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
-    ("F", 27, "Browse rooms — mobile", ["mobile"], {"debezel": True, "inset": [51, 42, 51, 42]}),
-    ("G", 3,  "Color update — before and after", ["brand"], {"split": False, "crop": False}),
+    ("F", 12, "Homepage — find your sofa", ["web"], {"crop": False}),
+    ("F", 18, "Featured categories, by color", ["web"], {"crop": False}),
+    ("F", 19, "Furniture for your little ones", ["web"], {"crop": False}),
+    ("F", 21, "Featured — Sofas &amp; Sectionals", ["web", "product"], {"crop": False}),
+    ("F", 22, "Browse rooms", ["web"], {"crop": False}),
+    ("F", 23, "Mobile homepage", ["mobile"], {"crop": False}),
+    ("F", 24, "Featured categories — mobile", ["mobile"], {"crop": False}),
+    ("F", 25, "Furniture for your little ones — mobile", ["mobile"], {"crop": False}),
+    ("F", 27, "Browse rooms — mobile", ["mobile"], {"crop": False}),
+    ("G", 3,  "Color update — before and after", ["brand"], {"crop": False}),
     ("G", 5,  "Color values — furniture, neutral, and action", ["brand"], {"crop": False}),
     ("G", 6,  "Color contrast, tested across the palette", ["brand"], {"crop": False}),
     ("G", 7,  "Icons and color — category campaign cards", ["brand", "web"], {"crop": False}),
+    ("G", 9,  "Typography — Pangea with Reckless, and the spacing spec", ["brand", "editorial"], {"crop": False}),
+    ("G", 11, "Hero type — Pangea Medium for the CTA", ["brand"], {"crop": False}),
+    ("G", 13, "Hero type — the solid call to action", ["brand"], {"crop": False}),
+    ("G", 12, "Hero type on the green ground", ["brand"], {"crop": False}),
   ],
  },
  {

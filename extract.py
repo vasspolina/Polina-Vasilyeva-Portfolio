@@ -826,8 +826,15 @@ def main():
     # the project directory; Python's own open() is not. Same document, and it
     # no longer depends on where the deck happens to live.
     def load(path):
-        with open(os.path.expanduser(path), "rb") as fh:
-            return pdfium.PdfDocument(fh.read())
+        # A deck can live on a drive that is not plugged in. Report it and
+        # carry on: the projects that do not read it still rebuild, and the
+        # ones that do keep the assets and manifest entries they already have.
+        try:
+            with open(os.path.expanduser(path), "rb") as fh:
+                return pdfium.PdfDocument(fh.read())
+        except FileNotFoundError:
+            print(f"source unavailable, skipping what needs it: {path}")
+            return None
 
     docs = {k: load(v) for k, v in data.SOURCES.items()}
     os.makedirs(SOURCE, exist_ok=True)
@@ -836,6 +843,11 @@ def main():
     for proj in data.PROJECTS:
         slug = proj["slug"]
         if only and slug not in only:
+            continue
+        needed = {e[0] for e in proj["pages"] if e[0] in docs}
+        missing = sorted(k for k in needed if docs[k] is None)
+        if missing:
+            print(f"{slug:18} skipped, source {', '.join(missing)} unavailable")
             continue
         d = os.path.join(ASSETS, slug)
         os.makedirs(d, exist_ok=True)
