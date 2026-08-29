@@ -100,7 +100,7 @@ PROJECTS = [
  {
   "slug": "verizon", "title": "Verizon",
   "year": "2022–2023",
-  "cover": "p01",
+  "cover": "p10",
   "group": "brand", "short": "Web, retail &amp; brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
   "desc": ["Research, then a single set of design standards unified "
@@ -863,6 +863,14 @@ PROJECTS = [
     ("B", 99, "T293, Rome — poster", ["brand"], {"cutout": 60, "span": 6}),
     ("B", 98, ["A rabid dog has no choice but to bite — poster",
                "Publication — spread"], ["editorial"], {"span": 6}),
+    ("IMG", "isaac-howell/rome1.png", "Malign Influence on the Information Interchange — poster",
+     ["brand"], {"crop": False}),
+    ("IMG", "isaac-howell/rome2.png", "Malign Influence — the sheet reversed",
+     ["brand"], {"crop": False}),
+    ("IMG", "isaac-howell/pit2.png", "Audiovisual, Geneva — poster",
+     ["brand"], {"crop": False}),
+    ("IMG", "isaac-howell/pit1.png", "Audiovisual — the sheet reversed",
+     ["editorial"], {"crop": False}),
   ],
  },
  {

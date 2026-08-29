@@ -643,15 +643,20 @@ a:focus-visible, button:focus-visible {
 /* Every card is the same 4:3 frame. The image is contained, not cropped —
    cover cut the headline off a homepage and sliced wordmarks in half — and
    each project's cover is chosen near 4:3 so it fills the frame anyway. */
+/* Fit, never clip. The card's width changes with the viewport, so an image
+   taller than it is wide used to be cropped by a different amount at every
+   size — the same cover showing a different crop on a phone and a laptop. */
 .ov-frame {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: var(--ov-h);
-  overflow: hidden;
 }
 .ov-frame img {
-  height: 100%;
-  width: auto;
+  max-height: 100%;
   max-width: 100%;
+  width: auto;
+  height: auto;
   display: block;
 }
 .ov-card:hover .ov-frame img { opacity: 0.92; transition: opacity var(--dur); }

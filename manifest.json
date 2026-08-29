@@ -6731,6 +6731,74 @@
    "span": 6
   },
   {
+   "stem": "rome1",
+   "caption": "Malign Influence on the Information Interchange — poster",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 3199,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "isaac-howell/rome1.png"
+  },
+  {
+   "stem": "rome2",
+   "caption": "Malign Influence — the sheet reversed",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 3199,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "isaac-howell/rome2.png"
+  },
+  {
+   "stem": "pit2",
+   "caption": "Audiovisual, Geneva — poster",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 3106,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "isaac-howell/pit2.png"
+  },
+  {
+   "stem": "pit1",
+   "caption": "Audiovisual — the sheet reversed",
+   "tags": [
+    "editorial"
+   ],
+   "w": 2400,
+   "h": 3106,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "isaac-howell/pit1.png"
+  },
+  {
    "stem": "drop01",
    "caption": "The Man Who Turned into a Wall",
    "tags": [
@@ -6762,36 +6830,6 @@
    ],
    "source": "DROP",
    "page": "drop02"
-  },
-  {
-   "stem": "drop03",
-   "caption": "Malign Influence — T293, Rome",
-   "tags": [
-    "brand"
-   ],
-   "w": 1127,
-   "h": 1502,
-   "widths": [
-    600,
-    1127
-   ],
-   "source": "DROP",
-   "page": "drop03"
-  },
-  {
-   "stem": "drop04",
-   "caption": "Malign Influence — T293, Rome",
-   "tags": [
-    "brand"
-   ],
-   "w": 1127,
-   "h": 1505,
-   "widths": [
-    600,
-    1127
-   ],
-   "source": "DROP",
-   "page": "drop04"
   }
  ],
  "willow-and-wu": [
