@@ -73,6 +73,7 @@ SOURCES = {
     "E": "source/_decks/haworth-brand-guidelines.pdf",
     "F": "source/_decks/furniture-final-design.pdf",
     "G": "source/_decks/furniture-color-typography.pdf",
+    "H": "source/_decks/furniture-final-design-full.pdf",
 }
 
 FILTERS = [
@@ -485,6 +486,10 @@ PROJECTS = [
  {
   "slug": "wsj", "title": "WSJ",
   "year": "2024",
+  # Emails and display units at one width, so the set reads as a set
+  # rather than as pieces of different importance.
+  "piece_width": {**{f"drop{n:02d}": 30 for n in range(1, 15)},
+                  "ad-tall": 30, "ad-square": 30},
   "cover": "ad-tall",
   "group": "brand", "short": "Subscription campaign design",
   "meta": "The Wall Street Journal — Subscription Campaign Design",
@@ -597,6 +602,29 @@ PROJECTS = [
     ("G", 11, "Hero type — Pangea Medium for the CTA", ["brand"], {"crop": False}),
     ("G", 13, "Hero type — the solid call to action", ["brand"], {"crop": False}),
     ("G", 12, "Hero type on the green ground", ["brand"], {"crop": False}),
+    # The fuller cut of the same presentation: the category and product pages,
+    # the mobile flows, and the campaign as it ran in social, display and OOH.
+    ("H", 1,  "Seating — the category page", ["web"], {"crop": False}),
+    ("H", 2,  "Category page — the chair that fits", ["web"], {"crop": False}),
+    ("H", 4,  "Living Room — mobile", ["mobile"], {"crop": False}),
+    ("H", 6,  "The chair that fits — mobile", ["mobile"], {"crop": False}),
+    ("H", 8,  "Highland Sunflower Sofa — product page", ["web", "ecommerce"], {"crop": False}),
+    ("H", 9,  "Product page — browse to go", ["web", "ecommerce"], {"crop": False}),
+    ("H", 12, "Product page — you may also like", ["web", "ecommerce"], {"crop": False}),
+    ("H", 13, "Product page — mobile", ["mobile", "ecommerce"], {"crop": False}),
+    ("H", 15, "Product details and swatches — mobile", ["mobile", "ecommerce"], {"crop": False}),
+    ("H", 18, "Instagram story — the campaign in the feed", ["social"], {"crop": False}),
+    ("H", 19, "Search it, Find it, Buy it — story set", ["social"], {"crop": False}),
+    ("H", 23, "Search it. Find it. Buy it. — story", ["social"], {"crop": False}),
+    ("H", 24, "The perfect chair for you — story", ["social"], {"crop": False}),
+    ("H", 25, "Search it. Find it. Buy it. — story on red", ["social"], {"crop": False}),
+    ("H", 26, "Your new sofa is waiting — social post", ["social"], {"crop": False}),
+    ("H", 27, "Everything for your bedroom — social post", ["social"], {"crop": False}),
+    ("H", 28, "Autumn sale — the icon grid", ["social", "brand"], {"crop": False}),
+    ("H", 31, "Display — your new chair is waiting", ["brand", "web"], {"crop": False}),
+    ("H", 33, "Display — room for the whole family", ["brand", "web"], {"crop": False}),
+    ("H", 37, "Out of home — Search it, Find it, Buy it", ["brand"], {"crop": False}),
+    ("H", 39, "Out of home — the second run", ["brand"], {"crop": False}),
   ],
  },
  {
