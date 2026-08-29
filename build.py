@@ -441,10 +441,12 @@ def figure(slug, item, eager=False, widths=None, show_caption=True):
         cls += " is-set"
     elif "web" in item.get("tags", []) and ratio >= 1.2:
         cls += " is-site"
-    elif 1.62 <= ratio <= 2.6:
+    elif 1.62 <= ratio <= 2.6 and "is-bleed" not in cls:
         # A page of a presentation, whichever deck it came from. The Retail SEM
         # pages arrive through the drop folder rather than a source letter, so
-        # matching on the proportion catches those too.
+        # matching on the proportion catches those too. A piece asked to bleed
+        # is not one of these: is-deck pins it to half the measure and the
+        # bleed never happens.
         cls += " is-deck"
     tags = " ".join(item.get("tags", []))
     if item.get("video"):

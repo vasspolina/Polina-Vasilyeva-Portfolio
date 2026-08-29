@@ -103,6 +103,7 @@ PROJECTS = [
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
   "piece_width": {"c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
+  "drops_first": True,
   "cover": "p01",
   "group": "brand", "short": "Web, retail &amp; brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
@@ -129,8 +130,6 @@ PROJECTS = [
   "pages": [
     # The deck's own title slide carries the wordmark on the slide ground, and
     # the Retail SEM title exists only at 1020px — too small to be a cover.
-    ("C", 1,  "Brand design for national retail", ["brand"],
-              {"crop": False, "slices": [(0.0107, 0.3465)]}),
     # The Retail SEM working deck, published whole: the system, the
     # wayfinding tiers, and the store as it was built and as it will be.
     ("IMG", "verizon-sem/p01.jpg", "Retail SEM — the working deck", ["brand"], {"crop": False, "split": False}),
@@ -184,7 +183,9 @@ PROJECTS = [
   "year": "2019",
   # The logo slide reads tighter than 16:9: the wordmark sits in a
   # narrower field, so the slide ground is taken in from both sides.
-  "piece_crop": {"b062": (0, 0.0875, 0, 0.0875)},
+  # The slide carries its own header and footer in small type; the mark
+  # alone is the cover, so both bands come off.
+  "piece_crop": {"b062": (0.14, 0.0875, 0.14, 0.0875)},
   # The research pages are spreads of type; two to a row keeps them
   # readable without letting one fill the measure alone.
   "piece_width": {"drop05": 48, "drop06": 48, "drop07": 48,

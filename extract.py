@@ -1129,6 +1129,11 @@ def main():
             if hsh:
                 seen.add(hsh)
             keep.append(it)
+        if proj.get("drops_first"):
+            # The folder images are the work itself; the deck pages document
+            # it. Some projects read better with the work first.
+            keep = ([k for k in keep if k["stem"].startswith("drop")] +
+                    [k for k in keep if not k["stem"].startswith("drop")])
         manifest[slug] = keep
 
     path = os.path.join(ROOT, "manifest.json")

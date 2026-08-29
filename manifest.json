@@ -1,21 +1,395 @@
 {
  "verizon": [
   {
-   "stem": "c001",
-   "caption": "Brand design for national retail",
+   "stem": "drop01",
+   "caption": "Verizon Prepaid — the price grid",
    "tags": [
     "brand"
    ],
-   "w": 2311,
-   "h": 1140,
+   "w": 2400,
+   "h": 190,
    "widths": [
     600,
     1200,
     1600,
-    2311
+    2400
    ],
-   "source": "C",
-   "page": 1
+   "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop02",
+   "caption": "Unlimited plans — headline and subhead",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop02"
+  },
+  {
+   "stem": "drop03",
+   "caption": "5G plan tiers — Get More to Start",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
+   "caption": "Unlimited is going Ultra — four benefit columns",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 700,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "5G Ultra Wideband — gradient headline in two panels",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 730,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop05"
+  },
+  {
+   "stem": "drop06",
+   "caption": "Assistant icon states — idle to error",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1360,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop06"
+  },
+  {
+   "stem": "drop13",
+   "caption": "Verizon",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop13"
+  },
+  {
+   "stem": "drop16",
+   "caption": "Retail SEM — the back wall, Home bay",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop16"
+  },
+  {
+   "stem": "drop17",
+   "caption": "Retail SEM — entertainment bay, passive and interactive",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop17"
+  },
+  {
+   "stem": "drop19",
+   "caption": "Retail SEM — Live Try, the demo table",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop19"
+  },
+  {
+   "stem": "drop20",
+   "caption": "Retail SEM — Live Try print, the eight placements",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop20"
+  },
+  {
+   "stem": "drop21",
+   "caption": "Retail SEM — Live Try print, mix and match sheets",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop21"
+  },
+  {
+   "stem": "drop22",
+   "caption": "Retail SEM — aisle fixtures and accessories",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop22"
+  },
+  {
+   "stem": "drop24",
+   "caption": "Future state — the floor",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop24"
+  },
+  {
+   "stem": "drop26",
+   "caption": "Future state — aisle and entertainment",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop26"
+  },
+  {
+   "stem": "drop27",
+   "caption": "Future state — the Home bay in place",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop27"
+  },
+  {
+   "stem": "drop31",
+   "caption": "Next Gen Reset — the entertainment wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop31"
+  },
+  {
+   "stem": "drop32",
+   "caption": "Next Gen Reset — product table merchandising",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop32"
+  },
+  {
+   "stem": "drop33",
+   "caption": "Next Gen Reset — the storefront",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop33"
+  },
+  {
+   "stem": "drop34",
+   "caption": "Next Gen Reset — the main floor",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop34"
+  },
+  {
+   "stem": "drop35",
+   "caption": "Next Gen Reset — the product tables",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop35"
+  },
+  {
+   "stem": "drop36",
+   "caption": "Next Gen Reset — the Home wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop36"
+  },
+  {
+   "stem": "drop37",
+   "caption": "Next Gen Reset — the +play wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop37"
   },
   {
    "stem": "p01",
@@ -716,414 +1090,6 @@
    ],
    "source": "IMG",
    "page": "verizon-sem/p34.jpg"
-  },
-  {
-   "stem": "drop01",
-   "caption": "Verizon Prepaid — the price grid",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 190,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop01"
-  },
-  {
-   "stem": "drop02",
-   "caption": "Unlimited plans — headline and subhead",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 190,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop02"
-  },
-  {
-   "stem": "drop03",
-   "caption": "5G plan tiers — Get More to Start",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 190,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop03"
-  },
-  {
-   "stem": "drop04",
-   "caption": "Unlimited is going Ultra — four benefit columns",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 700,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop04"
-  },
-  {
-   "stem": "drop05",
-   "caption": "5G Ultra Wideband — gradient headline in two panels",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 730,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop05"
-  },
-  {
-   "stem": "drop06",
-   "caption": "Come on in — storefront window graphic",
-   "tags": [
-    "brand"
-   ],
-   "w": 2071,
-   "h": 1592,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2071
-   ],
-   "source": "DROP",
-   "page": "drop06"
-  },
-  {
-   "stem": "drop07",
-   "caption": "Assistant icon states — idle to error",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1360,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop07"
-  },
-  {
-   "stem": "drop14",
-   "caption": "Verizon",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop14"
-  },
-  {
-   "stem": "drop17",
-   "caption": "Retail SEM — the back wall, Home bay",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop17"
-  },
-  {
-   "stem": "drop18",
-   "caption": "Retail SEM — entertainment bay, passive and interactive",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop18"
-  },
-  {
-   "stem": "drop20",
-   "caption": "Retail SEM — Live Try, the demo table",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop20"
-  },
-  {
-   "stem": "drop21",
-   "caption": "Retail SEM — Live Try print, the eight placements",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop21"
-  },
-  {
-   "stem": "drop22",
-   "caption": "Retail SEM — Live Try print, mix and match sheets",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop22"
-  },
-  {
-   "stem": "drop23",
-   "caption": "Retail SEM — aisle fixtures and accessories",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop23"
-  },
-  {
-   "stem": "drop25",
-   "caption": "Future state — the floor",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop25"
-  },
-  {
-   "stem": "drop27",
-   "caption": "Future state — aisle and entertainment",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop27"
-  },
-  {
-   "stem": "drop28",
-   "caption": "Future state — the Home bay in place",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop28"
-  },
-  {
-   "stem": "drop32",
-   "caption": "Next Gen Reset — the entertainment wall",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop32"
-  },
-  {
-   "stem": "drop33",
-   "caption": "Next Gen Reset — product table merchandising",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop33"
-  },
-  {
-   "stem": "drop34",
-   "caption": "Next Gen Reset — the storefront",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop34"
-  },
-  {
-   "stem": "drop35",
-   "caption": "Next Gen Reset — the main floor",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop35"
-  },
-  {
-   "stem": "drop36",
-   "caption": "Next Gen Reset — the product tables",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop36"
-  },
-  {
-   "stem": "drop37",
-   "caption": "Next Gen Reset — the Home wall",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop37"
-  },
-  {
-   "stem": "drop38",
-   "caption": "Next Gen Reset — the +play wall",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop38"
   }
  ],
  "haworth": [
@@ -1168,7 +1134,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 1636,
+   "h": 1179,
    "widths": [
     600,
     1200,
@@ -6881,13 +6847,13 @@
     "web",
     "brand"
    ],
-   "w": 2400,
-   "h": 2469,
+   "w": 2246,
+   "h": 2571,
    "widths": [
     600,
     1200,
     1600,
-    2400
+    2246
    ],
    "source": "DROP",
    "page": "drop02"
@@ -6899,13 +6865,13 @@
     "web",
     "brand"
    ],
-   "w": 1830,
+   "w": 1629,
    "h": 2600,
    "widths": [
     600,
     1200,
     1600,
-    1830
+    1629
    ],
    "source": "DROP",
    "page": "drop03"
@@ -6917,11 +6883,11 @@
     "web",
     "brand"
    ],
-   "w": 1106,
-   "h": 2598,
+   "w": 604,
+   "h": 2600,
    "widths": [
     600,
-    1106
+    604
    ],
    "source": "DROP",
    "page": "drop04"
@@ -6933,16 +6899,51 @@
     "web",
     "brand"
    ],
-   "w": 1831,
+   "w": 1532,
    "h": 2600,
    "widths": [
     600,
     1200,
-    1600,
-    1831
+    1532
    ],
    "source": "DROP",
    "page": "drop05"
+  },
+  {
+   "stem": "drop06",
+   "caption": "Business cards — the wordmark, both grounds",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 2400,
+   "h": 789,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop06"
+  },
+  {
+   "stem": "drop07",
+   "caption": "Business cards — the partners",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 2400,
+   "h": 522,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop07"
   }
  ]
 }
