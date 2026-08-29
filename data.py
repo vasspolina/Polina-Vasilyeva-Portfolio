@@ -512,6 +512,12 @@ PROJECTS = [
     ("B", 51, "Velour Couture — social and email assets", ["brand", "social"]),
     ("B", 52, "SISTERS — campaign identity", ["brand"]),
     ("B", 53, "SISTERS — campaign identity and social assets", ["brand", "social"]),
+    ("IMG", "alexander-wang/sisters-teaser.png",
+     "SISTERS — teaser, three faces above the title", ["brand", "social"],
+     {"crop": False}),
+    ("IMG", "alexander-wang/sisters-bus-shelter.png",
+     "SISTERS — bus shelter poster, excellence runs in the family", ["brand"],
+     {"crop": False}),
     ("B", 60, "vault — archive sale gate", ["ecommerce", "web"], {"dechrome": True}),
     ("B", 61, "vault — archive shopping grid", ["ecommerce", "web"], {"dechrome": True}),
   ],
@@ -574,7 +580,7 @@ PROJECTS = [
  {
   "slug": "chobani", "title": "Chobani",
   "year": "2020",
-  "cover": "drop01",
+  "cover": "drop09",
   "group": "product", "short": "UX/UI, visual design &amp; research",
   "meta": "Chobani — UX/UI, Visual Design &amp; Research",
   "desc": ["UX/UI, visual design, and research for chobani.com: landing "
@@ -885,7 +891,11 @@ PROJECTS = [
  {
   "slug": "isaac-howell", "title": "Isaac Howell",
   "year": "Ongoing",
-  "piece_width": {"drop03": 48, "drop04": 48, "b098-1": 48, "b098-2": 48},
+  # Each poster beside its own reverse, two to a row. The Rome scans that
+  # used to sit here are gone: the print PDFs carry the same sheets at
+  # twice the size and the hash kept those.
+  "piece_width": {"b098-1": 48, "b098-2": 48, "rome1": 48, "rome2": 48,
+                  "pit2": 48, "pit1": 48},
   "cover": "b098-1",
   "group": "book", "short": "Exhibition identity &amp; publication",
   "meta": "Isaac Howell — Exhibition Identity, Poster &amp; Publication",

@@ -742,7 +742,9 @@ JUNK = re.compile(
     r"^(screen ?shot|screenshot|img|dsc|photo|image|untitled)\b"
     r"|\d{4}-\d{2}-\d{2}"          # a date stamp
     r"|\bpage \d+$"                 # a slide number off a deck export
-    r"|\bcopy\b"
+    # "copy" only where it names a duplicate — "sheet copy", "poster copy 2" —
+    # never mid-sentence, where it means the words on the page.
+    r"|\bcopy\b\s*\d*\s*$"
     r"|presentation|audit|final design",
     re.I)
 

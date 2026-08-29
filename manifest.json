@@ -104,7 +104,7 @@
   },
   {
    "stem": "drop13",
-   "caption": "Verizon",
+   "caption": "Retail SEM — colour, type, imagery, copy, campaign, digital",
    "tags": [
     "brand"
    ],
@@ -4070,6 +4070,37 @@
    "page": 53
   },
   {
+   "stem": "sisters-teaser",
+   "caption": "SISTERS — teaser, three faces above the title",
+   "tags": [
+    "brand",
+    "social"
+   ],
+   "w": 1170,
+   "h": 2532,
+   "widths": [
+    600,
+    1170
+   ],
+   "source": "IMG",
+   "page": "alexander-wang/sisters-teaser.png"
+  },
+  {
+   "stem": "sisters-bus-shelter",
+   "caption": "SISTERS — bus shelter poster, excellence runs in the family",
+   "tags": [
+    "brand"
+   ],
+   "w": 720,
+   "h": 1076,
+   "widths": [
+    600,
+    720
+   ],
+   "source": "IMG",
+   "page": "alexander-wang/sisters-bus-shelter.png"
+  },
+  {
    "stem": "b060",
    "caption": "vault — archive sale gate",
    "tags": [
@@ -4155,21 +4186,6 @@
   },
   {
    "stem": "drop05",
-   "caption": "Sisters teaser — three faces stacked above the title",
-   "tags": [
-    "brand"
-   ],
-   "w": 1170,
-   "h": 2532,
-   "widths": [
-    600,
-    1170
-   ],
-   "source": "DROP",
-   "page": "drop05"
-  },
-  {
-   "stem": "drop06",
    "caption": "Storefront — the lit logo wall, angled crop",
    "tags": [
     "brand"
@@ -4181,10 +4197,10 @@
     1080
    ],
    "source": "DROP",
-   "page": "drop06"
+   "page": "drop05"
   },
   {
-   "stem": "drop07",
+   "stem": "drop06",
    "caption": "Main entrance — a blue and red room with white risers",
    "tags": [
     "brand"
@@ -4197,10 +4213,10 @@
     1443
    ],
    "source": "DROP",
-   "page": "drop07"
+   "page": "drop06"
   },
   {
-   "stem": "drop08",
+   "stem": "drop07",
    "caption": "Email layout — the elite pouch lanyard in three",
    "tags": [
     "brand"
@@ -4213,10 +4229,10 @@
     1500
    ],
    "source": "DROP",
-   "page": "drop08"
+   "page": "drop07"
   },
   {
-   "stem": "drop09",
+   "stem": "drop08",
    "caption": "Storefront — the full facade head on at night",
    "tags": [
     "brand"
@@ -4230,10 +4246,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop09"
+   "page": "drop08"
   },
   {
-   "stem": "drop10",
+   "stem": "drop09",
    "caption": "Packaging — resealable briefs bags in three sizes",
    "tags": [
     "brand"
@@ -4247,10 +4263,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop10"
+   "page": "drop09"
   },
   {
-   "stem": "drop11",
+   "stem": "drop10",
    "caption": "Store interior — printed walls and a mirrored doorway",
    "tags": [
     "brand"
@@ -4264,10 +4280,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop11"
+   "page": "drop10"
   },
   {
-   "stem": "drop12",
+   "stem": "drop11",
    "caption": "Retail display — cartons and pouches on red trays",
    "tags": [
     "brand"
@@ -4280,10 +4296,10 @@
     1361
    ],
    "source": "DROP",
-   "page": "drop12"
+   "page": "drop11"
   },
   {
-   "stem": "drop13",
+   "stem": "drop12",
    "caption": "Bodywear display case — packs stacked behind glass",
    "tags": [
     "brand"
@@ -4296,22 +4312,7 @@
     1342
    ],
    "source": "DROP",
-   "page": "drop13"
-  },
-  {
-   "stem": "drop15",
-   "caption": "Sisters — bus shelter poster, excellence runs in the family",
-   "tags": [
-    "brand"
-   ],
-   "w": 716,
-   "h": 1074,
-   "widths": [
-    600,
-    716
-   ],
-   "source": "DROP",
-   "page": "drop15"
+   "page": "drop12"
   }
  ],
  "wsj": [
