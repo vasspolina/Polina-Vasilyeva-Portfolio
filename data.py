@@ -661,6 +661,27 @@ PROJECTS = [
   ],
  },
  {
+  "slug": "lenka-ilic", "title": "Lenka Ilic",
+  "year": "2024",
+  "drop_tags": ["brand", "web"],
+  "cover": "drop01",
+  "group": "brand", "short": "Identity, website &amp; art direction",
+  "meta": "Lenka Ilic Studio — Identity, Website &amp; Art Direction",
+  # Everything stated here is on the pieces themselves or on the studio's own
+  # pages: the material, the maker, the city, the year of founding.
+  "desc": ["Identity, website and art direction for Lenka Ilic Studio, a "
+           "furniture practice in Miami and New York. The objects are folded "
+           "from recycled aluminium and made by hand in Delanson, New York, "
+           "and each carries a debossed signature and a serial number.",
+           "The mark is set in one weight and left alone. It sits small in "
+           "the corner of the page and small on the metal, so the object is "
+           "what is looked at: a grid of white forms on white, photographed "
+           "against the roofline and in the rooms they are made for."],
+  "pages": [
+    # Everything comes from drop/lenka-ilic/.
+  ],
+ },
+ {
   "slug": "bts-advocaten", "title": "Bektesevic Ter Steeg Advocaten",
   "year": "2026",
   "drop_tags": ["web", "brand"],
