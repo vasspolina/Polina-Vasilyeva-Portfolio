@@ -4943,6 +4943,255 @@
    ],
    "source": "A",
    "page": 12
+  },
+  {
+   "stem": "drop01",
+   "caption": "Title module — eyebrow and headline",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 521,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop02",
+   "caption": "Title module — headline and paragraph",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 521,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop02"
+  },
+  {
+   "stem": "drop03",
+   "caption": "Title module — headline with call to action",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 361,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
+   "caption": "Top banner — medium",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 657,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "Content banner",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 972,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop05"
+  },
+  {
+   "stem": "drop06",
+   "caption": "Main banner — video",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 972,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop06"
+  },
+  {
+   "stem": "drop07",
+   "caption": "Two up — image and call to action",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 917,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop07"
+  },
+  {
+   "stem": "drop08",
+   "caption": "Two columns — article and illustration",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 972,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop08"
+  },
+  {
+   "stem": "drop09",
+   "caption": "Three columns — headline, cards, call to action",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 1182,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop09"
+  },
+  {
+   "stem": "drop10",
+   "caption": "Three columns — statistics",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 1278,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop10"
+  },
+  {
+   "stem": "drop11",
+   "caption": "Left text banner — full image",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 1005,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop11"
+  },
+  {
+   "stem": "drop12",
+   "caption": "Recipe banner — half",
+   "tags": [
+    "web"
+   ],
+   "w": 1708,
+   "h": 1400,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1708
+   ],
+   "source": "DROP",
+   "page": "drop12"
+  },
+  {
+   "stem": "drop13",
+   "caption": "Title module — mobile",
+   "tags": [
+    "web"
+   ],
+   "w": 750,
+   "h": 910,
+   "widths": [
+    600,
+    750
+   ],
+   "source": "DROP",
+   "page": "drop13"
+  },
+  {
+   "stem": "drop14",
+   "caption": "Two up — mobile",
+   "tags": [
+    "web"
+   ],
+   "w": 750,
+   "h": 936,
+   "widths": [
+    600,
+    750
+   ],
+   "source": "DROP",
+   "page": "drop14"
+  },
+  {
+   "stem": "drop15",
+   "caption": "Three columns — mobile",
+   "tags": [
+    "web"
+   ],
+   "w": 750,
+   "h": 1410,
+   "widths": [
+    600,
+    750
+   ],
+   "source": "DROP",
+   "page": "drop15"
   }
  ],
  "furniture": [
@@ -5947,6 +6196,40 @@
    ],
    "source": "DROP",
    "page": "drop14"
+  },
+  {
+   "stem": "drop16",
+   "caption": "Prescription awareness — the check-in",
+   "tags": [
+    "product"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop16"
+  },
+  {
+   "stem": "drop17",
+   "caption": "Sentiment recognition — spoken triage",
+   "tags": [
+    "product"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop17"
   }
  ],
  "compass": [

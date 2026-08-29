@@ -4,3 +4,6 @@ _axe.js
 # Raw source material the pipeline reads. These are full-resolution client
 # originals; the site publishes curated crops of them from assets/ instead.
 drop/
+
+# Working source dropped in by hand; the site publishes crops of it from assets/.
+incoming/
