@@ -4333,22 +4333,6 @@
    "page": "wsj/ad-tall.png"
   },
   {
-   "stem": "ad-square",
-   "caption": "Make Art Feuds Your Business — squared unit",
-   "tags": [
-    "brand"
-   ],
-   "w": 1202,
-   "h": 2112,
-   "widths": [
-    600,
-    1200,
-    1202
-   ],
-   "source": "IMG",
-   "page": "wsj/ad-square.png"
-  },
-  {
    "stem": "drop01",
    "caption": "Listen to WSJ — podcast email",
    "tags": [

@@ -528,7 +528,7 @@ PROJECTS = [
   # Emails and display units at one width, so the set reads as a set
   # rather than as pieces of different importance.
   "piece_width": {**{f"drop{n:02d}": 23 for n in range(1, 15)},
-                  "ad-tall": 23, "ad-square": 23},
+                  "ad-tall": 23},
   "cover": "ad-tall",
   "group": "brand", "short": "Subscription campaign design",
   "meta": "The Wall Street Journal — Subscription Campaign Design",
@@ -539,8 +539,7 @@ PROJECTS = [
            "moves through.",
            "One campaign set to run at more than one ratio: the masthead, an "
            "editorial image, and the offer hold their relationship as the "
-           "frame changes shape, so the same idea reads in a tall unit and a "
-           "squared one without being redrawn.",
+           "frame changes shape.",
            "The email carries the middle of the funnel. Podcast titles are "
            "the subject, one colour to a show, and the price is stated as "
            "the picture rather than beside it: a green four, a red one, a "
@@ -549,8 +548,6 @@ PROJECTS = [
            "every size."],
   "pages": [
     ("IMG", "wsj/ad-tall.png", "Make Art Feuds Your Business — tall unit",
-     ["brand"], {"crop": False}),
-    ("IMG", "wsj/ad-square.png", "Make Art Feuds Your Business — squared unit",
      ["brand"], {"crop": False}),
   ],
  },
