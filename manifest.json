@@ -1,276 +1,447 @@
 {
  "verizon": [
   {
-   "stem": "c001",
-   "caption": "Brand design for national retail",
+   "stem": "p01",
+   "caption": "Retail SEM — the working deck",
    "tags": [
     "brand"
    ],
-   "w": 2311,
-   "h": 1140,
+   "w": 1020,
+   "h": 574,
    "widths": [
     600,
-    1200,
-    1600,
-    2311
+    1020
    ],
-   "source": "C",
-   "page": 1
+   "source": "IMG",
+   "page": "verizon-sem/p01.jpg"
   },
   {
-   "stem": "a026",
-   "caption": "Verizon.com homepage — connecting you with what matters",
-   "tags": [
-    "web"
-   ],
-   "w": 1940,
-   "h": 1163,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1940
-   ],
-   "source": "A",
-   "page": 26
-  },
-  {
-   "stem": "a028",
-   "caption": "Chat assistant on mobile",
-   "tags": [
-    "web",
-    "mobile"
-   ],
-   "w": 791,
-   "h": 1702,
-   "widths": [
-    600,
-    791
-   ],
-   "source": "A",
-   "page": 28
-  },
-  {
-   "stem": "a027",
-   "caption": "Voice assistant states — idle, waiting, listening, thinking, done, error",
-   "tags": [
-    "web",
-    "product"
-   ],
-   "w": 2400,
-   "h": 1509,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "A",
-   "page": 27
-  },
-  {
-   "stem": "a029",
-   "caption": "NHG Thin in application — in-store and online",
+   "stem": "p02",
+   "caption": "Agenda — the retail design system and the reset",
    "tags": [
     "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1347,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "A",
-   "page": 29
-  },
-  {
-   "stem": "a030",
-   "caption": "Vivid Red — digital color use",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1347,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "A",
-   "page": 30
-  },
-  {
-   "stem": "a031",
-   "caption": "Gray as a subtle accent on-screen",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1347,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "A",
-   "page": 31
-  },
-  {
-   "stem": "b085",
-   "caption": "Express Pickup Lockers — retail brand design",
-   "tags": [
-    "brand"
-   ],
-   "w": 1687,
-   "h": 925,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1687
-   ],
-   "source": "B",
-   "page": 85
-  },
-  {
-   "stem": "c002-1",
-   "caption": "Printed assets for national retail — one type system across every format",
-   "tags": [
-    "brand"
-   ],
-   "w": 2397,
-   "h": 1220,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2397
-   ],
-   "source": "C",
-   "page": 2
-  },
-  {
-   "stem": "c002-2",
-   "caption": "Printed assets for national retail — one type system across every format",
-   "tags": [
-    "brand"
-   ],
-   "w": 1690,
-   "h": 950,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1690
-   ],
-   "source": "C",
-   "page": 2
-  },
-  {
-   "stem": "c003-1",
-   "caption": "Ultra signage — the counter unit",
-   "tags": [
-    "brand"
-   ],
-   "w": 1722,
-   "h": 1167,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1722
-   ],
-   "source": "C",
-   "page": 3
-  },
-  {
-   "stem": "c003-2",
-   "caption": "Nuestros mejores planes — the wall",
-   "tags": [
-    "brand"
-   ],
-   "w": 2292,
-   "h": 1565,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2292
-   ],
-   "source": "C",
-   "page": 3
-  },
-  {
-   "stem": "c004-1",
-   "caption": "Our best plan ever — the light box",
-   "tags": [
-    "brand"
-   ],
-   "w": 1384,
-   "h": 892,
-   "widths": [
-    600,
-    1200,
-    1384
-   ],
-   "source": "C",
-   "page": 4
-  },
-  {
-   "stem": "c004-2",
-   "caption": "The Ultra table",
-   "tags": [
-    "brand"
-   ],
-   "w": 2292,
-   "h": 1565,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2292
-   ],
-   "source": "C",
-   "page": 4
-  },
-  {
-   "stem": "c020-3",
-   "caption": "The storefront",
-   "tags": [
-    "brand"
-   ],
-   "w": 1342,
-   "h": 699,
-   "widths": [
-    600,
-    1200,
-    1342
-   ],
-   "source": "C",
-   "page": 20
-  },
-  {
-   "stem": "a032",
-   "caption": "Executing growth across five vectors — strategy deck",
-   "tags": [
     "strategy"
    ],
    "w": 2400,
-   "h": 1347,
+   "h": 1350,
    "widths": [
     600,
     1200,
     1600,
     2400
    ],
-   "source": "A",
-   "page": 32
+   "source": "IMG",
+   "page": "verizon-sem/p02.jpg"
+  },
+  {
+   "stem": "p04",
+   "caption": "Optimizing the retail design system",
+   "tags": [
+    "strategy"
+   ],
+   "w": 2000,
+   "h": 1125,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2000
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p04.jpg"
+  },
+  {
+   "stem": "p05",
+   "caption": "Towards a responsive retail environment",
+   "tags": [
+    "strategy"
+   ],
+   "w": 2000,
+   "h": 1125,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2000
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p05.jpg"
+  },
+  {
+   "stem": "p07",
+   "caption": "What is happening, when — the roadmap",
+   "tags": [
+    "strategy"
+   ],
+   "w": 2000,
+   "h": 1125,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2000
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p07.jpg"
+  },
+  {
+   "stem": "p09",
+   "caption": "Entry",
+   "tags": [
+    "brand"
+   ],
+   "w": 2000,
+   "h": 1125,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2000
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p09.jpg"
+  },
+  {
+   "stem": "p10",
+   "caption": "The floor, looking in",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p10.jpg"
+  },
+  {
+   "stem": "p11",
+   "caption": "The floor, with the wall behind it",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p11.jpg"
+  },
+  {
+   "stem": "p12",
+   "caption": "Wayfinding",
+   "tags": [
+    "brand"
+   ],
+   "w": 2000,
+   "h": 1125,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2000
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p12.jpg"
+  },
+  {
+   "stem": "p13",
+   "caption": "Three tiers of wayfinding in the store",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p13.jpg"
+  },
+  {
+   "stem": "p14",
+   "caption": "Back Wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2000,
+   "h": 1125,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2000
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p14.jpg"
+  },
+  {
+   "stem": "p17",
+   "caption": "Business",
+   "tags": [
+    "brand"
+   ],
+   "w": 2000,
+   "h": 1125,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2000
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p17.jpg"
+  },
+  {
+   "stem": "p18",
+   "caption": "The Business bay and its aisle fixture",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p18.jpg"
+  },
+  {
+   "stem": "p19",
+   "caption": "Live Try",
+   "tags": [
+    "brand"
+   ],
+   "w": 2000,
+   "h": 1125,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2000
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p19.jpg"
+  },
+  {
+   "stem": "p20",
+   "caption": "Live Try — the wall without the gradient",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p20.jpg"
+  },
+  {
+   "stem": "p23",
+   "caption": "Aisle Fixtures",
+   "tags": [
+    "brand"
+   ],
+   "w": 2000,
+   "h": 1125,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2000
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p23.jpg"
+  },
+  {
+   "stem": "p24",
+   "caption": "Aisle fixtures — the frame and the paper-white stage",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1351,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p24.jpg"
+  },
+  {
+   "stem": "p25",
+   "caption": "Aisle headers, by category",
+   "tags": [
+    "brand",
+    "editorial"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p25.jpg"
+  },
+  {
+   "stem": "p27",
+   "caption": "Future state — the grey back wall today",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p27.jpg"
+  },
+  {
+   "stem": "p28",
+   "caption": "Future state — digital carried through",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p28.jpg"
+  },
+  {
+   "stem": "p29",
+   "caption": "The Home wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p29.jpg"
+  },
+  {
+   "stem": "p30",
+   "caption": "The floor from the entry",
+   "tags": [
+    "brand"
+   ],
+   "w": 2050,
+   "h": 1154,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2050
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p30.jpg"
+  },
+  {
+   "stem": "p31",
+   "caption": "Digital replaces print at Live Try",
+   "tags": [
+    "brand",
+    "product"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p31.jpg"
+  },
+  {
+   "stem": "p32",
+   "caption": "The collaboration table",
+   "tags": [
+    "brand"
+   ],
+   "w": 2050,
+   "h": 1154,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2050
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p32.jpg"
+  },
+  {
+   "stem": "p33",
+   "caption": "The floor, wide",
+   "tags": [
+    "brand"
+   ],
+   "w": 2000,
+   "h": 1125,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2000
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p33.jpg"
+  },
+  {
+   "stem": "p34",
+   "caption": "Express Pickup Lockers and the Business wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "verizon-sem/p34.jpg"
   },
   {
    "stem": "drop01",
@@ -392,13 +563,13 @@
    "page": "drop07"
   },
   {
-   "stem": "drop12",
-   "caption": "Retail SEM — holistic principles, journey, components",
+   "stem": "drop08",
+   "caption": "Executing growth across 5 vectors — a deck slide",
    "tags": [
     "brand"
    ],
    "w": 2400,
-   "h": 1350,
+   "h": 1349,
    "widths": [
     600,
     1200,
@@ -406,11 +577,28 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop12"
+   "page": "drop08"
   },
   {
-   "stem": "drop13",
-   "caption": "Retail SEM — a responsive retail environment",
+   "stem": "drop09",
+   "caption": "NHG Thin in application — guidelines spread",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1348,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop09"
+  },
+  {
+   "stem": "drop10",
+   "caption": "Vivid red digital use — colour and type swatches",
    "tags": [
     "brand"
    ],
@@ -423,7 +611,24 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop13"
+   "page": "drop10"
+  },
+  {
+   "stem": "drop11",
+   "caption": "Gray as a subtle accent — on-screen page",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1349,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop11"
   },
   {
    "stem": "drop14",
@@ -441,40 +646,6 @@
    ],
    "source": "DROP",
    "page": "drop14"
-  },
-  {
-   "stem": "drop15",
-   "caption": "Retail SEM — entry, the store as you walk in",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop15"
-  },
-  {
-   "stem": "drop16",
-   "caption": "Retail SEM — the three types of wayfinding",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop16"
   },
   {
    "stem": "drop17",
@@ -509,23 +680,6 @@
    ],
    "source": "DROP",
    "page": "drop18"
-  },
-  {
-   "stem": "drop19",
-   "caption": "Retail SEM — the Business bay",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop19"
   },
   {
    "stem": "drop20",
@@ -596,23 +750,6 @@
    "page": "drop23"
   },
   {
-   "stem": "drop24",
-   "caption": "Future state — the store looking in",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop24"
-  },
-  {
    "stem": "drop25",
    "caption": "Future state — the floor",
    "tags": [
@@ -628,23 +765,6 @@
    ],
    "source": "DROP",
    "page": "drop25"
-  },
-  {
-   "stem": "drop26",
-   "caption": "Future state — the Home wall",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop26"
   },
   {
    "stem": "drop27",
@@ -679,57 +799,6 @@
    ],
    "source": "DROP",
    "page": "drop28"
-  },
-  {
-   "stem": "drop29",
-   "caption": "Future state — the collaboration table",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop29"
-  },
-  {
-   "stem": "drop30",
-   "caption": "Future state — the open floor",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop30"
-  },
-  {
-   "stem": "drop31",
-   "caption": "Future state — the accessory wall",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop31"
   },
   {
    "stem": "drop32",
@@ -5432,6 +5501,57 @@
    "page": 19
   },
   {
+   "stem": "h020",
+   "caption": "Search it, Find it, Buy it — the second set",
+   "tags": [
+    "social"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "H",
+   "page": 20
+  },
+  {
+   "stem": "h021",
+   "caption": "Search it, Find it, Buy it — the third set",
+   "tags": [
+    "social"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "H",
+   "page": 21
+  },
+  {
+   "stem": "h022",
+   "caption": "Build your space — story",
+   "tags": [
+    "social"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "H",
+   "page": 22
+  },
+  {
    "stem": "h023",
    "caption": "Search it. Find it. Buy it. — story",
    "tags": [
@@ -6796,6 +6916,23 @@
    ],
    "source": "DROP",
    "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "Launch poster — YSoA Literature Paper No.1",
+   "tags": [
+    "brand"
+   ],
+   "w": 1839,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1839
+   ],
+   "source": "DROP",
+   "page": "drop05"
   }
  ]
 }

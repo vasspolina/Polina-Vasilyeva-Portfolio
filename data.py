@@ -100,7 +100,7 @@ PROJECTS = [
  {
   "slug": "verizon", "title": "Verizon",
   "year": "2022–2023",
-  "cover": "c001",
+  "cover": "p01",
   "group": "brand", "short": "Web, retail &amp; brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
   "desc": ["Research, then a single set of design standards unified "
@@ -124,33 +124,34 @@ PROJECTS = [
            "audits and workshops to improve the system from within, "
            "managing several projects at once across retail and digital."],
   "pages": [
-    # The deck's own title slide: the wordmark on the grey slide ground, which
-    # is the cover. Sliced off the top of the page, above the poster below it.
-    ("C", 1,  "Brand design for national retail", ["brand"],
-              {"crop": False, "slices": [(0.0107, 0.3465)]}),
-    ("A", 26, "Verizon.com homepage — connecting you with what matters", ["web"], {"dechrome": True}),
-    ("A", 28, "Chat assistant on mobile", ["web", "mobile"], {"debezel": True}),
-    ("A", 27, "Voice assistant states — idle, waiting, listening, thinking, done, error", ["web", "product"]),
-    ("A", 29, "NHG Thin in application — in-store and online", ["brand", "web"]),
-    ("A", 30, "Vivid Red — digital color use", ["brand"]),
-    ("A", 31, "Gray as a subtle accent on-screen", ["brand", "web"]),
-    ("B", 85, "Express Pickup Lockers — retail brand design", ["brand"]),
-    # The third piece is the banner drop06 already carries.
-    ("C", 2,  "Printed assets for national retail — one type system across every format",
-              ["brand"], {"rows": True, "keep": [1, 2]}),
-    # C5 is dropped: its asset sheets, storefront and assistant states are all
-    # carried whole by the folder images below.
-    ("C", 3,  ["Ultra signage — the counter unit",
-               "Nuestros mejores planes — the wall"], ["brand"],
-              {"slices": [(0.024, 0.404), (0.404, 0.914)]}),
-    ("C", 4,  ["Our best plan ever — the light box",
-               "The Ultra table"], ["brand"],
-              {"slices": [(0.024, 0.331), (0.404, 0.914)]}),
-    # The first two are superseded by the Retail SEM pages; only the
-    # storefront is still worth showing.
-    ("C", 20, ["The store, looking in", "Product table merchandising",
-               "The storefront"], ["brand"], {"rows": True, "keep": [3]}),
-    ("A", 32, "Executing growth across five vectors — strategy deck", ["strategy"]),
+    # The Retail SEM working deck, published whole: the system, the
+    # wayfinding tiers, and the store as it was built and as it will be.
+    ("IMG", "verizon-sem/p01.jpg", "Retail SEM — the working deck", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p02.jpg", "Agenda — the retail design system and the reset", ["brand", "strategy"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p04.jpg", "Optimizing the retail design system", ["strategy"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p05.jpg", "Towards a responsive retail environment", ["strategy"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p07.jpg", "What is happening, when — the roadmap", ["strategy"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p09.jpg", "Entry", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p10.jpg", "The floor, looking in", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p11.jpg", "The floor, with the wall behind it", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p12.jpg", "Wayfinding", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p13.jpg", "Three tiers of wayfinding in the store", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p14.jpg", "Back Wall", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p17.jpg", "Business", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p18.jpg", "The Business bay and its aisle fixture", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p19.jpg", "Live Try", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p20.jpg", "Live Try — the wall without the gradient", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p23.jpg", "Aisle Fixtures", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p24.jpg", "Aisle fixtures — the frame and the paper-white stage", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p25.jpg", "Aisle headers, by category", ["brand", "editorial"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p27.jpg", "Future state — the grey back wall today", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p28.jpg", "Future state — digital carried through", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p29.jpg", "The Home wall", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p30.jpg", "The floor from the entry", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p31.jpg", "Digital replaces print at Live Try", ["brand", "product"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p32.jpg", "The collaboration table", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p33.jpg", "The floor, wide", ["brand"], {"crop": False, "split": False}),
+    ("IMG", "verizon-sem/p34.jpg", "Express Pickup Lockers and the Business wall", ["brand"], {"crop": False, "split": False}),
   ],
  },
  {
@@ -566,6 +567,9 @@ PROJECTS = [
  {
   "slug": "furniture", "title": "Furniture.com",
   "year": "2022",
+  # The single mobile screens read as a set when they sit three to a row,
+  # the same rhythm as the story slides that show three phones at once.
+  "piece_width": {"h004": 32, "h006": 32, "h013": 32, "h015": 32},
   "cover": "f012",
   "group": "product", "short": "Web design &amp; digital accessibility",
   "meta": "Furniture.com — with McKinsey &amp; studio Dumbar, 2022 — Web Design &amp; Digital Accessibility",
@@ -615,6 +619,9 @@ PROJECTS = [
     ("H", 15, "Product details and swatches — mobile", ["mobile", "ecommerce"], {"crop": False}),
     ("H", 18, "Instagram story — the campaign in the feed", ["social"], {"crop": False}),
     ("H", 19, "Search it, Find it, Buy it — story set", ["social"], {"crop": False}),
+    ("H", 20, "Search it, Find it, Buy it — the second set", ["social"], {"crop": False}),
+    ("H", 21, "Search it, Find it, Buy it — the third set", ["social"], {"crop": False}),
+    ("H", 22, "Build your space — story", ["social"], {"crop": False}),
     ("H", 23, "Search it. Find it. Buy it. — story", ["social"], {"crop": False}),
     ("H", 24, "The perfect chair for you — story", ["social"], {"crop": False}),
     ("H", 25, "Search it. Find it. Buy it. — story on red", ["social"], {"crop": False}),
