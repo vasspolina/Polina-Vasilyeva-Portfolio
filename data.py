@@ -784,7 +784,9 @@ PROJECTS = [
   "meta": "Dada — Typeface — Passion Project",
   "kind": "specimen",
   "font": {"family": "Dada", "file": "Dada-Regular",
-           "caps": "ACIMOPQRXY", "glyphs": 387, "chars": 370, "year": "2020"},
+           "caps": "ACIMOPQRXY", "glyphs": 387, "chars": 370, "year": "2020",
+           "sample": "MOMA QUARTZ PARIS",
+           "ladder": "DADA IS NOT DEAD, IT SMELLS OF LAUGHTER"},
   "desc": ["A Dada intervention on a grotesque, drawn as capitals and "
            "figures only. Ten of the twenty-six, <em>A C I M O P Q R X "
            "Y</em>, are cut out and redrawn as biomorphic forms in the "
@@ -805,6 +807,31 @@ PROJECTS = [
     ("IMG", "dada/setting.png",  "Set at text size, all caps", ["editorial"], {"crop": False}),
     ("IMG", "dada/ladder.png",   "One line at falling sizes", ["editorial"], {"crop": False}),
     ("IMG", "dada/inverted.png", "DADA, reversed", ["brand"], {"crop": False}),
+  ],
+ },
+ {
+  "slug": "spiritual-labour", "title": "Spiritual Labour",
+  "year": "2014",
+  "cover": "wordmark",
+  "group": "type", "short": "Typeface",
+  "meta": "Spiritual Labour — Typeface — Passion Project",
+  "kind": "specimen",
+  "font": {"family": "Spiritual Labour", "file": "SpiritualLabour-Regular",
+           "glyphs": 92, "chars": 91, "year": "2014",
+           "set": "Capitals &amp; figures",
+           "sample": "SPIRITUAL LABOUR",
+           "rows": ["ABCDEFGHIJKLM", "NOPQRSTUVWXYZ",
+                    "0123456789", "?!.,;:"],
+           "ladder": "SPIRITUAL LABOUR"},
+  "desc": ["A display face of capitals and figures, drawn as one weight. The "
+           "letters are cut on a curve rather than a stem: bowls swell and "
+           "close, terminals turn back on themselves, and several capitals "
+           "give up their counters entirely.",
+           "Ninety-two glyphs. There is no lowercase, so the page sets "
+           "everything typed into it as capitals."],
+  "pages": [
+    ("IMG", "spirituallabour/wordmark.png", "The wordmark", ["brand"], {"crop": False}),
+    ("IMG", "spirituallabour/charset.png", "Capitals and figures", ["brand"], {"crop": False}),
   ],
  },
  {

@@ -497,30 +497,37 @@ def specimen(proj, desc, pager):
     your own word in it — so this page loads the font and renders real text.
     """
     f = proj["font"]
-    caps = "\n".join(f'      <span class="spec-cap">{c}</span>' for c in f["caps"])
-    # Capitals and figures only. There is no lowercase in this face — typing
-    # any would silently fall through to the Helvetica it was cut from.
-    rows = ["ABCDEFGHIJKLM", "NOPQRSTUVWXYZ",
-            "0123456789", "&amp;?!@#$%*() .,;:"]
+    caps = "\n".join(f'      <span class="spec-cap">{c}</span>' for c in f.get("caps", ""))
+    # Capitals and figures only. There is no lowercase in these faces — typing
+    # any would silently fall through to the face they were cut from.
+    rows = f.get("rows", ["ABCDEFGHIJKLM", "NOPQRSTUVWXYZ",
+                          "0123456789", "&amp;?!@#$%*() .,;:"])
+    redrawn = (f'<dt>Redrawn</dt><dd>{len(f["caps"])} capitals</dd>\n      '
+               if f.get("caps") else "")
+    caps_block = (f"""  <section class="spec-block">
+    <h2 class="about-h">The {len(f["caps"])} redrawn capitals</h2>
+    <div class="spec-caps">
+{caps}
+    </div>
+  </section>
+""" if f.get("caps") else "")
     charset = "\n".join(f'      <div class="spec-row">{r}</div>' for r in rows)
     ladder = "\n".join(
-        f'      <p class="spec-line" style="font-size:{s}px">'
-        f'DADA IS NOT DEAD, IT SMELLS OF LAUGHTER</p>'
-        for s in (96, 64, 44, 30, 21))
+        f'      <p class="spec-line" style="font-size:{sz}px">{f["ladder"]}</p>'
+        for sz in (96, 64, 44, 30, 21))
 
-    return f"""<article class="project specimen">
+    return f"""<article class="project specimen" style="--spec-face:'{f["family"]}'">
   <h1 class="spec-name">{proj["title"].upper()}</h1>
   <div class="spec-head">
     <div class="project-desc">
 {desc}
     </div>
     <dl class="spec-facts">
-      <dt>Set</dt><dd>Capitals &amp; figures</dd>
+      <dt>Set</dt><dd>{f.get("set", "Capitals &amp; figures")}</dd>
       <dt>Styles</dt><dd>1 — Regular</dd>
       <dt>Glyphs</dt><dd>{f["glyphs"]}</dd>
       <dt>Characters</dt><dd>{f["chars"]}</dd>
-      <dt>Redrawn</dt><dd>{len(f["caps"])} capitals</dd>
-      <dt>Year</dt><dd>{f["year"]}</dd>
+      {redrawn}<dt>Year</dt><dd>{f["year"]}</dd>
       <dt>Status</dt><dd>Unreleased</dd>
     </dl>
   </div>
@@ -536,16 +543,10 @@ def specimen(proj, desc, pager):
     </div>
     <div class="spec-stage" id="spec-stage" contenteditable="true"
          spellcheck="false" role="textbox" aria-multiline="true"
-         aria-label="Editable specimen">MOMA QUARTZ PARIS</div>
+         aria-label="Editable specimen">{f.get("sample", "MOMA QUARTZ PARIS")}</div>
   </section>
 
-  <section class="spec-block">
-    <h2 class="about-h">The {len(f["caps"])} redrawn capitals</h2>
-    <div class="spec-caps">
-{caps}
-    </div>
-  </section>
-
+{caps_block}
   <section class="spec-block">
     <h2 class="about-h">Character set</h2>
     <div class="spec-charset">

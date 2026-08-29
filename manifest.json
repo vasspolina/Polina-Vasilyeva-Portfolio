@@ -6934,5 +6934,41 @@
    "source": "DROP",
    "page": "drop05"
   }
+ ],
+ "spiritual-labour": [
+  {
+   "stem": "wordmark",
+   "caption": "The wordmark",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1500,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "spirituallabour/wordmark.png"
+  },
+  {
+   "stem": "charset",
+   "caption": "Capitals and figures",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "spirituallabour/charset.png"
+  }
  ]
 }

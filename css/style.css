@@ -513,8 +513,16 @@ a:focus-visible, button:focus-visible {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Spiritual Labour";
+  src: url("../fonts/SpiritualLabour-Regular.woff2") format("woff2"),
+       url("../fonts/SpiritualLabour-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
 .spec-name {
-  font-family: "Dada", "PP Telegraf", sans-serif;
+  font-family: var(--spec-face, "Dada"), "PP Telegraf", sans-serif;
   font-size: clamp(96px, 26vw, 380px);
   line-height: 1.2;
   letter-spacing: 0;
@@ -560,7 +568,7 @@ a:focus-visible, button:focus-visible {
 .spec-slider input { accent-color: var(--accent); width: 180px; }
 
 .spec-stage {
-  font-family: "Dada", "PP Telegraf", sans-serif;
+  font-family: var(--spec-face, "Dada"), "PP Telegraf", sans-serif;
   /* The face is capitals and figures only; uppercase whatever is typed so a
      visitor never sees it fall back to plain Helvetica lowercase. */
   text-transform: uppercase;
@@ -580,14 +588,14 @@ a:focus-visible, button:focus-visible {
   margin-top: var(--space-2);
 }
 .spec-cap {
-  font-family: "Dada", sans-serif;
+  font-family: var(--spec-face, "Dada"), sans-serif;
   font-size: 96px;
   line-height: 1.2;
   letter-spacing: 0;
 }
 .spec-charset { margin-top: var(--space-2); }
 .spec-row {
-  font-family: "Dada", sans-serif;
+  font-family: var(--spec-face, "Dada"), sans-serif;
   font-size: clamp(28px, 6vw, 68px);
   line-height: 1.2;
   letter-spacing: 0;
@@ -595,7 +603,7 @@ a:focus-visible, button:focus-visible {
 }
 .spec-ladder { margin-top: var(--space-2); }
 .spec-line {
-  font-family: "Dada", sans-serif;
+  font-family: var(--spec-face, "Dada"), sans-serif;
   line-height: 1.2;
   letter-spacing: 0;
   margin-bottom: var(--space-2);
