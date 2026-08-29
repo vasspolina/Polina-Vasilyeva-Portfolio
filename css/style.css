@@ -428,6 +428,9 @@ a:focus-visible, button:focus-visible {
    own line instead of wrapping after the last word. */
 .pager a { display: inline-block; }
 .pager .arrow { display: block; }
+/* The next link is set to the right, so its arrow sits over the right edge
+   of the title rather than over the left. */
+.pager a:last-child { text-align: right; }
 
 @media (max-width: 767px) {
   .project-title { font-size: 24px; }
