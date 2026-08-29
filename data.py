@@ -639,8 +639,8 @@ PROJECTS = [
     ("H", 19, "Search it, Find it, Buy it — story set", ["social"], {"crop": False}),
     ("H", 20, "Search it, Find it, Buy it — the second set", ["social"], {"crop": False}),
     ("H", 21, "Search it, Find it, Buy it — the third set", ["social"], {"crop": False}),
-    ("H", 22, "Build your space — story", ["social"], {"crop": False}),
-    ("H", 23, "Search it. Find it. Buy it. — story", ["social"], {"crop": False}),
+    ("IMG", "furniture/story-set-1.png", "Build your space, and Search it Find it Buy it — stories",
+     ["social"], {"crop": False, "split": False}),
     ("H", 24, "The perfect chair for you — story", ["social"], {"crop": False}),
     ("H", 25, "Search it. Find it. Buy it. — story on red", ["social"], {"crop": False}),
     ("H", 26, "Your new sofa is waiting — social post", ["social"], {"crop": False}),
@@ -650,6 +650,29 @@ PROJECTS = [
     ("H", 33, "Display — room for the whole family", ["brand", "web"], {"crop": False}),
     ("H", 37, "Out of home — Search it, Find it, Buy it", ["brand"], {"crop": False}),
     ("H", 39, "Out of home — the second run", ["brand"], {"crop": False}),
+  ],
+ },
+ {
+  "slug": "bts-advocaten", "title": "Bektesevic Ter Steeg Advocaten",
+  "year": "2026",
+  "drop_tags": ["web", "brand"],
+  "cover": "drop01",
+  "group": "product", "short": "Website &amp; identity",
+  "meta": "Bektesevic Ter Steeg Advocaten — Website &amp; Identity",
+  # The site is designed but the copy on it is the firm's own; nothing here
+  # describes the practice beyond what the pages themselves state.
+  "desc": ["Website and identity for Bektesevic Ter Steeg Advocaten, a "
+           "criminal defence practice in Amsterdam. The wordmark sets the "
+           "two names in a grotesque and the word <em>advocaten</em> in a "
+           "serif, and the pages hold that pairing: the sentence runs "
+           "between the two faces, so the emphasis falls inside the line "
+           "rather than on a heading above it.",
+           "Bands of pale blue and white carry the argument down the page, "
+           "and the type is set large enough to be read at arm's length. "
+           "Designed for the desktop and the phone, with expertise, "
+           "lawyers and contact each taking the same structure."],
+  "pages": [
+    # Everything comes from drop/bts-advocaten/.
   ],
  },
  {
