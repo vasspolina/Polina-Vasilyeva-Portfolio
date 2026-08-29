@@ -33,6 +33,261 @@
    "page": "verizon-sem/p01.jpg"
   },
   {
+   "stem": "a026",
+   "caption": "Verizon.com homepage — connecting you with what matters",
+   "tags": [
+    "web"
+   ],
+   "w": 1940,
+   "h": 1163,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1940
+   ],
+   "source": "A",
+   "page": 26
+  },
+  {
+   "stem": "a028",
+   "caption": "Chat assistant on mobile",
+   "tags": [
+    "web",
+    "mobile"
+   ],
+   "w": 791,
+   "h": 1702,
+   "widths": [
+    600,
+    791
+   ],
+   "source": "A",
+   "page": 28
+  },
+  {
+   "stem": "a027",
+   "caption": "Voice assistant states — idle, waiting, listening, thinking, done, error",
+   "tags": [
+    "web",
+    "product"
+   ],
+   "w": 2400,
+   "h": 1509,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "A",
+   "page": 27
+  },
+  {
+   "stem": "a029",
+   "caption": "NHG Thin in application — in-store and online",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1347,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "A",
+   "page": 29
+  },
+  {
+   "stem": "a030",
+   "caption": "Vivid Red — digital color use",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1347,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "A",
+   "page": 30
+  },
+  {
+   "stem": "a031",
+   "caption": "Gray as a subtle accent on-screen",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1347,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "A",
+   "page": 31
+  },
+  {
+   "stem": "b085",
+   "caption": "Express Pickup Lockers — retail brand design",
+   "tags": [
+    "brand"
+   ],
+   "w": 1687,
+   "h": 925,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1687
+   ],
+   "source": "B",
+   "page": 85
+  },
+  {
+   "stem": "c002-1",
+   "caption": "Printed assets for national retail — one type system across every format",
+   "tags": [
+    "brand"
+   ],
+   "w": 2397,
+   "h": 1220,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2397
+   ],
+   "source": "C",
+   "page": 2
+  },
+  {
+   "stem": "c002-2",
+   "caption": "Printed assets for national retail — one type system across every format",
+   "tags": [
+    "brand"
+   ],
+   "w": 1690,
+   "h": 950,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1690
+   ],
+   "source": "C",
+   "page": 2
+  },
+  {
+   "stem": "c003-1",
+   "caption": "Ultra signage — the counter unit",
+   "tags": [
+    "brand"
+   ],
+   "w": 1722,
+   "h": 1167,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1722
+   ],
+   "source": "C",
+   "page": 3
+  },
+  {
+   "stem": "c003-2",
+   "caption": "Nuestros mejores planes — the wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2292,
+   "h": 1565,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2292
+   ],
+   "source": "C",
+   "page": 3
+  },
+  {
+   "stem": "c004-1",
+   "caption": "Our best plan ever — the light box",
+   "tags": [
+    "brand"
+   ],
+   "w": 1384,
+   "h": 892,
+   "widths": [
+    600,
+    1200,
+    1384
+   ],
+   "source": "C",
+   "page": 4
+  },
+  {
+   "stem": "c004-2",
+   "caption": "The Ultra table",
+   "tags": [
+    "brand"
+   ],
+   "w": 2292,
+   "h": 1565,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2292
+   ],
+   "source": "C",
+   "page": 4
+  },
+  {
+   "stem": "c020-3",
+   "caption": "The storefront",
+   "tags": [
+    "brand"
+   ],
+   "w": 1342,
+   "h": 699,
+   "widths": [
+    600,
+    1200,
+    1342
+   ],
+   "source": "C",
+   "page": 20
+  },
+  {
+   "stem": "a032",
+   "caption": "Executing growth across five vectors — strategy deck",
+   "tags": [
+    "strategy"
+   ],
+   "w": 2400,
+   "h": 1347,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "A",
+   "page": 32
+  },
+  {
    "stem": "p02",
    "caption": "Agenda — the retail design system and the reset",
    "tags": [
@@ -578,74 +833,6 @@
    ],
    "source": "DROP",
    "page": "drop07"
-  },
-  {
-   "stem": "drop08",
-   "caption": "Executing growth across 5 vectors — a deck slide",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1349,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop08"
-  },
-  {
-   "stem": "drop09",
-   "caption": "NHG Thin in application — guidelines spread",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1348,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop09"
-  },
-  {
-   "stem": "drop10",
-   "caption": "Vivid red digital use — colour and type swatches",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop10"
-  },
-  {
-   "stem": "drop11",
-   "caption": "Gray as a subtle accent — on-screen page",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1349,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop11"
   },
   {
    "stem": "drop14",
@@ -4803,6 +4990,57 @@
  ],
  "furniture": [
   {
+   "stem": "mobile-set-1",
+   "caption": "Mobile — home, categories, and the little ones",
+   "tags": [
+    "mobile"
+   ],
+   "w": 2196,
+   "h": 1400,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2196
+   ],
+   "source": "IMG",
+   "page": "furniture/mobile-set-1.png"
+  },
+  {
+   "stem": "mobile-set-2",
+   "caption": "Mobile — browse rooms and the living room",
+   "tags": [
+    "mobile"
+   ],
+   "w": 2196,
+   "h": 1400,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2196
+   ],
+   "source": "IMG",
+   "page": "furniture/mobile-set-2.png"
+  },
+  {
+   "stem": "mobile-set-3",
+   "caption": "Mobile — the product page and its details",
+   "tags": [
+    "mobile",
+    "ecommerce"
+   ],
+   "w": 1518,
+   "h": 1400,
+   "widths": [
+    600,
+    1200,
+    1518
+   ],
+   "source": "IMG",
+   "page": "furniture/mobile-set-3.png"
+  },
+  {
    "stem": "f001",
    "caption": "Find it… — campaign banner",
    "tags": [
@@ -4941,74 +5179,6 @@
    ],
    "source": "F",
    "page": 22
-  },
-  {
-   "stem": "f023",
-   "caption": "Mobile homepage",
-   "tags": [
-    "mobile"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "F",
-   "page": 23
-  },
-  {
-   "stem": "f024",
-   "caption": "Featured categories — mobile",
-   "tags": [
-    "mobile"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "F",
-   "page": 24
-  },
-  {
-   "stem": "f025",
-   "caption": "Furniture for your little ones — mobile",
-   "tags": [
-    "mobile"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "F",
-   "page": 25
-  },
-  {
-   "stem": "f027",
-   "caption": "Browse rooms — mobile",
-   "tags": [
-    "mobile"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "F",
-   "page": 27
   },
   {
    "stem": "g003",
@@ -5183,40 +5353,6 @@
    "page": 2
   },
   {
-   "stem": "h004",
-   "caption": "Living Room — mobile",
-   "tags": [
-    "mobile"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "H",
-   "page": 4
-  },
-  {
-   "stem": "h006",
-   "caption": "The chair that fits — mobile",
-   "tags": [
-    "mobile"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "H",
-   "page": 6
-  },
-  {
    "stem": "h008",
    "caption": "Highland Sunflower Sofa — product page",
    "tags": [
@@ -5269,42 +5405,6 @@
    ],
    "source": "H",
    "page": 12
-  },
-  {
-   "stem": "h013",
-   "caption": "Product page — mobile",
-   "tags": [
-    "mobile",
-    "ecommerce"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "H",
-   "page": 13
-  },
-  {
-   "stem": "h015",
-   "caption": "Product details and swatches — mobile",
-   "tags": [
-    "mobile",
-    "ecommerce"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "H",
-   "page": 15
   },
   {
    "stem": "h018",
