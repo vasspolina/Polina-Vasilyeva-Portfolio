@@ -100,7 +100,7 @@ PROJECTS = [
  {
   "slug": "verizon", "title": "Verizon",
   "year": "2022–2023",
-  "cover": "p10",
+  "cover": "c001",
   "group": "brand", "short": "Web, retail &amp; brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
   "desc": ["Research, then a single set of design standards unified "
@@ -124,6 +124,11 @@ PROJECTS = [
            "audits and workshops to improve the system from within, "
            "managing several projects at once across retail and digital."],
   "pages": [
+    # The deck's own title slide carries the wordmark on the slide ground, and
+    # the Retail SEM title exists only at 1020px — too small to be a cover.
+    ("C", 1,  "Brand design for national retail", ["brand"],
+              {"crop": False, "slices": [(0.0107, 0.3465)]}),
+
     # The Retail SEM working deck, published whole: the system, the
     # wayfinding tiers, and the store as it was built and as it will be.
     ("IMG", "verizon-sem/p01.jpg", "Retail SEM — the working deck", ["brand"], {"crop": False, "split": False}),
@@ -160,6 +165,9 @@ PROJECTS = [
   # The logo slide reads tighter than 16:9: the wordmark sits in a
   # narrower field, so the slide ground is taken in from both sides.
   "piece_crop": {"b062": (0, 0.0875, 0, 0.0875)},
+  # The research pages are spreads of type; two to a row keeps them
+  # readable without letting one fill the measure alone.
+  "piece_width": {"drop05": 48, "drop06": 48, "drop07": 48},
   "cover": "b062",
   "group": "brand", "short": "Brand, e-commerce &amp; strategy",
   "meta": "Haworth — with Apartamento Studios — Brand, E-commerce &amp; Digital Strategy",
@@ -188,9 +196,14 @@ PROJECTS = [
   "pages": [
     ("A", 59, "Haworth.com homepage — Inspired Design", ["ecommerce", "web"],
      {"dechrome": True, "span": 6}),
+    ("IMG", "haworth/collection-lockup.png", "Haworth Collection lockup on navy",
+     ["brand"], {"crop": False}),
+    ("B", 62, "Haworth — logo design", ["brand"], {"crop": False}),
+    ("IMG", "haworth/social-five-screens.png",
+     "Instagram posts and stories — five screens", ["social"],
+     {"crop": False, "split": False, "bleed": True}),
     ("A", 60, "Editorial modules — workplace research stories", ["ecommerce", "web"],
      {"dechrome": True, "span": 6}),
-    ("B", 62, "Haworth — logo design", ["brand"], {"crop": False}),
     # b063 and the first half of b064 are dropped: one repeats the shoot, the
     # other carries the "Art Direction" divider band across its foot.
     ("B", 64, "New York headquarters — art direction", ["brand"], {"keep": [2]}),
@@ -393,8 +406,6 @@ PROJECTS = [
     ("E", 110, "Brand book — print and premium products", ["brand", "editorial"],
      {"crop": False, "split": False, "span": 2}),
     ("E", 112, "Brand book — digital", ["brand", "editorial"],
-     {"crop": False, "split": False, "span": 2}),
-    ("E", 113, "Brand book — digital", ["brand", "editorial"],
      {"crop": False, "split": False, "span": 2}),
     ("VID", "haworth-opening-title.mp4", "Opening title", ["brand"],
      {"src": "/Volumes/Expansion/opening_title_2_HAWORTH.mov",

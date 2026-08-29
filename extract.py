@@ -398,6 +398,10 @@ def whiten_corners(im, thresh=48):
     the page; flooding from each corner over the connected dark region takes
     the wedge and nothing else, because the wedge does not touch the artwork.
     """
+    if im.mode in ("RGBA", "LA"):
+        # Transparent artwork carries no window-corner wedge, and converting to
+        # RGB to look for one would throw the alpha away.
+        return im
     rgb = im.convert("RGB")
     w, h = rgb.size
     before = np.asarray(rgb).copy()
@@ -417,6 +421,8 @@ def whiten_corners(im, thresh=48):
 
 
 def flatten_white(im):
+    # Kept for pieces that ask for it; transparency is otherwise preserved,
+    # since a spread drawn on a transparent ground is meant to sit on the page.
     """Flatten a keyed cutout onto white before it is published.
 
     drop_backdrop and cut_out remove a studio ground and leave the piece on a
@@ -1031,7 +1037,6 @@ def main():
                 # Flatten first: whiten_corners works in RGB, and dropping the
                 # alpha off a piece drawn as black-on-transparent — the type
                 # specimens — leaves a solid black rectangle.
-                piece = flatten_white(piece)
                 piece = whiten_corners(piece)
                 targets = [t for t in WIDTHS if t < piece.width]
                 targets.append(min(piece.width, WIDTHS[-1]))
@@ -1095,7 +1100,6 @@ def main():
                 piece = piece.crop((round(pw * l), round(ph * t),
                                     pw - round(pw * r), ph - round(ph * b)))
                 piece = trim_edge_lines(piece)
-            piece = flatten_white(piece)
             piece = whiten_corners(piece)
             targets = [t for t in WIDTHS if t < piece.width]
             targets.append(min(piece.width, WIDTHS[-1]))

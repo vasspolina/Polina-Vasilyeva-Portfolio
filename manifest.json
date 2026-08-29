@@ -1,6 +1,23 @@
 {
  "verizon": [
   {
+   "stem": "c001",
+   "caption": "Brand design for national retail",
+   "tags": [
+    "brand"
+   ],
+   "w": 2311,
+   "h": 1140,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2311
+   ],
+   "source": "C",
+   "page": 1
+  },
+  {
    "stem": "p01",
    "caption": "Retail SEM — the working deck",
    "tags": [
@@ -939,23 +956,21 @@
    "span": 6
   },
   {
-   "stem": "a060",
-   "caption": "Editorial modules — workplace research stories",
+   "stem": "collection-lockup",
+   "caption": "Haworth Collection lockup on navy",
    "tags": [
-    "ecommerce",
-    "web"
+    "brand"
    ],
    "w": 2400,
-   "h": 1390,
+   "h": 1349,
    "widths": [
     600,
     1200,
     1600,
     2400
    ],
-   "source": "A",
-   "page": 60,
-   "span": 6
+   "source": "IMG",
+   "page": "haworth/collection-lockup.png"
   },
   {
    "stem": "b062",
@@ -973,6 +988,43 @@
    ],
    "source": "B",
    "page": 62
+  },
+  {
+   "stem": "social-five-screens",
+   "caption": "Instagram posts and stories — five screens",
+   "tags": [
+    "social"
+   ],
+   "w": 2400,
+   "h": 1349,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "haworth/social-five-screens.png",
+   "bleed": true
+  },
+  {
+   "stem": "a060",
+   "caption": "Editorial modules — workplace research stories",
+   "tags": [
+    "ecommerce",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1390,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "A",
+   "page": 60,
+   "span": 6
   },
   {
    "stem": "b064-2",
@@ -2892,41 +2944,7 @@
    "span": 2
   },
   {
-   "stem": "e113",
-   "caption": "Brand book — digital",
-   "tags": [
-    "brand",
-    "editorial"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "E",
-   "page": 113,
-   "span": 2
-  },
-  {
    "stem": "drop01",
-   "caption": "Instagram feed — Uquiola quote and NeoCon '19",
-   "tags": [
-    "brand"
-   ],
-   "w": 1198,
-   "h": 2459,
-   "widths": [
-    600,
-    1198
-   ],
-   "source": "DROP",
-   "page": "drop01"
-  },
-  {
-   "stem": "drop02",
    "caption": "Hall of Fame Awards invitation — portrait and landscape",
    "tags": [
     "brand"
@@ -2940,11 +2958,28 @@
     2400
    ],
    "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop02",
+   "caption": "Active Components Upper Storage — features sell sheet",
+   "tags": [
+    "brand"
+   ],
+   "w": 1682,
+   "h": 2177,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1682
+   ],
+   "source": "DROP",
    "page": "drop02"
   },
   {
    "stem": "drop03",
-   "caption": "Active Components Upper Storage — features sell sheet",
+   "caption": "Active Components Upper Storage — sell sheet cover",
    "tags": [
     "brand"
    ],
@@ -2960,58 +2995,7 @@
    "page": "drop03"
   },
   {
-   "stem": "drop04",
-   "caption": "Active Components Upper Storage — sell sheet cover",
-   "tags": [
-    "brand"
-   ],
-   "w": 1682,
-   "h": 2177,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1682
-   ],
-   "source": "DROP",
-   "page": "drop04"
-  },
-  {
    "stem": "drop05",
-   "caption": "Haworth Collection lockup on navy",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop05"
-  },
-  {
-   "stem": "drop07",
-   "caption": "Instagram posts and stories — five screens",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1349,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop07"
-  },
-  {
-   "stem": "drop08",
    "caption": "Research deck — stakeholder interview quotes",
    "tags": [
     "brand"
@@ -3025,10 +3009,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop08"
+   "page": "drop05"
   },
   {
-   "stem": "drop09",
+   "stem": "drop06",
    "caption": "Competitor matrix — content and tools compared",
    "tags": [
     "brand"
@@ -3042,10 +3026,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop09"
+   "page": "drop06"
   },
   {
-   "stem": "drop10",
+   "stem": "drop07",
    "caption": "Research spread — challenge and opportunity",
    "tags": [
     "brand"
@@ -3059,7 +3043,7 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop10"
+   "page": "drop07"
   }
  ],
  "alexander-wang": [
