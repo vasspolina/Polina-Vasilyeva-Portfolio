@@ -629,8 +629,8 @@ for i, proj in enumerate(PROJECTS):
     plain = proj["desc"][0].replace("<em>", "").replace("</em>", "")
 
     pager = f"""  <nav class="pager" aria-label="More projects">
-    <a href="{prev_p["slug"]}.html">← {prev_p["title"]}</a>
-    <a href="{next_p["slug"]}.html">{next_p["title"]} →</a>
+    <a href="{prev_p["slug"]}.html"><span class="arrow">←</span>{prev_p["title"]}</a>
+    <a href="{next_p["slug"]}.html">{next_p["title"]}<span class="arrow">→</span></a>
   </nav>"""
 
     if proj.get("kind") == "specimen":

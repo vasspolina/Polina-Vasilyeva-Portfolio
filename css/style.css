@@ -424,6 +424,10 @@ a:focus-visible, button:focus-visible {
   border-top: 1px solid var(--hairline);
   font-size: 18px;
 }
+/* The arrow reads as a direction, not as part of the title, so it takes its
+   own line instead of wrapping after the last word. */
+.pager a { display: inline-block; }
+.pager .arrow { display: block; }
 
 @media (max-width: 767px) {
   .project-title { font-size: 24px; }
@@ -964,7 +968,9 @@ em, i, cite, address, dfn, var { font-style: normal; }
   /* A tight gutter here: at 375px three pinned pieces plus two 32px gaps
      overflow the measure by 26px and the third wraps. */
   .project-images { display: flex; flex-wrap: wrap; gap: calc(var(--space-4) * 0.36) var(--space-1); }
-  .project-images > .work-figure { width: 100%; margin: 0 0 calc(var(--space-4) * 0.36); }
+  /* Every piece runs the full measure on a phone. A width pinned for the
+     desktop grid has no meaning in a single column. */
+  .project-images > .work-figure { width: 100% !important; margin: 0 0 calc(var(--space-4) * 0.36); }
   .project-images > .work-figure.is-set { margin-bottom: var(--space-3); }
   .project-images > .work-figure img,
   .project-images > .work-figure video {

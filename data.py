@@ -128,7 +128,6 @@ PROJECTS = [
     # the Retail SEM title exists only at 1020px — too small to be a cover.
     ("C", 1,  "Brand design for national retail", ["brand"],
               {"crop": False, "slices": [(0.0107, 0.3465)]}),
-
     # The Retail SEM working deck, published whole: the system, the
     # wayfinding tiers, and the store as it was built and as it will be.
     ("IMG", "verizon-sem/p01.jpg", "Retail SEM — the working deck", ["brand"], {"crop": False, "split": False}),
@@ -167,8 +166,9 @@ PROJECTS = [
   "piece_crop": {"b062": (0, 0.0875, 0, 0.0875)},
   # The research pages are spreads of type; two to a row keeps them
   # readable without letting one fill the measure alone.
-  "piece_width": {"drop05": 48, "drop06": 48, "drop07": 48},
-  "cover": "b062",
+  "piece_width": {"drop05": 48, "drop06": 48, "drop07": 48,
+                  "a060": 30, "b064-2": 30, "b065-1": 30, "b065-2": 30},
+  "cover": "social-five-screens",
   "group": "brand", "short": "Brand, e-commerce &amp; strategy",
   "meta": "Haworth — with Apartamento Studios — Brand, E-commerce &amp; Digital Strategy",
   "desc": ["E-commerce design and digital strategy for the Haworth "
@@ -417,11 +417,12 @@ PROJECTS = [
  },
  {
   "slug": "alexander-wang", "title": "Alexander Wang",
-  "piece_width": {"b009-1": 40, "b009-2": 40, "b009-3": 40},
   # The lockup alone: the slide's own caption line sits below it.
+  "piece_width": {"b031-1": 30, "b031-2": 30, "b033": 30,
+                  "b035-1": 30, "b035-2": 30},
   "piece_crop": {"b003": (0.02, 0.088, 0.10, 0.088)},
   "year": "2021–2022",
-  "cover": "b003",
+  "cover": "b037",
   "group": "brand", "short": "Brand, packaging &amp; art direction",
   "meta": "Alexander Wang — Senior Designer &amp; Art Director, 2021–2022 — Brand, Packaging &amp; E-commerce",
   "desc": ["Branding, campaign, and packaging design for Alexander Wang "
@@ -488,9 +489,6 @@ PROJECTS = [
     ("B", 51, "Velour Couture — social and email assets", ["brand", "social"]),
     ("B", 52, "SISTERS — campaign identity", ["brand"]),
     ("B", 53, "SISTERS — campaign identity and social assets", ["brand", "social"]),
-    ("B", 57, "Art direction for 3D animation and social ads", ["brand", "social"]),
-    ("B", 58, "Art direction for 3D animation and social ads", ["brand", "social"]),
-    ("B", 59, "Art direction for 3D animation and social ads", ["brand", "social"]),
     ("B", 60, "vault — archive sale gate", ["ecommerce", "web"], {"dechrome": True}),
     ("B", 61, "vault — archive shopping grid", ["ecommerce", "web"], {"dechrome": True}),
   ],
@@ -553,7 +551,7 @@ PROJECTS = [
  {
   "slug": "chobani", "title": "Chobani",
   "year": "2020",
-  "cover": "a007",
+  "cover": "drop01",
   "group": "product", "short": "UX/UI, visual design &amp; research",
   "meta": "Chobani — UX/UI, Visual Design &amp; Research",
   "desc": ["UX/UI, visual design, and research for chobani.com: landing "
@@ -563,16 +561,8 @@ PROJECTS = [
            "pages with nutritional highlights.",
             "Designed across desktop and mobile as one continuous system."],
   "pages": [
-    ("A", 3,  "Chobani.com — Greek Yogurt and Flip product lines", ["web"], {"dechrome": True}),
-    ("A", 4,  "Complete and Less Sugar lines", ["web"]),
-    ("A", 5,  "Greek Yogurt Drinks", ["web"]),
-    ("A", 6,  "Foodservice landing", ["web"], {"dechrome": True}),
-    ("A", 7,  "Recipes — mains, drinks, desserts", ["web"]),
-    ("A", 8,  "Product detail — Greek Strawberry", ["web", "product"]),
-    ("A", 9,  "Nutritional highlights and hand-picked suggestions", ["product"]),
-    ("A", 10, "Recipe page — waffles with caramelized apples", ["web"], {"dechrome": True}),
-    ("A", 11, "Step-by-step cooking mode with Chef Tips", ["product"]),
-    ("A", 12, "Foodservice, recipes, and product detail on mobile", ["mobile"], {"debezel": True}),
+    # The site pages here were screen grabs of the live site; the component
+    # files below carry the same work at the size it was drawn.
   ],
  },
  {
