@@ -488,14 +488,21 @@ PROJECTS = [
   "cover": "ad-tall",
   "group": "brand", "short": "Subscription campaign design",
   "meta": "The Wall Street Journal — Subscription Campaign Design",
-  "desc": ["Subscription acquisition advertising for The Wall Street Journal. "
+  "desc": ["Subscription acquisition design for The Wall Street Journal, "
+           "across the marketing funnel: display advertising at the top, "
+           "email further down, and the offer pages that close. Each stage "
+           "asks for one thing, and the ask gets more specific as the reader "
+           "moves through.",
            "One campaign set to run at more than one ratio: the masthead, an "
            "editorial image, and the offer hold their relationship as the "
            "frame changes shape, so the same idea reads in a tall unit and a "
            "squared one without being redrawn.",
-           "Set in the paper's own Escrow, on the WSJ green, with the "
-           "subscribe action and the price carried in a black band at the "
-           "foot of every size."],
+           "The email carries the middle of the funnel. Podcast titles are "
+           "the subject, one colour to a show, and the price is stated as "
+           "the picture rather than beside it: a green four, a red one, a "
+           "field of dollar signs. Set in the paper's own Escrow, with the "
+           "subscribe action and the price carried in a band at the foot of "
+           "every size."],
   "pages": [
     ("IMG", "wsj/ad-tall.png", "Make Art Feuds Your Business — tall unit",
      ["brand"], {"crop": False}),

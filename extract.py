@@ -1028,8 +1028,11 @@ def main():
                             # put back.
                             piece = trim_edge_lines(piece)
 
-                piece = whiten_corners(piece)
+                # Flatten first: whiten_corners works in RGB, and dropping the
+                # alpha off a piece drawn as black-on-transparent — the type
+                # specimens — leaves a solid black rectangle.
                 piece = flatten_white(piece)
+                piece = whiten_corners(piece)
                 targets = [t for t in WIDTHS if t < piece.width]
                 targets.append(min(piece.width, WIDTHS[-1]))
                 widths = []
@@ -1092,8 +1095,8 @@ def main():
                 piece = piece.crop((round(pw * l), round(ph * t),
                                     pw - round(pw * r), ph - round(ph * b)))
                 piece = trim_edge_lines(piece)
-            piece = whiten_corners(piece)
             piece = flatten_white(piece)
+            piece = whiten_corners(piece)
             targets = [t for t in WIDTHS if t < piece.width]
             targets.append(min(piece.width, WIDTHS[-1]))
             widths = []

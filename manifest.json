@@ -4332,6 +4332,226 @@
    ],
    "source": "IMG",
    "page": "wsj/ad-square.png"
+  },
+  {
+   "stem": "drop01",
+   "caption": "Listen to WSJ — podcast email",
+   "tags": [
+    "brand"
+   ],
+   "w": 982,
+   "h": 2600,
+   "widths": [
+    600,
+    982
+   ],
+   "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop02",
+   "caption": "Podcast cards — one colour to a show",
+   "tags": [
+    "brand"
+   ],
+   "w": 1641,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1641
+   ],
+   "source": "DROP",
+   "page": "drop02"
+  },
+  {
+   "stem": "drop03",
+   "caption": "Listen To WSJ Podcasts — the show list",
+   "tags": [
+    "brand"
+   ],
+   "w": 1717,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1717
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
+   "caption": "WSJ Digital — four dollars a month",
+   "tags": [
+    "brand"
+   ],
+   "w": 1254,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1254
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "Only four dollars — the price as the picture",
+   "tags": [
+    "brand"
+   ],
+   "w": 1057,
+   "h": 2600,
+   "widths": [
+    600,
+    1057
+   ],
+   "source": "DROP",
+   "page": "drop05"
+  },
+  {
+   "stem": "drop06",
+   "caption": "What's News — a single show, a single screen",
+   "tags": [
+    "brand"
+   ],
+   "w": 2074,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2074
+   ],
+   "source": "DROP",
+   "page": "drop06"
+  },
+  {
+   "stem": "drop07",
+   "caption": "WSJ Digital — the offer squared",
+   "tags": [
+    "brand"
+   ],
+   "w": 1352,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1352
+   ],
+   "source": "DROP",
+   "page": "drop07"
+  },
+  {
+   "stem": "drop08",
+   "caption": "WSJ Digital Bundle — six dollars, three titles",
+   "tags": [
+    "brand"
+   ],
+   "w": 553,
+   "h": 2600,
+   "widths": [
+    553
+   ],
+   "source": "DROP",
+   "page": "drop08"
+  },
+  {
+   "stem": "drop09",
+   "caption": "Listen To Opinions — Minute Briefing",
+   "tags": [
+    "brand"
+   ],
+   "w": 689,
+   "h": 2600,
+   "widths": [
+    600,
+    689
+   ],
+   "source": "DROP",
+   "page": "drop09"
+  },
+  {
+   "stem": "drop10",
+   "caption": "Get Critical Perspective — Free Expression",
+   "tags": [
+    "brand"
+   ],
+   "w": 689,
+   "h": 2600,
+   "widths": [
+    600,
+    689
+   ],
+   "source": "DROP",
+   "page": "drop10"
+  },
+  {
+   "stem": "drop11",
+   "caption": "Learn and Stay Informed — the three shows together",
+   "tags": [
+    "brand"
+   ],
+   "w": 689,
+   "h": 2600,
+   "widths": [
+    600,
+    689
+   ],
+   "source": "DROP",
+   "page": "drop11"
+  },
+  {
+   "stem": "drop12",
+   "caption": "Engage In Topics That Affect You — Pride month",
+   "tags": [
+    "brand"
+   ],
+   "w": 1602,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1602
+   ],
+   "source": "DROP",
+   "page": "drop12"
+  },
+  {
+   "stem": "drop13",
+   "caption": "Real-Time Data — the binary field",
+   "tags": [
+    "brand"
+   ],
+   "w": 877,
+   "h": 2600,
+   "widths": [
+    600,
+    877
+   ],
+   "source": "DROP",
+   "page": "drop13"
+  },
+  {
+   "stem": "drop14",
+   "caption": "One dollar — the offer on the dollar field",
+   "tags": [
+    "brand"
+   ],
+   "w": 1462,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1462
+   ],
+   "source": "DROP",
+   "page": "drop14"
   }
  ],
  "clinique": [
@@ -5866,6 +6086,94 @@
    ],
    "source": "IMG",
    "page": "dada/hero.png"
+  },
+  {
+   "stem": "capitals",
+   "caption": "The ten redrawn capitals",
+   "tags": [
+    "brand",
+    "editorial"
+   ],
+   "w": 2400,
+   "h": 542,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "dada/capitals.png"
+  },
+  {
+   "stem": "words",
+   "caption": "MOMA, QUARTZ, PARIS",
+   "tags": [
+    "brand",
+    "editorial"
+   ],
+   "w": 2149,
+   "h": 2280,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2149
+   ],
+   "source": "IMG",
+   "page": "dada/words.png"
+  },
+  {
+   "stem": "charset",
+   "caption": "Capitals and figures — the whole set",
+   "tags": [
+    "brand",
+    "editorial"
+   ],
+   "w": 2400,
+   "h": 1706,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "dada/charset.png"
+  },
+  {
+   "stem": "setting",
+   "caption": "Set at text size, all caps",
+   "tags": [
+    "editorial"
+   ],
+   "w": 2400,
+   "h": 1283,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "dada/setting.png"
+  },
+  {
+   "stem": "ladder",
+   "caption": "One line at falling sizes",
+   "tags": [
+    "editorial"
+   ],
+   "w": 2400,
+   "h": 676,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "dada/ladder.png"
   },
   {
    "stem": "inverted",
