@@ -1094,40 +1094,6 @@
  ],
  "haworth": [
   {
-   "stem": "a059",
-   "caption": "Haworth.com homepage — Inspired Design",
-   "tags": [
-    "ecommerce",
-    "web"
-   ],
-   "w": 1194,
-   "h": 691,
-   "widths": [
-    600,
-    1194
-   ],
-   "source": "A",
-   "page": 59,
-   "span": 6
-  },
-  {
-   "stem": "collection-lockup",
-   "caption": "Haworth Collection lockup on navy",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1349,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "IMG",
-   "page": "haworth/collection-lockup.png"
-  },
-  {
    "stem": "b062",
    "caption": "Haworth — logo design",
    "tags": [
@@ -1145,6 +1111,40 @@
    "page": 62
   },
   {
+   "stem": "collection-lockup",
+   "caption": "Haworth Collection lockup on navy",
+   "tags": [
+    "brand"
+   ],
+   "w": 2386,
+   "h": 1170,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2386
+   ],
+   "source": "IMG",
+   "page": "haworth/collection-lockup.png"
+  },
+  {
+   "stem": "a059",
+   "caption": "Haworth.com homepage — Inspired Design",
+   "tags": [
+    "ecommerce",
+    "web"
+   ],
+   "w": 1194,
+   "h": 691,
+   "widths": [
+    600,
+    1194
+   ],
+   "source": "A",
+   "page": 59,
+   "span": 6
+  },
+  {
    "stem": "social-five-screens",
    "caption": "Instagram posts and stories — five screens",
    "tags": [
@@ -1160,7 +1160,7 @@
    ],
    "source": "IMG",
    "page": "haworth/social-five-screens.png",
-   "bleed": true
+   "span": 12
   },
   {
    "stem": "a060",
@@ -3116,7 +3116,7 @@
    "page": "drop01"
   },
   {
-   "stem": "drop02",
+   "stem": "drop03",
    "caption": "Active Components Upper Storage — features sell sheet",
    "tags": [
     "brand"
@@ -3130,10 +3130,10 @@
     1682
    ],
    "source": "DROP",
-   "page": "drop02"
+   "page": "drop03"
   },
   {
-   "stem": "drop03",
+   "stem": "drop04",
    "caption": "Active Components Upper Storage — sell sheet cover",
    "tags": [
     "brand"
@@ -3147,7 +3147,7 @@
     1682
    ],
    "source": "DROP",
-   "page": "drop03"
+   "page": "drop04"
   },
   {
    "stem": "drop05",

@@ -185,7 +185,8 @@ PROJECTS = [
   # narrower field, so the slide ground is taken in from both sides.
   # The slide carries its own header and footer in small type; the mark
   # alone is the cover, so both bands come off.
-  "piece_crop": {"b062": (0.14, 0.0875, 0.14, 0.0875)},
+  "piece_crop": {"b062": (0.14, 0.0875, 0.14, 0.0875),
+                 "collection-lockup": (0.14, 0.0875, 0.14, 0.0875)},
   # The research pages are spreads of type; two to a row keeps them
   # readable without letting one fill the measure alone.
   "piece_width": {"drop05": 48, "drop06": 48, "drop07": 48,
@@ -216,14 +217,14 @@ PROJECTS = [
            "furnishings: it won new customers, grew the audience by 20%, "
            "and lifted sales by 10%."],
   "pages": [
-    ("A", 59, "Haworth.com homepage — Inspired Design", ["ecommerce", "web"],
-     {"dechrome": True, "span": 6}),
+    ("B", 62, "Haworth — logo design", ["brand"], {"crop": False}),
     ("IMG", "haworth/collection-lockup.png", "Haworth Collection lockup on navy",
      ["brand"], {"crop": False}),
-    ("B", 62, "Haworth — logo design", ["brand"], {"crop": False}),
+    ("A", 59, "Haworth.com homepage — Inspired Design", ["ecommerce", "web"],
+     {"dechrome": True, "span": 6}),
     ("IMG", "haworth/social-five-screens.png",
      "Instagram posts and stories — five screens", ["social"],
-     {"crop": False, "split": False, "bleed": True}),
+     {"crop": False, "split": False, "span": 12}),
     ("A", 60, "Editorial modules — workplace research stories", ["ecommerce", "web"],
      {"dechrome": True, "span": 6}),
     # b063 and the first half of b064 are dropped: one repeats the shoot, the
@@ -520,8 +521,8 @@ PROJECTS = [
   "year": "2024",
   # Emails and display units at one width, so the set reads as a set
   # rather than as pieces of different importance.
-  "piece_width": {**{f"drop{n:02d}": 30 for n in range(1, 15)},
-                  "ad-tall": 30, "ad-square": 30},
+  "piece_width": {**{f"drop{n:02d}": 23 for n in range(1, 15)},
+                  "ad-tall": 23, "ad-square": 23},
   "cover": "ad-tall",
   "group": "brand", "short": "Subscription campaign design",
   "meta": "The Wall Street Journal — Subscription Campaign Design",
