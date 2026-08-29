@@ -56,11 +56,13 @@
     "web",
     "mobile"
    ],
-   "w": 791,
-   "h": 1702,
+   "w": 2400,
+   "h": 1350,
    "widths": [
     600,
-    791
+    1200,
+    1600,
+    2400
    ],
    "source": "A",
    "page": 28
@@ -4745,7 +4747,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 486,
+   "h": 438,
    "widths": [
     600,
     1200,
@@ -4762,7 +4764,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 486,
+   "h": 438,
    "widths": [
     600,
     1200,
@@ -4779,7 +4781,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 349,
+   "h": 312,
    "widths": [
     600,
     1200,
@@ -4796,7 +4798,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 840,
+   "h": 773,
    "widths": [
     600,
     1200,
@@ -4813,7 +4815,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 756,
+   "h": 692,
    "widths": [
     600,
     1200,
@@ -4830,7 +4832,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 714,
+   "h": 653,
    "widths": [
     600,
     1200,
@@ -4847,7 +4849,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 913,
+   "h": 844,
    "widths": [
     600,
     1200,
@@ -4864,7 +4866,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 998,
+   "h": 927,
    "widths": [
     600,
     1200,
@@ -4880,13 +4882,13 @@
    "tags": [
     "brand"
    ],
-   "w": 2200,
-   "h": 1140,
+   "w": 2048,
+   "h": 1000,
    "widths": [
     600,
     1200,
     1600,
-    2200
+    2048
    ],
    "source": "DROP",
    "page": "drop09"
@@ -6856,13 +6858,13 @@
  "bts-advocaten": [
   {
    "stem": "drop01",
-   "caption": "Bektesevic Ter Steeg Advocaten — the wordmark",
+   "caption": "The wordmark",
    "tags": [
     "web",
     "brand"
    ],
    "w": 2400,
-   "h": 1500,
+   "h": 1400,
    "widths": [
     600,
     1200,
@@ -6874,116 +6876,73 @@
   },
   {
    "stem": "drop02",
-   "caption": "Home — the case for the defence",
+   "caption": "Home — desktop and mobile",
    "tags": [
     "web",
     "brand"
    ],
-   "w": 1820,
-   "h": 2600,
+   "w": 2400,
+   "h": 2469,
    "widths": [
     600,
     1200,
     1600,
-    1820
+    2400
    ],
    "source": "DROP",
    "page": "drop02"
   },
   {
    "stem": "drop03",
-   "caption": "Expertise — the areas of practice",
+   "caption": "Expertise — desktop and mobile",
    "tags": [
     "web",
     "brand"
    ],
-   "w": 1306,
+   "w": 1830,
    "h": 2600,
    "widths": [
     600,
     1200,
-    1306
+    1600,
+    1830
    ],
    "source": "DROP",
    "page": "drop03"
   },
   {
    "stem": "drop04",
-   "caption": "Contact — the page",
+   "caption": "Lawyers — desktop and mobile",
    "tags": [
     "web",
     "brand"
    ],
-   "w": 1228,
-   "h": 2600,
+   "w": 1106,
+   "h": 2598,
    "widths": [
     600,
-    1200,
-    1228
+    1106
    ],
    "source": "DROP",
    "page": "drop04"
   },
   {
    "stem": "drop05",
-   "caption": "Home — mobile",
+   "caption": "Contact — desktop and mobile",
    "tags": [
     "web",
     "brand"
    ],
-   "w": 637,
+   "w": 1831,
    "h": 2600,
    "widths": [
     600,
-    637
+    1200,
+    1600,
+    1831
    ],
    "source": "DROP",
    "page": "drop05"
-  },
-  {
-   "stem": "drop06",
-   "caption": "Lawyers — mobile",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 553,
-   "h": 2600,
-   "widths": [
-    553
-   ],
-   "source": "DROP",
-   "page": "drop06"
-  },
-  {
-   "stem": "drop07",
-   "caption": "Expertise — mobile",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 454,
-   "h": 2600,
-   "widths": [
-    454
-   ],
-   "source": "DROP",
-   "page": "drop07"
-  },
-  {
-   "stem": "drop08",
-   "caption": "Contact — mobile",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 533,
-   "h": 2600,
-   "widths": [
-    533
-   ],
-   "source": "DROP",
-   "page": "drop08"
   }
  ]
 }

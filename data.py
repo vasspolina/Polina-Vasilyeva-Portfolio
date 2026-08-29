@@ -100,7 +100,10 @@ PROJECTS = [
  {
   "slug": "verizon", "title": "Verizon",
   "year": "2022–2023",
-  "cover": "c001",
+  # The signage slices come off pages of different heights; one width
+  # sets them level, two to a row.
+  "piece_width": {"c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
+  "cover": "p01",
   "group": "brand", "short": "Web, retail &amp; brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
   "desc": ["Research, then a single set of design standards unified "
@@ -132,7 +135,7 @@ PROJECTS = [
     # wayfinding tiers, and the store as it was built and as it will be.
     ("IMG", "verizon-sem/p01.jpg", "Retail SEM — the working deck", ["brand"], {"crop": False, "split": False}),
     ("A", 26, "Verizon.com homepage — connecting you with what matters", ["web"], {"dechrome": True}),
-    ("A", 28, "Chat assistant on mobile", ["web", "mobile"], {"debezel": True}),
+    ("A", 28, "Chat assistant on mobile", ["web", "mobile"], {"crop": False}),
     ("A", 27, "Voice assistant states — idle, waiting, listening, thinking, done, error", ["web", "product"]),
     ("A", 29, "NHG Thin in application — in-store and online", ["brand", "web"]),
     ("A", 30, "Vivid Red — digital color use", ["brand"]),
@@ -186,7 +189,7 @@ PROJECTS = [
   # readable without letting one fill the measure alone.
   "piece_width": {"drop05": 48, "drop06": 48, "drop07": 48,
                   "a060": 30, "b064-2": 30, "b065-1": 30, "b065-2": 30},
-  "cover": "social-five-screens",
+  "cover": "b062",
   "group": "brand", "short": "Brand, e-commerce &amp; strategy",
   "meta": "Haworth — with Apartamento Studios — Brand, E-commerce &amp; Digital Strategy",
   "desc": ["E-commerce design and digital strategy for the Haworth "
@@ -656,6 +659,8 @@ PROJECTS = [
   "slug": "bts-advocaten", "title": "Bektesevic Ter Steeg Advocaten",
   "year": "2026",
   "drop_tags": ["web", "brand"],
+  # Two pages, each with its phone, to a row.
+  "piece_width": {"drop02": 48, "drop03": 48, "drop04": 48, "drop05": 48},
   "cover": "drop01",
   "group": "product", "short": "Website &amp; identity",
   "meta": "Bektesevic Ter Steeg Advocaten — Website &amp; Identity",
