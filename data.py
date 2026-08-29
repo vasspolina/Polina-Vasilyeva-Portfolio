@@ -589,6 +589,8 @@ PROJECTS = [
   # The single mobile screens read as a set when they sit three to a row,
   # the same rhythm as the story slides that show three phones at once.
   "piece_width": {"mobile-set-1": 48, "mobile-set-2": 48, "mobile-set-3": 48},
+  # A hairline of the page white survives on two edges of this slide.
+  "piece_crop": {"f004": (0, 0, 0.010, 0.006)},
   "cover": "f012",
   "group": "product", "short": "Web design &amp; digital accessibility",
   "meta": "Furniture.com — with McKinsey &amp; studio Dumbar, 2022 — Web Design &amp; Digital Accessibility",
@@ -634,7 +636,6 @@ PROJECTS = [
     ("H", 8,  "Highland Sunflower Sofa — product page", ["web", "ecommerce"], {"crop": False}),
     ("H", 9,  "Product page — browse to go", ["web", "ecommerce"], {"crop": False}),
     ("H", 12, "Product page — you may also like", ["web", "ecommerce"], {"crop": False}),
-    ("H", 18, "Instagram story — the campaign in the feed", ["social"], {"crop": False}),
     ("H", 19, "Search it, Find it, Buy it — story set", ["social"], {"crop": False}),
     ("H", 20, "Search it, Find it, Buy it — the second set", ["social"], {"crop": False}),
     ("H", 21, "Search it, Find it, Buy it — the third set", ["social"], {"crop": False}),

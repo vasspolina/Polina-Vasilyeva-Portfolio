@@ -4745,7 +4745,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 521,
+   "h": 486,
    "widths": [
     600,
     1200,
@@ -4762,7 +4762,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 521,
+   "h": 486,
    "widths": [
     600,
     1200,
@@ -4779,7 +4779,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 361,
+   "h": 349,
    "widths": [
     600,
     1200,
@@ -4791,12 +4791,12 @@
   },
   {
    "stem": "drop04",
-   "caption": "Top banner — medium",
+   "caption": "Title, paragraph and call to action",
    "tags": [
     "brand"
    ],
    "w": 2400,
-   "h": 657,
+   "h": 840,
    "widths": [
     600,
     1200,
@@ -4808,12 +4808,12 @@
   },
   {
    "stem": "drop05",
-   "caption": "Content banner",
+   "caption": "Two up — image and call to action",
    "tags": [
     "brand"
    ],
    "w": 2400,
-   "h": 972,
+   "h": 756,
    "widths": [
     600,
     1200,
@@ -4825,12 +4825,12 @@
   },
   {
    "stem": "drop06",
-   "caption": "Main banner — video",
+   "caption": "Two up — the wider pair",
    "tags": [
     "brand"
    ],
    "w": 2400,
-   "h": 972,
+   "h": 714,
    "widths": [
     600,
     1200,
@@ -4842,12 +4842,12 @@
   },
   {
    "stem": "drop07",
-   "caption": "Two up — image and call to action",
+   "caption": "Two columns — article and illustration",
    "tags": [
     "brand"
    ],
    "w": 2400,
-   "h": 917,
+   "h": 913,
    "widths": [
     600,
     1200,
@@ -4859,12 +4859,12 @@
   },
   {
    "stem": "drop08",
-   "caption": "Two columns — article and illustration",
+   "caption": "Three columns — with call to action",
    "tags": [
     "brand"
    ],
    "w": 2400,
-   "h": 972,
+   "h": 998,
    "widths": [
     600,
     1200,
@@ -4876,116 +4876,20 @@
   },
   {
    "stem": "drop09",
-   "caption": "Three columns — headline, cards, call to action",
+   "caption": "Three columns — without call to action",
    "tags": [
     "brand"
    ],
-   "w": 2400,
-   "h": 1182,
+   "w": 2200,
+   "h": 1140,
    "widths": [
     600,
     1200,
     1600,
-    2400
+    2200
    ],
    "source": "DROP",
    "page": "drop09"
-  },
-  {
-   "stem": "drop10",
-   "caption": "Three columns — statistics",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1278,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop10"
-  },
-  {
-   "stem": "drop11",
-   "caption": "Left text banner — full image",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1005,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop11"
-  },
-  {
-   "stem": "drop12",
-   "caption": "Recipe banner — half",
-   "tags": [
-    "brand"
-   ],
-   "w": 1708,
-   "h": 1400,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1708
-   ],
-   "source": "DROP",
-   "page": "drop12"
-  },
-  {
-   "stem": "drop13",
-   "caption": "Title module — mobile",
-   "tags": [
-    "brand"
-   ],
-   "w": 750,
-   "h": 910,
-   "widths": [
-    600,
-    750
-   ],
-   "source": "DROP",
-   "page": "drop13"
-  },
-  {
-   "stem": "drop14",
-   "caption": "Two up — mobile",
-   "tags": [
-    "brand"
-   ],
-   "w": 750,
-   "h": 936,
-   "widths": [
-    600,
-    750
-   ],
-   "source": "DROP",
-   "page": "drop14"
-  },
-  {
-   "stem": "drop15",
-   "caption": "Three columns — mobile",
-   "tags": [
-    "brand"
-   ],
-   "w": 750,
-   "h": 1410,
-   "widths": [
-    600,
-    750
-   ],
-   "source": "DROP",
-   "page": "drop15"
   }
  ],
  "furniture": [
@@ -5084,7 +4988,7 @@
     "web"
    ],
    "w": 2400,
-   "h": 1350,
+   "h": 1344,
    "widths": [
     600,
     1200,
@@ -5405,23 +5309,6 @@
    ],
    "source": "H",
    "page": 12
-  },
-  {
-   "stem": "h018",
-   "caption": "Instagram story — the campaign in the feed",
-   "tags": [
-    "social"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "H",
-   "page": 18
   },
   {
    "stem": "h019",
