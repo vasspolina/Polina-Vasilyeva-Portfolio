@@ -87,7 +87,41 @@
   },
   {
    "stem": "drop06",
-   "caption": "Assistant icon states — idle to error",
+   "caption": "Verizon.com homepage — connecting you with what matters",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1454,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop06"
+  },
+  {
+   "stem": "drop07",
+   "caption": "Chat assistant on mobile",
+   "tags": [
+    "brand"
+   ],
+   "w": 1714,
+   "h": 1960,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1714
+   ],
+   "source": "DROP",
+   "page": "drop07"
+  },
+  {
+   "stem": "drop08",
+   "caption": "Voice assistant states — idle to error",
    "tags": [
     "brand"
    ],
@@ -100,11 +134,28 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop06"
+   "page": "drop08"
+  },
+  {
+   "stem": "drop09",
+   "caption": "NHG Thin in application — in-store and online",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1348,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop09"
   },
   {
    "stem": "drop13",
-   "caption": "Retail SEM — colour, type, imagery, copy, campaign, digital",
+   "caption": "Vivid Red — digital colour use",
    "tags": [
     "brand"
    ],
@@ -120,13 +171,13 @@
    "page": "drop13"
   },
   {
-   "stem": "drop16",
-   "caption": "Retail SEM — the back wall, Home bay",
+   "stem": "drop15",
+   "caption": "Gray as a subtle accent — on-screen page",
    "tags": [
     "brand"
    ],
    "w": 2400,
-   "h": 1350,
+   "h": 1349,
    "widths": [
     600,
     1200,
@@ -134,62 +185,43 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop16"
+   "page": "drop15"
   },
   {
    "stem": "drop17",
-   "caption": "Retail SEM — entertainment bay, passive and interactive",
+   "caption": "Express Pickup Lockers — for online orders",
    "tags": [
     "brand"
    ],
-   "w": 2400,
-   "h": 1350,
+   "w": 1086,
+   "h": 1448,
    "widths": [
     600,
-    1200,
-    1600,
-    2400
+    1086
    ],
    "source": "DROP",
    "page": "drop17"
   },
   {
-   "stem": "drop19",
-   "caption": "Retail SEM — Live Try, the demo table",
+   "stem": "drop18",
+   "caption": "Express Pickup — ready when you are",
    "tags": [
     "brand"
    ],
-   "w": 2400,
-   "h": 1350,
+   "w": 1628,
+   "h": 966,
    "widths": [
     600,
     1200,
     1600,
-    2400
+    1628
    ],
    "source": "DROP",
-   "page": "drop19"
-  },
-  {
-   "stem": "drop20",
-   "caption": "Retail SEM — Live Try print, the eight placements",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop20"
+   "page": "drop18"
   },
   {
    "stem": "drop21",
-   "caption": "Retail SEM — Live Try print, mix and match sheets",
+   "caption": "Retail SEM — colour, type, imagery, copy, campaign, digital",
    "tags": [
     "brand"
    ],
@@ -205,25 +237,8 @@
    "page": "drop21"
   },
   {
-   "stem": "drop22",
-   "caption": "Retail SEM — aisle fixtures and accessories",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop22"
-  },
-  {
    "stem": "drop24",
-   "caption": "Future state — the floor",
+   "caption": "Retail SEM — the back wall, Home bay",
    "tags": [
     "brand"
    ],
@@ -239,8 +254,8 @@
    "page": "drop24"
   },
   {
-   "stem": "drop26",
-   "caption": "Future state — aisle and entertainment",
+   "stem": "drop25",
+   "caption": "Retail SEM — entertainment bay, passive and interactive",
    "tags": [
     "brand"
    ],
@@ -253,11 +268,11 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop26"
+   "page": "drop25"
   },
   {
    "stem": "drop27",
-   "caption": "Future state — the Home bay in place",
+   "caption": "Retail SEM — Live Try, the demo table",
    "tags": [
     "brand"
    ],
@@ -273,8 +288,8 @@
    "page": "drop27"
   },
   {
-   "stem": "drop31",
-   "caption": "Next Gen Reset — the entertainment wall",
+   "stem": "drop28",
+   "caption": "Retail SEM — Live Try print, the eight placements",
    "tags": [
     "brand"
    ],
@@ -287,11 +302,45 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop31"
+   "page": "drop28"
+  },
+  {
+   "stem": "drop29",
+   "caption": "Retail SEM — Live Try print, mix and match sheets",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop29"
+  },
+  {
+   "stem": "drop30",
+   "caption": "Retail SEM — aisle fixtures and accessories",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop30"
   },
   {
    "stem": "drop32",
-   "caption": "Next Gen Reset — product table merchandising",
+   "caption": "Future state — the floor",
    "tags": [
     "brand"
    ],
@@ -307,25 +356,8 @@
    "page": "drop32"
   },
   {
-   "stem": "drop33",
-   "caption": "Next Gen Reset — the storefront",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop33"
-  },
-  {
    "stem": "drop34",
-   "caption": "Next Gen Reset — the main floor",
+   "caption": "Future state — aisle and entertainment",
    "tags": [
     "brand"
    ],
@@ -342,7 +374,7 @@
   },
   {
    "stem": "drop35",
-   "caption": "Next Gen Reset — the product tables",
+   "caption": "Future state — the Home bay in place",
    "tags": [
     "brand"
    ],
@@ -358,7 +390,92 @@
    "page": "drop35"
   },
   {
-   "stem": "drop36",
+   "stem": "drop39",
+   "caption": "Next Gen Reset — the entertainment wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop39"
+  },
+  {
+   "stem": "drop40",
+   "caption": "Next Gen Reset — product table merchandising",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop40"
+  },
+  {
+   "stem": "drop41",
+   "caption": "Next Gen Reset — the storefront",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop41"
+  },
+  {
+   "stem": "drop42",
+   "caption": "Next Gen Reset — the main floor",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop42"
+  },
+  {
+   "stem": "drop43",
+   "caption": "Next Gen Reset — the product tables",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop43"
+  },
+  {
+   "stem": "drop44",
    "caption": "Next Gen Reset — the Home wall",
    "tags": [
     "brand"
@@ -372,10 +489,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop36"
+   "page": "drop44"
   },
   {
-   "stem": "drop37",
+   "stem": "drop45",
    "caption": "Next Gen Reset — the +play wall",
    "tags": [
     "brand"
@@ -389,7 +506,7 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop37"
+   "page": "drop45"
   },
   {
    "stem": "p01",
@@ -405,129 +522,6 @@
    ],
    "source": "IMG",
    "page": "verizon-sem/p01.jpg"
-  },
-  {
-   "stem": "a026",
-   "caption": "Verizon.com homepage — connecting you with what matters",
-   "tags": [
-    "web"
-   ],
-   "w": 1940,
-   "h": 1163,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1940
-   ],
-   "source": "A",
-   "page": 26
-  },
-  {
-   "stem": "a028",
-   "caption": "Chat assistant on mobile",
-   "tags": [
-    "web",
-    "mobile"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "A",
-   "page": 28
-  },
-  {
-   "stem": "a027",
-   "caption": "Voice assistant states — idle, waiting, listening, thinking, done, error",
-   "tags": [
-    "web",
-    "product"
-   ],
-   "w": 2400,
-   "h": 1509,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "A",
-   "page": 27
-  },
-  {
-   "stem": "a029",
-   "caption": "NHG Thin in application — in-store and online",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1347,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "A",
-   "page": 29
-  },
-  {
-   "stem": "a030",
-   "caption": "Vivid Red — digital color use",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1347,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "A",
-   "page": 30
-  },
-  {
-   "stem": "a031",
-   "caption": "Gray as a subtle accent on-screen",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1347,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "A",
-   "page": 31
-  },
-  {
-   "stem": "b085",
-   "caption": "Express Pickup Lockers — retail brand design",
-   "tags": [
-    "brand"
-   ],
-   "w": 1687,
-   "h": 925,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1687
-   ],
-   "source": "B",
-   "page": 85
   },
   {
    "stem": "c002-1",

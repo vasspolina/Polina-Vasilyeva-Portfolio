@@ -133,13 +133,6 @@ PROJECTS = [
     # The Retail SEM working deck, published whole: the system, the
     # wayfinding tiers, and the store as it was built and as it will be.
     ("IMG", "verizon-sem/p01.jpg", "Retail SEM — the working deck", ["brand"], {"crop": False, "split": False}),
-    ("A", 26, "Verizon.com homepage — connecting you with what matters", ["web"], {"dechrome": True}),
-    ("A", 28, "Chat assistant on mobile", ["web", "mobile"], {"crop": False}),
-    ("A", 27, "Voice assistant states — idle, waiting, listening, thinking, done, error", ["web", "product"]),
-    ("A", 29, "NHG Thin in application — in-store and online", ["brand", "web"]),
-    ("A", 30, "Vivid Red — digital color use", ["brand"]),
-    ("A", 31, "Gray as a subtle accent on-screen", ["brand", "web"]),
-    ("B", 85, "Express Pickup Lockers — retail brand design", ["brand"]),
     ("C", 2,  "Printed assets for national retail — one type system across every format",
               ["brand"], {"rows": True, "keep": [1, 2]}),
     ("C", 3,  ["Ultra signage — the counter unit",
