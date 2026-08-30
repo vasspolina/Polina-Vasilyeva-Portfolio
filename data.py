@@ -103,8 +103,11 @@ PROJECTS = [
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
   "piece_width": {"c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
+  # The logo slide carries the deck's own small header top-left; it comes
+  # off, and the same again off the foot so the mark stays centred.
+  "piece_crop": {"a025": (0.09, 0, 0.097, 0)},
   "drops_first": True,
-  "cover": "p01",
+  "cover": "a025",
   "group": "brand", "short": "Web, retail &amp; brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
   "desc": ["Research, then a single set of design standards unified "
@@ -132,6 +135,8 @@ PROJECTS = [
     # the Retail SEM title exists only at 1020px — too small to be a cover.
     # The Retail SEM working deck, published whole: the system, the
     # wayfinding tiers, and the store as it was built and as it will be.
+    # The deck's own logo slide, black ground, no footer: the cover.
+    ("A", 25, "Verizon — the mark", ["brand"], {"crop": False, "split": False}),
     ("IMG", "verizon-sem/p01.jpg", "Retail SEM — the working deck", ["brand"], {"crop": False, "split": False}),
     ("C", 2,  "Printed assets for national retail — one type system across every format",
               ["brand"], {"rows": True, "keep": [1, 2]}),
