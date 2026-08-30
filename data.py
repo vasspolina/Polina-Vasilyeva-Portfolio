@@ -912,12 +912,10 @@ PROJECTS = [
  {
   "slug": "isaac-howell", "title": "Isaac Howell",
   "year": "Ongoing",
-  # Each poster beside its own reverse, two to a row. The Rome scans that
-  # used to sit here are gone: the print PDFs carry the same sheets at
-  # twice the size and the hash kept those.
-  "piece_width": {"b098-1": 48, "b098-2": 48, "rome1": 48, "rome2": 48,
-                  "pit2": 48, "pit1": 48},
-  "cover": "b098-1",
+  # The posters read at a third of the measure rather than a half.
+  "piece_width": {"drop03": 34, "drop04": 34, "drop05": 34,
+                  "drop06": 34, "drop07": 34},
+  "cover": "drop03",
   "group": "book", "short": "Exhibition identity &amp; publication",
   "meta": "Isaac Howell — Exhibition Identity, Poster &amp; Publication",
   "desc": ["Identity and one-page publications for solo shows of the "
@@ -937,19 +935,8 @@ PROJECTS = [
            "page, and into <em>The Man Who Turned into a Wall</em>, which "
            "sequences drawings against script."],
   "pages": [
-    # b097 is this same poster photographed on a phone; the flat artwork below
-    # says it better, so only one of the two is published.
-    ("B", 99, "T293, Rome — poster", ["brand"], {"cutout": 60, "span": 6}),
-    ("B", 98, ["A rabid dog has no choice but to bite — poster",
-               "Publication — spread"], ["editorial"], {"span": 6}),
-    ("IMG", "isaac-howell/rome1.png", "Malign Influence on the Information Interchange — poster",
-     ["brand"], {"crop": False}),
-    ("IMG", "isaac-howell/rome2.png", "Malign Influence — the sheet reversed",
-     ["brand"], {"crop": False}),
-    ("IMG", "isaac-howell/pit2.png", "Audiovisual, Geneva — poster",
-     ["brand"], {"crop": False}),
-    ("IMG", "isaac-howell/pit1.png", "Audiovisual — the sheet reversed",
-     ["editorial"], {"crop": False}),
+    # Everything comes from drop/isaac-howell/: the print files carry these
+    # sheets at 6142px, where the deck cuts them at 1301.
   ],
  },
  {
