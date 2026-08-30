@@ -6872,6 +6872,24 @@
   },
   {
    "stem": "drop02",
+   "caption": "Business cards — the studio and its partner",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 2400,
+   "h": 990,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop02"
+  },
+  {
+   "stem": "drop03",
    "caption": "Home — desktop and mobile",
    "tags": [
     "web",
@@ -6886,10 +6904,10 @@
     2246
    ],
    "source": "DROP",
-   "page": "drop02"
+   "page": "drop03"
   },
   {
-   "stem": "drop03",
+   "stem": "drop04",
    "caption": "Expertise — desktop and mobile",
    "tags": [
     "web",
@@ -6904,10 +6922,10 @@
     1629
    ],
    "source": "DROP",
-   "page": "drop03"
+   "page": "drop04"
   },
   {
-   "stem": "drop04",
+   "stem": "drop05",
    "caption": "Lawyers — desktop and mobile",
    "tags": [
     "web",
@@ -6920,10 +6938,10 @@
     604
    ],
    "source": "DROP",
-   "page": "drop04"
+   "page": "drop05"
   },
   {
-   "stem": "drop05",
+   "stem": "drop06",
    "caption": "Contact — desktop and mobile",
    "tags": [
     "web",
@@ -6937,10 +6955,10 @@
     1532
    ],
    "source": "DROP",
-   "page": "drop05"
+   "page": "drop06"
   },
   {
-   "stem": "drop06",
+   "stem": "drop07",
    "caption": "Business cards — the wordmark, both grounds",
    "tags": [
     "web",
@@ -6955,10 +6973,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop06"
+   "page": "drop07"
   },
   {
-   "stem": "drop07",
+   "stem": "drop08",
    "caption": "Business cards — the partners",
    "tags": [
     "web",
@@ -6973,7 +6991,7 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop07"
+   "page": "drop08"
   }
  ],
  "lenka-ilic": [
