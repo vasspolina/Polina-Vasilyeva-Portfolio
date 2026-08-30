@@ -818,11 +818,17 @@ em, i, cite, address, dfn, var { font-style: normal; }
 :root[data-theme="dark"] .filter[data-filter="social"] { background: transparent; border: 2px solid #ffc570; color: #ffc570; }
 
 /* A piece that runs the full window, past the page margin. */
+/* Out to the page edge, by cancelling the page padding rather than by
+   measuring the viewport: 100vw counts the scrollbar the page does not have
+   to itself, and the piece then hangs a scrollbar's width past the right. */
 .work-figure.is-bleed {
   grid-column: 1 / -1;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: calc(100% + var(--page-pad) * 2);
+  /* the row caps its children at the measure; a bleeding piece is the one
+     thing allowed past it */
+  max-width: none;
+  margin-left: calc(var(--page-pad) * -1);
+  margin-right: calc(var(--page-pad) * -1);
 }
 .work-figure.is-bleed figcaption { padding-left: var(--page-pad); }
 
@@ -983,7 +989,10 @@ em, i, cite, address, dfn, var { font-style: normal; }
     max-height: none;
   }
   .work-figure[data-tags~="mobile"] img { max-height: none; width: 62%; }
-  .work-figure.is-bleed { width: 100vw; margin-left: calc(50% - 50vw); }
+  .work-figure.is-bleed { width: calc(100% + var(--page-pad) * 2) !important;
+                          max-width: none;
+                          margin-left: calc(var(--page-pad) * -1) !important;
+                          margin-right: calc(var(--page-pad) * -1) !important; }
 
   /* The overview reads as one card to a row too. */
   .ov-grid { display: block; }

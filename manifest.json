@@ -1154,7 +1154,7 @@
    ],
    "source": "IMG",
    "page": "haworth/social-five-screens.png",
-   "span": 12
+   "bleed": true
   },
   {
    "stem": "a060",
@@ -3091,6 +3091,42 @@
    "source": "E",
    "page": 112,
    "span": 2
+  },
+  {
+   "stem": "haworth-opening-title",
+   "caption": "Opening title",
+   "tags": [
+    "brand"
+   ],
+   "w": 1280,
+   "h": 720,
+   "widths": [
+    600,
+    1200,
+    1280
+   ],
+   "source": "VID",
+   "page": "haworth-opening-title.mp4",
+   "video": "haworth-opening-title.mp4",
+   "autoplay": true
+  },
+  {
+   "stem": "haworth-motion",
+   "caption": "Motion graphics",
+   "tags": [
+    "brand"
+   ],
+   "w": 1280,
+   "h": 720,
+   "widths": [
+    600,
+    1200,
+    1280
+   ],
+   "source": "VID",
+   "page": "haworth-motion.mp4",
+   "video": "haworth-motion.mp4",
+   "autoplay": false
   },
   {
    "stem": "drop01",

@@ -217,7 +217,7 @@ PROJECTS = [
      {"dechrome": True, "span": 6}),
     ("IMG", "haworth/social-five-screens.png",
      "Instagram posts and stories — five screens", ["social"],
-     {"crop": False, "split": False, "span": 12}),
+     {"crop": False, "split": False, "bleed": True}),
     ("A", 60, "Editorial modules — workplace research stories", ["ecommerce", "web"],
      {"dechrome": True, "span": 6}),
     # b063 and the first half of b064 are dropped: one repeats the shoot, the
