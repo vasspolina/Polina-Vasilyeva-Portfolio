@@ -217,7 +217,7 @@ PROJECTS = [
      {"dechrome": True, "span": 6}),
     ("IMG", "haworth/social-five-screens.png",
      "Instagram posts and stories — five screens", ["social"],
-     {"crop": False, "split": False, "bleed": True}),
+     {"crop": False, "split": False, "span": 12}),
     ("A", 60, "Editorial modules — workplace research stories", ["ecommerce", "web"],
      {"dechrome": True, "span": 6}),
     # b063 and the first half of b064 are dropped: one repeats the shoot, the
@@ -761,9 +761,9 @@ PROJECTS = [
   "pages": [
     ("D", 4, "Graphic approach — the For Sale card", ["brand"]),
     ("D", 5, "Digital banner system", ["brand", "web"]),
-    ("D", 6, "Data visualisation — call-out stats", ["brand", "product"]),
-    ("D", 7, "Data visualisation — inventory tables", ["brand", "product"]),
-    ("D", 8, "Data visualisation — tables", ["brand", "product"]),
+    ("D", 6, "Data visualisation — call-out stats", ["brand", "editorial"]),
+    ("D", 7, "Data visualisation — inventory tables", ["brand", "editorial"]),
+    ("D", 8, "Data visualisation — tables", ["brand", "editorial"]),
     ("IMG", "compass/map.jpg", "245 10th Avenue — neighborhood points of interest", ["brand", "editorial"], {"crop": False}),
   ],
  },

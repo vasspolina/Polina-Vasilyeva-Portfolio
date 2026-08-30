@@ -638,12 +638,14 @@ a:focus-visible, button:focus-visible {
 /* One height, natural widths: every cover is reproduced at the same scale and
    keeps its own proportion, so a poster sits narrow beside a wide storefront
    instead of being letterboxed into a common rectangle. */
+/* Two to a row, whatever shape the cover is: a fixed pair of columns rather
+   than a flex row that packs by width and leaves a wide cover alone. */
 .ov-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-3) 36px;
 }
-.ov-card { flex: 0 0 auto; max-width: 100%; }
+.ov-card { min-width: 0; max-width: 100%; }
 .ov-card { display: block; }
 /* A fixed frame keeps the row tidy even though the covers are every shape;
    the image fills it and is centre-cropped rather than letterboxed. */
