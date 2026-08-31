@@ -93,8 +93,8 @@ PROJECTS = [
   "piece_crop": {"a025": (0.122, 0.058, 0.130, 0.059)},
   "drops_first": True,
   "lead": ["drop06", "drop07", "drop09", "i001", "i011"],
-  "before_decks": ["i0%02d" % n for n in range(2, 19)],
-  "keep_always": ["i0%02d" % n for n in range(1, 19)],
+  "before_decks": ["i0%02d" % n for n in (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 17, 18)],
+  "keep_always": ["i0%02d" % n for n in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 17, 18)],
   "cover": "a025",
   "group": "brand", "short": "Retail and brand design",
   "meta": "Verizon, Senior Design Consultant, 2022 to 2023, Retail and Brand Design",
@@ -143,16 +143,6 @@ PROJECTS = [
     ("I", 10, "5G Ultra Wideband, now in more places — the wall", ["brand"],
      {"crop": False, "split": False}),
     ("I", 11, "The Disney Bundle — the wall", ["brand"],
-     {"crop": False, "split": False}),
-    ("I", 12, "America's most reliable network is going Ultra — the second run", ["brand"],
-     {"crop": False, "split": False}),
-    ("I", 13, "The reliability line — the second run", ["brand"],
-     {"crop": False, "split": False}),
-    ("I", 14, "5G Get More at $55 — the second run", ["brand"],
-     {"crop": False, "split": False}),
-    ("I", 15, "Introducing our best Unlimited plans — the second run", ["brand"],
-     {"crop": False, "split": False}),
-    ("I", 16, "The reliability line — the third run", ["brand"],
      {"crop": False, "split": False}),
     ("I", 17, "America's most reliable network is going Ultra — the wide wall", ["brand"],
      {"crop": False, "split": False}),
@@ -839,7 +829,10 @@ PROJECTS = [
   "desc": ["I designed the identity and the one page publications for solo shows of the artist Isaac Soh Fujita Howell, at Public Gallery in London and at T293 in Rome. For <em>A rabid dog has no choice but to bite</em> the title circles the edge of the poster as a frame, and the painting holds the centre.",
            "Two shows at T293 followed. <em>By order from above (and we are all dutiful citizens)</em> sets the details on overlapping black cards that lock into one another like a puzzle. <em>Malign Influence on the Information Interchange</em> rings the sheet with its own title, then runs the same sheet inverted with photographs set into the ring.",
            "The run extends into newsprint, where the text turns with the page, and into <em>The Man Who Turned into a Wall</em>, which sequences drawings against script."],
-  "pages": [
+    # The two newspaper spreads read as a pair; the rest of that run takes a
+  # row each.
+  "piece_width": {"drop01": 48, "drop02": 48, "drop08": 100},
+"pages": [
     # Everything comes from drop/isaac-howell/: the print files carry these
     # sheets at 6142px, where the deck cuts them at 1301.
   ],

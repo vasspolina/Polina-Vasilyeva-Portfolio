@@ -1068,91 +1068,6 @@
    "page": 10
   },
   {
-   "stem": "i012",
-   "caption": "America's most reliable network is going Ultra, the second run",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 190,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "I",
-   "page": 12
-  },
-  {
-   "stem": "i013",
-   "caption": "The reliability line, the second run",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 190,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "I",
-   "page": 13
-  },
-  {
-   "stem": "i014",
-   "caption": "5G Get More at $55, the second run",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 190,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "I",
-   "page": 14
-  },
-  {
-   "stem": "i015",
-   "caption": "Introducing our best Unlimited plans, the second run",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 190,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "I",
-   "page": 15
-  },
-  {
-   "stem": "i016",
-   "caption": "The reliability line, the third run",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 190,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "I",
-   "page": 16
-  },
-  {
    "stem": "i017",
    "caption": "America's most reliable network is going Ultra, the wide wall",
    "tags": [
@@ -7715,7 +7630,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 1800,
+   "h": 3200,
    "widths": [
     600,
     1200,
@@ -7732,7 +7647,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 1800,
+   "h": 3200,
    "widths": [
     600,
     1200,
@@ -7744,7 +7659,7 @@
   },
   {
    "stem": "drop05",
-   "caption": "Malign Influence, T293, Rome",
+   "caption": "By order from above, the cast cards",
    "tags": [
     "brand"
    ],
@@ -7823,6 +7738,40 @@
    ],
    "source": "DROP",
    "page": "drop09"
+  },
+  {
+   "stem": "drop10",
+   "caption": "Malign Influence, the poster",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 3199,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop10"
+  },
+  {
+   "stem": "drop11",
+   "caption": "Malign Influence, the sheet with photographs",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 3199,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop11"
   }
  ],
  "willow-and-wu": [
