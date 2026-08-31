@@ -93,12 +93,13 @@ PROJECTS = [
   "piece_crop": {"a025": (0.122, 0.058, 0.130, 0.059)},
   "drops_first": True,
   "lead": ["drop06", "drop07", "drop09", "i001", "i011"],
+  "before_decks": ["i0%02d" % n for n in range(2, 19)],
   "keep_always": ["i0%02d" % n for n in range(1, 19)],
   "cover": "a025",
   "group": "brand", "short": "Retail and brand design",
   "meta": "Verizon, Senior Design Consultant, 2022 to 2023, Retail and Brand Design",
-  "desc": ["I was on the team behind Verizon's retail guidelines and assets. The work covered the brand guidelines and the national retail audit guidelines. I unified how typography was used across them, wrote the instructions for use of the logo, and designed the signage.",
-           "We started with research into where the customer experience and the look of it came apart between digital and retail. The standards that followed were simplified across digital, retail and UX. NHG Thin, Vivid Red and the soft grays are used the same way on a store screen and on a phone. The 5G homepage follows them, and so does the chat and voice assistant, through every speech state it can be in.",
+  "desc": ["I was on the team behind Verizon's retail guidelines and assets. The work covered the brand guidelines and the national retail audit guidelines. I unified the typography across them, wrote the instructions for use of the logo, and designed the signage.",
+           "We started with research into where the customer experience and the look of it came apart between digital and retail. We simplified the standards that followed, across digital, retail and UX. A store screen and a phone carry NHG Thin, Vivid Red and the soft grays the same way. The 5G homepage follows them, and so does the chat and voice assistant, through every speech state it can be in.",
            "In retail one type system sits behind every printed piece, from the rate sheet and the price card to the window and header signage, so a Prepaid sheet and an Unlimited plan grid speak at the same pitch. It carries onto the floor in the wayfinding, the Home and Business walls, the Express Pickup Lockers and the packaging. I reviewed the assets against accessibility best practice and updated what fell short.",
            "The standards raised designer productivity, shortened turnaround on retail projects and improved print quality."],
   "pages": [
@@ -435,9 +436,11 @@ PROJECTS = [
   # The lockup alone: the slide's own caption line sits below it.
   # The lockup and the mark it is built from, side by side.
   "piece_width": {"b003": 48, "b005": 48,
+                  "b009-1": 30, "b009-2": 30, "b009-3": 30,
                   "b031-1": 30, "b031-2": 30, "b033": 30,
                   "b035-1": 30, "b035-2": 30},
-  "piece_crop": {"b003": (0.02, 0.088, 0.10, 0.088)},
+  "piece_crop": {"b003": (0.02, 0.088, 0.10, 0.088),
+                 "b051": (0.1119, 0, 0.0985, 0)},
   "year": "2021 to 2022",
   "cover": "b037",
   "group": "brand", "short": "Brand and packaging design",
@@ -586,7 +589,7 @@ PROJECTS = [
   "cover": "f012",
   "group": "product", "short": "Web design and digital accessibility",
   "meta": "Furniture.com, with McKinsey and studio Dumbar, 2022, Web Design and Digital Accessibility",
-  "desc": ["I designed Furniture.com and its accessibility, with McKinsey and with studio Dumbar. The shopping experience is built around search, from the sofa a shopper starts with to the room they browse it in. A warm identity carries it, with a furniture icon set drawn for the job.",
+  "desc": ["I designed Furniture.com and its accessibility, with McKinsey and with studio Dumbar. Search drives the shopping experience, from the sofa a shopper starts with to the room they browse it in. A warm identity carries it, with a furniture icon set drawn for the job.",
            "Eight colours carry the furniture categories, one each. Every icon and campaign module sits on that palette, and I checked each against black, white and every neutral base for contrast.",
            "I designed it responsively, from the large screen heroes down to the mobile flows."],
   "pages": [
@@ -604,7 +607,7 @@ PROJECTS = [
     ("F", 12, "Homepage — find your sofa", ["web"], {"crop": False}),
     ("F", 18, "Featured categories, by color", ["web"], {"crop": False}),
     ("F", 19, "Furniture for your little ones", ["web"], {"crop": False}),
-    ("F", 21, "Featured — Sofas &amp; Sectionals", ["web", "product"], {"crop": False}),
+    ("F", 21, "Featured — Sofas and Sectionals", ["web", "product"], {"crop": False}),
     ("F", 22, "Browse rooms", ["web"], {"crop": False}),
     ("G", 3,  "Color update — before and after", ["brand"], {"crop": False}),
     ("G", 5,  "Color values — furniture, neutral, and action", ["brand"], {"crop": False}),
@@ -652,8 +655,8 @@ PROJECTS = [
   "meta": "Lenka Ilic Studio, Identity and Website Design",
   # Everything stated here is on the pieces themselves or on the studio's own
   # pages: the material, the maker, the city, the year of founding.
-  "desc": ["I designed the identity and the website for Lenka Ilic Studio, a furniture practice in Miami and New York, and art directed the photography. The objects are folded from recycled aluminium and made by hand in Delanson, New York. Each carries a debossed signature and a serial number.",
-           "The mark sits in one weight, small in the corner of the page and small on the metal, so the object is what you look at. The photographs put a grid of white forms on white, against the roofline and in the rooms they were made for."],
+  "desc": ["I designed the identity and the website for Lenka Ilic Studio, a furniture practice in Miami and New York, and art directed the photography. The studio folds each object from recycled aluminium by hand in Delanson, New York. Each carries a debossed signature and a serial number.",
+           "The mark sits in one weight, small in the corner of the page and small on the metal, so the object is what you look at. The photographs put a grid of white forms on white, against the roofline and in the rooms they belong to."],
   "pages": [
     # Everything comes from drop/lenka-ilic/.
   ],
@@ -771,7 +774,7 @@ PROJECTS = [
   "group": "book", "short": "Monograph design",
   "meta": "Sarah Crowner, Monograph, Publication Design",
   "desc": ["I designed the complete monograph on the painter Sarah Crowner, whose sewn canvases sit between fine and applied art. I designed the cover, the typography, the grid, and the order the essays and plates run in.",
-           "Susan Cross's essay <em>Beetle in the Leaves</em> runs tight to the margin against the installation views, while the paintings take full spreads. The layout borrows the logic the work is built on, panels butted edge to edge, colour set against colour without a seam."],
+           "Susan Cross's essay <em>Beetle in the Leaves</em> runs tight to the margin against the installation views, while the paintings take full spreads. The layout borrows the logic behind the work, panels butted edge to edge, colour set against colour without a seam."],
   "pages": [
     ("IMG", "sarah-crowner/cover.jpg", "Cover", ["editorial", "brand"], {"split": False, "rotate": 90}),
     ("IMG", "sarah-crowner/beetle-in-the-leaves.jpg", "Beetle in the Leaves — essay opening", ["editorial"], {"split": False, "rotate": -90}),
@@ -812,7 +815,7 @@ PROJECTS = [
   "kind": "specimen",
   "font": {"family": "Spiritual Labour", "file": "SpiritualLabour-Regular",
            "glyphs": 92, "chars": 91, "year": "2014",
-           "set": "Capitals &amp; figures",
+           "set": "Capitals and figures",
            "sample": "SPIRITUAL LABOUR",
            "rows": ["ABCDEFGHIJKLM", "NOPQRSTUVWXYZ",
                     "0123456789", "?!.,;:"],

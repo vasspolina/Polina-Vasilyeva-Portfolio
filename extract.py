@@ -1198,9 +1198,15 @@ def main():
             led = set(proj.get("lead") or ())
             front = [k for k in keep if k["stem"] in led]
             rest = [k for k in keep if k["stem"] not in led]
+            # Some pieces are the work rather than a document of it, but do
+            # not live in the drop folder. They sit with the folder images,
+            # above the deck pages, instead of falling in among them.
+            early = set(proj.get("before_decks") or ())
             keep = (front +
                     [k for k in rest if k["stem"].startswith("drop")] +
-                    [k for k in rest if not k["stem"].startswith("drop")])
+                    [k for k in rest if k["stem"] in early] +
+                    [k for k in rest if not k["stem"].startswith("drop")
+                     and k["stem"] not in early])
         manifest[slug] = keep
 
     path = os.path.join(ROOT, "manifest.json")

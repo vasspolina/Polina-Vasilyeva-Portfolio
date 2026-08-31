@@ -368,7 +368,7 @@ about = head(f"About, {data.NAME}", 0, data.ABOUT[0]) + nav(0, "about") + f"""<m
   </div>
   <div class="about-cols">
     <section class="about-col">
-      <h2 class="about-h">Selected clients &amp; studios</h2>
+      <h2 class="about-h">Selected clients and studios</h2>
       <ul class="about-list">
 {clients}
       </ul>
@@ -525,7 +525,7 @@ def specimen(proj, desc, pager):
 {desc}
     </div>
     <dl class="spec-facts">
-      <dt>Set</dt><dd>{f.get("set", "Capitals &amp; figures")}</dd>
+      <dt>Set</dt><dd>{f.get("set", "Capitals and figures")}</dd>
       <dt>Styles</dt><dd>1, Regular</dd>
       <dt>Glyphs</dt><dd>{f["glyphs"]}</dd>
       <dt>Characters</dt><dd>{f["chars"]}</dd>
