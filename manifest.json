@@ -3817,6 +3817,88 @@
    "page": 13
   },
   {
+   "stem": "spec-sheets",
+   "caption": "Product spec sheets — mid-rise briefs and crewneck",
+   "tags": [
+    "brand"
+   ],
+   "w": 1466,
+   "h": 1204,
+   "widths": [
+    600,
+    1200,
+    1466
+   ],
+   "source": "IMG",
+   "page": "alexander-wang/spec-sheets.png"
+  },
+  {
+   "stem": "classic-briefs-packs",
+   "caption": "Classic Briefs — the three pack formats",
+   "tags": [
+    "brand"
+   ],
+   "w": 1650,
+   "h": 912,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1650
+   ],
+   "source": "IMG",
+   "page": "alexander-wang/classic-briefs-packs.png"
+  },
+  {
+   "stem": "resealable-bags",
+   "caption": "Packaging — resealable briefs bags in three sizes",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1349,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "alexander-wang/resealable-bags.png"
+  },
+  {
+   "stem": "retail-display-trays",
+   "caption": "Retail display — cartons and pouches on red trays",
+   "tags": [
+    "brand"
+   ],
+   "w": 1372,
+   "h": 2384,
+   "widths": [
+    600,
+    1200,
+    1372
+   ],
+   "source": "IMG",
+   "page": "alexander-wang/retail-display-trays.png"
+  },
+  {
+   "stem": "display-case",
+   "caption": "Bodywear display case — packs stacked behind glass",
+   "tags": [
+    "brand"
+   ],
+   "w": 1342,
+   "h": 2370,
+   "widths": [
+    600,
+    1200,
+    1342
+   ],
+   "source": "IMG",
+   "page": "alexander-wang/display-case.png"
+  },
+  {
    "stem": "b014",
    "caption": "Packaging — bag, carton, and box",
    "tags": [
@@ -4547,12 +4629,13 @@
     "brand",
     "social"
    ],
-   "w": 1352,
-   "h": 783,
+   "w": 2400,
+   "h": 1350,
    "widths": [
     600,
     1200,
-    1352
+    1600,
+    2400
    ],
    "source": "B",
    "page": 51
@@ -4694,39 +4777,6 @@
   },
   {
    "stem": "drop03",
-   "caption": "Product spec sheets — mid-rise briefs and crewneck",
-   "tags": [
-    "brand"
-   ],
-   "w": 1466,
-   "h": 1204,
-   "widths": [
-    600,
-    1200,
-    1466
-   ],
-   "source": "DROP",
-   "page": "drop03"
-  },
-  {
-   "stem": "drop04",
-   "caption": "Classic Briefs — the three pack formats",
-   "tags": [
-    "brand"
-   ],
-   "w": 1650,
-   "h": 912,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1650
-   ],
-   "source": "DROP",
-   "page": "drop04"
-  },
-  {
-   "stem": "drop05",
    "caption": "Storefront — the lit logo wall, angled crop",
    "tags": [
     "brand"
@@ -4738,10 +4788,10 @@
     1080
    ],
    "source": "DROP",
-   "page": "drop05"
+   "page": "drop03"
   },
   {
-   "stem": "drop06",
+   "stem": "drop04",
    "caption": "Main entrance — a blue and red room with white risers",
    "tags": [
     "brand"
@@ -4754,10 +4804,10 @@
     1443
    ],
    "source": "DROP",
-   "page": "drop06"
+   "page": "drop04"
   },
   {
-   "stem": "drop07",
+   "stem": "drop05",
    "caption": "Email layout — the elite pouch lanyard in three",
    "tags": [
     "brand"
@@ -4770,10 +4820,10 @@
     1500
    ],
    "source": "DROP",
-   "page": "drop07"
+   "page": "drop05"
   },
   {
-   "stem": "drop08",
+   "stem": "drop06",
    "caption": "Storefront — the full facade head on at night",
    "tags": [
     "brand"
@@ -4787,27 +4837,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop08"
+   "page": "drop06"
   },
   {
-   "stem": "drop09",
-   "caption": "Packaging — resealable briefs bags in three sizes",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1349,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop09"
-  },
-  {
-   "stem": "drop10",
+   "stem": "drop07",
    "caption": "Store interior — printed walls and a mirrored doorway",
    "tags": [
     "brand"
@@ -4821,39 +4854,7 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop10"
-  },
-  {
-   "stem": "drop11",
-   "caption": "Retail display — cartons and pouches on red trays",
-   "tags": [
-    "brand"
-   ],
-   "w": 1361,
-   "h": 2372,
-   "widths": [
-    600,
-    1200,
-    1361
-   ],
-   "source": "DROP",
-   "page": "drop11"
-  },
-  {
-   "stem": "drop12",
-   "caption": "Bodywear display case — packs stacked behind glass",
-   "tags": [
-    "brand"
-   ],
-   "w": 1342,
-   "h": 2370,
-   "widths": [
-    600,
-    1200,
-    1342
-   ],
-   "source": "DROP",
-   "page": "drop12"
+   "page": "drop07"
   }
  ],
  "wsj": [
