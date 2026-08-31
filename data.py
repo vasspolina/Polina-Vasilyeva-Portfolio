@@ -697,7 +697,8 @@ PROJECTS = [
   # dark table. Keying those out takes the picture with them.
   "keep_ground": True,
   # The card set is one row of three; nothing sits beside it.
-  "piece_width": {"drop02": 100},
+  # The card set and each web pair take a row to themselves.
+  "piece_width": {"drop02": 100, "drop03": 100, "drop04": 100, "drop05": 100},
   "cover": "drop01",
   "group": "brand", "short": "Identity, website &amp; art direction",
   "meta": "Lenka Ilic Studio — Identity, Website &amp; Art Direction",
