@@ -4741,24 +4741,6 @@
    "page": 49
   },
   {
-   "stem": "b051",
-   "caption": "Velour Couture, social and email assets",
-   "tags": [
-    "brand",
-    "social"
-   ],
-   "w": 2400,
-   "h": 1066,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "B",
-   "page": 51
-  },
-  {
    "stem": "b052",
    "caption": "SISTERS, campaign identity",
    "tags": [
@@ -4973,6 +4955,57 @@
    ],
    "source": "DROP",
    "page": "drop07"
+  },
+  {
+   "stem": "drop09",
+   "caption": "Velour Couture, the four panel story",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop09"
+  },
+  {
+   "stem": "drop10",
+   "caption": "Velour Couture, three looks",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop10"
+  },
+  {
+   "stem": "drop11",
+   "caption": "Basement Prep, look 13 with the accessories",
+   "tags": [
+    "brand"
+   ],
+   "w": 2250,
+   "h": 4000,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2250
+   ],
+   "source": "DROP",
+   "page": "drop11"
   }
  ],
  "wsj": [
