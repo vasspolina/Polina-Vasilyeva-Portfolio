@@ -978,8 +978,8 @@ PROJECTS = [
  {
   "slug": "willow-and-wu", "title": "Willow and Wu",
   "year": "2024",
-  "piece_width": {"b101": 42},
-  "cover": "b101",
+  "piece_width": {"poster": 42},
+  "cover": "poster",
   "group": "brand", "short": "Film identity, poster &amp; titles",
   "meta": "Kathy Meng — Film Identity, Poster &amp; Titles",
   "desc": ["Identity for <em>Willow and Wu</em>, a short independent film "
@@ -988,7 +988,8 @@ PROJECTS = [
            "Carried through the poster and the on-screen title sequence."],
   "pages": [
     ("B", 100, "Willow and Wu — wordmark", ["brand"], {"crop": False}),
-    ("B", 101, "Poster design", ["brand"], {"crop": False}),
+    ("IMG", "willow-and-wu/poster.png", "Poster design", ["brand"],
+     {"crop": False, "split": False}),
     ("B", 102, "Movie titles", ["brand"], {"split": False, "span": 12}),
   ],
  },
