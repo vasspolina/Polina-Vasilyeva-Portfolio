@@ -158,8 +158,6 @@ PROJECTS = [
     ("I", 9,  "What Ultra Wideband gives you — the icon row", ["brand"], {"split": False}),
     ("I", 10, "5G Ultra Wideband, now in more places", ["brand"], {"split": False}),
     ("I", 11, "Better gets better — iPhone 13 Pro", ["brand"], {"split": False}),
-    ("I", 14, "The plan grid, by tier", ["brand", "editorial"]),
-    ("I", 17, "Ultra — the lockup", ["brand"]),
     ("I", 18, "5G Ultra Wideband — now in more and more places", ["brand"]),
     ("IMG", "verizon-sem/p02.jpg", "Agenda — the retail design system and the reset", ["brand", "strategy"], {"crop": False, "split": False}),
     ("IMG", "verizon-sem/p04.jpg", "Optimizing the retail design system", ["strategy"], {"crop": False, "split": False}),
