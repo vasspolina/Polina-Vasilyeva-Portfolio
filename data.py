@@ -114,26 +114,25 @@ PROJECTS = [
   "cover": "a025",
   "group": "brand", "short": "Web, retail &amp; brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
-  "desc": ["Research, then a single set of design standards unified "
-           "across digital, retail, and UX. Within Brand 3.0: the 5G "
-           "homepage, the chat and voice assistant with its full set of "
-           "speech states, and the application of NHG Thin, Vivid Red, "
-           "and soft grays across screens in-store and online.",
-            "Brand design for national retail: one type system holding "
-           "every printed asset together, from rate sheets and plan "
-           "comparisons to price cards and window and header signage, so "
-           "a Prepaid sheet, an Unlimited plan grid and an <em>Ultra</em> "
-           "header all read as the same voice at any size. The system "
-           "carries into the stores as three tiers of wayfinding, the "
-           "Home and Business walls, Express Pickup Lockers, and "
-           "packaging. Every asset was reviewed against accessibility "
-           "best practice.",
-            "Streamlining the standards raised designer productivity, "
+  "desc": ["Research across the retail floor and the site, then one set "
+           "of design standards where digital, retail, and UX had each "
+           "kept their own. Within Brand 3.0 that meant the 5G homepage, "
+           "the chat and voice assistant through its full run of speech "
+           "states, and NHG Thin, Vivid Red, and the soft grays applied "
+           "the same way on a screen in a store and on a phone at home.",
+            "For national retail, one type system holds every printed "
+           "asset: rate sheets, plan comparisons, price cards, window and "
+           "header signage. A Prepaid sheet, an Unlimited plan grid and "
+           "an <em>Ultra</em> header read in the same voice at any size. "
+           "The system carries onto the floor as three tiers of "
+           "wayfinding, the Home and Business walls, Express Pickup "
+           "Lockers, and packaging. Every asset was reviewed against "
+           "accessibility best practice and updated where it fell short.",
+            "Streamlined standards raised designer productivity, "
            "shortened turnaround on retail projects, and improved print "
-           "quality.",
-            "Built components for Verizon's own design library, and ran "
-           "audits and workshops to improve the system from within, "
-           "managing several projects at once across retail and digital."],
+           "quality. Alongside that work: components for Verizon's own "
+           "design library, and audits and workshops that improved the "
+           "system from within."],
   "pages": [
     # The deck's own title slide carries the wordmark on the slide ground, and
     # the Retail SEM title exists only at 1020px — too small to be a cover.
