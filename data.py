@@ -74,6 +74,7 @@ SOURCES = {
     "F": "source/_decks/furniture-final-design.pdf",
     "G": "source/_decks/furniture-color-typography.pdf",
     "H": "source/_decks/furniture-final-design-full.pdf",
+    "I": "source/_decks/verizon-retail-signage.pdf",
 }
 
 FILTERS = [
@@ -152,6 +153,15 @@ PROJECTS = [
     ("C", 20, ["The store, looking in", "Product table merchandising",
                "The storefront"], ["brand"], {"rows": True, "keep": [3]}),
     ("A", 32, "Executing growth across five vectors — strategy deck", ["strategy"]),
+    # The retail signage artwork itself, a banner to a page.
+    ("I", 1,  "Stretch your data, not your budget — the price tiers", ["brand", "editorial"]),
+    ("I", 7,  "5G plan tiers — the price strip", ["brand"]),
+    ("I", 9,  "What Ultra Wideband gives you — the icon row", ["brand"], {"split": False}),
+    ("I", 10, "5G Ultra Wideband, now in more places", ["brand"], {"split": False}),
+    ("I", 11, "Better gets better — iPhone 13 Pro", ["brand"], {"split": False}),
+    ("I", 14, "The plan grid, by tier", ["brand", "editorial"]),
+    ("I", 17, "Ultra — the lockup", ["brand"]),
+    ("I", 18, "5G Ultra Wideband — now in more and more places", ["brand"]),
     ("IMG", "verizon-sem/p02.jpg", "Agenda — the retail design system and the reset", ["brand", "strategy"], {"crop": False, "split": False}),
     ("IMG", "verizon-sem/p04.jpg", "Optimizing the retail design system", ["strategy"], {"crop": False, "split": False}),
     ("IMG", "verizon-sem/p05.jpg", "Towards a responsive retail environment", ["strategy"], {"crop": False, "split": False}),
