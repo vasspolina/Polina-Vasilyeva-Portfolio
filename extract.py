@@ -701,6 +701,7 @@ def regions(im, split=True, crop=True, rows=False):
 SPARSE = 0.75          # ink density below this reads as a mark, not a photograph
 DROP = os.path.join(ROOT, "drop")   # hand-picked images, one folder per project
 DROP_LONG = 2600       # keep enough pixels for the 2400 rendition
+DROP_TALL = 12000      # a page can be long; past this it is not worth the bytes
 
 
 def is_sparse(mask, box):
@@ -813,9 +814,12 @@ def dropped(slug, title, tags, key_ground=True):
         # invents detail that is not in it: the result is soft and heavy at
         # once. A source smaller than the cap is published at its own size and
         # the rendition ladder simply starts lower.
-        long_edge = max(im.size)
-        if long_edge > DROP_LONG:
-            k = DROP_LONG / long_edge
+        # Cap the width, not the long edge. A whole page captured top to
+        # bottom is portrait, and its 2400 rendition is 2400 across; capping
+        # its height instead squeezed the width to a fraction of that and the
+        # page published soft. Height gets its own, much looser ceiling.
+        k = min(DROP_LONG / im.width, DROP_TALL / im.height, 1)
+        if k < 1:
             im = im.resize((round(im.width * k), round(im.height * k)), Image.LANCZOS)
         # Strip only the ordering prefix. A character class of digits and
         # spaces would be greedy and eat the caption's own first word:

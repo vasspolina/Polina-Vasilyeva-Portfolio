@@ -515,7 +515,8 @@ PROJECTS = [
   "pages": [
     ("B", 3,  "bodywear — brand lockup", ["brand"], {"crop": False}),
     ("B", 5,  "The a mark", ["brand"], {"pad": 0.14}),
-    ("B", 9,  "Care label — designed and supervised through production", ["brand"]),
+    ("B", 9,  "Care label — designed and supervised through production", ["brand"],
+     {"scale": 6.0}),
     ("B", 13, "Packaging — the Classic Briefs bag", ["brand"], {"split": False}),
     ("IMG", "alexander-wang/spec-sheets.png",
      "Product spec sheets — mid-rise briefs and crewneck", ["brand"],
@@ -560,10 +561,12 @@ PROJECTS = [
       "start": 190, "duration": 40, "width": 800, "kbps": 450,
       "autoplay": True}),   # only 1MB, and an installation loop wants to run
     ("B", 38, "Beijing flagship — gradient video installation", ["brand"]),
-    ("B", 39, "Beijing flagship — gradient installation in the store", ["brand"]),
+    ("B", 39, "Beijing flagship — gradient installation in the store", ["brand"],
+     {"scale": 4.0}),
     ("B", 40, "Retail — video installation, animation", ["brand"]),
     ("B", 41, "Retail — video installation, animation", ["brand"]),
-    ("B", 42, "Retail — video installation, animation", ["brand"]),
+    ("B", 42, "Retail — video installation, animation", ["brand"],
+     {"scale": 4.0}),
     ("B", 43, "Retail — video installation, animation", ["brand"]),
     ("B", 44, "Sanya Haitang Bay — 3D catwalk animation", ["brand"]),
     ("B", 45, "Sanya Haitang Bay — storefront", ["brand"]),
@@ -819,7 +822,7 @@ PROJECTS = [
   # d005 comes off the deck at 1279px, so it sits smaller than the deck
   # pages beside it. The two broker covers pair, black beside white.
   "piece_width": {"d005": 45, "drop04": 100, "drop05": 48, "drop06": 48,
-                  "d006": 70, "d007": 70, "d008": 70,
+                  "d006": 48, "d007": 48, "d008": 48,
                   # both cards are small objects and are shown as such
                   "drop02": 30, "drop03": 30,
                   # the listing map is dense and needs the room
@@ -844,9 +847,12 @@ PROJECTS = [
   "pages": [
     ("D", 4, "Graphic approach — the For Sale card", ["brand"]),
     ("D", 5, "Digital banner system", ["brand", "web"]),
-    ("D", 6, "Data visualisation — call-out stats", ["brand", "editorial"]),
-    ("D", 7, "Data visualisation — inventory tables", ["brand", "editorial"]),
-    ("D", 8, "Data visualisation — tables", ["brand", "editorial"]),
+    ("D", 6, "Data visualisation — call-out stats", ["brand", "editorial"],
+     {"scale": 4.0}),
+    ("D", 7, "Data visualisation — inventory tables", ["brand", "editorial"],
+     {"scale": 4.0}),
+    ("D", 8, "Data visualisation — tables", ["brand", "editorial"],
+     {"scale": 4.0}),
     ("IMG", "compass/map.jpg", "245 10th Avenue — neighborhood points of interest", ["brand", "editorial"], {"crop": False}),
   ],
  },
@@ -895,10 +901,10 @@ PROJECTS = [
            "Yekaterinburg runs the title vertically down the poster, "
            "letting each photograph take the rest of the sheet."],
   "pages": [
-    ("B", 91, "See you later — landscape spread", ["editorial"], {"cutout": 45}),
-    ("B", 92, "See you later — horizon spread", ["editorial"], {"cutout": 45}),
-    ("B", 93, "See you later — water spread", ["editorial"], {"cutout": 45}),
-    ("B", 94, "See you later — portrait spread", ["editorial"], {"cutout": 45}),
+    ("B", 91, "See you later — landscape spread", ["editorial"], {"cutout": 45, "scale": 4.0}),
+    ("B", 92, "See you later — horizon spread", ["editorial"], {"cutout": 45, "scale": 4.0}),
+    ("B", 93, "See you later — water spread", ["editorial"], {"cutout": 45, "scale": 4.0}),
+    ("B", 94, "See you later — portrait spread", ["editorial"], {"cutout": 45, "scale": 4.0}),
     ("B", 95, "Пучки серебряного света — one poster, four images, on the street",
      ["brand", "editorial"]),
     ("B", 96, "Пучки серебряного света — one poster, four images, on the street",
