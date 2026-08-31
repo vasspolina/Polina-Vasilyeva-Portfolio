@@ -1630,7 +1630,7 @@
    "page": "haworth/collection-lockup.png"
   },
   {
-   "stem": "e078",
+   "stem": "e077",
    "caption": "Business cards — fronts and backs, standard and bilingual",
    "tags": [
     "brand"
@@ -1644,7 +1644,7 @@
     2400
    ],
    "source": "E",
-   "page": 78
+   "page": 77
   },
   {
    "stem": "a059",
@@ -1664,24 +1664,6 @@
    "span": 6
   },
   {
-   "stem": "social-five-screens",
-   "caption": "Instagram posts and stories — five screens",
-   "tags": [
-    "social"
-   ],
-   "w": 2400,
-   "h": 1349,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "IMG",
-   "page": "haworth/social-five-screens.png",
-   "span": 12
-  },
-  {
    "stem": "a060",
    "caption": "Editorial modules — workplace research stories",
    "tags": [
@@ -1699,6 +1681,24 @@
    "source": "A",
    "page": 60,
    "span": 6
+  },
+  {
+   "stem": "social-five-screens",
+   "caption": "Instagram posts and stories — five screens",
+   "tags": [
+    "social"
+   ],
+   "w": 2400,
+   "h": 1349,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "haworth/social-five-screens.png",
+   "span": 12
   },
   {
    "stem": "b064-2",
@@ -1962,24 +1962,6 @@
    ],
    "source": "E",
    "page": 15,
-   "span": 2
-  },
-  {
-   "stem": "e016",
-   "caption": "Brand book — the logotype",
-   "tags": [
-    "brand",
-    "editorial"
-   ],
-   "w": 1584,
-   "h": 754,
-   "widths": [
-    600,
-    1200,
-    1584
-   ],
-   "source": "E",
-   "page": 16,
    "span": 2
   },
   {
@@ -2949,25 +2931,6 @@
    ],
    "source": "E",
    "page": 76,
-   "span": 2
-  },
-  {
-   "stem": "e077",
-   "caption": "Brand book — corporate materials",
-   "tags": [
-    "brand",
-    "editorial"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "E",
-   "page": 77,
    "span": 2
   },
   {

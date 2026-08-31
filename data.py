@@ -114,25 +114,23 @@ PROJECTS = [
   "cover": "a025",
   "group": "brand", "short": "Web, retail &amp; brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
-  "desc": ["Research across the retail floor and the site, then one set "
-           "of design standards where digital, retail, and UX had each "
-           "kept their own. Within Brand 3.0 that meant the 5G homepage, "
-           "the chat and voice assistant through its full run of speech "
-           "states, and NHG Thin, Vivid Red, and the soft grays applied "
-           "the same way on a screen in a store and on a phone at home.",
-            "For national retail, one type system holds every printed "
-           "asset: rate sheets, plan comparisons, price cards, window and "
-           "header signage. A Prepaid sheet, an Unlimited plan grid and "
-           "an <em>Ultra</em> header read in the same voice at any size. "
-           "The system carries onto the floor as three tiers of "
-           "wayfinding, the Home and Business walls, Express Pickup "
-           "Lockers, and packaging. Every asset was reviewed against "
-           "accessibility best practice and updated where it fell short.",
-            "Streamlined standards raised designer productivity, "
-           "shortened turnaround on retail projects, and improved print "
-           "quality. Alongside that work: components for Verizon's own "
-           "design library, and audits and workshops that improved the "
-           "system from within."],
+  "desc": ["Verizon's design standards had grown apart: digital, retail "
+           "and UX each held their own. I researched the store floor and "
+           "the site, then wrote one set for all three. Under Brand 3.0 "
+           "that covered the 5G homepage, the chat and voice assistant "
+           "with every speech state it can be in, and one consistent use "
+           "of NHG Thin, Vivid Red and the soft grays.",
+            "The retail work put a single type system behind every "
+           "printed piece, from rate sheets and price cards to window and "
+           "header signage, so a Prepaid sheet and an Unlimited plan grid "
+           "speak at the same pitch. It continues onto the floor in the "
+           "wayfinding, the Home and Business walls, the Express Pickup "
+           "Lockers and the packaging. I reviewed each asset for "
+           "accessibility and fixed what failed.",
+            "Designers worked faster on it, retail turnarounds got "
+           "shorter, and print quality improved. I also built components "
+           "for Verizon's design library and ran audits and workshops on "
+           "the system itself."],
   "pages": [
     # The deck's own title slide carries the wordmark on the slide ground, and
     # the Retail SEM title exists only at 1020px — too small to be a cover.
@@ -193,7 +191,7 @@ PROJECTS = [
   # narrower field, so the slide ground is taken in from both sides.
   # The slide carries its own header and footer in small type; the mark
   # alone is the cover, so both bands come off.
-  "keep_always": ["e016", "e078"],
+  "keep_always": ["e016", "e077"],
   "piece_crop": {"b062": (0.310, 0.271, 0.304, 0.273),
                  "e016": (0.0964, 0.1816, 0.3797, 0.1996),
                  "collection-lockup": (0.242, 0.1955, 0.242, 0.1955)},
@@ -232,15 +230,16 @@ PROJECTS = [
     ("E", 16, "Haworth — the logotype on white", ["brand"], {"crop": False, "split": False}),
     ("IMG", "haworth/collection-lockup.png", "Haworth Collection lockup on navy",
      ["brand"], {"crop": False}),
-    ("E", 78, "Business cards — fronts and backs, standard and bilingual",
+    ("E", 77, "Business cards — fronts and backs, standard and bilingual",
      ["brand"], {"crop": False, "split": False}),
     ("A", 59, "Haworth.com homepage — Inspired Design", ["ecommerce", "web"],
+     {"dechrome": True, "span": 6}),
+    ("A", 60, "Editorial modules — workplace research stories", ["ecommerce", "web"],
      {"dechrome": True, "span": 6}),
     ("IMG", "haworth/social-five-screens.png",
      "Instagram posts and stories — five screens", ["social"],
      {"crop": False, "split": False, "span": 12}),
-    ("A", 60, "Editorial modules — workplace research stories", ["ecommerce", "web"],
-     {"dechrome": True, "span": 6}),
+
     # b063 and the first half of b064 are dropped: one repeats the shoot, the
     # other carries the "Art Direction" divider band across its foot.
     ("B", 64, "New York headquarters — art direction", ["brand"], {"keep": [2]}),
@@ -265,8 +264,6 @@ PROJECTS = [
     ("E", 13, "Brand book — visual identity", ["brand", "editorial"],
      {"crop": False, "split": False, "span": 2}),
     ("E", 15, "Brand book — the logotype", ["brand", "editorial"],
-     {"crop": False, "split": False, "span": 2}),
-    ("E", 16, "Brand book — the logotype", ["brand", "editorial"],
      {"crop": False, "split": False, "span": 2}),
     ("E", 17, "Brand book — the logotype", ["brand", "editorial"],
      {"crop": False, "split": False, "span": 2}),
@@ -373,8 +370,6 @@ PROJECTS = [
     ("E", 72, "Brand book — verbal identity", ["brand", "editorial"],
      {"crop": False, "split": False, "span": 2}),
     ("E", 76, "Brand book — corporate materials", ["brand", "editorial"],
-     {"crop": False, "split": False, "span": 2}),
-    ("E", 77, "Brand book — corporate materials", ["brand", "editorial"],
      {"crop": False, "split": False, "span": 2}),
     ("E", 78, "Brand book — corporate materials", ["brand", "editorial"],
      {"crop": False, "split": False, "span": 2}),
