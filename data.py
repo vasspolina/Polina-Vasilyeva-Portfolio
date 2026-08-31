@@ -7,35 +7,17 @@ PROJECTS    — ordered. Each page entry is (source, page_number, caption, [tags
 """
 
 NAME = "Polina Vasilyeva"
-ROLE = "Senior Interactive, Product, UX &amp; Visual Designer"
+ROLE = "Senior Product and Interaction Designer"
 EMAIL = "vasilievapolli@gmail.com"
 PHONE = "203 909 8496"
 LOCATION = "New York / Madrid"
 LINKEDIN = "https://www.linkedin.com/in/polina-vasilyeva-265aa031/"
 
 ABOUT = [
-    "I’m a senior interactive, product, UX and visual designer working "
-    "between New York and Madrid. Ten years across accessible and friendly "
-    "visual and interactive design, digital strategy, art direction, and "
-    "concept development, helping companies and individuals focus and build "
-    "on their advantage.",
-    "Most recently I designed product experiences for PayPal’s loyalty "
-    "program, adapting rewards mechanics and partner offers to the UK and "
-    "German markets. Before that, at Apple, I led design on an AI-powered "
-    "shopping assistant for the global storefront, redesigned the AppleCare "
-    "support and coverage-selection flows, and built a personalized "
-    "carrier-offer experience, embedding WCAG standards into every stage "
-    "from concept through QA.",
-    "Earlier: product design and design-system work at Optum, Fitbit "
-    "features with Google through HUGE, component libraries and product "
-    "strategy for McKinsey, brand standards for Verizon across digital and "
-    "retail, campaigns and packaging as Senior Designer and Art Director at "
-    "Alexander Wang, UX and visual design for Florida Blue with frog "
-    "design, and a re-brand strategy for Showtime at Wolff Olins.",
-    "I hold an MFA from Yale School of Art and a BFA from Gerrit Rietveld "
-    "Academie, and I teach, currently as a visiting critic at NYU, "
-    "previously adjunct professor at Pratt Institute and The New School, "
-    "and visiting critic at RISD.",
+    "I design products and interfaces, and I work between New York and Madrid. I have practised for ten years, across visual design, digital strategy, art direction and accessibility.",
+    "Most recently I designed product experiences for PayPal's loyalty programme. I adapted the rewards mechanics and the partner offers to the UK and German markets. Before that I led design at Apple on a shopping assistant built on a language model for the global storefront. I redesigned the AppleCare support flow and the flow where a customer picks their coverage. I built a carrier offer experience that changes per customer, and I put WCAG standards into every stage from concept through QA.",
+    "Earlier I did product design and design system work at Optum, Fitbit features with Google through HUGE, component libraries and product strategy for McKinsey, brand standards for Verizon across digital and retail, campaigns and packaging as Senior Designer and Art Director at Alexander Wang, UX and visual design for Florida Blue with frog design, and a rebrand strategy for Showtime at Wolff Olins.",
+    "I hold an MFA from Yale School of Art and a BFA from Gerrit Rietveld Academie. I teach as a visiting critic at NYU. I was an adjunct professor at Pratt Institute and at The New School, and a visiting critic at RISD.",
 ]
 
 CLIENTS = ["PayPal", "Apple", "Optum", "Google / Fitbit", "McKinsey", "Verizon",
@@ -45,15 +27,15 @@ CLIENTS = ["PayPal", "Apple", "Optum", "Google / Fitbit", "McKinsey", "Verizon",
            "Tomo", "Pratt Institute"]
 
 TEACHING = [
-    ("NYU", "Visiting Critic, 2021–present"),
-    ("Pratt Institute", "Adjunct Professor, 2017–2020"),
-    ("The New School", "Adjunct Professor, 2017–2018"),
-    ("RISD", "Visiting Critic, 2017–2021"),
+    ("NYU", "Visiting Critic, 2021 to present"),
+    ("Pratt Institute", "Adjunct Professor, 2017 to 2020"),
+    ("The New School", "Adjunct Professor, 2017 to 2018"),
+    ("RISD", "Visiting Critic, 2017 to 2021"),
 ]
 
 EDUCATION = [
-    ("Yale School of Art", "MFA, Graphic and Digital Product Design, 2015–2017"),
-    ("Gerrit Rietveld Academie", "BFA, Graphic and Interaction Design, 2010–2015"),
+    ("Yale School of Art", "MFA, Graphic and Digital Product Design, 2015 to 2017"),
+    ("Gerrit Rietveld Academie", "BFA, Graphic and Interaction Design, 2010 to 2015"),
 ]
 
 INTRO = ("Selected work in product, web, brand, and editorial design for "
@@ -81,9 +63,9 @@ FILTERS = [
     ("all", "all"),
     ("web", "web"),
     ("mobile", "mobile"),
-    ("ecommerce", "e-commerce"),
+    ("ecommerce", "ecommerce"),
     ("brand", "brand"),
-    ("product", "ux &amp; product"),
+    ("product", "ux and product"),
     ("editorial", "editorial"),
     ("strategy", "strategy"),
     ("social", "social"),
@@ -91,16 +73,16 @@ FILTERS = [
 
 # The overview section at the top of the index, one image per project.
 GROUPS = [
-    ("brand",   "Brand &amp; campaign"),
-    ("product", "Product &amp; web"),
-    ("book",    "Books &amp; print"),
+    ("brand",   "Brand and campaign"),
+    ("product", "Product and web"),
+    ("book",    "Books and print"),
     ("type",    "Type"),
 ]
 
 PROJECTS = [
  {
   "slug": "verizon", "title": "Verizon",
-  "year": "2022–2023",
+  "year": "2022 to 2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
   "piece_width": {"c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
@@ -114,7 +96,7 @@ PROJECTS = [
   "keep_always": ["i0%02d" % n for n in range(1, 19)],
   "cover": "a025",
   "group": "brand", "short": "Retail and brand design",
-  "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
+  "meta": "Verizon, Senior Design Consultant, 2022 to 2023, Retail and Brand Design",
   "desc": ["I was on the team behind Verizon's retail guidelines and assets. The work covered the brand guidelines and the national retail audit guidelines. I unified how typography was used across them, wrote the instructions for use of the logo, and designed the signage.",
            "We started with research into where the customer experience and the look of it came apart between digital and retail. The standards that followed were simplified across digital, retail and UX. NHG Thin, Vivid Red and the soft grays are used the same way on a store screen and on a phone. The 5G homepage follows them, and so does the chat and voice assistant, through every speech state it can be in.",
            "In retail one type system sits behind every printed piece, from the rate sheet and the price card to the window and header signage, so a Prepaid sheet and an Unlimited plan grid speak at the same pitch. It carries onto the floor in the wayfinding, the Home and Business walls, the Express Pickup Lockers and the packaging. I reviewed the assets against accessibility best practice and updated what fell short.",
@@ -220,7 +202,7 @@ PROJECTS = [
                   "a059": 48, "a060": 48, "b064-2": 30, "b065-1": 30, "b065-2": 30},
   "cover": "b062",
   "group": "brand", "short": "Brand and online store design",
-  "meta": "Haworth — with Apartamento Studios — Brand, E-commerce &amp; Digital Strategy",
+  "meta": "Haworth, with Apartamento Studios, Brand and Online Store Design",
   "desc": ["I designed the online store and the digital strategy for Haworth's platform. The homepage became the central portal for brand stories. Editorial modules carried the workplace research, and the mobile pages told the Social Spaces and Organic Workspace stories.",
            "I worked with Apartamento Studios on the logo and on the brand guidelines. The guidelines cover how the logotype changed, its clearspace and minimum size, the sub brand lockups for Collection and Health, Founders Grotesk set against Plantin MT Pro, the colour system, the modular layout grid, the photography direction, an icon set drawn on one grid, and the applications from business cards to invitations.",
            "I also art directed the New York headquarters and the print work, from the workplace research reports to the Interior Design Hall of Fame Awards.",
@@ -456,10 +438,10 @@ PROJECTS = [
                   "b031-1": 30, "b031-2": 30, "b033": 30,
                   "b035-1": 30, "b035-2": 30},
   "piece_crop": {"b003": (0.02, 0.088, 0.10, 0.088)},
-  "year": "2021–2022",
+  "year": "2021 to 2022",
   "cover": "b037",
   "group": "brand", "short": "Brand and packaging design",
-  "meta": "Alexander Wang — Senior Designer &amp; Art Director, 2021–2022 — Brand, Packaging &amp; E-commerce",
+  "meta": "Alexander Wang, Senior Designer and Art Director, 2021 to 2022, Brand and Packaging Design",
   "desc": ["I originated and launched the brand and the packaging for Alexander Wang bodywear, and the campaigns that ran with it. The clothing and care labels carry red and blue stripes that nod to classic Americana. The packaging borrows the look of the grocery aisle, in cartons, mylar, magnetic boxes, and all of it recyclable.",
            "The idea carries into retail as display units built to look like refrigerated cases. It carries into the video installation and into the art direction for the flagship stores in Beijing, Sanya Haitang Bay and New York.",
            "Promo campaigns ran each season from spring to autumn, in print and in digital media both static and moving. Todd Oldham shot <em>Whenever. Wherever.</em> I designed the <em>SISTERS</em> identity with its cast cards and its posters. I directed the styling for Julia Fox, made the drop titles that carried each release through social and email, and designed the vault site for special offer sales."],
@@ -551,7 +533,7 @@ PROJECTS = [
                   "ad-tall": 23},
   "cover": "ad-tall",
   "group": "brand", "short": "Subscription campaign design",
-  "meta": "The Wall Street Journal — Subscription Campaign Design",
+  "meta": "The Wall Street Journal, Subscription Campaign Design",
   "desc": ["I designed subscription acquisition for The Wall Street Journal across the marketing funnel. Display advertising sits at the top, email in the middle, and the offer pages close. Each stage asks for one thing, and the ask gets more specific as the reader moves down.",
            "One campaign runs at more than one ratio. The masthead holds its relationship to the editorial image and to the offer as the frame changes shape.",
            "The email carries the middle of the funnel. Podcast titles are the subject, one colour to a show. The price becomes the picture rather than a line beside it, a green four and a red one over a field of dollar signs. I set it in Escrow, the paper's own face. The subscribe action and the price sit in a band at the foot of every size."],
@@ -570,7 +552,7 @@ PROJECTS = [
                  "drop07": (0.068, 0, 0, 0), "drop08": (0.068, 0, 0, 0)},
   "cover": "drop01",
   "group": "product", "short": "Online store and campaign design",
-  "meta": "Clinique — clinique iD, E-commerce &amp; Campaign Design",
+  "meta": "Clinique, clinique iD, Online Store and Campaign Design",
   "desc": ["I designed the campaign and the online store for clinique iD, a hydrator built in two parts. A base takes a cartridge of concentrate. The product page sells it as an equation, base plus cartridge equals the bottle you end up with.",
            "Each concern has its own colour and its own texture. Green is for irritation, blue for pores and uneven texture, purple for lines and wrinkles, orange for fatigue. A shopper can pick a base and a cartridge without reading a word."],
   "pages": [
@@ -584,7 +566,7 @@ PROJECTS = [
   "piece_width": {f"drop{n:02d}": 100 for n in range(1, 10)},
   "cover": "drop09",
   "group": "product", "short": "Product design and research",
-  "meta": "Chobani — UX/UI, Visual Design &amp; Research",
+  "meta": "Chobani, Product Design and Research",
   "desc": ["I designed chobani.com and ran the research behind it. Landing systems cover every product line, from Greek Yogurt and Flip through Complete, Less Sugar and Drinks, and foodservice has its own. The recipe library holds a cooking mode that works one step at a time. Product pages carry the nutritional highlights.",
            "I designed it for the desktop and the phone as one system."],
   "pages": [
@@ -603,7 +585,7 @@ PROJECTS = [
   "piece_crop": {"f004": (0, 0, 0.010, 0.006)},
   "cover": "f012",
   "group": "product", "short": "Web design and digital accessibility",
-  "meta": "Furniture.com — with McKinsey &amp; studio Dumbar, 2022 — Web Design &amp; Digital Accessibility",
+  "meta": "Furniture.com, with McKinsey and studio Dumbar, 2022, Web Design and Digital Accessibility",
   "desc": ["I designed Furniture.com and its accessibility, with McKinsey and with studio Dumbar. The shopping experience is built around search, from the sofa a shopper starts with to the room they browse it in. A warm identity carries it, with a furniture icon set drawn for the job.",
            "Eight colours carry the furniture categories, one each. Every icon and campaign module sits on that palette, and I checked each against black, white and every neutral base for contrast.",
            "I designed it responsively, from the large screen heroes down to the mobile flows."],
@@ -667,7 +649,7 @@ PROJECTS = [
   "piece_width": {"drop02": 100, "drop03": 100, "drop04": 100, "drop05": 100},
   "cover": "drop01",
   "group": "brand", "short": "Identity and website design",
-  "meta": "Lenka Ilic Studio — Identity, Website &amp; Art Direction",
+  "meta": "Lenka Ilic Studio, Identity and Website Design",
   # Everything stated here is on the pieces themselves or on the studio's own
   # pages: the material, the maker, the city, the year of founding.
   "desc": ["I designed the identity and the website for Lenka Ilic Studio, a furniture practice in Miami and New York, and art directed the photography. The objects are folded from recycled aluminium and made by hand in Delanson, New York. Each carries a debossed signature and a serial number.",
@@ -684,7 +666,7 @@ PROJECTS = [
   "piece_width": {"drop02": 100, "drop03": 100, "drop04": 100, "drop05": 100},
   "cover": "drop01",
   "group": "product", "short": "Website and identity",
-  "meta": "Bektesevic Ter Steeg Advocaten — Website &amp; Identity",
+  "meta": "Bektesevic Ter Steeg Advocaten, Website and Identity",
   # The site is designed but the copy on it is the firm's own; nothing here
   # describes the practice beyond what the pages themselves state.
   "desc": ["I designed the website and the identity for Bektesevic Ter Steeg Advocaten, a criminal defence practice in Amsterdam. The wordmark sets the two names in a grotesque and the word <em>advocaten</em> in a serif. The pages hold that pairing. A sentence runs between the two faces, so the emphasis falls inside the line rather than on a heading above it.",
@@ -695,11 +677,11 @@ PROJECTS = [
  },
  {
   "slug": "florida-blue", "title": "Florida Blue",
-  "year": "2018–2019",
+  "year": "2018 to 2019",
   "drop_tags": ["product"],
   "cover": "drop04",
   "group": "product", "short": "UI strategy and design",
-  "meta": "Florida Blue — with frog design, 2018–2019 — UX &amp; Visual Design",
+  "meta": "Florida Blue, with frog design, 2018 to 2019, UX and Visual Design",
   "desc": ["I worked with frog design on the UI strategy and design for Florida Blue's member experience. Loom is a companion that reads sentiment and sorts urgency. Promise Card is a payment card that rewards health activity. Health Hub puts a member's healthcare in one view.",
            "I ran the user research and the testing. I set the core UX and visual principles, and delivered the design system and the visual libraries behind them. I tested for accessibility throughout. The concepts extend into CareBuddies peer support, into rewards and discounts, into provider profiles, and into the marketing site.",
            "Underneath sits the strategy. I defined each concept on its own terms, then mapped the experience objectives over time and scored them, so the order of the roadmap can be argued for."],
@@ -727,7 +709,7 @@ PROJECTS = [
                   "drop09": 47},
   "cover": "d004-1",
   "group": "brand", "short": "Real estate marketing design",
-  "meta": "Compass — Real Estate Marketing Design",
+  "meta": "Compass, Real Estate Marketing Design",
   "desc": ["I designed marketing material for the real estate brokerage Compass. The wordmark sits against its own field of dashes. The For Sale card runs in black and in white, and a digital banner system covers every placement.",
            "I built a language for the listing data and the market reports. It covers the call out statistics, the inventory tables and the summary figures, and it stays legible from a phone banner up to a printed sheet.",
            "Each listing carries its own collateral. Neighbourhood maps place a building among its restaurants, its galleries, its parks, its gyms and its transit. Alongside them sit the pieces an agent hands over, from the business card and the announcement card to the agent introduction and the <em>Compass and you</em> brochure."],
@@ -747,10 +729,10 @@ PROJECTS = [
   "slug": "pratt", "title": "Pratt",
   # b087 kept a live browser toolbar, address bar and all.
   "piece_crop": {"b087": (0.075, 0, 0, 0)},
-  "year": "2017–2020",
+  "year": "2017 to 2020",
   "cover": "b090",
   "group": "book", "short": "Print and institutional identity",
-  "meta": "Pratt Institute — Adjunct Professor, 2017–2020 — Website, Video Art Direction &amp; Publication",
+  "meta": "Pratt Institute, Adjunct Professor, 2017 to 2020, Website and Publication Design",
   "desc": ["I designed the website for Pratt Shows, the annual exhibition that closes the institute's year. It indexes every school and programme, and a soft edged mask holds the index together and lets the work bleed through the interface.",
            "That mask is the identity. It changes colour with the season, from yellow to white on grey to grey on pink for Spring 2018, and it crops whatever sits inside it, so a rotating banner frames a plaster sculpture one week and a field of cast forms the next.",
            "I also art directed the video for the show, the print from the show postcards through to the SCPS Fall 2019 brochure, and Prattfolio, the alumni magazine of Pratt Institute."],
@@ -768,7 +750,7 @@ PROJECTS = [
   "slug": "sasha-sedelnikov", "title": "Sasha Sedelnikov",
   "cover": "b091",
   "group": "book", "short": "Publication and show identity",
-  "meta": "Sasha Sedelnikov — Publication Design &amp; Show Identity",
+  "meta": "Sasha Sedelnikov, Publication Design and Show Identity",
   "desc": ["I designed <em>See you later</em>, a photobook by Sasha Sedelnikov held in the Garage Museum of Contemporary Art in Moscow. I paced the monochrome sequences against the colour ones and against the paper, so the images set their own rhythm.",
            "I designed the show identity for <em>Пучки серебряного света</em> (Bundles of Silver Light) at the Museum of the History of Yekaterinburg. The title runs vertically down the poster and each photograph takes the rest of the sheet."],
   "pages": [
@@ -787,7 +769,7 @@ PROJECTS = [
   "year": "2016",
   "layout": "row",
   "group": "book", "short": "Monograph design",
-  "meta": "Sarah Crowner — Monograph — Publication Design",
+  "meta": "Sarah Crowner, Monograph, Publication Design",
   "desc": ["I designed the complete monograph on the painter Sarah Crowner, whose sewn canvases sit between fine and applied art. I designed the cover, the typography, the grid, and the order the essays and plates run in.",
            "Susan Cross's essay <em>Beetle in the Leaves</em> runs tight to the margin against the installation views, while the paintings take full spreads. The layout borrows the logic the work is built on, panels butted edge to edge, colour set against colour without a seam."],
   "pages": [
@@ -802,7 +784,7 @@ PROJECTS = [
   "year": "2016",
   "cover": "charset",
   "group": "type", "short": "Typeface",
-  "meta": "Dada — Typeface — Passion Project",
+  "meta": "Dada, Typeface, Passion Project",
   "kind": "specimen",
   "font": {"family": "Dada", "file": "Dada-Regular",
            "caps": "ACIMOPQRXY", "glyphs": 387, "chars": 370, "year": "2020",
@@ -826,7 +808,7 @@ PROJECTS = [
   "year": "2014",
   "cover": "wordmark",
   "group": "type", "short": "Typeface",
-  "meta": "Spiritual Labour — Typeface — Passion Project",
+  "meta": "Spiritual Labour, Typeface, Passion Project",
   "kind": "specimen",
   "font": {"family": "Spiritual Labour", "file": "SpiritualLabour-Regular",
            "glyphs": 92, "chars": 91, "year": "2014",
@@ -850,7 +832,7 @@ PROJECTS = [
                   "drop06": 34, "drop07": 34},
   "cover": "drop03",
   "group": "book", "short": "Exhibition identity and publication",
-  "meta": "Isaac Howell — Exhibition Identity, Poster &amp; Publication",
+  "meta": "Isaac Howell, Exhibition Identity and Publication",
   "desc": ["I designed the identity and the one page publications for solo shows of the artist Isaac Soh Fujita Howell, at Public Gallery in London and at T293 in Rome. For <em>A rabid dog has no choice but to bite</em> the title circles the edge of the poster as a frame, and the painting holds the centre.",
            "Two shows at T293 followed. <em>By order from above (and we are all dutiful citizens)</em> sets the details on overlapping black cards that lock into one another like a puzzle. <em>Malign Influence on the Information Interchange</em> rings the sheet with its own title, then runs the same sheet inverted with photographs set into the ring.",
            "The run extends into newsprint, where the text turns with the page, and into <em>The Man Who Turned into a Wall</em>, which sequences drawings against script."],
@@ -866,7 +848,7 @@ PROJECTS = [
   "piece_crop": {"b100": (0.145, 0, 0.145, 0)},
   "cover": "poster",
   "group": "brand", "short": "Film identity and titles",
-  "meta": "Kathy Meng — Film Identity, Poster &amp; Titles",
+  "meta": "Kathy Meng, Film Identity and Titles",
   "desc": ["I designed the identity for <em>Willow and Wu</em>, a short independent film directed by Kathy Meng. A heavy condensed wordmark stacks into a block against the stills, with a full credit line under it.",
            "It carries through the poster and the title sequence on screen."],
   "pages": [
@@ -881,7 +863,7 @@ PROJECTS = [
   "year": "2016",
   "cover": "drop01",
   "group": "book", "short": "Publication design and concept",
-  "meta": "Yale Literature Paper — Publication Design &amp; Concept",
+  "meta": "Yale Literature Paper, Publication Design and Concept",
   "desc": ["I designed the first issue of the Yale School of Art literature paper, and set its concept. Cut paper forms in orange, blue and yellow crash through the grid, and the text sets itself into and around the shapes.",
            "Each spread treats its subject as an object to pull apart: a gourd, a garlic house, a table of contents that refuses to sit still."],
   "pages": [

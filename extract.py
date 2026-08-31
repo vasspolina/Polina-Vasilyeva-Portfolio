@@ -704,6 +704,35 @@ DROP_LONG = 2600       # keep enough pixels for the 2400 rendition
 DROP_TALL = 12000      # a page can be long; past this it is not worth the bytes
 
 
+HYPHENATED = {
+    "Real-Time": "Real Time", "Ultra-fast": "Ultra fast",
+    "ultra-simple": "ultra simple", "call-out": "call out",
+    "check-in": "check in", "custom-blend": "custom blend",
+    "cut-out": "cut out", "mid-rise": "mid rise",
+    "paper-white": "paper white",
+}
+
+
+def plain(caption):
+    """A caption with no dash in it.
+
+    The em dash was doing the work of a comma, so a comma takes it back. The
+    handful of hyphenated compounds are listed rather than split on sight:
+    splitting every hyphen would also cut through a name.
+    """
+    head, sep, tail = caption.partition("\u2014")
+    if not sep:
+        head, sep, tail = caption.partition("\u2013")
+    if sep:
+        # A comma cannot mark the join when the title already contains one:
+        # "Search it, Find it, Buy it, the third set" reads as four things.
+        joiner = ": " if "," in head else ", "
+        caption = head.rstrip() + joiner + tail.lstrip()
+    for a, b in HYPHENATED.items():
+        caption = caption.replace(a, b)
+    return caption
+
+
 def is_sparse(mask, box):
     """True for a wordmark or logo, false for a photograph or screenshot.
 
@@ -1070,7 +1099,7 @@ def main():
                 cap = (caption[i - 1] if isinstance(caption, (list, tuple))
                        and i - 1 < len(caption) else
                        caption[-1] if isinstance(caption, (list, tuple)) else caption)
-                item = {"stem": stem, "caption": cap, "tags": tags,
+                item = {"stem": stem, "caption": plain(cap), "tags": tags,
                         "w": top, "h": round(piece.height * top / piece.width),
                         "widths": widths, "source": src, "page": page}
                 item["hash"] = ahash(piece).hex()
@@ -1129,7 +1158,7 @@ def main():
                           quality=QUALITY, method=5)
                 widths.append(target)
             top = widths[-1]
-            items.append({"stem": stem, "caption": cap, "tags": tags,
+            items.append({"stem": stem, "caption": plain(cap), "tags": tags,
                           "w": top, "h": round(piece.height * top / piece.width),
                           "widths": widths, "source": "DROP", "page": stem,
                           "hash": ahash(piece).hex()})

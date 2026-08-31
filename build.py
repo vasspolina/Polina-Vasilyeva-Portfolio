@@ -235,7 +235,7 @@ tiles = []
 for proj in PROJECTS:
     slug, title = proj["slug"], proj["title"]
     for item in MANIFEST[slug]:
-        alt = f"{title} — {item['caption']}"
+        alt = f"{title}, {item['caption']}"
         port = is_portrait(item)
         cls = "grid-item is-portrait" if port else "grid-item"
         sizes = GRID_SIZES_PORTRAIT if port else GRID_SIZES
@@ -309,7 +309,7 @@ for p in PROJECTS:
         f'  </a>')
 index_rows = "\n".join(rows)
 
-index = head(f"{data.NAME} — Work", 0, data.INTRO) + nav(0) + f"""<main id="main">
+index = head(f"{data.NAME}, Work", 0, data.INTRO) + nav(0) + f"""<main id="main">
 <p class="intro">{no_orphan(data.INTRO)}</p>
 <p class="intro-note">{no_orphan(data.INTRO_NOTE)}</p>
 
@@ -359,10 +359,10 @@ education = "\n".join(
     f"      <li>{where}<span class=\"about-note\">{what}</span></li>"
     for where, what in data.EDUCATION)
 
-about = head(f"About — {data.NAME}", 0, data.ABOUT[0]) + nav(0, "about") + f"""<main id="main">
+about = head(f"About, {data.NAME}", 0, data.ABOUT[0]) + nav(0, "about") + f"""<main id="main">
 <article class="about">
   <h1 class="project-title">{data.NAME}</h1>
-  <p class="about-role">{data.ROLE} — {data.LOCATION}</p>
+  <p class="about-role">{data.ROLE}, {data.LOCATION}</p>
   <div class="about-bio">
 {bio}
   </div>
@@ -526,7 +526,7 @@ def specimen(proj, desc, pager):
     </div>
     <dl class="spec-facts">
       <dt>Set</dt><dd>{f.get("set", "Capitals &amp; figures")}</dd>
-      <dt>Styles</dt><dd>1 — Regular</dd>
+      <dt>Styles</dt><dd>1, Regular</dd>
       <dt>Glyphs</dt><dd>{f["glyphs"]}</dd>
       <dt>Characters</dt><dd>{f["chars"]}</dd>
       {redrawn}<dt>Year</dt><dd>{f["year"]}</dd>
@@ -569,14 +569,14 @@ def specimen(proj, desc, pager):
 
 
 # -------------------------------------------------------------- contact
-contact = head(f"Contact — {data.NAME}", 0,
-               f"Get in touch with {data.NAME} — {data.EMAIL}") + nav(0, "contact") + f"""<main id="main">
+contact = head(f"Contact, {data.NAME}", 0,
+               f"Get in touch with {data.NAME} at {data.EMAIL}") + nav(0, "contact") + f"""<main id="main">
 <article class="about contact">
   <h1 class="project-title">Contact</h1>
   <div class="about-bio">
-    <p>Open to senior product, interactive and brand work — full-time, contract,
-       or a single well-defined project. Based between New York and Madrid, and
-       used to working across time zones.</p>
+    <p>Open to senior product, interactive and brand work. I take a full time
+       role, a contract, or a single project with a clear brief. I am based
+       between New York and Madrid and I work across time zones.</p>
   </div>
   <div class="about-cols">
     <section class="about-col">
@@ -650,7 +650,7 @@ for i, proj in enumerate(PROJECTS):
 {pager}
 </article>"""
 
-    page = head(f'{proj["title"]} — {data.NAME}', 1, plain) + nav(1) + f"""<main id="main">
+    page = head(f'{proj["title"]}, {data.NAME}', 1, plain) + nav(1) + f"""<main id="main">
 {body}
 </main>
 """ + footer(1)
