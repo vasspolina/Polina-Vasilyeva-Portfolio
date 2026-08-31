@@ -7038,7 +7038,7 @@
     "web"
    ],
    "w": 2400,
-   "h": 458,
+   "h": 454,
    "widths": [
     600,
     1200,
@@ -7050,24 +7050,59 @@
   },
   {
    "stem": "drop03",
-   "caption": "lenkailic.com — the object grid",
+   "caption": "lenkailic.com — Conscious Object, desktop and mobile",
    "tags": [
     "brand",
     "web"
    ],
-   "w": 2400,
-   "h": 1357,
+   "w": 1921,
+   "h": 2600,
    "widths": [
     600,
     1200,
     1600,
-    2400
+    1921
    ],
    "source": "DROP",
    "page": "drop03"
   },
   {
    "stem": "drop04",
+   "caption": "Sideboard — the product page, desktop and mobile",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1289,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1289
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "Philosophy and bio — the page",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1817,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1817
+   ],
+   "source": "DROP",
+   "page": "drop05"
+  },
+  {
+   "stem": "drop06",
    "caption": "Authenticity mark — the signed plate",
    "tags": [
     "brand",
@@ -7082,58 +7117,22 @@
     1676
    ],
    "source": "DROP",
-   "page": "drop04"
-  },
-  {
-   "stem": "drop05",
-   "caption": "Authenticity mark — serial and maker",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1676,
-   "h": 1674,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1676
-   ],
-   "source": "DROP",
-   "page": "drop05"
-  },
-  {
-   "stem": "drop06",
-   "caption": "Bench on the roof, Manhattan behind it",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1733,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1733
-   ],
-   "source": "DROP",
    "page": "drop06"
   },
   {
    "stem": "drop07",
-   "caption": "Bench, three quarters",
+   "caption": "Conscious Stand — the debossed mark",
    "tags": [
     "brand",
     "web"
    ],
-   "w": 1734,
-   "h": 2600,
+   "w": 2400,
+   "h": 2559,
    "widths": [
     600,
     1200,
     1600,
-    1734
+    2400
    ],
    "source": "DROP",
    "page": "drop07"
