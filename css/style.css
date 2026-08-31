@@ -233,7 +233,7 @@ a:focus-visible, button:focus-visible {
   appearance: none;
   -webkit-appearance: none;
   background: transparent;
-  border: 2px solid currentColor;
+  border: 1px solid currentColor;
   border-radius: 999px;
   color: var(--fg);
   font-family: inherit;
@@ -775,15 +775,15 @@ em, i, cite, address, dfn, var { font-style: normal; }
    clears AA. The chosen one is marked by a ring as well as by fill, so the
    state is not carried by colour alone. */
 .filter { color: #ffffff; }   /* replaced by the outline rules below */
-.filter[data-filter="all"] { background: transparent; border: 2px solid #0861ca; color: #0861ca; }
-.filter[data-filter="web"] { background: transparent; border: 2px solid #236237; color: #236237; }
-.filter[data-filter="mobile"] { background: transparent; border: 2px solid #5b3a8e; color: #5b3a8e; }
-.filter[data-filter="ecommerce"] { background: transparent; border: 2px solid #0f5f66; color: #0f5f66; }
-.filter[data-filter="brand"] { background: transparent; border: 2px solid #8a4b2a; color: #8a4b2a; }
-.filter[data-filter="product"] { background: transparent; border: 2px solid #2f4858; color: #2f4858; }
-.filter[data-filter="editorial"] { background: transparent; border: 2px solid #4a3428; color: #4a3428; }
-.filter[data-filter="strategy"] { background: transparent; border: 2px solid #55611f; color: #55611f; }
-.filter[data-filter="social"] { background: transparent; border: 2px solid #8e5400; color: #8e5400; }
+.filter[data-filter="all"] { background: var(--chip); border: 1px solid #0861ca; color: #0861ca; }
+.filter[data-filter="web"] { background: var(--chip); border: 1px solid #236237; color: #236237; }
+.filter[data-filter="mobile"] { background: var(--chip); border: 1px solid #5b3a8e; color: #5b3a8e; }
+.filter[data-filter="ecommerce"] { background: var(--chip); border: 1px solid #0f5f66; color: #0f5f66; }
+.filter[data-filter="brand"] { background: var(--chip); border: 1px solid #8a4b2a; color: #8a4b2a; }
+.filter[data-filter="product"] { background: var(--chip); border: 1px solid #2f4858; color: #2f4858; }
+.filter[data-filter="editorial"] { background: var(--chip); border: 1px solid #4a3428; color: #4a3428; }
+.filter[data-filter="strategy"] { background: var(--chip); border: 1px solid #55611f; color: #55611f; }
+.filter[data-filter="social"] { background: var(--chip); border: 1px solid #8e5400; color: #8e5400; }
 
 .filter:hover { filter: brightness(1.18); background: inherit; }
 /* The chosen one is filled with its own colour, so the state is carried by
@@ -794,30 +794,30 @@ em, i, cite, address, dfn, var { font-style: normal; }
 
 @media (prefers-color-scheme: dark) {
   
-  :root:not([data-theme="light"]) .filter[data-filter="all"] { background: transparent; border: 2px solid #76b2fa; color: #76b2fa; }
-  :root:not([data-theme="light"]) .filter[data-filter="web"] { background: transparent; border: 2px solid #96d9ab; color: #96d9ab; }
-  :root:not([data-theme="light"]) .filter[data-filter="mobile"] { background: transparent; border: 2px solid #b197d8; color: #b197d8; }
-  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"] { background: transparent; border: 2px solid #83e4ed; color: #83e4ed; }
-  :root:not([data-theme="light"]) .filter[data-filter="brand"] { background: transparent; border: 2px solid #deac92; color: #deac92; }
-  :root:not([data-theme="light"]) .filter[data-filter="product"] { background: transparent; border: 2px solid #97bfd8; color: #97bfd8; }
-  :root:not([data-theme="light"]) .filter[data-filter="editorial"] { background: transparent; border: 2px solid #d8ae97; color: #d8ae97; }
-  :root:not([data-theme="light"]) .filter[data-filter="strategy"] { background: transparent; border: 2px solid #cfdc93; color: #cfdc93; }
-  :root:not([data-theme="light"]) .filter[data-filter="social"] { background: transparent; border: 2px solid #ffc570; color: #ffc570; }
+  :root:not([data-theme="light"]) .filter[data-filter="all"] { background: var(--chip); border: 1px solid #76b2fa; color: #76b2fa; }
+  :root:not([data-theme="light"]) .filter[data-filter="web"] { background: var(--chip); border: 1px solid #96d9ab; color: #96d9ab; }
+  :root:not([data-theme="light"]) .filter[data-filter="mobile"] { background: var(--chip); border: 1px solid #b197d8; color: #b197d8; }
+  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"] { background: var(--chip); border: 1px solid #83e4ed; color: #83e4ed; }
+  :root:not([data-theme="light"]) .filter[data-filter="brand"] { background: var(--chip); border: 1px solid #deac92; color: #deac92; }
+  :root:not([data-theme="light"]) .filter[data-filter="product"] { background: var(--chip); border: 1px solid #97bfd8; color: #97bfd8; }
+  :root:not([data-theme="light"]) .filter[data-filter="editorial"] { background: var(--chip); border: 1px solid #d8ae97; color: #d8ae97; }
+  :root:not([data-theme="light"]) .filter[data-filter="strategy"] { background: var(--chip); border: 1px solid #cfdc93; color: #cfdc93; }
+  :root:not([data-theme="light"]) .filter[data-filter="social"] { background: var(--chip); border: 1px solid #ffc570; color: #ffc570; }
 }
 
 :root[data-theme="dark"] { --mobile-nav: #d457e5; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) { --mobile-nav: #d457e5; }
 }
-:root[data-theme="dark"] .filter[data-filter="all"] { background: transparent; border: 2px solid #76b2fa; color: #76b2fa; }
-:root[data-theme="dark"] .filter[data-filter="web"] { background: transparent; border: 2px solid #96d9ab; color: #96d9ab; }
-:root[data-theme="dark"] .filter[data-filter="mobile"] { background: transparent; border: 2px solid #b197d8; color: #b197d8; }
-:root[data-theme="dark"] .filter[data-filter="ecommerce"] { background: transparent; border: 2px solid #83e4ed; color: #83e4ed; }
-:root[data-theme="dark"] .filter[data-filter="brand"] { background: transparent; border: 2px solid #deac92; color: #deac92; }
-:root[data-theme="dark"] .filter[data-filter="product"] { background: transparent; border: 2px solid #97bfd8; color: #97bfd8; }
-:root[data-theme="dark"] .filter[data-filter="editorial"] { background: transparent; border: 2px solid #d8ae97; color: #d8ae97; }
-:root[data-theme="dark"] .filter[data-filter="strategy"] { background: transparent; border: 2px solid #cfdc93; color: #cfdc93; }
-:root[data-theme="dark"] .filter[data-filter="social"] { background: transparent; border: 2px solid #ffc570; color: #ffc570; }
+:root[data-theme="dark"] .filter[data-filter="all"] { background: var(--chip); border: 1px solid #76b2fa; color: #76b2fa; }
+:root[data-theme="dark"] .filter[data-filter="web"] { background: var(--chip); border: 1px solid #96d9ab; color: #96d9ab; }
+:root[data-theme="dark"] .filter[data-filter="mobile"] { background: var(--chip); border: 1px solid #b197d8; color: #b197d8; }
+:root[data-theme="dark"] .filter[data-filter="ecommerce"] { background: var(--chip); border: 1px solid #83e4ed; color: #83e4ed; }
+:root[data-theme="dark"] .filter[data-filter="brand"] { background: var(--chip); border: 1px solid #deac92; color: #deac92; }
+:root[data-theme="dark"] .filter[data-filter="product"] { background: var(--chip); border: 1px solid #97bfd8; color: #97bfd8; }
+:root[data-theme="dark"] .filter[data-filter="editorial"] { background: var(--chip); border: 1px solid #d8ae97; color: #d8ae97; }
+:root[data-theme="dark"] .filter[data-filter="strategy"] { background: var(--chip); border: 1px solid #cfdc93; color: #cfdc93; }
+:root[data-theme="dark"] .filter[data-filter="social"] { background: var(--chip); border: 1px solid #ffc570; color: #ffc570; }
 
 /* A piece that runs the full window, past the page margin. */
 /* Out to the page edge, by cancelling the page padding rather than by

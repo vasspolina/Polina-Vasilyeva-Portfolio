@@ -109,7 +109,9 @@ PROJECTS = [
                   "drop13": 100, "drop15": 100},
   # The logo slide carries the deck's own small header top-left; it comes
   # off, and the same again off the foot so the mark stays centred.
-  "piece_crop": {"a025": (0.09, 0, 0.097, 0)},
+  # Framed like Haworth's mark: the mark an eighth of the height,
+  # centred, at one aspect, so the two covers read as a pair.
+  "piece_crop": {"a025": (0.122, 0.058, 0.130, 0.059)},
   "drops_first": True,
   "cover": "a025",
   "group": "brand", "short": "Web, retail &amp; brand design",
@@ -196,7 +198,7 @@ PROJECTS = [
   # narrower field, so the slide ground is taken in from both sides.
   # The slide carries its own header and footer in small type; the mark
   # alone is the cover, so both bands come off.
-  "piece_crop": {"b062": (0.14, 0.0875, 0.14, 0.0875),
+  "piece_crop": {"b062": (0.310, 0.271, 0.304, 0.273),
                  "collection-lockup": (0.14, 0.0875, 0.14, 0.0875)},
   # The research pages are spreads of type; two to a row keeps them
   # readable without letting one fill the measure alone.
