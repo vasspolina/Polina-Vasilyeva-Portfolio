@@ -7104,24 +7104,6 @@
   },
   {
    "stem": "drop06",
-   "caption": "Conscious Stand — the debossed mark",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 2559,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop06"
-  },
-  {
-   "stem": "drop07",
    "caption": "Bench on the roof, Manhattan behind it",
    "tags": [
     "brand",
@@ -7136,10 +7118,10 @@
     1733
    ],
    "source": "DROP",
-   "page": "drop07"
+   "page": "drop06"
   },
   {
-   "stem": "drop08",
+   "stem": "drop07",
    "caption": "Bench, three quarters",
    "tags": [
     "brand",
@@ -7154,11 +7136,29 @@
     1734
    ],
    "source": "DROP",
+   "page": "drop07"
+  },
+  {
+   "stem": "drop08",
+   "caption": "Bench along the parapet",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1733,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1733
+   ],
+   "source": "DROP",
    "page": "drop08"
   },
   {
    "stem": "drop09",
-   "caption": "Bench along the parapet",
+   "caption": "Side table against the sofa",
    "tags": [
     "brand",
     "web"
@@ -7176,7 +7176,7 @@
   },
   {
    "stem": "drop10",
-   "caption": "Side table against the sofa",
+   "caption": "Stand between the seats",
    "tags": [
     "brand",
     "web"
@@ -7194,7 +7194,7 @@
   },
   {
    "stem": "drop11",
-   "caption": "Stand between the seats",
+   "caption": "Stand in the meeting room",
    "tags": [
     "brand",
     "web"
@@ -7212,7 +7212,7 @@
   },
   {
    "stem": "drop12",
-   "caption": "Stand in the meeting room",
+   "caption": "Stand in use",
    "tags": [
     "brand",
     "web"
@@ -7230,7 +7230,7 @@
   },
   {
    "stem": "drop13",
-   "caption": "Stand in use",
+   "caption": "Stand beside the yellow chair",
    "tags": [
     "brand",
     "web"
@@ -7248,24 +7248,6 @@
   },
   {
    "stem": "drop14",
-   "caption": "Stand beside the yellow chair",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1733,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1733
-   ],
-   "source": "DROP",
-   "page": "drop14"
-  },
-  {
-   "stem": "drop15",
    "caption": "Console, open form",
    "tags": [
     "brand",
@@ -7280,10 +7262,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop15"
+   "page": "drop14"
   },
   {
-   "stem": "drop16",
+   "stem": "drop15",
    "caption": "Console from the front",
    "tags": [
     "brand",
@@ -7298,10 +7280,10 @@
     1733
    ],
    "source": "DROP",
-   "page": "drop16"
+   "page": "drop15"
   },
   {
-   "stem": "drop17",
+   "stem": "drop16",
    "caption": "The debossed signature, close",
    "tags": [
     "brand",
@@ -7316,10 +7298,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop17"
+   "page": "drop16"
   },
   {
-   "stem": "drop18",
+   "stem": "drop17",
    "caption": "Aluminium sheet before folding",
    "tags": [
     "brand",
@@ -7334,7 +7316,7 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop18"
+   "page": "drop17"
   }
  ]
 }

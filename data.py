@@ -665,6 +665,11 @@ PROJECTS = [
   "slug": "lenka-ilic", "title": "Lenka Ilic",
   "year": "2024",
   "drop_tags": ["brand", "web"],
+  # The objects are photographed on their own grounds — felt, concrete, a
+  # dark table. Keying those out takes the picture with them.
+  "keep_ground": True,
+  # The card set is one row of three; nothing sits beside it.
+  "piece_width": {"drop02": 100},
   "cover": "drop01",
   "group": "brand", "short": "Identity, website &amp; art direction",
   "meta": "Lenka Ilic Studio — Identity, Website &amp; Art Direction",

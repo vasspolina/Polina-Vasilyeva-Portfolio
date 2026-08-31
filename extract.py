@@ -763,7 +763,7 @@ def is_label(text):
     return len([w for w in re.split(r"\W+", text) if w]) >= 2
 
 
-def dropped(slug, title, tags):
+def dropped(slug, title, tags, key_ground=True):
     """Images Polina put in drop/<slug>/ by hand.
 
     They are finished artwork, not deck slides: nothing is detected, split or
@@ -789,7 +789,7 @@ def dropped(slug, title, tags):
         # Only when the border is overwhelmingly black: a studio ground runs
         # right around the object, whereas a photograph that merely happens to
         # be dark does not.
-        if (border.max(axis=1) < 50).mean() > 0.85:
+        if key_ground and (border.max(axis=1) < 50).mean() > 0.85:
             keyed = cut_out(im, dark=60)
             # Only a ground, never the artwork. If keying would take most of
             # the picture, the black was the design, not the surface it was
@@ -1091,7 +1091,8 @@ def main():
         base_tags = proj.get("drop_tags") or (
             [counts.most_common(1)[0][0]] if counts else ["brand"])
         for n, (piece, cap, tags) in enumerate(
-                dropped(slug, proj["title"], base_tags), 1):
+                dropped(slug, proj["title"], base_tags,
+                        key_ground=not proj.get("keep_ground")), 1):
             stem = f"drop{n:02d}"
             # Before the renditions are written, not after: cropping a piece
             # that has already been saved changes nothing on disk.
@@ -1102,7 +1103,8 @@ def main():
                 piece = piece.crop((round(pw * l), round(ph * t),
                                     pw - round(pw * r), ph - round(ph * b)))
                 piece = trim_edge_lines(piece)
-            piece = whiten_corners(piece)
+            if not proj.get("keep_ground"):
+                piece = whiten_corners(piece)
             targets = [t for t in WIDTHS if t < piece.width]
             targets.append(min(piece.width, WIDTHS[-1]))
             widths = []
