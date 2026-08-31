@@ -756,8 +756,9 @@ PROJECTS = [
   # The deck runs one slide to a line at 70% of the measure, which is 40% more
   # than the half page a deck slide normally takes. The business card is the
   # same 40% the other way, since a card is a small object.
-  # drop09 arrived inside a PDF viewer's grey artboard.
-  "piece_crop": {"drop09": (0.047, 0.12, 0.047, 0.12)},
+  # drop09 arrived inside a PDF viewer's artboard, but only the foot of it
+  # is flat: the 12% taken off each side was map, not margin.
+  "piece_crop": {"drop09": (0, 0, 0.081, 0)},
   # d005 comes off the deck at 1279px, so it sits smaller than the deck
   # pages beside it. The two broker covers pair, black beside white.
   "piece_width": {"d005": 45, "drop04": 100, "drop05": 48, "drop06": 48,
@@ -960,6 +961,7 @@ PROJECTS = [
  {
   "slug": "willow-and-wu", "title": "Willow and Wu",
   "year": "2024",
+  "piece_width": {"b101": 42},
   "cover": "b101",
   "group": "brand", "short": "Film identity, poster &amp; titles",
   "meta": "Kathy Meng — Film Identity, Poster &amp; Titles",
@@ -969,8 +971,8 @@ PROJECTS = [
            "Carried through the poster and the on-screen title sequence."],
   "pages": [
     ("B", 100, "Willow and Wu — wordmark", ["brand"], {"crop": False}),
-    ("B", 101, "Poster design", ["brand"], {"frac": 35}),
-    ("B", 102, "Movie titles", ["brand"], {"split": False, "bleed": True}),
+    ("B", 101, "Poster design", ["brand"], {"crop": False}),
+    ("B", 102, "Movie titles", ["brand"], {"split": False, "span": 12}),
   ],
  },
  {
