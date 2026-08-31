@@ -450,7 +450,9 @@ PROJECTS = [
  {
   "slug": "alexander-wang", "title": "Alexander Wang",
   # The lockup alone: the slide's own caption line sits below it.
-  "piece_width": {"b031-1": 30, "b031-2": 30, "b033": 30,
+  # The lockup and the mark it is built from, side by side.
+  "piece_width": {"b003": 48, "b005": 48,
+                  "b031-1": 30, "b031-2": 30, "b033": 30,
                   "b035-1": 30, "b035-2": 30},
   "piece_crop": {"b003": (0.02, 0.088, 0.10, 0.088)},
   "year": "2021–2022",
