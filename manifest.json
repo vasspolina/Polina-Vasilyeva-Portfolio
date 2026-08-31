@@ -51,10 +51,9 @@
   },
   {
    "stem": "i001",
-   "caption": "Stretch your data, not your budget — the price tiers",
+   "caption": "Stretch your data, not your budget — the price sheet",
    "tags": [
-    "brand",
-    "editorial"
+    "brand"
    ],
    "w": 2400,
    "h": 3106,
@@ -69,17 +68,17 @@
   },
   {
    "stem": "i011",
-   "caption": "Better gets better — iPhone 13 Pro",
+   "caption": "The Disney Bundle — the wall",
    "tags": [
     "brand"
    ],
-   "w": 2190,
-   "h": 546,
+   "w": 2400,
+   "h": 700,
    "widths": [
     600,
     1200,
     1600,
-    2190
+    2400
    ],
    "source": "I",
    "page": 11
@@ -1099,13 +1098,98 @@
    "page": 32
   },
   {
-   "stem": "i007",
-   "caption": "5G plan tiers — the price strip",
+   "stem": "i002",
+   "caption": "Plan prices across every tier — the counter strip",
    "tags": [
     "brand"
    ],
    "w": 2400,
-   "h": 144,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 2
+  },
+  {
+   "stem": "i003",
+   "caption": "The reliability line — the counter strip",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 3
+  },
+  {
+   "stem": "i004",
+   "caption": "America's most reliable network is going Ultra — the strip",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 4
+  },
+  {
+   "stem": "i005",
+   "caption": "Introducing our best Unlimited plans — the strip",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 5
+  },
+  {
+   "stem": "i006",
+   "caption": "Unlimited is going Ultra — the strip",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 6
+  },
+  {
+   "stem": "i007",
+   "caption": "5G Get More at $55 — the price strip",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
    "widths": [
     600,
     1200,
@@ -1116,13 +1200,30 @@
    "page": 7
   },
   {
-   "stem": "i009",
-   "caption": "What Ultra Wideband gives you — the icon row",
+   "stem": "i008",
+   "caption": "Our fastest 5G, no extra charge — the wall",
    "tags": [
     "brand"
    ],
    "w": 2400,
-   "h": 561,
+   "h": 700,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 8
+  },
+  {
+   "stem": "i009",
+   "caption": "Ultra-fast, ultra-simple internet — the wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 700,
    "widths": [
     600,
     1200,
@@ -1134,12 +1235,12 @@
   },
   {
    "stem": "i010",
-   "caption": "5G Ultra Wideband, now in more places",
+   "caption": "5G Ultra Wideband, now in more places — the wall",
    "tags": [
     "brand"
    ],
    "w": 2400,
-   "h": 181,
+   "h": 700,
    "widths": [
     600,
     1200,
@@ -1148,6 +1249,125 @@
    ],
    "source": "I",
    "page": 10
+  },
+  {
+   "stem": "i012",
+   "caption": "America's most reliable network is going Ultra — the second run",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 12
+  },
+  {
+   "stem": "i013",
+   "caption": "The reliability line — the second run",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 13
+  },
+  {
+   "stem": "i014",
+   "caption": "5G Get More at $55 — the second run",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 14
+  },
+  {
+   "stem": "i015",
+   "caption": "Introducing our best Unlimited plans — the second run",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 15
+  },
+  {
+   "stem": "i016",
+   "caption": "The reliability line — the third run",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 16
+  },
+  {
+   "stem": "i017",
+   "caption": "America's most reliable network is going Ultra — the wide wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 700,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 17
+  },
+  {
+   "stem": "i018",
+   "caption": "Now in more and more places — the strip",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 190,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 18
   },
   {
    "stem": "p02",

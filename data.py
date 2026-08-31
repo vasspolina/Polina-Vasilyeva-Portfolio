@@ -111,26 +111,32 @@ PROJECTS = [
   "piece_crop": {"a025": (0.122, 0.058, 0.130, 0.059)},
   "drops_first": True,
   "lead": ["drop06", "drop07", "drop09", "i001", "i011"],
+  "keep_always": ["i0%02d" % n for n in range(1, 19)],
   "cover": "a025",
   "group": "brand", "short": "Web, retail &amp; brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
-  "desc": ["Verizon's design standards had grown apart: digital, retail "
-           "and UX each held their own. I researched the store floor and "
-           "the site, then wrote one set for all three. Under Brand 3.0 "
-           "that covered the 5G homepage, the chat and voice assistant "
-           "with every speech state it can be in, and one consistent use "
-           "of NHG Thin, Vivid Red and the soft grays.",
-            "The retail work put a single type system behind every "
-           "printed piece, from rate sheets and price cards to window and "
-           "header signage, so a Prepaid sheet and an Unlimited plan grid "
-           "speak at the same pitch. It continues onto the floor in the "
-           "wayfinding, the Home and Business walls, the Express Pickup "
-           "Lockers and the packaging. I reviewed each asset for "
-           "accessibility and fixed what failed.",
-            "Designers worked faster on it, retail turnarounds got "
-           "shorter, and print quality improved. I also built components "
-           "for Verizon's design library and ran audits and workshops on "
-           "the system itself."],
+  "desc": ["On the team behind Verizon's retail guidelines and assets: "
+           "the brand guidelines and the national retail audit guidelines, "
+           "refining and unifying the use of typography across them, "
+           "writing the instructions for use of the logo, and designing "
+           "the signage itself.",
+            "Research first, into where the customer experience and the "
+           "look and feel came apart between digital and retail. The "
+           "standards that followed were simplified and unified across "
+           "digital, retail and UX: NHG Thin, Vivid Red and the soft grays "
+           "used the same way on a store screen and on a phone, the 5G "
+           "homepage, and the chat and voice assistant with every speech "
+           "state it can be in.",
+            "In retail one type system sits behind every printed piece, "
+           "from rate sheets and price cards to window and header signage, "
+           "so a Prepaid sheet and an Unlimited plan grid speak at the "
+           "same pitch. It carries onto the floor in the wayfinding, the "
+           "Home and Business walls, the Express Pickup Lockers and the "
+           "packaging. Assets were reviewed against accessibility best "
+           "practice and updated where they fell short.",
+            "Streamlining the standards raised designer productivity, "
+           "shortened turnaround on retail projects and improved print "
+           "quality."],
   "pages": [
     # The deck's own title slide carries the wordmark on the slide ground, and
     # the Retail SEM title exists only at 1020px — too small to be a cover.
@@ -151,12 +157,42 @@ PROJECTS = [
                "The storefront"], ["brand"], {"rows": True, "keep": [3]}),
     ("A", 32, "Executing growth across five vectors — strategy deck", ["strategy"]),
     # The retail signage artwork itself, a banner to a page.
-    ("I", 1,  "Stretch your data, not your budget — the price tiers", ["brand", "editorial"],
+    ("I", 1, "Stretch your data, not your budget — the price sheet", ["brand"],
      {"crop": False, "split": False}),
-    ("I", 7,  "5G plan tiers — the price strip", ["brand"]),
-    ("I", 9,  "What Ultra Wideband gives you — the icon row", ["brand"], {"split": False}),
-    ("I", 10, "5G Ultra Wideband, now in more places", ["brand"], {"split": False}),
-    ("I", 11, "Better gets better — iPhone 13 Pro", ["brand"], {"split": False}),
+    ("I", 2, "Plan prices across every tier — the counter strip", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 3, "The reliability line — the counter strip", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 4, "America's most reliable network is going Ultra — the strip", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 5, "Introducing our best Unlimited plans — the strip", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 6, "Unlimited is going Ultra — the strip", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 7, "5G Get More at $55 — the price strip", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 8, "Our fastest 5G, no extra charge — the wall", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 9, "Ultra-fast, ultra-simple internet — the wall", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 10, "5G Ultra Wideband, now in more places — the wall", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 11, "The Disney Bundle — the wall", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 12, "America's most reliable network is going Ultra — the second run", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 13, "The reliability line — the second run", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 14, "5G Get More at $55 — the second run", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 15, "Introducing our best Unlimited plans — the second run", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 16, "The reliability line — the third run", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 17, "America's most reliable network is going Ultra — the wide wall", ["brand"],
+     {"crop": False, "split": False}),
+    ("I", 18, "Now in more and more places — the strip", ["brand"],
+     {"crop": False, "split": False}),
     ("IMG", "verizon-sem/p02.jpg", "Agenda — the retail design system and the reset", ["brand", "strategy"], {"crop": False, "split": False}),
     ("IMG", "verizon-sem/p04.jpg", "Optimizing the retail design system", ["strategy"], {"crop": False, "split": False}),
     ("IMG", "verizon-sem/p05.jpg", "Towards a responsive retail environment", ["strategy"], {"crop": False, "split": False}),
