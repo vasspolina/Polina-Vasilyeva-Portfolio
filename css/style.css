@@ -242,10 +242,9 @@ a:focus-visible, button:focus-visible {
   line-height: 1.2;
   letter-spacing: 0.01em;
   cursor: pointer;
-  padding: 4px 16px;
+  padding: 2px 16px;
   transition: background var(--dur), color var(--dur);
 }
-.filter:hover { filter: brightness(0.82); }
 
 /* ---- grid ---- */
 .grid {
@@ -785,12 +784,12 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .filter[data-filter="strategy"] { background: transparent; border: 1px solid #55611f; color: #55611f; }
 .filter[data-filter="social"] { background: transparent; border: 1px solid #8e5400; color: #8e5400; }
 
-.filter:hover { filter: brightness(1.18); background: inherit; }
 /* The chosen one is filled with its own colour, so the state is carried by
    fill as well as by hue. currentColor cannot do this: it resolves against the
    element's own colour, which this rule is also setting, so both ended up the
    page ground and the pill vanished. The fill is named per filter below. */
-.filter.is-active { color: var(--bg); }
+.filter.is-active,
+.filter:hover { color: var(--bg); }
 
 @media (prefers-color-scheme: dark) {
   
@@ -848,35 +847,70 @@ em, i, cite, address, dfn, var { font-style: normal; }
 }
 
 .filter[data-filter="all"].is-active { background-color: #0861ca; }
+  :root:not([data-theme="light"]) img[src*="/dada/"]:not([src*="inverted"]) {
+    filter: invert(1);
+  }
+}
+:root[data-theme="dark"] img[src*="/dada/"]:not([src*="inverted"]) {
+  filter: invert(1);
+}
+
+.filter[data-filter="all"]:hover { background-color: #0861ca; }
 .filter[data-filter="web"].is-active { background-color: #236237; }
+.filter[data-filter="web"]:hover { background-color: #236237; }
 .filter[data-filter="mobile"].is-active { background-color: #5b3a8e; }
+.filter[data-filter="mobile"]:hover { background-color: #5b3a8e; }
 .filter[data-filter="ecommerce"].is-active { background-color: #0f5f66; }
+.filter[data-filter="ecommerce"]:hover { background-color: #0f5f66; }
 .filter[data-filter="brand"].is-active { background-color: #8a4b2a; }
+.filter[data-filter="brand"]:hover { background-color: #8a4b2a; }
 .filter[data-filter="product"].is-active { background-color: #2f4858; }
+.filter[data-filter="product"]:hover { background-color: #2f4858; }
 .filter[data-filter="editorial"].is-active { background-color: #4a3428; }
+.filter[data-filter="editorial"]:hover { background-color: #4a3428; }
 .filter[data-filter="strategy"].is-active { background-color: #55611f; }
+.filter[data-filter="strategy"]:hover { background-color: #55611f; }
 .filter[data-filter="social"].is-active { background-color: #8e5400; }
+.filter[data-filter="social"]:hover { background-color: #8e5400; }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .filter[data-filter="all"].is-active { background-color: #76b2fa; }
+  :root:not([data-theme="light"]) .filter[data-filter="all"]:hover { background-color: #76b2fa; }
   :root:not([data-theme="light"]) .filter[data-filter="web"].is-active { background-color: #96d9ab; }
+  :root:not([data-theme="light"]) .filter[data-filter="web"]:hover { background-color: #96d9ab; }
   :root:not([data-theme="light"]) .filter[data-filter="mobile"].is-active { background-color: #b197d8; }
+  :root:not([data-theme="light"]) .filter[data-filter="mobile"]:hover { background-color: #b197d8; }
   :root:not([data-theme="light"]) .filter[data-filter="ecommerce"].is-active { background-color: #83e4ed; }
+  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"]:hover { background-color: #83e4ed; }
   :root:not([data-theme="light"]) .filter[data-filter="brand"].is-active { background-color: #deac92; }
+  :root:not([data-theme="light"]) .filter[data-filter="brand"]:hover { background-color: #deac92; }
   :root:not([data-theme="light"]) .filter[data-filter="product"].is-active { background-color: #97bfd8; }
+  :root:not([data-theme="light"]) .filter[data-filter="product"]:hover { background-color: #97bfd8; }
   :root:not([data-theme="light"]) .filter[data-filter="editorial"].is-active { background-color: #d8ae97; }
+  :root:not([data-theme="light"]) .filter[data-filter="editorial"]:hover { background-color: #d8ae97; }
   :root:not([data-theme="light"]) .filter[data-filter="strategy"].is-active { background-color: #cfdc93; }
+  :root:not([data-theme="light"]) .filter[data-filter="strategy"]:hover { background-color: #cfdc93; }
   :root:not([data-theme="light"]) .filter[data-filter="social"].is-active { background-color: #ffc570; }
+  :root:not([data-theme="light"]) .filter[data-filter="social"]:hover { background-color: #ffc570; }
 }
 :root[data-theme="dark"] .filter[data-filter="all"].is-active { background-color: #76b2fa; }
+:root[data-theme="dark"] .filter[data-filter="all"]:hover { background-color: #76b2fa; }
 :root[data-theme="dark"] .filter[data-filter="web"].is-active { background-color: #96d9ab; }
+:root[data-theme="dark"] .filter[data-filter="web"]:hover { background-color: #96d9ab; }
 :root[data-theme="dark"] .filter[data-filter="mobile"].is-active { background-color: #b197d8; }
+:root[data-theme="dark"] .filter[data-filter="mobile"]:hover { background-color: #b197d8; }
 :root[data-theme="dark"] .filter[data-filter="ecommerce"].is-active { background-color: #83e4ed; }
+:root[data-theme="dark"] .filter[data-filter="ecommerce"]:hover { background-color: #83e4ed; }
 :root[data-theme="dark"] .filter[data-filter="brand"].is-active { background-color: #deac92; }
+:root[data-theme="dark"] .filter[data-filter="brand"]:hover { background-color: #deac92; }
 :root[data-theme="dark"] .filter[data-filter="product"].is-active { background-color: #97bfd8; }
+:root[data-theme="dark"] .filter[data-filter="product"]:hover { background-color: #97bfd8; }
 :root[data-theme="dark"] .filter[data-filter="editorial"].is-active { background-color: #d8ae97; }
+:root[data-theme="dark"] .filter[data-filter="editorial"]:hover { background-color: #d8ae97; }
 :root[data-theme="dark"] .filter[data-filter="strategy"].is-active { background-color: #cfdc93; }
+:root[data-theme="dark"] .filter[data-filter="strategy"]:hover { background-color: #cfdc93; }
 :root[data-theme="dark"] .filter[data-filter="social"].is-active { background-color: #ffc570; }
+:root[data-theme="dark"] .filter[data-filter="social"]:hover { background-color: #ffc570; }
 
 /* The dark palette sets colour at a higher specificity than .is-active can
    reach, so the chosen pill kept its own hue for both fill and type and went
@@ -1044,3 +1078,13 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .project-title, .ov-h, .all-h, .ov-name, .about-role, .idx-name {
   text-wrap: balance;
 }
+
+/* Dark mode names each hue at a much higher specificity than the plain
+   .filter:hover / .is-active rules, so the text colour has to be restated
+   at that same weight or the label paints its hue on its own fill. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .filter.is-active,
+  :root:not([data-theme="light"]) .filter:hover { color: var(--bg); }
+}
+:root[data-theme="dark"] .filter.is-active,
+:root[data-theme="dark"] .filter:hover { color: var(--bg); }

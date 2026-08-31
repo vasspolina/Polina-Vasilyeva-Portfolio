@@ -57,7 +57,7 @@
     "editorial"
    ],
    "w": 2400,
-   "h": 2410,
+   "h": 3106,
    "widths": [
     600,
     1200,
@@ -1597,21 +1597,54 @@
    "page": 62
   },
   {
+   "stem": "e016",
+   "caption": "Haworth — the logotype on white",
+   "tags": [
+    "brand"
+   ],
+   "w": 1584,
+   "h": 754,
+   "widths": [
+    600,
+    1200,
+    1584
+   ],
+   "source": "E",
+   "page": 16
+  },
+  {
    "stem": "collection-lockup",
    "caption": "Haworth Collection lockup on navy",
    "tags": [
     "brand"
    ],
-   "w": 2386,
-   "h": 1170,
+   "w": 1762,
+   "h": 840,
    "widths": [
     600,
     1200,
     1600,
-    2386
+    1762
    ],
    "source": "IMG",
    "page": "haworth/collection-lockup.png"
+  },
+  {
+   "stem": "e078",
+   "caption": "Business cards — fronts and backs, standard and bilingual",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "E",
+   "page": 78
   },
   {
    "stem": "a059",
@@ -1938,13 +1971,12 @@
     "brand",
     "editorial"
    ],
-   "w": 2400,
-   "h": 1350,
+   "w": 1584,
+   "h": 754,
    "widths": [
     600,
     1200,
-    1600,
-    2400
+    1584
    ],
    "source": "E",
    "page": 16,
@@ -5371,6 +5403,41 @@
  ],
  "furniture": [
   {
+   "stem": "f001",
+   "caption": "Find it… — campaign banner",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "F",
+   "page": 1
+  },
+  {
+   "stem": "f019",
+   "caption": "Furniture for your little ones",
+   "tags": [
+    "web"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "F",
+   "page": 19
+  },
+  {
    "stem": "mobile-set-1",
    "caption": "Mobile — home, categories, and the little ones",
    "tags": [
@@ -5420,24 +5487,6 @@
    ],
    "source": "IMG",
    "page": "furniture/mobile-set-3.png"
-  },
-  {
-   "stem": "f001",
-   "caption": "Find it… — campaign banner",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "F",
-   "page": 1
   },
   {
    "stem": "f003",
@@ -5508,23 +5557,6 @@
    ],
    "source": "F",
    "page": 18
-  },
-  {
-   "stem": "f019",
-   "caption": "Furniture for your little ones",
-   "tags": [
-    "web"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "F",
-   "page": 19
   },
   {
    "stem": "f021",
@@ -5845,7 +5877,7 @@
     "social"
    ],
    "w": 2400,
-   "h": 1099,
+   "h": 1350,
    "widths": [
     600,
     1200,
@@ -6010,6 +6042,417 @@
    ],
    "source": "H",
    "page": 39
+  }
+ ],
+ "lenka-ilic": [
+  {
+   "stem": "drop01",
+   "caption": "Lenka Ilic — the wordmark",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1400,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop02",
+   "caption": "Business cards — two fronts and the back",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 454,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop02"
+  },
+  {
+   "stem": "drop03",
+   "caption": "lenkailic.com — Conscious Object, desktop and mobile",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1391,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1391
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
+   "caption": "Sideboard — the product page, desktop and mobile",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 934,
+   "h": 2600,
+   "widths": [
+    600,
+    934
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "Philosophy and bio — the page, desktop and mobile",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 994,
+   "h": 2600,
+   "widths": [
+    600,
+    994
+   ],
+   "source": "DROP",
+   "page": "drop05"
+  },
+  {
+   "stem": "drop06",
+   "caption": "Authenticity mark — the signed plate",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1676,
+   "h": 1675,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1676
+   ],
+   "source": "DROP",
+   "page": "drop06"
+  },
+  {
+   "stem": "drop07",
+   "caption": "Conscious Stand — the debossed mark",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 2559,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop07"
+  },
+  {
+   "stem": "drop08",
+   "caption": "Bench along the parapet",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1733,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1733
+   ],
+   "source": "DROP",
+   "page": "drop08"
+  },
+  {
+   "stem": "drop09",
+   "caption": "Side table against the sofa",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1733,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1733
+   ],
+   "source": "DROP",
+   "page": "drop09"
+  },
+  {
+   "stem": "drop10",
+   "caption": "Stand between the seats",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1733,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1733
+   ],
+   "source": "DROP",
+   "page": "drop10"
+  },
+  {
+   "stem": "drop11",
+   "caption": "Stand in the meeting room",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1733,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1733
+   ],
+   "source": "DROP",
+   "page": "drop11"
+  },
+  {
+   "stem": "drop12",
+   "caption": "Stand in use",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1733,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1733
+   ],
+   "source": "DROP",
+   "page": "drop12"
+  },
+  {
+   "stem": "drop13",
+   "caption": "Stand beside the yellow chair",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1733,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1733
+   ],
+   "source": "DROP",
+   "page": "drop13"
+  },
+  {
+   "stem": "drop14",
+   "caption": "Console, open form",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop14"
+  },
+  {
+   "stem": "drop15",
+   "caption": "Console from the front",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 1733,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1733
+   ],
+   "source": "DROP",
+   "page": "drop15"
+  },
+  {
+   "stem": "drop16",
+   "caption": "The debossed signature, close",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop16"
+  },
+  {
+   "stem": "drop17",
+   "caption": "Aluminium sheet before folding",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1601,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop17"
+  }
+ ],
+ "bts-advocaten": [
+  {
+   "stem": "drop01",
+   "caption": "The wordmark",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1400,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop02",
+   "caption": "Business cards — the studio and its partner",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 2400,
+   "h": 990,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop02"
+  },
+  {
+   "stem": "drop03",
+   "caption": "Home — desktop and mobile",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 2326,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2326
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
+   "caption": "Expertise — desktop and mobile",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 1656,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1656
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "Lawyers — desktop and mobile",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 685,
+   "h": 2600,
+   "widths": [
+    600,
+    685
+   ],
+   "source": "DROP",
+   "page": "drop05"
+  },
+  {
+   "stem": "drop06",
+   "caption": "Contact — desktop and mobile",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 1748,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1748
+   ],
+   "source": "DROP",
+   "page": "drop06"
   }
  ],
  "florida-blue": [
@@ -7000,6 +7443,42 @@
    "page": "dada/inverted.png"
   }
  ],
+ "spiritual-labour": [
+  {
+   "stem": "wordmark",
+   "caption": "The wordmark",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1500,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "spirituallabour/wordmark.png"
+  },
+  {
+   "stem": "charset",
+   "caption": "Capitals and figures",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "IMG",
+   "page": "spirituallabour/charset.png"
+  }
+ ],
  "isaac-howell": [
   {
    "stem": "drop01",
@@ -7159,7 +7638,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 1350,
+   "h": 959,
    "widths": [
     600,
     1200,
@@ -7290,488 +7769,6 @@
    ],
    "source": "DROP",
    "page": "drop05"
-  }
- ],
- "spiritual-labour": [
-  {
-   "stem": "wordmark",
-   "caption": "The wordmark",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1500,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "IMG",
-   "page": "spirituallabour/wordmark.png"
-  },
-  {
-   "stem": "charset",
-   "caption": "Capitals and figures",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "IMG",
-   "page": "spirituallabour/charset.png"
-  }
- ],
- "bts-advocaten": [
-  {
-   "stem": "drop01",
-   "caption": "The wordmark",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1400,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop01"
-  },
-  {
-   "stem": "drop02",
-   "caption": "Business cards — the studio and its partner",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 2400,
-   "h": 990,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop02"
-  },
-  {
-   "stem": "drop03",
-   "caption": "Home — desktop and mobile",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 2246,
-   "h": 2571,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2246
-   ],
-   "source": "DROP",
-   "page": "drop03"
-  },
-  {
-   "stem": "drop04",
-   "caption": "Expertise — desktop and mobile",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 1629,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1629
-   ],
-   "source": "DROP",
-   "page": "drop04"
-  },
-  {
-   "stem": "drop05",
-   "caption": "Lawyers — desktop and mobile",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 604,
-   "h": 2600,
-   "widths": [
-    600,
-    604
-   ],
-   "source": "DROP",
-   "page": "drop05"
-  },
-  {
-   "stem": "drop06",
-   "caption": "Contact — desktop and mobile",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 1532,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1532
-   ],
-   "source": "DROP",
-   "page": "drop06"
-  },
-  {
-   "stem": "drop07",
-   "caption": "Business cards — the wordmark, both grounds",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 2400,
-   "h": 789,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop07"
-  },
-  {
-   "stem": "drop08",
-   "caption": "Business cards — the partners",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 2400,
-   "h": 522,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop08"
-  }
- ],
- "lenka-ilic": [
-  {
-   "stem": "drop01",
-   "caption": "Lenka Ilic — the wordmark",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1400,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop01"
-  },
-  {
-   "stem": "drop02",
-   "caption": "Business cards — two fronts and the back",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 454,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop02"
-  },
-  {
-   "stem": "drop03",
-   "caption": "lenkailic.com — Conscious Object, desktop and mobile",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1391,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1391
-   ],
-   "source": "DROP",
-   "page": "drop03"
-  },
-  {
-   "stem": "drop04",
-   "caption": "Sideboard — the product page, desktop and mobile",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 934,
-   "h": 2600,
-   "widths": [
-    600,
-    934
-   ],
-   "source": "DROP",
-   "page": "drop04"
-  },
-  {
-   "stem": "drop05",
-   "caption": "Philosophy and bio — the page, desktop and mobile",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 994,
-   "h": 2600,
-   "widths": [
-    600,
-    994
-   ],
-   "source": "DROP",
-   "page": "drop05"
-  },
-  {
-   "stem": "drop06",
-   "caption": "Authenticity mark — the signed plate",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1676,
-   "h": 1675,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1676
-   ],
-   "source": "DROP",
-   "page": "drop06"
-  },
-  {
-   "stem": "drop07",
-   "caption": "Conscious Stand — the debossed mark",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 2559,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop07"
-  },
-  {
-   "stem": "drop08",
-   "caption": "Bench along the parapet",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1733,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1733
-   ],
-   "source": "DROP",
-   "page": "drop08"
-  },
-  {
-   "stem": "drop09",
-   "caption": "Side table against the sofa",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1733,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1733
-   ],
-   "source": "DROP",
-   "page": "drop09"
-  },
-  {
-   "stem": "drop10",
-   "caption": "Stand between the seats",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1733,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1733
-   ],
-   "source": "DROP",
-   "page": "drop10"
-  },
-  {
-   "stem": "drop11",
-   "caption": "Stand in the meeting room",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1733,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1733
-   ],
-   "source": "DROP",
-   "page": "drop11"
-  },
-  {
-   "stem": "drop12",
-   "caption": "Stand in use",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1733,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1733
-   ],
-   "source": "DROP",
-   "page": "drop12"
-  },
-  {
-   "stem": "drop13",
-   "caption": "Stand beside the yellow chair",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1733,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1733
-   ],
-   "source": "DROP",
-   "page": "drop13"
-  },
-  {
-   "stem": "drop14",
-   "caption": "Console, open form",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop14"
-  },
-  {
-   "stem": "drop15",
-   "caption": "Console from the front",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 1733,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1733
-   ],
-   "source": "DROP",
-   "page": "drop15"
-  },
-  {
-   "stem": "drop16",
-   "caption": "The debossed signature, close",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop16"
-  },
-  {
-   "stem": "drop17",
-   "caption": "Aluminium sheet before folding",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1601,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop17"
   }
  ]
 }

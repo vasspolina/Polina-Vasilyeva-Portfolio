@@ -154,7 +154,8 @@ PROJECTS = [
                "The storefront"], ["brand"], {"rows": True, "keep": [3]}),
     ("A", 32, "Executing growth across five vectors — strategy deck", ["strategy"]),
     # The retail signage artwork itself, a banner to a page.
-    ("I", 1,  "Stretch your data, not your budget — the price tiers", ["brand", "editorial"]),
+    ("I", 1,  "Stretch your data, not your budget — the price tiers", ["brand", "editorial"],
+     {"crop": False, "split": False}),
     ("I", 7,  "5G plan tiers — the price strip", ["brand"]),
     ("I", 9,  "What Ultra Wideband gives you — the icon row", ["brand"], {"split": False}),
     ("I", 10, "5G Ultra Wideband, now in more places", ["brand"], {"split": False}),
@@ -193,8 +194,10 @@ PROJECTS = [
   # narrower field, so the slide ground is taken in from both sides.
   # The slide carries its own header and footer in small type; the mark
   # alone is the cover, so both bands come off.
+  "keep_always": ["e016", "e078"],
   "piece_crop": {"b062": (0.310, 0.271, 0.304, 0.273),
-                 "collection-lockup": (0.14, 0.0875, 0.14, 0.0875)},
+                 "e016": (0.0964, 0.1816, 0.3797, 0.1996),
+                 "collection-lockup": (0.242, 0.1955, 0.242, 0.1955)},
   # The research pages are spreads of type; two to a row keeps them
   # readable without letting one fill the measure alone.
   "piece_width": {"social-five-screens": 100,
@@ -227,8 +230,11 @@ PROJECTS = [
            "and lifted sales by 10%."],
   "pages": [
     ("B", 62, "Haworth — logo design", ["brand"], {"crop": False}),
+    ("E", 16, "Haworth — the logotype on white", ["brand"], {"crop": False, "split": False}),
     ("IMG", "haworth/collection-lockup.png", "Haworth Collection lockup on navy",
      ["brand"], {"crop": False}),
+    ("E", 78, "Business cards — fronts and backs, standard and bilingual",
+     ["brand"], {"crop": False, "split": False}),
     ("A", 59, "Haworth.com homepage — Inspired Design", ["ecommerce", "web"],
      {"dechrome": True, "span": 6}),
     ("IMG", "haworth/social-five-screens.png",
@@ -607,6 +613,8 @@ PROJECTS = [
  {
   "slug": "chobani", "title": "Chobani",
   "year": "2020",
+  "keep_ground": True,
+  "piece_width": {f"drop{n:02d}": 100 for n in range(1, 10)},
   "cover": "drop09",
   "group": "product", "short": "UX/UI, visual design &amp; research",
   "meta": "Chobani — UX/UI, Visual Design &amp; Research",
@@ -627,6 +635,7 @@ PROJECTS = [
   # The single mobile screens read as a set when they sit three to a row,
   # the same rhythm as the story slides that show three phones at once.
   "piece_width": {"mobile-set-1": 48, "mobile-set-2": 48, "mobile-set-3": 48},
+  "lead": ["f001", "f019"],
   # A hairline of the page white survives on two edges of this slide.
   "piece_crop": {"f004": (0, 0, 0.010, 0.006)},
   "cover": "f012",
@@ -722,7 +731,7 @@ PROJECTS = [
   "year": "2026",
   "drop_tags": ["web", "brand"],
   # Two pages, each with its phone, to a row.
-  "piece_width": {"drop02": 48, "drop03": 48, "drop04": 48, "drop05": 48},
+  "piece_width": {"drop02": 100, "drop03": 100, "drop04": 100, "drop05": 100},
   "cover": "drop01",
   "group": "product", "short": "Website &amp; identity",
   "meta": "Bektesevic Ter Steeg Advocaten — Website &amp; Identity",
@@ -979,7 +988,8 @@ PROJECTS = [
  {
   "slug": "willow-and-wu", "title": "Willow and Wu",
   "year": "2024",
-  "piece_width": {"poster": 42},
+  "piece_width": {"poster": 42, "b102": 100},
+  "piece_crop": {"b100": (0.145, 0, 0.145, 0)},
   "cover": "poster",
   "group": "brand", "short": "Film identity, poster &amp; titles",
   "meta": "Kathy Meng — Film Identity, Poster &amp; Titles",

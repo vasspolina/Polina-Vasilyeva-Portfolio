@@ -1125,8 +1125,15 @@ def main():
         # The decks show the same artwork on more than one slide, and a page
         # can also split into near-identical halves. Keep the first of each.
         seen, keep = set(), []
+        never = set(proj.get("keep_always") or ())
         for it in items:
             hsh = it.pop("hash", None)
+            if it["stem"] in never:
+                # A page whose ground dominates its hash — a wordmark or a card
+                # grid on white — collides with any other quiet page. Named
+                # pieces are kept whatever the hash says.
+                keep.append(it)
+                continue
             if hsh and hsh in seen:
                 print(f"{slug:18} {'':4} {'':18}  -- dropped {it['stem']}, repeat of an earlier image")
                 continue
