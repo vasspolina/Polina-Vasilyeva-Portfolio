@@ -102,7 +102,10 @@ PROJECTS = [
   "year": "2022–2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
-  "piece_width": {"c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
+  "piece_width": {"c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48,
+                  # the colour pages carry dense type; each takes the
+                  # full measure, one to a row, margins kept
+                  "drop13": 100, "drop15": 100},
   # The logo slide carries the deck's own small header top-left; it comes
   # off, and the same again off the foot so the mark stays centred.
   "piece_crop": {"a025": (0.09, 0, 0.097, 0)},
