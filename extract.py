@@ -959,7 +959,16 @@ def main():
                         big = docs[src][page - 1].render(
                             scale=base * factor).to_pil().convert("RGB")
                         bw, bh = big.size
-                        im = big.crop((0, int(bh * BAND), bw, bh - int(bh * BAND)))
+                        # Shave the chrome only where the first render did.
+                        # A page published whole keeps its full height, and
+                        # its box is the full frame: shaving here left the box
+                        # overrunning the bottom edge, and the overrun came
+                        # back as a black band under the artwork.
+                        if opts.get("crop") is not False:
+                            im = big.crop((0, int(bh * BAND), bw,
+                                           bh - int(bh * BAND)))
+                        else:
+                            im = big
                         boxes = [tuple(int(round(v * factor)) for v in b)
                                  for b in boxes]
 

@@ -242,7 +242,7 @@ a:focus-visible, button:focus-visible {
   line-height: 1.2;
   letter-spacing: 0.01em;
   cursor: pointer;
-  padding: 2px;
+  padding: 2px 4px;
   transition: background var(--dur), color var(--dur);
 }
 
@@ -307,7 +307,7 @@ a:focus-visible, button:focus-visible {
   .nav { font-size: 18px; gap: var(--space-2); }
   .theme-toggle { font-size: 18px; }
   .intro { font-size: 24px; }
-  .filter { font-size: 18px; padding: 2px; }
+  .filter { font-size: 18px; padding: 2px 4px; }
   .caption { font-size: 16px; }
   .grid { grid-template-columns: 1fr; }
   .grid-item.is-portrait img { max-width: 50%; }

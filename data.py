@@ -235,7 +235,7 @@ PROJECTS = [
   # readable without letting one fill the measure alone.
   "piece_width": {"social-five-screens": 100,
                   "drop05": 48, "drop06": 48, "drop07": 48,
-                  "a060": 30, "b064-2": 30, "b065-1": 30, "b065-2": 30},
+                  "a060": 48, "b064-2": 30, "b065-1": 30, "b065-2": 30},
   "cover": "b062",
   "group": "brand", "short": "Brand, e-commerce &amp; strategy",
   "meta": "Haworth — with Apartamento Studios — Brand, E-commerce &amp; Digital Strategy",
