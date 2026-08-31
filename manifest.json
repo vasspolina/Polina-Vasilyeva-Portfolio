@@ -35,6 +35,21 @@
    "page": "drop07"
   },
   {
+   "stem": "drop09",
+   "caption": "Built right for gamers — the retail banner",
+   "tags": [
+    "brand"
+   ],
+   "w": 1166,
+   "h": 898,
+   "widths": [
+    600,
+    1166
+   ],
+   "source": "DROP",
+   "page": "drop09"
+  },
+  {
    "stem": "i001",
    "caption": "Stretch your data, not your budget — the price tiers",
    "tags": [
@@ -172,7 +187,7 @@
    "page": "drop08"
   },
   {
-   "stem": "drop11",
+   "stem": "drop12",
    "caption": "NHG Thin in application — guidelines spread",
    "tags": [
     "brand"
@@ -186,10 +201,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop11"
+   "page": "drop12"
   },
   {
-   "stem": "drop12",
+   "stem": "drop13",
    "caption": "Express Pickup Lockers — for online orders",
    "tags": [
     "brand"
@@ -201,10 +216,10 @@
     1086
    ],
    "source": "DROP",
-   "page": "drop12"
+   "page": "drop13"
   },
   {
-   "stem": "drop13",
+   "stem": "drop14",
    "caption": "Express Pickup — ready when you are",
    "tags": [
     "brand"
@@ -218,28 +233,11 @@
     1628
    ],
    "source": "DROP",
-   "page": "drop13"
-  },
-  {
-   "stem": "drop16",
-   "caption": "Designed by Verizon — the guidelines",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop16"
+   "page": "drop14"
   },
   {
    "stem": "drop17",
-   "caption": "The checkmark redrawn",
+   "caption": "Designed by Verizon — the guidelines",
    "tags": [
     "brand"
    ],
@@ -256,7 +254,7 @@
   },
   {
    "stem": "drop18",
-   "caption": "Clear space and minimum size",
+   "caption": "The checkmark redrawn",
    "tags": [
     "brand"
    ],
@@ -273,7 +271,7 @@
   },
   {
    "stem": "drop19",
-   "caption": "The checkmark on coloured grounds",
+   "caption": "Clear space and minimum size",
    "tags": [
     "brand"
    ],
@@ -290,7 +288,7 @@
   },
   {
    "stem": "drop20",
-   "caption": "Two ways to use the standalone checkmark",
+   "caption": "The checkmark on coloured grounds",
    "tags": [
     "brand"
    ],
@@ -307,7 +305,7 @@
   },
   {
    "stem": "drop21",
-   "caption": "Quiet confidence — size and placement",
+   "caption": "Two ways to use the standalone checkmark",
    "tags": [
     "brand"
    ],
@@ -324,7 +322,7 @@
   },
   {
    "stem": "drop22",
-   "caption": "Quiet confidence — applications",
+   "caption": "Quiet confidence — size and placement",
    "tags": [
     "brand"
    ],
@@ -341,7 +339,7 @@
   },
   {
    "stem": "drop23",
-   "caption": "Iconic impact — the checkmark at large sizes",
+   "caption": "Quiet confidence — applications",
    "tags": [
     "brand"
    ],
@@ -358,7 +356,7 @@
   },
   {
    "stem": "drop24",
-   "caption": "Incorporating the masterbrand logo",
+   "caption": "Iconic impact — the checkmark at large sizes",
    "tags": [
     "brand"
    ],
@@ -375,7 +373,7 @@
   },
   {
    "stem": "drop25",
-   "caption": "Checkmark and logo use — the recap",
+   "caption": "Incorporating the masterbrand logo",
    "tags": [
     "brand"
    ],
@@ -392,7 +390,7 @@
   },
   {
    "stem": "drop26",
-   "caption": "Vertical NHG Bold in retail",
+   "caption": "Checkmark and logo use — the recap",
    "tags": [
     "brand"
    ],
@@ -409,7 +407,7 @@
   },
   {
    "stem": "drop27",
-   "caption": "NHG Thin — a new typographic voice",
+   "caption": "Vertical NHG Bold in retail",
    "tags": [
     "brand"
    ],
@@ -426,7 +424,7 @@
   },
   {
    "stem": "drop28",
-   "caption": "NHG Thin — basic type styles",
+   "caption": "NHG Thin — a new typographic voice",
    "tags": [
     "brand"
    ],
@@ -443,7 +441,7 @@
   },
   {
    "stem": "drop29",
-   "caption": "NHG Thin — applications",
+   "caption": "NHG Thin — basic type styles",
    "tags": [
     "brand"
    ],
@@ -460,7 +458,7 @@
   },
   {
    "stem": "drop30",
-   "caption": "NHG customized",
+   "caption": "NHG Thin — applications",
    "tags": [
     "brand"
    ],
@@ -477,7 +475,7 @@
   },
   {
    "stem": "drop31",
-   "caption": "Diagrid construction",
+   "caption": "NHG customized",
    "tags": [
     "brand"
    ],
@@ -494,7 +492,7 @@
   },
   {
    "stem": "drop32",
-   "caption": "Two ways to use the diagrid",
+   "caption": "Diagrid construction",
    "tags": [
     "brand"
    ],
@@ -511,7 +509,7 @@
   },
   {
    "stem": "drop33",
-   "caption": "Sliced corners for digital",
+   "caption": "Two ways to use the diagrid",
    "tags": [
     "brand"
    ],
@@ -528,7 +526,7 @@
   },
   {
    "stem": "drop34",
-   "caption": "Network graphic — a dynamic graphic, not a pattern",
+   "caption": "Sliced corners for digital",
    "tags": [
     "brand"
    ],
@@ -545,7 +543,7 @@
   },
   {
    "stem": "drop35",
-   "caption": "Network graphic on verizon.com",
+   "caption": "Network graphic — a dynamic graphic, not a pattern",
    "tags": [
     "brand"
    ],
@@ -562,7 +560,7 @@
   },
   {
    "stem": "drop36",
-   "caption": "Primary colour palette",
+   "caption": "Network graphic on verizon.com",
    "tags": [
     "brand"
    ],
@@ -579,7 +577,7 @@
   },
   {
    "stem": "drop37",
-   "caption": "New colour ratios with more red",
+   "caption": "Primary colour palette",
    "tags": [
     "brand"
    ],
@@ -596,7 +594,7 @@
   },
   {
    "stem": "drop38",
-   "caption": "Unlocking a spectrum of colour",
+   "caption": "New colour ratios with more red",
    "tags": [
     "brand"
    ],
@@ -613,7 +611,7 @@
   },
   {
    "stem": "drop39",
-   "caption": "Spectrum — sample applications",
+   "caption": "Unlocking a spectrum of colour",
    "tags": [
     "brand"
    ],
@@ -630,7 +628,7 @@
   },
   {
    "stem": "drop40",
-   "caption": "Retail SEM — colour, type, imagery, copy, campaign, digital",
+   "caption": "Spectrum — sample applications",
    "tags": [
     "brand"
    ],
@@ -646,8 +644,8 @@
    "page": "drop40"
   },
   {
-   "stem": "drop43",
-   "caption": "Retail SEM — the back wall, Home bay",
+   "stem": "drop41",
+   "caption": "Retail SEM — colour, type, imagery, copy, campaign, digital",
    "tags": [
     "brand"
    ],
@@ -660,11 +658,11 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop43"
+   "page": "drop41"
   },
   {
    "stem": "drop44",
-   "caption": "Retail SEM — entertainment bay, passive and interactive",
+   "caption": "Retail SEM — the back wall, Home bay",
    "tags": [
     "brand"
    ],
@@ -680,8 +678,8 @@
    "page": "drop44"
   },
   {
-   "stem": "drop46",
-   "caption": "Retail SEM — Live Try, the demo table",
+   "stem": "drop45",
+   "caption": "Retail SEM — entertainment bay, passive and interactive",
    "tags": [
     "brand"
    ],
@@ -694,11 +692,11 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop46"
+   "page": "drop45"
   },
   {
    "stem": "drop47",
-   "caption": "Retail SEM — Live Try print, the eight placements",
+   "caption": "Retail SEM — Live Try, the demo table",
    "tags": [
     "brand"
    ],
@@ -715,7 +713,7 @@
   },
   {
    "stem": "drop48",
-   "caption": "Retail SEM — Live Try print, mix and match sheets",
+   "caption": "Retail SEM — Live Try print, the eight placements",
    "tags": [
     "brand"
    ],
@@ -732,7 +730,7 @@
   },
   {
    "stem": "drop49",
-   "caption": "Retail SEM — aisle fixtures and accessories",
+   "caption": "Retail SEM — Live Try print, mix and match sheets",
    "tags": [
     "brand"
    ],
@@ -748,7 +746,24 @@
    "page": "drop49"
   },
   {
-   "stem": "drop51",
+   "stem": "drop50",
+   "caption": "Retail SEM — aisle fixtures and accessories",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop50"
+  },
+  {
+   "stem": "drop52",
    "caption": "Future state — the floor",
    "tags": [
     "brand"
@@ -762,28 +777,11 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop51"
-  },
-  {
-   "stem": "drop53",
-   "caption": "Future state — aisle and entertainment",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop53"
+   "page": "drop52"
   },
   {
    "stem": "drop54",
-   "caption": "Future state — the Home bay in place",
+   "caption": "Future state — aisle and entertainment",
    "tags": [
     "brand"
    ],
@@ -799,8 +797,8 @@
    "page": "drop54"
   },
   {
-   "stem": "drop58",
-   "caption": "Next Gen Reset — the entertainment wall",
+   "stem": "drop55",
+   "caption": "Future state — the Home bay in place",
    "tags": [
     "brand"
    ],
@@ -813,11 +811,11 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop58"
+   "page": "drop55"
   },
   {
    "stem": "drop59",
-   "caption": "Next Gen Reset — product table merchandising",
+   "caption": "Next Gen Reset — the entertainment wall",
    "tags": [
     "brand"
    ],
@@ -834,7 +832,7 @@
   },
   {
    "stem": "drop60",
-   "caption": "Next Gen Reset — the storefront",
+   "caption": "Next Gen Reset — product table merchandising",
    "tags": [
     "brand"
    ],
@@ -851,7 +849,7 @@
   },
   {
    "stem": "drop61",
-   "caption": "Next Gen Reset — the main floor",
+   "caption": "Next Gen Reset — the storefront",
    "tags": [
     "brand"
    ],
@@ -868,7 +866,7 @@
   },
   {
    "stem": "drop62",
-   "caption": "Next Gen Reset — the product tables",
+   "caption": "Next Gen Reset — the main floor",
    "tags": [
     "brand"
    ],
@@ -885,7 +883,7 @@
   },
   {
    "stem": "drop63",
-   "caption": "Next Gen Reset — the Home wall",
+   "caption": "Next Gen Reset — the product tables",
    "tags": [
     "brand"
    ],
@@ -902,7 +900,7 @@
   },
   {
    "stem": "drop64",
-   "caption": "Next Gen Reset — the +play wall",
+   "caption": "Next Gen Reset — the Home wall",
    "tags": [
     "brand"
    ],
@@ -916,6 +914,23 @@
    ],
    "source": "DROP",
    "page": "drop64"
+  },
+  {
+   "stem": "drop65",
+   "caption": "Next Gen Reset — the +play wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop65"
   },
   {
    "stem": "a025",
