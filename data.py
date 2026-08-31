@@ -761,7 +761,10 @@ PROJECTS = [
   # same 40% the other way, since a card is a small object.
   # drop09 arrived inside a PDF viewer's grey artboard.
   "piece_crop": {"drop09": (0.047, 0.12, 0.047, 0.12)},
-  "piece_width": {"d005": 70, "d006": 70, "d007": 70, "d008": 70,
+  # d005 comes off the deck at 1279px, so it sits smaller than the deck
+  # pages beside it. The two broker covers pair, black beside white.
+  "piece_width": {"d005": 45, "drop04": 100, "drop05": 48, "drop06": 48,
+                  "d006": 70, "d007": 70, "d008": 70,
                   # both cards are small objects and are shown as such
                   "drop02": 30, "drop03": 30,
                   # the listing map is dense and needs the room

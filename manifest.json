@@ -155,40 +155,6 @@
   },
   {
    "stem": "drop13",
-   "caption": "Vivid Red — digital colour use",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop13"
-  },
-  {
-   "stem": "drop15",
-   "caption": "Gray as a subtle accent — on-screen page",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1349,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop15"
-  },
-  {
-   "stem": "drop17",
    "caption": "Express Pickup Lockers — for online orders",
    "tags": [
     "brand"
@@ -200,10 +166,10 @@
     1086
    ],
    "source": "DROP",
-   "page": "drop17"
+   "page": "drop13"
   },
   {
-   "stem": "drop18",
+   "stem": "drop14",
    "caption": "Express Pickup — ready when you are",
    "tags": [
     "brand"
@@ -217,11 +183,79 @@
     1628
    ],
    "source": "DROP",
+   "page": "drop14"
+  },
+  {
+   "stem": "drop17",
+   "caption": "Designed by Verizon — the guidelines",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop17"
+  },
+  {
+   "stem": "drop18",
+   "caption": "The checkmark redrawn",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
    "page": "drop18"
   },
   {
+   "stem": "drop19",
+   "caption": "Clear space and minimum size",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop19"
+  },
+  {
+   "stem": "drop20",
+   "caption": "The checkmark on coloured grounds",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop20"
+  },
+  {
    "stem": "drop21",
-   "caption": "Retail SEM — colour, type, imagery, copy, campaign, digital",
+   "caption": "Two ways to use the standalone checkmark",
    "tags": [
     "brand"
    ],
@@ -237,8 +271,42 @@
    "page": "drop21"
   },
   {
+   "stem": "drop22",
+   "caption": "Quiet confidence — size and placement",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop22"
+  },
+  {
+   "stem": "drop23",
+   "caption": "Quiet confidence — applications",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop23"
+  },
+  {
    "stem": "drop24",
-   "caption": "Retail SEM — the back wall, Home bay",
+   "caption": "Iconic impact — the checkmark at large sizes",
    "tags": [
     "brand"
    ],
@@ -255,7 +323,7 @@
   },
   {
    "stem": "drop25",
-   "caption": "Retail SEM — entertainment bay, passive and interactive",
+   "caption": "Incorporating the masterbrand logo",
    "tags": [
     "brand"
    ],
@@ -271,8 +339,25 @@
    "page": "drop25"
   },
   {
+   "stem": "drop26",
+   "caption": "Checkmark and logo use — the recap",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop26"
+  },
+  {
    "stem": "drop27",
-   "caption": "Retail SEM — Live Try, the demo table",
+   "caption": "Vertical NHG Bold in retail",
    "tags": [
     "brand"
    ],
@@ -289,7 +374,7 @@
   },
   {
    "stem": "drop28",
-   "caption": "Retail SEM — Live Try print, the eight placements",
+   "caption": "NHG Thin — a new typographic voice",
    "tags": [
     "brand"
    ],
@@ -306,7 +391,7 @@
   },
   {
    "stem": "drop29",
-   "caption": "Retail SEM — Live Try print, mix and match sheets",
+   "caption": "NHG Thin — basic type styles",
    "tags": [
     "brand"
    ],
@@ -323,7 +408,7 @@
   },
   {
    "stem": "drop30",
-   "caption": "Retail SEM — aisle fixtures and accessories",
+   "caption": "NHG Thin — applications",
    "tags": [
     "brand"
    ],
@@ -339,8 +424,25 @@
    "page": "drop30"
   },
   {
+   "stem": "drop31",
+   "caption": "NHG customized",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop31"
+  },
+  {
    "stem": "drop32",
-   "caption": "Future state — the floor",
+   "caption": "Diagrid construction",
    "tags": [
     "brand"
    ],
@@ -356,8 +458,25 @@
    "page": "drop32"
   },
   {
+   "stem": "drop33",
+   "caption": "Two ways to use the diagrid",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop33"
+  },
+  {
    "stem": "drop34",
-   "caption": "Future state — aisle and entertainment",
+   "caption": "Sliced corners for digital",
    "tags": [
     "brand"
    ],
@@ -374,7 +493,7 @@
   },
   {
    "stem": "drop35",
-   "caption": "Future state — the Home bay in place",
+   "caption": "Network graphic — a dynamic graphic, not a pattern",
    "tags": [
     "brand"
    ],
@@ -390,8 +509,59 @@
    "page": "drop35"
   },
   {
+   "stem": "drop36",
+   "caption": "Network graphic on verizon.com",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop36"
+  },
+  {
+   "stem": "drop37",
+   "caption": "Primary colour palette",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop37"
+  },
+  {
+   "stem": "drop38",
+   "caption": "New colour ratios with more red",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop38"
+  },
+  {
    "stem": "drop39",
-   "caption": "Next Gen Reset — the entertainment wall",
+   "caption": "Unlocking a spectrum of colour",
    "tags": [
     "brand"
    ],
@@ -408,7 +578,7 @@
   },
   {
    "stem": "drop40",
-   "caption": "Next Gen Reset — product table merchandising",
+   "caption": "Spectrum — sample applications",
    "tags": [
     "brand"
    ],
@@ -425,7 +595,7 @@
   },
   {
    "stem": "drop41",
-   "caption": "Next Gen Reset — the storefront",
+   "caption": "Retail SEM — colour, type, imagery, copy, campaign, digital",
    "tags": [
     "brand"
    ],
@@ -441,42 +611,8 @@
    "page": "drop41"
   },
   {
-   "stem": "drop42",
-   "caption": "Next Gen Reset — the main floor",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop42"
-  },
-  {
-   "stem": "drop43",
-   "caption": "Next Gen Reset — the product tables",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop43"
-  },
-  {
    "stem": "drop44",
-   "caption": "Next Gen Reset — the Home wall",
+   "caption": "Retail SEM — the back wall, Home bay",
    "tags": [
     "brand"
    ],
@@ -493,7 +629,7 @@
   },
   {
    "stem": "drop45",
-   "caption": "Next Gen Reset — the +play wall",
+   "caption": "Retail SEM — entertainment bay, passive and interactive",
    "tags": [
     "brand"
    ],
@@ -507,6 +643,244 @@
    ],
    "source": "DROP",
    "page": "drop45"
+  },
+  {
+   "stem": "drop47",
+   "caption": "Retail SEM — Live Try, the demo table",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop47"
+  },
+  {
+   "stem": "drop48",
+   "caption": "Retail SEM — Live Try print, the eight placements",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop48"
+  },
+  {
+   "stem": "drop49",
+   "caption": "Retail SEM — Live Try print, mix and match sheets",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop49"
+  },
+  {
+   "stem": "drop50",
+   "caption": "Retail SEM — aisle fixtures and accessories",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop50"
+  },
+  {
+   "stem": "drop52",
+   "caption": "Future state — the floor",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop52"
+  },
+  {
+   "stem": "drop54",
+   "caption": "Future state — aisle and entertainment",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop54"
+  },
+  {
+   "stem": "drop55",
+   "caption": "Future state — the Home bay in place",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop55"
+  },
+  {
+   "stem": "drop59",
+   "caption": "Next Gen Reset — the entertainment wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop59"
+  },
+  {
+   "stem": "drop60",
+   "caption": "Next Gen Reset — product table merchandising",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop60"
+  },
+  {
+   "stem": "drop61",
+   "caption": "Next Gen Reset — the storefront",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop61"
+  },
+  {
+   "stem": "drop62",
+   "caption": "Next Gen Reset — the main floor",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop62"
+  },
+  {
+   "stem": "drop63",
+   "caption": "Next Gen Reset — the product tables",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop63"
+  },
+  {
+   "stem": "drop64",
+   "caption": "Next Gen Reset — the Home wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop64"
+  },
+  {
+   "stem": "drop65",
+   "caption": "Next Gen Reset — the +play wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop65"
   },
   {
    "stem": "a025",
