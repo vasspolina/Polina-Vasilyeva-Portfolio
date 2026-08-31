@@ -110,6 +110,7 @@ PROJECTS = [
   # centred, at one aspect, so the two covers read as a pair.
   "piece_crop": {"a025": (0.122, 0.058, 0.130, 0.059)},
   "drops_first": True,
+  "lead": ["drop06", "drop07", "i001", "i011"],
   "cover": "a025",
   "group": "brand", "short": "Web, retail &amp; brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",

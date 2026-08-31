@@ -1133,11 +1133,25 @@ def main():
             if hsh:
                 seen.add(hsh)
             keep.append(it)
+        if proj.get("lead"):
+            # A few pieces open the project regardless of which source they
+            # came from. Everything else keeps the order it already had.
+            want = list(proj["lead"])
+            by = {k["stem"]: k for k in keep}
+            missing = [w for w in want if w not in by]
+            if missing:
+                print(f"{slug:18} {'':4} {'':18}  -- lead names no such piece: {missing}")
+            front = [by[w] for w in want if w in by]
+            keep = front + [k for k in keep if k["stem"] not in set(want)]
         if proj.get("drops_first"):
             # The folder images are the work itself; the deck pages document
             # it. Some projects read better with the work first.
-            keep = ([k for k in keep if k["stem"].startswith("drop")] +
-                    [k for k in keep if not k["stem"].startswith("drop")])
+            led = set(proj.get("lead") or ())
+            front = [k for k in keep if k["stem"] in led]
+            rest = [k for k in keep if k["stem"] not in led]
+            keep = (front +
+                    [k for k in rest if k["stem"].startswith("drop")] +
+                    [k for k in rest if not k["stem"].startswith("drop")])
         manifest[slug] = keep
 
     path = os.path.join(ROOT, "manifest.json")

@@ -1,6 +1,75 @@
 {
  "verizon": [
   {
+   "stem": "drop06",
+   "caption": "Verizon.com homepage — connecting you with what matters",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1454,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop06"
+  },
+  {
+   "stem": "drop07",
+   "caption": "Chat assistant on mobile",
+   "tags": [
+    "brand"
+   ],
+   "w": 1714,
+   "h": 1960,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1714
+   ],
+   "source": "DROP",
+   "page": "drop07"
+  },
+  {
+   "stem": "i001",
+   "caption": "Stretch your data, not your budget — the price tiers",
+   "tags": [
+    "brand",
+    "editorial"
+   ],
+   "w": 2400,
+   "h": 2410,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "I",
+   "page": 1
+  },
+  {
+   "stem": "i011",
+   "caption": "Better gets better — iPhone 13 Pro",
+   "tags": [
+    "brand"
+   ],
+   "w": 2190,
+   "h": 546,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2190
+   ],
+   "source": "I",
+   "page": 11
+  },
+  {
    "stem": "drop01",
    "caption": "Verizon Prepaid — the price grid",
    "tags": [
@@ -86,40 +155,6 @@
    "page": "drop05"
   },
   {
-   "stem": "drop06",
-   "caption": "Verizon.com homepage — connecting you with what matters",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1454,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop06"
-  },
-  {
-   "stem": "drop07",
-   "caption": "Chat assistant on mobile",
-   "tags": [
-    "brand"
-   ],
-   "w": 1714,
-   "h": 1960,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1714
-   ],
-   "source": "DROP",
-   "page": "drop07"
-  },
-  {
    "stem": "drop08",
    "caption": "Voice assistant states — idle to error",
    "tags": [
@@ -137,8 +172,8 @@
    "page": "drop08"
   },
   {
-   "stem": "drop09",
-   "caption": "NHG Thin in application — in-store and online",
+   "stem": "drop11",
+   "caption": "NHG Thin in application — guidelines spread",
    "tags": [
     "brand"
    ],
@@ -151,10 +186,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop09"
+   "page": "drop11"
   },
   {
-   "stem": "drop13",
+   "stem": "drop12",
    "caption": "Express Pickup Lockers — for online orders",
    "tags": [
     "brand"
@@ -166,10 +201,10 @@
     1086
    ],
    "source": "DROP",
-   "page": "drop13"
+   "page": "drop12"
   },
   {
-   "stem": "drop14",
+   "stem": "drop13",
    "caption": "Express Pickup — ready when you are",
    "tags": [
     "brand"
@@ -183,11 +218,28 @@
     1628
    ],
    "source": "DROP",
-   "page": "drop14"
+   "page": "drop13"
+  },
+  {
+   "stem": "drop16",
+   "caption": "Designed by Verizon — the guidelines",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop16"
   },
   {
    "stem": "drop17",
-   "caption": "Designed by Verizon — the guidelines",
+   "caption": "The checkmark redrawn",
    "tags": [
     "brand"
    ],
@@ -204,7 +256,7 @@
   },
   {
    "stem": "drop18",
-   "caption": "The checkmark redrawn",
+   "caption": "Clear space and minimum size",
    "tags": [
     "brand"
    ],
@@ -221,7 +273,7 @@
   },
   {
    "stem": "drop19",
-   "caption": "Clear space and minimum size",
+   "caption": "The checkmark on coloured grounds",
    "tags": [
     "brand"
    ],
@@ -238,7 +290,7 @@
   },
   {
    "stem": "drop20",
-   "caption": "The checkmark on coloured grounds",
+   "caption": "Two ways to use the standalone checkmark",
    "tags": [
     "brand"
    ],
@@ -255,7 +307,7 @@
   },
   {
    "stem": "drop21",
-   "caption": "Two ways to use the standalone checkmark",
+   "caption": "Quiet confidence — size and placement",
    "tags": [
     "brand"
    ],
@@ -272,7 +324,7 @@
   },
   {
    "stem": "drop22",
-   "caption": "Quiet confidence — size and placement",
+   "caption": "Quiet confidence — applications",
    "tags": [
     "brand"
    ],
@@ -289,7 +341,7 @@
   },
   {
    "stem": "drop23",
-   "caption": "Quiet confidence — applications",
+   "caption": "Iconic impact — the checkmark at large sizes",
    "tags": [
     "brand"
    ],
@@ -306,7 +358,7 @@
   },
   {
    "stem": "drop24",
-   "caption": "Iconic impact — the checkmark at large sizes",
+   "caption": "Incorporating the masterbrand logo",
    "tags": [
     "brand"
    ],
@@ -323,7 +375,7 @@
   },
   {
    "stem": "drop25",
-   "caption": "Incorporating the masterbrand logo",
+   "caption": "Checkmark and logo use — the recap",
    "tags": [
     "brand"
    ],
@@ -340,7 +392,7 @@
   },
   {
    "stem": "drop26",
-   "caption": "Checkmark and logo use — the recap",
+   "caption": "Vertical NHG Bold in retail",
    "tags": [
     "brand"
    ],
@@ -357,7 +409,7 @@
   },
   {
    "stem": "drop27",
-   "caption": "Vertical NHG Bold in retail",
+   "caption": "NHG Thin — a new typographic voice",
    "tags": [
     "brand"
    ],
@@ -374,7 +426,7 @@
   },
   {
    "stem": "drop28",
-   "caption": "NHG Thin — a new typographic voice",
+   "caption": "NHG Thin — basic type styles",
    "tags": [
     "brand"
    ],
@@ -391,7 +443,7 @@
   },
   {
    "stem": "drop29",
-   "caption": "NHG Thin — basic type styles",
+   "caption": "NHG Thin — applications",
    "tags": [
     "brand"
    ],
@@ -408,7 +460,7 @@
   },
   {
    "stem": "drop30",
-   "caption": "NHG Thin — applications",
+   "caption": "NHG customized",
    "tags": [
     "brand"
    ],
@@ -425,7 +477,7 @@
   },
   {
    "stem": "drop31",
-   "caption": "NHG customized",
+   "caption": "Diagrid construction",
    "tags": [
     "brand"
    ],
@@ -442,7 +494,7 @@
   },
   {
    "stem": "drop32",
-   "caption": "Diagrid construction",
+   "caption": "Two ways to use the diagrid",
    "tags": [
     "brand"
    ],
@@ -459,7 +511,7 @@
   },
   {
    "stem": "drop33",
-   "caption": "Two ways to use the diagrid",
+   "caption": "Sliced corners for digital",
    "tags": [
     "brand"
    ],
@@ -476,7 +528,7 @@
   },
   {
    "stem": "drop34",
-   "caption": "Sliced corners for digital",
+   "caption": "Network graphic — a dynamic graphic, not a pattern",
    "tags": [
     "brand"
    ],
@@ -493,7 +545,7 @@
   },
   {
    "stem": "drop35",
-   "caption": "Network graphic — a dynamic graphic, not a pattern",
+   "caption": "Network graphic on verizon.com",
    "tags": [
     "brand"
    ],
@@ -510,7 +562,7 @@
   },
   {
    "stem": "drop36",
-   "caption": "Network graphic on verizon.com",
+   "caption": "Primary colour palette",
    "tags": [
     "brand"
    ],
@@ -527,7 +579,7 @@
   },
   {
    "stem": "drop37",
-   "caption": "Primary colour palette",
+   "caption": "New colour ratios with more red",
    "tags": [
     "brand"
    ],
@@ -544,7 +596,7 @@
   },
   {
    "stem": "drop38",
-   "caption": "New colour ratios with more red",
+   "caption": "Unlocking a spectrum of colour",
    "tags": [
     "brand"
    ],
@@ -561,7 +613,7 @@
   },
   {
    "stem": "drop39",
-   "caption": "Unlocking a spectrum of colour",
+   "caption": "Spectrum — sample applications",
    "tags": [
     "brand"
    ],
@@ -578,7 +630,7 @@
   },
   {
    "stem": "drop40",
-   "caption": "Spectrum — sample applications",
+   "caption": "Retail SEM — colour, type, imagery, copy, campaign, digital",
    "tags": [
     "brand"
    ],
@@ -594,8 +646,8 @@
    "page": "drop40"
   },
   {
-   "stem": "drop41",
-   "caption": "Retail SEM — colour, type, imagery, copy, campaign, digital",
+   "stem": "drop43",
+   "caption": "Retail SEM — the back wall, Home bay",
    "tags": [
     "brand"
    ],
@@ -608,11 +660,11 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop41"
+   "page": "drop43"
   },
   {
    "stem": "drop44",
-   "caption": "Retail SEM — the back wall, Home bay",
+   "caption": "Retail SEM — entertainment bay, passive and interactive",
    "tags": [
     "brand"
    ],
@@ -628,8 +680,8 @@
    "page": "drop44"
   },
   {
-   "stem": "drop45",
-   "caption": "Retail SEM — entertainment bay, passive and interactive",
+   "stem": "drop46",
+   "caption": "Retail SEM — Live Try, the demo table",
    "tags": [
     "brand"
    ],
@@ -642,11 +694,11 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop45"
+   "page": "drop46"
   },
   {
    "stem": "drop47",
-   "caption": "Retail SEM — Live Try, the demo table",
+   "caption": "Retail SEM — Live Try print, the eight placements",
    "tags": [
     "brand"
    ],
@@ -663,7 +715,7 @@
   },
   {
    "stem": "drop48",
-   "caption": "Retail SEM — Live Try print, the eight placements",
+   "caption": "Retail SEM — Live Try print, mix and match sheets",
    "tags": [
     "brand"
    ],
@@ -680,7 +732,7 @@
   },
   {
    "stem": "drop49",
-   "caption": "Retail SEM — Live Try print, mix and match sheets",
+   "caption": "Retail SEM — aisle fixtures and accessories",
    "tags": [
     "brand"
    ],
@@ -696,24 +748,7 @@
    "page": "drop49"
   },
   {
-   "stem": "drop50",
-   "caption": "Retail SEM — aisle fixtures and accessories",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop50"
-  },
-  {
-   "stem": "drop52",
+   "stem": "drop51",
    "caption": "Future state — the floor",
    "tags": [
     "brand"
@@ -727,11 +762,28 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop52"
+   "page": "drop51"
+  },
+  {
+   "stem": "drop53",
+   "caption": "Future state — aisle and entertainment",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop53"
   },
   {
    "stem": "drop54",
-   "caption": "Future state — aisle and entertainment",
+   "caption": "Future state — the Home bay in place",
    "tags": [
     "brand"
    ],
@@ -747,8 +799,8 @@
    "page": "drop54"
   },
   {
-   "stem": "drop55",
-   "caption": "Future state — the Home bay in place",
+   "stem": "drop58",
+   "caption": "Next Gen Reset — the entertainment wall",
    "tags": [
     "brand"
    ],
@@ -761,11 +813,11 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop55"
+   "page": "drop58"
   },
   {
    "stem": "drop59",
-   "caption": "Next Gen Reset — the entertainment wall",
+   "caption": "Next Gen Reset — product table merchandising",
    "tags": [
     "brand"
    ],
@@ -782,7 +834,7 @@
   },
   {
    "stem": "drop60",
-   "caption": "Next Gen Reset — product table merchandising",
+   "caption": "Next Gen Reset — the storefront",
    "tags": [
     "brand"
    ],
@@ -799,7 +851,7 @@
   },
   {
    "stem": "drop61",
-   "caption": "Next Gen Reset — the storefront",
+   "caption": "Next Gen Reset — the main floor",
    "tags": [
     "brand"
    ],
@@ -816,7 +868,7 @@
   },
   {
    "stem": "drop62",
-   "caption": "Next Gen Reset — the main floor",
+   "caption": "Next Gen Reset — the product tables",
    "tags": [
     "brand"
    ],
@@ -833,7 +885,7 @@
   },
   {
    "stem": "drop63",
-   "caption": "Next Gen Reset — the product tables",
+   "caption": "Next Gen Reset — the Home wall",
    "tags": [
     "brand"
    ],
@@ -850,23 +902,6 @@
   },
   {
    "stem": "drop64",
-   "caption": "Next Gen Reset — the Home wall",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop64"
-  },
-  {
-   "stem": "drop65",
    "caption": "Next Gen Reset — the +play wall",
    "tags": [
     "brand"
@@ -880,7 +915,7 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop65"
+   "page": "drop64"
   },
   {
    "stem": "a025",
@@ -1049,24 +1084,6 @@
    "page": 32
   },
   {
-   "stem": "i001",
-   "caption": "Stretch your data, not your budget — the price tiers",
-   "tags": [
-    "brand",
-    "editorial"
-   ],
-   "w": 2400,
-   "h": 2410,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "I",
-   "page": 1
-  },
-  {
    "stem": "i007",
    "caption": "5G plan tiers — the price strip",
    "tags": [
@@ -1116,23 +1133,6 @@
    ],
    "source": "I",
    "page": 10
-  },
-  {
-   "stem": "i011",
-   "caption": "Better gets better — iPhone 13 Pro",
-   "tags": [
-    "brand"
-   ],
-   "w": 2190,
-   "h": 546,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2190
-   ],
-   "source": "I",
-   "page": 11
   },
   {
    "stem": "p02",
@@ -7528,18 +7528,16 @@
   },
   {
    "stem": "drop05",
-   "caption": "Philosophy and bio — the page",
+   "caption": "Philosophy and bio — the page, desktop and mobile",
    "tags": [
     "brand",
     "web"
    ],
-   "w": 2400,
-   "h": 2598,
+   "w": 994,
+   "h": 2600,
    "widths": [
     600,
-    1200,
-    1600,
-    2400
+    994
    ],
    "source": "DROP",
    "page": "drop05"
