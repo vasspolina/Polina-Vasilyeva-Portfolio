@@ -197,7 +197,8 @@ PROJECTS = [
                  "collection-lockup": (0.14, 0.0875, 0.14, 0.0875)},
   # The research pages are spreads of type; two to a row keeps them
   # readable without letting one fill the measure alone.
-  "piece_width": {"drop05": 48, "drop06": 48, "drop07": 48,
+  "piece_width": {"social-five-screens": 100,
+                  "drop05": 48, "drop06": 48, "drop07": 48,
                   "a060": 30, "b064-2": 30, "b065-1": 30, "b065-2": 30},
   "cover": "b062",
   "group": "brand", "short": "Brand, e-commerce &amp; strategy",
@@ -538,7 +539,7 @@ PROJECTS = [
   "year": "2024",
   # Emails and display units at one width, so the set reads as a set
   # rather than as pieces of different importance.
-  "piece_width": {**{f"drop{n:02d}": 23 for n in range(1, 15)},
+  "piece_width": {**{f"drop{n:02d}": 23 for n in range(1, 14)},
                   "ad-tall": 23},
   "cover": "ad-tall",
   "group": "brand", "short": "Subscription campaign design",

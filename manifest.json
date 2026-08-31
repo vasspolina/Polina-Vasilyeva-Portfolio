@@ -4875,6 +4875,54 @@
   },
   {
    "stem": "drop01",
+   "caption": "Engage In Topics That Affect You — Pride month",
+   "tags": [
+    "brand"
+   ],
+   "w": 1602,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1602
+   ],
+   "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop02",
+   "caption": "Real-Time Data — the binary field",
+   "tags": [
+    "brand"
+   ],
+   "w": 877,
+   "h": 2600,
+   "widths": [
+    600,
+    877
+   ],
+   "source": "DROP",
+   "page": "drop02"
+  },
+  {
+   "stem": "drop03",
+   "caption": "One dollar — the offer on the dollar field",
+   "tags": [
+    "brand"
+   ],
+   "w": 1462,
+   "h": 2600,
+   "widths": [
+    600,
+    1200,
+    1462
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
    "caption": "Listen to WSJ — podcast email",
    "tags": [
     "brand"
@@ -4886,27 +4934,10 @@
     982
    ],
    "source": "DROP",
-   "page": "drop01"
+   "page": "drop04"
   },
   {
-   "stem": "drop02",
-   "caption": "Podcast cards — one colour to a show",
-   "tags": [
-    "brand"
-   ],
-   "w": 1641,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1641
-   ],
-   "source": "DROP",
-   "page": "drop02"
-  },
-  {
-   "stem": "drop03",
+   "stem": "drop05",
    "caption": "Listen To WSJ Podcasts — the show list",
    "tags": [
     "brand"
@@ -4920,10 +4951,10 @@
     1717
    ],
    "source": "DROP",
-   "page": "drop03"
+   "page": "drop05"
   },
   {
-   "stem": "drop04",
+   "stem": "drop06",
    "caption": "WSJ Digital — four dollars a month",
    "tags": [
     "brand"
@@ -4936,10 +4967,10 @@
     1254
    ],
    "source": "DROP",
-   "page": "drop04"
+   "page": "drop06"
   },
   {
-   "stem": "drop05",
+   "stem": "drop07",
    "caption": "Only four dollars — the price as the picture",
    "tags": [
     "brand"
@@ -4951,10 +4982,10 @@
     1057
    ],
    "source": "DROP",
-   "page": "drop05"
+   "page": "drop07"
   },
   {
-   "stem": "drop06",
+   "stem": "drop08",
    "caption": "What's News — a single show, a single screen",
    "tags": [
     "brand"
@@ -4968,10 +4999,10 @@
     2074
    ],
    "source": "DROP",
-   "page": "drop06"
+   "page": "drop08"
   },
   {
-   "stem": "drop07",
+   "stem": "drop09",
    "caption": "WSJ Digital — the offer squared",
    "tags": [
     "brand"
@@ -4984,10 +5015,10 @@
     1352
    ],
    "source": "DROP",
-   "page": "drop07"
+   "page": "drop09"
   },
   {
-   "stem": "drop08",
+   "stem": "drop10",
    "caption": "WSJ Digital Bundle — six dollars, three titles",
    "tags": [
     "brand"
@@ -4998,41 +5029,11 @@
     553
    ],
    "source": "DROP",
-   "page": "drop08"
-  },
-  {
-   "stem": "drop09",
-   "caption": "Listen To Opinions — Minute Briefing",
-   "tags": [
-    "brand"
-   ],
-   "w": 689,
-   "h": 2600,
-   "widths": [
-    600,
-    689
-   ],
-   "source": "DROP",
-   "page": "drop09"
-  },
-  {
-   "stem": "drop10",
-   "caption": "Get Critical Perspective — Free Expression",
-   "tags": [
-    "brand"
-   ],
-   "w": 689,
-   "h": 2600,
-   "widths": [
-    600,
-    689
-   ],
-   "source": "DROP",
    "page": "drop10"
   },
   {
    "stem": "drop11",
-   "caption": "Learn and Stay Informed — the three shows together",
+   "caption": "Listen To Opinions — Minute Briefing",
    "tags": [
     "brand"
    ],
@@ -5047,51 +5048,33 @@
   },
   {
    "stem": "drop12",
-   "caption": "Engage In Topics That Affect You — Pride month",
+   "caption": "Get Critical Perspective — Free Expression",
    "tags": [
     "brand"
    ],
-   "w": 1602,
+   "w": 689,
    "h": 2600,
    "widths": [
     600,
-    1200,
-    1600,
-    1602
+    689
    ],
    "source": "DROP",
    "page": "drop12"
   },
   {
    "stem": "drop13",
-   "caption": "Real-Time Data — the binary field",
+   "caption": "Learn and Stay Informed — the three shows together",
    "tags": [
     "brand"
    ],
-   "w": 877,
+   "w": 689,
    "h": 2600,
    "widths": [
     600,
-    877
+    689
    ],
    "source": "DROP",
    "page": "drop13"
-  },
-  {
-   "stem": "drop14",
-   "caption": "One dollar — the offer on the dollar field",
-   "tags": [
-    "brand"
-   ],
-   "w": 1462,
-   "h": 2600,
-   "widths": [
-    600,
-    1200,
-    1462
-   ],
-   "source": "DROP",
-   "page": "drop14"
   }
  ],
  "clinique": [
