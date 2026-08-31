@@ -182,7 +182,14 @@ PROJECTS = [
   # narrower field, so the slide ground is taken in from both sides.
   # The slide carries its own header and footer in small type; the mark
   # alone is the cover, so both bands come off.
-  "keep_always": ["e016", "e077"],
+    # The identity opens the project, then the work, then the brand book that
+  # documents it. Naming the openers keeps them ahead of the drop folder.
+  "drops_first": True,
+  "lead": ["b062", "e016", "collection-lockup", "e077", "a059", "a060",
+           "social-five-screens", "b064-2", "b065-1", "b065-2", "b066",
+           "b068-1", "b068-2"],
+  "before_decks": ["haworth-opening-title", "haworth-motion"],
+"keep_always": ["e016", "e077"],
   "piece_crop": {"b062": (0.310, 0.271, 0.304, 0.273),
                  "e016": (0.0964, 0.1816, 0.3797, 0.1996),
                  "collection-lockup": (0.242, 0.1955, 0.242, 0.1955)},
@@ -656,7 +663,8 @@ PROJECTS = [
   "year": "2026",
   "drop_tags": ["web", "brand"],
   # Two pages, each with its phone, to a row.
-  "piece_width": {"drop02": 100, "drop03": 100, "drop04": 100, "drop05": 100},
+  "piece_width": {"drop03": 100, "drop04": 100, "drop05": 100,
+                  "drop06": 100},
   "cover": "drop01",
   "group": "product", "short": "Website and identity",
   "meta": "Bektesevic Ter Steeg Advocaten, Website and Identity",
@@ -691,11 +699,11 @@ PROJECTS = [
   # same 40% the other way, since a card is a small object.
   # drop09 arrived inside a PDF viewer's artboard, but only the foot of it
   # is flat: the 12% taken off each side was map, not margin.
-  "piece_crop": {"drop09": (0, 0, 0.081, 0)},
+  "piece_crop": {},
   # d005 comes off the deck at 1279px, so it sits smaller than the deck
   # pages beside it. The two broker covers pair, black beside white.
-  "piece_width": {"d005": 45, "drop04": 100, "drop05": 48, "drop06": 48,
-                  "d006": 48, "d007": 48, "d008": 48,
+  "piece_width": {"drop04": 60, "drop05": 48, "drop06": 48,
+                  "d005": 48, "d006": 48, "d007": 48, "d008": 48,
                   # both cards are small objects and are shown as such
                   "drop02": 30, "drop03": 30,
                   # the listing map is dense and needs the room

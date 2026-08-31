@@ -1912,6 +1912,144 @@
    "page": 68
   },
   {
+   "stem": "drop01",
+   "caption": "Hall of Fame Awards invitation, portrait and landscape",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1350,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop03",
+   "caption": "Active Components Upper Storage, features sell sheet",
+   "tags": [
+    "brand"
+   ],
+   "w": 1682,
+   "h": 2177,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1682
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
+   "caption": "Active Components Upper Storage, sell sheet cover",
+   "tags": [
+    "brand"
+   ],
+   "w": 1682,
+   "h": 2177,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1682
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "Research deck, stakeholder interview quotes",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1502,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop05"
+  },
+  {
+   "stem": "drop06",
+   "caption": "Competitor matrix, content and tools compared",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1500,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop06"
+  },
+  {
+   "stem": "drop07",
+   "caption": "Research spread, challenge and opportunity",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1503,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop07"
+  },
+  {
+   "stem": "haworth-opening-title",
+   "caption": "Opening title",
+   "tags": [
+    "brand"
+   ],
+   "w": 1280,
+   "h": 720,
+   "widths": [
+    600,
+    1200,
+    1280
+   ],
+   "source": "VID",
+   "page": "haworth-opening-title.mp4",
+   "video": "haworth-opening-title.mp4",
+   "autoplay": true
+  },
+  {
+   "stem": "haworth-motion",
+   "caption": "Motion graphics",
+   "tags": [
+    "brand"
+   ],
+   "w": 1280,
+   "h": 720,
+   "widths": [
+    600,
+    1200,
+    1280
+   ],
+   "source": "VID",
+   "page": "haworth-motion.mp4",
+   "video": "haworth-motion.mp4",
+   "autoplay": false
+  },
+  {
    "stem": "e005",
    "caption": "Brand book, brand strategy",
    "tags": [
@@ -3696,144 +3834,6 @@
    "source": "E",
    "page": 112,
    "span": 2
-  },
-  {
-   "stem": "haworth-opening-title",
-   "caption": "Opening title",
-   "tags": [
-    "brand"
-   ],
-   "w": 1280,
-   "h": 720,
-   "widths": [
-    600,
-    1200,
-    1280
-   ],
-   "source": "VID",
-   "page": "haworth-opening-title.mp4",
-   "video": "haworth-opening-title.mp4",
-   "autoplay": true
-  },
-  {
-   "stem": "haworth-motion",
-   "caption": "Motion graphics",
-   "tags": [
-    "brand"
-   ],
-   "w": 1280,
-   "h": 720,
-   "widths": [
-    600,
-    1200,
-    1280
-   ],
-   "source": "VID",
-   "page": "haworth-motion.mp4",
-   "video": "haworth-motion.mp4",
-   "autoplay": false
-  },
-  {
-   "stem": "drop01",
-   "caption": "Hall of Fame Awards invitation, portrait and landscape",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1350,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop01"
-  },
-  {
-   "stem": "drop03",
-   "caption": "Active Components Upper Storage, features sell sheet",
-   "tags": [
-    "brand"
-   ],
-   "w": 1682,
-   "h": 2177,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1682
-   ],
-   "source": "DROP",
-   "page": "drop03"
-  },
-  {
-   "stem": "drop04",
-   "caption": "Active Components Upper Storage, sell sheet cover",
-   "tags": [
-    "brand"
-   ],
-   "w": 1682,
-   "h": 2177,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1682
-   ],
-   "source": "DROP",
-   "page": "drop04"
-  },
-  {
-   "stem": "drop05",
-   "caption": "Research deck, stakeholder interview quotes",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1502,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop05"
-  },
-  {
-   "stem": "drop06",
-   "caption": "Competitor matrix, content and tools compared",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1500,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop06"
-  },
-  {
-   "stem": "drop07",
-   "caption": "Research spread, challenge and opportunity",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1503,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop07"
   }
  ],
  "alexander-wang": [
@@ -6500,7 +6500,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 2683,
+   "h": 2544,
    "widths": [
     600,
     1200,
@@ -6518,7 +6518,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 3769,
+   "h": 3573,
    "widths": [
     600,
     1200,
@@ -6536,7 +6536,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 9108,
+   "h": 8636,
    "widths": [
     600,
     1200,
@@ -6554,7 +6554,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 3570,
+   "h": 3385,
    "widths": [
     600,
     1200,
@@ -7047,7 +7047,7 @@
     "brand"
    ],
    "w": 1284,
-   "h": 1417,
+   "h": 1542,
    "widths": [
     600,
     1200,
