@@ -113,30 +113,12 @@ PROJECTS = [
   "lead": ["drop06", "drop07", "drop09", "i001", "i011"],
   "keep_always": ["i0%02d" % n for n in range(1, 19)],
   "cover": "a025",
-  "group": "brand", "short": "Web, retail &amp; brand design",
+  "group": "brand", "short": "Retail and brand design",
   "meta": "Verizon — Senior Design Consultant, 2022–2023 — Web, Retail &amp; Brand Design",
-  "desc": ["On the team behind Verizon's retail guidelines and assets: "
-           "the brand guidelines and the national retail audit guidelines, "
-           "refining and unifying the use of typography across them, "
-           "writing the instructions for use of the logo, and designing "
-           "the signage itself.",
-            "Research first, into where the customer experience and the "
-           "look and feel came apart between digital and retail. The "
-           "standards that followed were simplified and unified across "
-           "digital, retail and UX: NHG Thin, Vivid Red and the soft grays "
-           "used the same way on a store screen and on a phone, the 5G "
-           "homepage, and the chat and voice assistant with every speech "
-           "state it can be in.",
-            "In retail one type system sits behind every printed piece, "
-           "from rate sheets and price cards to window and header signage, "
-           "so a Prepaid sheet and an Unlimited plan grid speak at the "
-           "same pitch. It carries onto the floor in the wayfinding, the "
-           "Home and Business walls, the Express Pickup Lockers and the "
-           "packaging. Assets were reviewed against accessibility best "
-           "practice and updated where they fell short.",
-            "Streamlining the standards raised designer productivity, "
-           "shortened turnaround on retail projects and improved print "
-           "quality."],
+  "desc": ["I was on the team behind Verizon's retail guidelines and assets. The work covered the brand guidelines and the national retail audit guidelines. I unified how typography was used across them, wrote the instructions for use of the logo, and designed the signage.",
+           "We started with research into where the customer experience and the look of it came apart between digital and retail. The standards that followed were simplified across digital, retail and UX. NHG Thin, Vivid Red and the soft grays are used the same way on a store screen and on a phone. The 5G homepage follows them, and so does the chat and voice assistant, through every speech state it can be in.",
+           "In retail one type system sits behind every printed piece, from the rate sheet and the price card to the window and header signage, so a Prepaid sheet and an Unlimited plan grid speak at the same pitch. It carries onto the floor in the wayfinding, the Home and Business walls, the Express Pickup Lockers and the packaging. I reviewed the assets against accessibility best practice and updated what fell short.",
+           "The standards raised designer productivity, shortened turnaround on retail projects and improved print quality."],
   "pages": [
     # The deck's own title slide carries the wordmark on the slide ground, and
     # the Retail SEM title exists only at 1020px — too small to be a cover.
@@ -235,32 +217,15 @@ PROJECTS = [
   # readable without letting one fill the measure alone.
   "piece_width": {"social-five-screens": 100,
                   "drop05": 48, "drop06": 48, "drop07": 48,
-                  "a060": 48, "b064-2": 30, "b065-1": 30, "b065-2": 30},
+                  "a059": 48, "a060": 48, "b064-2": 30, "b065-1": 30, "b065-2": 30},
   "cover": "b062",
-  "group": "brand", "short": "Brand, e-commerce &amp; strategy",
+  "group": "brand", "short": "Brand and online store design",
   "meta": "Haworth — with Apartamento Studios — Brand, E-commerce &amp; Digital Strategy",
-  "desc": ["E-commerce design and digital strategy for the Haworth "
-           "platform: the homepage as a central portal for brand stories, "
-           "editorial modules built on workplace research, and mobile "
-           "storytelling for Social Spaces and Organic Workspace.",
-            "With Apartamento Studios: the logo and the brand guidelines "
-           "themselves, covering logotype evolution, clearspace and "
-           "minimum size, the sub-brand lock-ups for Collection and "
-           "Health, Founders Grotesk paired with Plantin MT Pro, the "
-           "colour system and its expressive combinations, the modular "
-           "layout grid, photography direction, the icon set drawn on one "
-           "grid, and the applications from business cards to invitations "
-           "and premium products.",
-            "Also art direction for the New York headquarters, and print "
-           "work from workplace research reports to the Interior Design "
-           "Hall of Fame Awards.",
-            "The strategy work frames Haworth's shift from furniture "
-           "manufacturer to office solutions provider. The brand design "
-           "system unites strategy, design, and technology, and extends "
-           "into a social media system spanning NeoCon and Orgatec.",
-            "The rebrand reaffirmed Haworth's leadership in contract "
-           "furnishings: it won new customers, grew the audience by 20%, "
-           "and lifted sales by 10%."],
+  "desc": ["I designed the online store and the digital strategy for Haworth's platform. The homepage became the central portal for brand stories. Editorial modules carried the workplace research, and the mobile pages told the Social Spaces and Organic Workspace stories.",
+           "I worked with Apartamento Studios on the logo and on the brand guidelines. The guidelines cover how the logotype changed, its clearspace and minimum size, the sub brand lockups for Collection and Health, Founders Grotesk set against Plantin MT Pro, the colour system, the modular layout grid, the photography direction, an icon set drawn on one grid, and the applications from business cards to invitations.",
+           "I also art directed the New York headquarters and the print work, from the workplace research reports to the Interior Design Hall of Fame Awards.",
+           "The strategy frames Haworth's shift from a furniture manufacturer to a provider of office solutions. The brand design system extends into a social media system that ran at NeoCon and at Orgatec.",
+           "The rebrand won new customers. The audience grew by 20% and sales rose by 10%."],
   "pages": [
     ("B", 62, "Haworth — logo design", ["brand"], {"crop": False}),
     ("E", 16, "Haworth — the logotype on white", ["brand"], {"crop": False, "split": False}),
@@ -493,25 +458,11 @@ PROJECTS = [
   "piece_crop": {"b003": (0.02, 0.088, 0.10, 0.088)},
   "year": "2021–2022",
   "cover": "b037",
-  "group": "brand", "short": "Brand, packaging &amp; art direction",
+  "group": "brand", "short": "Brand and packaging design",
   "meta": "Alexander Wang — Senior Designer &amp; Art Director, 2021–2022 — Brand, Packaging &amp; E-commerce",
-  "desc": ["Branding, campaign, and packaging design for Alexander Wang "
-           "bodywear, originated and launched: clothing and care labels, "
-           "red and blue stripes nodding to classic Americana, and a "
-           "packaging system that borrows the visual language of the "
-           "grocery aisle in cartons, mylar, and magnetic boxes, all "
-           "recyclable.",
-            "The idea carries into retail as display units built to look "
-           "like refrigerated cases, and into video installation and art "
-           "direction for the flagships in Beijing, Sanya Haitang Bay, "
-           "and New York.",
-            "Promo campaigns across spring, summer, and autumn in static "
-           "and dynamic digital media alongside print: <em>Whenever. "
-           "Wherever.</em> shot by Todd Oldham, and the <em>SISTERS</em> "
-           "identity with its cast cards and OOH posters. Styling "
-           "direction for Julia Fox, drop titles carrying each release "
-           "through social and email, and the e-commerce side, where I "
-           "designed the vault site for special-offer sales."],
+  "desc": ["I originated and launched the brand and the packaging for Alexander Wang bodywear, and the campaigns that ran with it. The clothing and care labels carry red and blue stripes that nod to classic Americana. The packaging borrows the look of the grocery aisle, in cartons, mylar, magnetic boxes, and all of it recyclable.",
+           "The idea carries into retail as display units built to look like refrigerated cases. It carries into the video installation and into the art direction for the flagship stores in Beijing, Sanya Haitang Bay and New York.",
+           "Promo campaigns ran each season from spring to autumn, in print and in digital media both static and moving. Todd Oldham shot <em>Whenever. Wherever.</em> I designed the <em>SISTERS</em> identity with its cast cards and its posters. I directed the styling for Julia Fox, made the drop titles that carried each release through social and email, and designed the vault site for special offer sales."],
   "pages": [
     ("B", 3,  "bodywear — brand lockup", ["brand"], {"crop": False}),
     ("B", 5,  "The a mark", ["brand"], {"pad": 0.14}),
@@ -601,20 +552,9 @@ PROJECTS = [
   "cover": "ad-tall",
   "group": "brand", "short": "Subscription campaign design",
   "meta": "The Wall Street Journal — Subscription Campaign Design",
-  "desc": ["Subscription acquisition design for The Wall Street Journal, "
-           "across the marketing funnel: display advertising at the top, "
-           "email further down, and the offer pages that close. Each stage "
-           "asks for one thing, and the ask gets more specific as the reader "
-           "moves through.",
-           "One campaign set to run at more than one ratio: the masthead, an "
-           "editorial image, and the offer hold their relationship as the "
-           "frame changes shape.",
-           "The email carries the middle of the funnel. Podcast titles are "
-           "the subject, one colour to a show, and the price is stated as "
-           "the picture rather than beside it: a green four, a red one, a "
-           "field of dollar signs. Set in the paper's own Escrow, with the "
-           "subscribe action and the price carried in a band at the foot of "
-           "every size."],
+  "desc": ["I designed subscription acquisition for The Wall Street Journal across the marketing funnel. Display advertising sits at the top, email in the middle, and the offer pages close. Each stage asks for one thing, and the ask gets more specific as the reader moves down.",
+           "One campaign runs at more than one ratio. The masthead holds its relationship to the editorial image and to the offer as the frame changes shape.",
+           "The email carries the middle of the funnel. Podcast titles are the subject, one colour to a show. The price becomes the picture rather than a line beside it, a green four and a red one over a field of dollar signs. I set it in Escrow, the paper's own face. The subscribe action and the price sit in a band at the foot of every size."],
   "pages": [
     ("IMG", "wsj/ad-tall.png", "Make Art Feuds Your Business — tall unit",
      ["brand"], {"crop": False}),
@@ -629,16 +569,10 @@ PROJECTS = [
   "piece_crop": {"drop05": (0.068, 0, 0, 0), "drop06": (0.068, 0, 0, 0),
                  "drop07": (0.068, 0, 0, 0), "drop08": (0.068, 0, 0, 0)},
   "cover": "drop01",
-  "group": "product", "short": "E-commerce &amp; campaign design",
+  "group": "product", "short": "Online store and campaign design",
   "meta": "Clinique — clinique iD, E-commerce &amp; Campaign Design",
-  "desc": ["Campaign and e-commerce design for clinique iD, a hydrator built in "
-           "two parts: a base, and a cartridge of concentrate dropped into it. "
-           "The product page sells the idea as an equation, base plus cartridge "
-           "equals the bottle you end up with.",
-           "Each concern gets its own colour and its own texture, green for "
-           "irritation, blue for pores and uneven texture, purple for lines and "
-           "wrinkles, orange for fatigue, so the range reads at a glance and a "
-           "shopper can pick a base and a cartridge without reading a word."],
+  "desc": ["I designed the campaign and the online store for clinique iD, a hydrator built in two parts. A base takes a cartridge of concentrate. The product page sells it as an equation, base plus cartridge equals the bottle you end up with.",
+           "Each concern has its own colour and its own texture. Green is for irritation, blue for pores and uneven texture, purple for lines and wrinkles, orange for fatigue. A shopper can pick a base and a cartridge without reading a word."],
   "pages": [
     # Everything comes from drop/clinique/.
   ],
@@ -649,14 +583,10 @@ PROJECTS = [
   "keep_ground": True,
   "piece_width": {f"drop{n:02d}": 100 for n in range(1, 10)},
   "cover": "drop09",
-  "group": "product", "short": "UX/UI, visual design &amp; research",
+  "group": "product", "short": "Product design and research",
   "meta": "Chobani — UX/UI, Visual Design &amp; Research",
-  "desc": ["UX/UI, visual design, and research for chobani.com: landing "
-           "systems for every product line, including Greek Yogurt, Flip, "
-           "Complete, Less Sugar and Drinks, plus foodservice, a recipe "
-           "library with a step-by-step cooking mode, and product detail "
-           "pages with nutritional highlights.",
-            "Designed across desktop and mobile as one continuous system."],
+  "desc": ["I designed chobani.com and ran the research behind it. Landing systems cover every product line, from Greek Yogurt and Flip through Complete, Less Sugar and Drinks, and foodservice has its own. The recipe library holds a cooking mode that works one step at a time. Product pages carry the nutritional highlights.",
+           "I designed it for the desktop and the phone as one system."],
   "pages": [
     # The site pages here were screen grabs of the live site; the component
     # files below carry the same work at the size it was drawn.
@@ -672,18 +602,11 @@ PROJECTS = [
   # A hairline of the page white survives on two edges of this slide.
   "piece_crop": {"f004": (0, 0, 0.010, 0.006)},
   "cover": "f012",
-  "group": "product", "short": "Web design &amp; digital accessibility",
+  "group": "product", "short": "Web design and digital accessibility",
   "meta": "Furniture.com — with McKinsey &amp; studio Dumbar, 2022 — Web Design &amp; Digital Accessibility",
-  "desc": ["Web design and digital accessibility for Furniture.com, with "
-           "McKinsey and studio Dumbar: a search-led shopping experience "
-           "built around finding your sofa, browsing rooms, and the chair "
-           "that fits, carried by a warm identity and a bespoke furniture "
-           "icon system.",
-            "Eight colors, one per furniture category, each icon and "
-           "campaign module built on the same palette and checked against "
-           "black, white, and every neutral base for contrast.",
-            "Designed responsively from large-screen heroes down to the "
-           "mobile browsing flows."],
+  "desc": ["I designed Furniture.com and its accessibility, with McKinsey and with studio Dumbar. The shopping experience is built around search, from the sofa a shopper starts with to the room they browse it in. A warm identity carries it, with a furniture icon set drawn for the job.",
+           "Eight colours carry the furniture categories, one each. Every icon and campaign module sits on that palette, and I checked each against black, white and every neutral base for contrast.",
+           "I designed it responsively, from the large screen heroes down to the mobile flows."],
   "pages": [
     ("IMG", "furniture/mobile-set-1.png", "Mobile — home, categories, and the little ones",
      ["mobile"], {"crop": False, "split": False}),
@@ -743,18 +666,12 @@ PROJECTS = [
   # The card set and each web pair take a row to themselves.
   "piece_width": {"drop02": 100, "drop03": 100, "drop04": 100, "drop05": 100},
   "cover": "drop01",
-  "group": "brand", "short": "Identity, website &amp; art direction",
+  "group": "brand", "short": "Identity and website design",
   "meta": "Lenka Ilic Studio — Identity, Website &amp; Art Direction",
   # Everything stated here is on the pieces themselves or on the studio's own
   # pages: the material, the maker, the city, the year of founding.
-  "desc": ["Identity, website and art direction for Lenka Ilic Studio, a "
-           "furniture practice in Miami and New York. The objects are folded "
-           "from recycled aluminium and made by hand in Delanson, New York, "
-           "and each carries a debossed signature and a serial number.",
-           "The mark is set in one weight and left alone. It sits small in "
-           "the corner of the page and small on the metal, so the object is "
-           "what is looked at: a grid of white forms on white, photographed "
-           "against the roofline and in the rooms they are made for."],
+  "desc": ["I designed the identity and the website for Lenka Ilic Studio, a furniture practice in Miami and New York, and art directed the photography. The objects are folded from recycled aluminium and made by hand in Delanson, New York. Each carries a debossed signature and a serial number.",
+           "The mark sits in one weight, small in the corner of the page and small on the metal, so the object is what you look at. The photographs put a grid of white forms on white, against the roofline and in the rooms they were made for."],
   "pages": [
     # Everything comes from drop/lenka-ilic/.
   ],
@@ -766,20 +683,12 @@ PROJECTS = [
   # Two pages, each with its phone, to a row.
   "piece_width": {"drop02": 100, "drop03": 100, "drop04": 100, "drop05": 100},
   "cover": "drop01",
-  "group": "product", "short": "Website &amp; identity",
+  "group": "product", "short": "Website and identity",
   "meta": "Bektesevic Ter Steeg Advocaten — Website &amp; Identity",
   # The site is designed but the copy on it is the firm's own; nothing here
   # describes the practice beyond what the pages themselves state.
-  "desc": ["Website and identity for Bektesevic Ter Steeg Advocaten, a "
-           "criminal defence practice in Amsterdam. The wordmark sets the "
-           "two names in a grotesque and the word <em>advocaten</em> in a "
-           "serif, and the pages hold that pairing: the sentence runs "
-           "between the two faces, so the emphasis falls inside the line "
-           "rather than on a heading above it.",
-           "Bands of pale blue and white carry the argument down the page, "
-           "and the type is set large enough to be read at arm's length. "
-           "Designed for the desktop and the phone, with expertise, "
-           "lawyers and contact each taking the same structure."],
+  "desc": ["I designed the website and the identity for Bektesevic Ter Steeg Advocaten, a criminal defence practice in Amsterdam. The wordmark sets the two names in a grotesque and the word <em>advocaten</em> in a serif. The pages hold that pairing. A sentence runs between the two faces, so the emphasis falls inside the line rather than on a heading above it.",
+           "Bands of pale blue and white carry the argument down the page. I set the type large enough to read at arm's length. The expertise, lawyers and contact pages take the same structure, on the desktop and on the phone."],
   "pages": [
     # Everything comes from drop/bts-advocaten/.
   ],
@@ -789,22 +698,11 @@ PROJECTS = [
   "year": "2018–2019",
   "drop_tags": ["product"],
   "cover": "drop04",
-  "group": "product", "short": "UI strategy &amp; design",
+  "group": "product", "short": "UI strategy and design",
   "meta": "Florida Blue — with frog design, 2018–2019 — UX &amp; Visual Design",
-  "desc": ["UI strategy and design with frog design for Florida Blue's "
-           "member experience: Loom, an on-the-go companion that reads "
-           "sentiment and triages urgency; Promise Card, a payment card "
-           "that rewards health activity; and Health Hub, a member's "
-           "healthcare in one view.",
-            "I led the user research and testing, set the core UX and "
-           "visual principles, and delivered the design system and visual "
-           "libraries behind it, tested for accessibility throughout. "
-           "Concepts extend into CareBuddies peer support, rewards and "
-           "discounts, provider profiles, and the marketing site.",
-            "The strategy sits underneath: each concept defined on its own "
-           "terms, and the experience objectives mapped over time and "
-           "scored, so the order of the roadmap can be argued for rather "
-           "than asserted."],
+  "desc": ["I worked with frog design on the UI strategy and design for Florida Blue's member experience. Loom is a companion that reads sentiment and sorts urgency. Promise Card is a payment card that rewards health activity. Health Hub puts a member's healthcare in one view.",
+           "I ran the user research and the testing. I set the core UX and visual principles, and delivered the design system and the visual libraries behind them. I tested for accessibility throughout. The concepts extend into CareBuddies peer support, into rewards and discounts, into provider profiles, and into the marketing site.",
+           "Underneath sits the strategy. I defined each concept on its own terms, then mapped the experience objectives over time and scored them, so the order of the roadmap can be argued for."],
   "pages": [
     # Every piece comes from drop/florida-blue/.
 
@@ -830,20 +728,9 @@ PROJECTS = [
   "cover": "d004-1",
   "group": "brand", "short": "Real estate marketing design",
   "meta": "Compass — Real Estate Marketing Design",
-  "desc": ["Marketing design for the real estate brokerage Compass: the "
-           "wordmark set against its field of dashes, the For Sale card "
-           "in both black and white, and a digital banner system sized "
-           "for every placement.",
-            "A data-visualisation language for listings and market "
-           "reports, covering call-out stats, inventory tables and "
-           "summary figures, built to stay legible from a phone banner up "
-           "to a printed sheet.",
-            "Per-listing collateral too: neighborhood points-of-interest "
-           "maps that place a building among its restaurants, galleries, "
-           "parks, gyms and transit, alongside the everyday pieces an "
-           "agent hands over, business cards, announcement cards, an "
-           "agent introduction, and the <em>Compass and you</em> "
-           "brochure."],
+  "desc": ["I designed marketing material for the real estate brokerage Compass. The wordmark sits against its own field of dashes. The For Sale card runs in black and in white, and a digital banner system covers every placement.",
+           "I built a language for the listing data and the market reports. It covers the call out statistics, the inventory tables and the summary figures, and it stays legible from a phone banner up to a printed sheet.",
+           "Each listing carries its own collateral. Neighbourhood maps place a building among its restaurants, its galleries, its parks, its gyms and its transit. Alongside them sit the pieces an agent hands over, from the business card and the announcement card to the agent introduction and the <em>Compass and you</em> brochure."],
   "pages": [
     ("D", 4, "Graphic approach — the For Sale card", ["brand"]),
     ("D", 5, "Digital banner system", ["brand", "web"]),
@@ -862,21 +749,11 @@ PROJECTS = [
   "piece_crop": {"b087": (0.075, 0, 0, 0)},
   "year": "2017–2020",
   "cover": "b090",
-  "group": "book", "short": "Books, print &amp; cultural institution identity",
+  "group": "book", "short": "Print and institutional identity",
   "meta": "Pratt Institute — Adjunct Professor, 2017–2020 — Website, Video Art Direction &amp; Publication",
-  "desc": ["Website design for Pratt Shows, the institute's annual "
-           "end-of-year exhibition: an index of every school and programme "
-           "held together by a soft-edged mask that lets the work bleed "
-           "through the interface.",
-            "That mask is the identity. It changes colour with the season, "
-           "yellow, then white on grey, then grey on pink for Spring "
-           "2018, and crops whatever sits inside it, so a rotating banner "
-           "frames a plaster sculpture one week and a field of cast forms "
-           "the next.",
-            "Alongside it, video art direction for the show, print from "
-           "the show postcards to the SCPS Fall 2019 brochure, and "
-           "publication design for Prattfolio, the alumni magazine of "
-           "Pratt Institute."],
+  "desc": ["I designed the website for Pratt Shows, the annual exhibition that closes the institute's year. It indexes every school and programme, and a soft edged mask holds the index together and lets the work bleed through the interface.",
+           "That mask is the identity. It changes colour with the season, from yellow to white on grey to grey on pink for Spring 2018, and it crops whatever sits inside it, so a rotating banner frames a plaster sculpture one week and a field of cast forms the next.",
+           "I also art directed the video for the show, the print from the show postcards through to the SCPS Fall 2019 brochure, and Prattfolio, the alumni magazine of Pratt Institute."],
   "pages": [
     ("B", 87, "Pratt Shows — programme index", ["web"], {"dechrome": 120}),  # tab strip + URL bar; taller than the auto-detect finds
     ("B", 88, "Pratt Shows — exhibition page", ["web"], {"dechrome": True}),
@@ -890,16 +767,10 @@ PROJECTS = [
  {
   "slug": "sasha-sedelnikov", "title": "Sasha Sedelnikov",
   "cover": "b091",
-  "group": "book", "short": "Publication &amp; show identity",
+  "group": "book", "short": "Publication and show identity",
   "meta": "Sasha Sedelnikov — Publication Design &amp; Show Identity",
-  "desc": ["Publication design for <em>See you later</em>, a photobook by "
-           "Sasha Sedelnikov, held in the Garage Museum of Contemporary "
-           "Art, Moscow. Black-and-white and colour sequences are paced "
-           "against the paper so the images set their own rhythm.",
-            "The show identity for <em>Пучки серебряного света</em> "
-           "(Bundles of Silver Light) at the Museum of the History of "
-           "Yekaterinburg runs the title vertically down the poster, "
-           "letting each photograph take the rest of the sheet."],
+  "desc": ["I designed <em>See you later</em>, a photobook by Sasha Sedelnikov held in the Garage Museum of Contemporary Art in Moscow. I paced the monochrome sequences against the colour ones and against the paper, so the images set their own rhythm.",
+           "I designed the show identity for <em>Пучки серебряного света</em> (Bundles of Silver Light) at the Museum of the History of Yekaterinburg. The title runs vertically down the poster and each photograph takes the rest of the sheet."],
   "pages": [
     ("B", 91, "See you later — landscape spread", ["editorial"], {"cutout": 45, "scale": 4.0}),
     ("B", 92, "See you later — horizon spread", ["editorial"], {"cutout": 45, "scale": 4.0}),
@@ -917,15 +788,8 @@ PROJECTS = [
   "layout": "row",
   "group": "book", "short": "Monograph design",
   "meta": "Sarah Crowner — Monograph — Publication Design",
-  "desc": ["Design of the complete monograph on the painter Sarah "
-           "Crowner, whose sewn canvases and cut-and-stitched panels "
-           "straddle the divide between fine and applied art. Cover, "
-           "typography, grid, and the sequencing of essays and plates.",
-            "Susan Cross's essay <em>Beetle in the Leaves</em> runs tight "
-           "to the margin against installation views and figures, while "
-           "the paintings take full spreads. The layout borrows the logic "
-           "the work is built on: panels butted edge to edge, colour "
-           "meeting colour without a seam."],
+  "desc": ["I designed the complete monograph on the painter Sarah Crowner, whose sewn canvases sit between fine and applied art. I designed the cover, the typography, the grid, and the order the essays and plates run in.",
+           "Susan Cross's essay <em>Beetle in the Leaves</em> runs tight to the margin against the installation views, while the paintings take full spreads. The layout borrows the logic the work is built on, panels butted edge to edge, colour set against colour without a seam."],
   "pages": [
     ("IMG", "sarah-crowner/cover.jpg", "Cover", ["editorial", "brand"], {"split": False, "rotate": 90}),
     ("IMG", "sarah-crowner/beetle-in-the-leaves.jpg", "Beetle in the Leaves — essay opening", ["editorial"], {"split": False, "rotate": -90}),
@@ -944,18 +808,9 @@ PROJECTS = [
            "caps": "ACIMOPQRXY", "glyphs": 387, "chars": 370, "year": "2020",
            "sample": "MOMA QUARTZ PARIS",
            "ladder": "DADA IS NOT DEAD, IT SMELLS OF LAUGHTER"},
-  "desc": ["A Dada intervention on a grotesque, drawn as capitals and "
-           "figures only. Ten of the twenty-six, <em>A C I M O P Q R X "
-           "Y</em>, are cut out and redrawn as biomorphic forms in the "
-           "manner of Arp and Taeuber-Arp: blobs with eyes, tentacles, "
-           "stray dots. The other sixteen are left exactly as they were.",
-            "Set a word and the typeface behaves; set a name and it comes "
-           "apart. <em>QUARTZ</em> keeps its U, T and Z and loses the "
-           "rest to the shapes. The joke only works because the neutral "
-           "letters stay neutral. The ransom-note effect comes from the "
-           "collision, not from the drawing.",
-            "Built from Helvetica Neue LT Com, whose outlines are "
-           "Linotype’s. A private experiment, never released."],
+  "desc": ["A Dada intervention on a grotesque, drawn as capitals and figures only. I cut ten of the twenty six letters, <em>A C I M O P Q R X Y</em>, and redrew them as biomorphic forms after Arp and Taeuber Arp: blobs with eyes, tentacles, stray dots. I left the other sixteen exactly as they were.",
+           "Set a word and the typeface behaves. Set a name and it comes apart. <em>QUARTZ</em> keeps its U, its T and its Z, and loses the rest to the shapes. The joke works because the neutral letters stay neutral. The collision does the work, rather than the drawing.",
+           "I built it from Helvetica Neue LT Com, whose outlines belong to Linotype. It was a private experiment and I never released it."],
   "pages": [
     ("IMG", "dada/hero.png",     "DADA", ["brand", "editorial"], {"crop": False}),
     ("IMG", "dada/capitals.png", "The ten redrawn capitals", ["brand", "editorial"], {"crop": False}),
@@ -980,12 +835,8 @@ PROJECTS = [
            "rows": ["ABCDEFGHIJKLM", "NOPQRSTUVWXYZ",
                     "0123456789", "?!.,;:"],
            "ladder": "SPIRITUAL LABOUR"},
-  "desc": ["A display face of capitals and figures, drawn as one weight. The "
-           "letters are cut on a curve rather than a stem: bowls swell and "
-           "close, terminals turn back on themselves, and several capitals "
-           "give up their counters entirely.",
-           "Ninety-two glyphs. There is no lowercase, so the page sets "
-           "everything typed into it as capitals."],
+  "desc": ["A display face of capitals and figures, drawn as one weight. I cut the letters on a curve rather than a stem. Bowls swell and close, terminals turn back on themselves, and several capitals give up their counters.",
+           "Ninety two glyphs. There is no lowercase, so the page sets everything typed into it as capitals."],
   "pages": [
     ("IMG", "spirituallabour/wordmark.png", "The wordmark", ["brand"], {"crop": False}),
     ("IMG", "spirituallabour/charset.png", "Capitals and figures", ["brand"], {"crop": False}),
@@ -998,24 +849,11 @@ PROJECTS = [
   "piece_width": {"drop03": 34, "drop04": 34, "drop05": 34,
                   "drop06": 34, "drop07": 34},
   "cover": "drop03",
-  "group": "book", "short": "Exhibition identity &amp; publication",
+  "group": "book", "short": "Exhibition identity and publication",
   "meta": "Isaac Howell — Exhibition Identity, Poster &amp; Publication",
-  "desc": ["Identity and one-page publications for solo shows of the "
-           "artist Isaac Soh Fujita Howell, across Public Gallery in "
-           "London and T293 in Rome. For <em>A rabid dog has no choice "
-           "but to bite</em> at Public Gallery the title circles the "
-           "poster edge as a frame, leaving the painting to hold the "
-           "centre.",
-            "Two shows at T293 followed. <em>By order from above (and we "
-           "are all dutiful citizens)</em> sets the details on "
-           "overlapping black cards that lock into one another like a "
-           "puzzle. <em>Malign Influence on the Information "
-           "Interchange</em> rings the sheet with its own title, then "
-           "runs the same sheet inverted with photographs set into the "
-           "ring.",
-            "The run extends into newsprint, where the text turns with the "
-           "page, and into <em>The Man Who Turned into a Wall</em>, which "
-           "sequences drawings against script."],
+  "desc": ["I designed the identity and the one page publications for solo shows of the artist Isaac Soh Fujita Howell, at Public Gallery in London and at T293 in Rome. For <em>A rabid dog has no choice but to bite</em> the title circles the edge of the poster as a frame, and the painting holds the centre.",
+           "Two shows at T293 followed. <em>By order from above (and we are all dutiful citizens)</em> sets the details on overlapping black cards that lock into one another like a puzzle. <em>Malign Influence on the Information Interchange</em> rings the sheet with its own title, then runs the same sheet inverted with photographs set into the ring.",
+           "The run extends into newsprint, where the text turns with the page, and into <em>The Man Who Turned into a Wall</em>, which sequences drawings against script."],
   "pages": [
     # Everything comes from drop/isaac-howell/: the print files carry these
     # sheets at 6142px, where the deck cuts them at 1301.
@@ -1027,12 +865,10 @@ PROJECTS = [
   "piece_width": {"poster": 42, "b102": 100},
   "piece_crop": {"b100": (0.145, 0, 0.145, 0)},
   "cover": "poster",
-  "group": "brand", "short": "Film identity, poster &amp; titles",
+  "group": "brand", "short": "Film identity and titles",
   "meta": "Kathy Meng — Film Identity, Poster &amp; Titles",
-  "desc": ["Identity for <em>Willow and Wu</em>, a short independent film "
-           "directed by Kathy Meng: a heavy condensed wordmark that stacks "
-           "into a block, set against stills and a full credit line.",
-           "Carried through the poster and the on-screen title sequence."],
+  "desc": ["I designed the identity for <em>Willow and Wu</em>, a short independent film directed by Kathy Meng. A heavy condensed wordmark stacks into a block against the stills, with a full credit line under it.",
+           "It carries through the poster and the title sequence on screen."],
   "pages": [
     ("B", 100, "Willow and Wu — wordmark", ["brand"], {"crop": False}),
     ("IMG", "willow-and-wu/poster.png", "Poster design", ["brand"],
@@ -1044,15 +880,10 @@ PROJECTS = [
   "slug": "literature-paper", "title": "Literature Paper",
   "year": "2016",
   "cover": "drop01",
-  "group": "book", "short": "Publication design &amp; concept",
+  "group": "book", "short": "Publication design and concept",
   "meta": "Yale Literature Paper — Publication Design &amp; Concept",
-  "desc": ["Publication design and concept for the first issue of the "
-           "Yale School of Art literature paper: cut-paper forms in "
-           "orange, blue, and yellow crashing through the grid, with text "
-           "setting itself into and around the shapes.",
-            "Each spread treats its subject as an object to be pulled "
-           "apart: a gourd, a garlic house, a table of contents that "
-           "refuses to sit still."],
+  "desc": ["I designed the first issue of the Yale School of Art literature paper, and set its concept. Cut paper forms in orange, blue and yellow crash through the grid, and the text sets itself into and around the shapes.",
+           "Each spread treats its subject as an object to pull apart: a gourd, a garlic house, a table of contents that refuses to sit still."],
   "pages": [
     # The four spreads come from drop/ as flat scans; the deck
     # reproductions of the same pages were lower resolution.
