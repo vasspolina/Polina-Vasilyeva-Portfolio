@@ -99,10 +99,10 @@ PROJECTS = [
   "cover": "a025",
   "group": "brand", "short": "Retail and brand design",
   "meta": "Verizon, Senior Design Consultant, 2022 to 2023, Retail and Brand Design",
-  "desc": ["I was on the team behind Verizon's retail guidelines and assets. The work covered the brand guidelines and the national retail audit guidelines. I unified the typography across them, wrote the instructions for use of the logo, and designed the signage.",
-           "We started with research into where the customer experience and the look of it came apart between digital and retail. We simplified the standards that followed, across digital, retail and UX. A store screen and a phone carry NHG Thin, Vivid Red and the soft grays the same way. The 5G homepage follows them, and so does the chat and voice assistant, through every speech state it can be in.",
-           "In retail one type system sits behind every printed piece, from the rate sheet and the price card to the window and header signage, so a Prepaid sheet and an Unlimited plan grid speak at the same pitch. It carries onto the floor in the wayfinding, the Home and Business walls, the Express Pickup Lockers and the packaging. I reviewed the assets against accessibility best practice and updated what fell short.",
-           "The standards raised designer productivity, shortened turnaround on retail projects and improved print quality."],
+  "desc": ["I conducted research to identify effective approaches and opportunities to improve customer experience and look and feel across digital and retail.",
+           "I simplified and unified design standards across brand guidelines for digital and retail and UX.",
+           "I reviewed and updated design assets and customer experience under accessibility best practices.",
+           "I streamlined design standards, resulting in an increase in productivity for designers, shorter turnaround times for retail projects, and improved print quality."],
   "pages": [
     # The deck's own title slide carries the wordmark on the slide ground, and
     # the Retail SEM title exists only at 1020px — too small to be a cover.
@@ -202,11 +202,11 @@ PROJECTS = [
   "cover": "b062",
   "group": "brand", "short": "Brand and online store design",
   "meta": "Haworth, with Apartamento Studios, Brand and Online Store Design",
-  "desc": ["I designed the online store and the digital strategy for Haworth's platform. The homepage became the central portal for brand stories. Editorial modules carried the workplace research, and the mobile pages told the Social Spaces and Organic Workspace stories.",
-           "I worked with Apartamento Studios on the logo and on the brand guidelines. The guidelines cover how the logotype changed, its clearspace and minimum size, the sub brand lockups for Collection and Health, Founders Grotesk set against Plantin MT Pro, the colour system, the modular layout grid, the photography direction, an icon set drawn on one grid, and the applications from business cards to invitations.",
-           "I also art directed the New York headquarters and the print work, from the workplace research reports to the Interior Design Hall of Fame Awards.",
-           "The strategy frames Haworth's shift from a furniture manufacturer to a provider of office solutions. The brand design system extends into a social media system that ran at NeoCon and at Orgatec.",
-           "The rebrand won new customers. The audience grew by 20% and sales rose by 10%."],
+  "desc": ["While at Apartamento, I worked on re-branding Haworth, a leading office furniture manufacturer. I developed branding systems, including the brand narrative, collateral, and digital strategy to articulate the company's position in the market, befitting its leadership role within the contract furnishings industry. The re-brand led to winning new customers, market repositioning, attracting targeted audiences, and increasing sales.",
+           "In collaboration with an in-house business strategist I developed the solutions for Haworth brand to transition from furniture manufacturer to premium office solutions provider. I worked closely with the in-house business strategist to help Haworth achieve its cultural and sales strategy goals through the design and align verbal and visual language to target the right customers.",
+           "I created flexible and scalable easy to use brand systems and brand guidelines for company in-house design and marketing teams, which optimized workflow, leading to increased efficiency, brand consistency, and, as a result, brand recognition.",
+           "I developed a digital marketing campaign, including social media advertising, and created digital asset production guidelines. The digital marketing campaign increased online conversions by 15%.",
+           "I developed environmental signage for Haworth showrooms and exhibition graphics for annual National Exposition of Contract Interior Furnishings NeoCon. I created guidelines for print advertisement materials, brochures and magazines. I oversaw brand application, user experience, and user interface for Haworth's e-commerce website."],
   "pages": [
     ("B", 62, "Haworth — logo design", ["brand"], {"crop": False}),
     ("E", 16, "Haworth — the logotype on white", ["brand"], {"crop": False, "split": False}),
@@ -442,9 +442,9 @@ PROJECTS = [
   "cover": "b037",
   "group": "brand", "short": "Brand and packaging design",
   "meta": "Alexander Wang, Senior Designer and Art Director, 2021 to 2022, Brand and Packaging Design",
-  "desc": ["I originated and launched the brand and the packaging for Alexander Wang bodywear, and the campaigns that ran with it. The clothing and care labels carry red and blue stripes that nod to classic Americana. The packaging borrows the look of the grocery aisle, in cartons, mylar, magnetic boxes, and all of it recyclable.",
-           "The idea carries into retail as display units built to look like refrigerated cases. It carries into the video installation and into the art direction for the flagship stores in Beijing, Sanya Haitang Bay and New York.",
-           "Promo campaigns ran each season from spring to autumn, in print and in digital media both static and moving. Todd Oldham shot <em>Whenever. Wherever.</em> I designed the <em>SISTERS</em> identity with its cast cards and its posters. I directed the styling for Julia Fox, made the drop titles that carried each release through social and email, and designed the vault site for special offer sales."],
+  "desc": ["I developed multiple promo campaigns for AW spring, summer and autumn with static and dynamic digital media along with printed materials.",
+           "I originated and launched branding, campaign and packaging design for AW Bodywear.",
+           "I administered and maintained AW e-commerce, and designed an e-commerce site for AW special offers sales. I supported planning and logistics of AW events, and provided guidance with PR and social media design and copywriting strategies."],
   "pages": [
     ("B", 3,  "bodywear — brand lockup", ["brand"], {"crop": False}),
     ("B", 5,  "The a mark", ["brand"], {"pad": 0.14}),
@@ -681,9 +681,9 @@ PROJECTS = [
   "cover": "drop04",
   "group": "product", "short": "UI strategy and design",
   "meta": "Florida Blue, with frog design, 2018 to 2019, UX and Visual Design",
-  "desc": ["I worked with frog design on the UI strategy and design for Florida Blue's member experience. Loom is a companion that reads sentiment and sorts urgency. Promise Card is a payment card that rewards health activity. Health Hub puts a member's healthcare in one view.",
-           "I ran the user research and the testing. I set the core UX and visual principles, and delivered the design system and the visual libraries behind them. I tested for accessibility throughout. The concepts extend into CareBuddies peer support, into rewards and discounts, into provider profiles, and into the marketing site.",
-           "Underneath sits the strategy. I defined each concept on its own terms, then mapped the experience objectives over time and scored them, so the order of the roadmap can be argued for."],
+  "desc": ["While contracting with Frog, I developed user experience strategies and designs for our clients in collaboration with the in-house team. By conducting research and utilizing the extracted knowledge, establishing core UX design principles and analytical thinking, I created optimized solutions to help organizations develop truly differentiated customer experiences by building meaningful relationships with their customers. I developed cohesive design systems and led accessibility tests to make the design accessible for customers, including those with disabilities.",
+           "In collaboration with the Frog in-house business strategist, I developed case studies for user experience to maximize the payment plan transparency for individual and corporate clients of the insurance company Florida Blue. Florida Blue's digital transformation led to the increase, buyback trust among customers and helped the company to win the highly competitive market area in the Florida region.",
+           "I led user research and testing and established core UX and visual design principles. I delivered cohesive design systems, including visual design libraries and optimized customer experience solutions. I conducted accessibility tests to make the design accessible."],
   "pages": [
     # Every piece comes from drop/florida-blue/.
 
@@ -709,9 +709,9 @@ PROJECTS = [
   "cover": "d004-1",
   "group": "brand", "short": "Real estate marketing design",
   "meta": "Compass, Real Estate Marketing Design",
-  "desc": ["I designed marketing material for the real estate brokerage Compass. The wordmark sits against its own field of dashes. The For Sale card runs in black and in white, and a digital banner system covers every placement.",
-           "I built a language for the listing data and the market reports. It covers the call out statistics, the inventory tables and the summary figures, and it stays legible from a phone banner up to a printed sheet.",
-           "Each listing carries its own collateral. Neighbourhood maps place a building among its restaurants, its galleries, its parks, its gyms and its transit. Alongside them sit the pieces an agent hands over, from the business card and the announcement card to the agent introduction and the <em>Compass and you</em> brochure."],
+  "desc": ["As a part of the Compass Real Estate Branding team and under the supervision of Jay Peter Salvas I oversaw the typography and design within the brand's identity, maintained consistency across the projects and designed multiple logos, digital and print collateral for real estate agents.",
+           "I worked closely with the Compass marketing team to help Compass Agents to achieve the sales strategy goals through the design. I developed environmental signage for Compass agents and companies affiliated with Compass.",
+           "I created print advertisement materials, magazines, brochures, business cards, door hangers. I oversaw brand application, user experience, and user interface for Compass website and email advertisement. I created digital marketing assets, social media, ad banners and email design."],
   "pages": [
     ("D", 4, "Graphic approach — the For Sale card", ["brand"]),
     ("D", 5, "Digital banner system", ["brand", "web"]),
@@ -732,9 +732,8 @@ PROJECTS = [
   "cover": "b090",
   "group": "book", "short": "Print and institutional identity",
   "meta": "Pratt Institute, Adjunct Professor, 2017 to 2020, Website and Publication Design",
-  "desc": ["I designed the website for Pratt Shows, the annual exhibition that closes the institute's year. It indexes every school and programme, and a soft edged mask holds the index together and lets the work bleed through the interface.",
-           "That mask is the identity. It changes colour with the season, from yellow to white on grey to grey on pink for Spring 2018, and it crops whatever sits inside it, so a rotating banner frames a plaster sculpture one week and a field of cast forms the next.",
-           "I also art directed the video for the show, the print from the show postcards through to the SCPS Fall 2019 brochure, and Prattfolio, the alumni magazine of Pratt Institute."],
+  "desc": ["I developed a brand strategy course for Pratt Institute titled Brand Strategy Design, which is focused on engaging students in critical conversations around innovative strategies in a corporate environment. The brand strategy course I developed at Pratt sought to go beyond traditional branding courses you usually find in design schools that too often focus on a surface understanding of design thinking and logo design.",
+           "I initiated and taught Digital Product and Interactive Design course. I created and taught Graphic Design Advanced Senior Project course. I ran workshops and guided individual students, and created course material: syllabi, assignments, presentations, handouts."],
   "pages": [
     ("B", 87, "Pratt Shows — programme index", ["web"], {"dechrome": 120}),  # tab strip + URL bar; taller than the auto-detect finds
     ("B", 88, "Pratt Shows — exhibition page", ["web"], {"dechrome": True}),
