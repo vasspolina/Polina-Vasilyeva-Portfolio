@@ -771,7 +771,9 @@ PROJECTS = [
   "meta": "Sarah Crowner, Monograph, Publication Design",
   "desc": ["I designed the complete monograph on the painter Sarah Crowner, whose sewn canvases sit between fine and applied art. I designed the cover, the typography, the grid, and the order the essays and plates run in.",
            "Susan Cross's essay <em>Beetle in the Leaves</em> runs tight to the margin against the installation views, while the paintings take full spreads. The layout borrows the logic behind the work, panels butted edge to edge, colour set against colour without a seam."],
-  "pages": [
+    # One height for the four, so widths follow each piece's own proportion.
+  "piece_width": {"drop01": 26.2, "drop02": 48, "drop03": 48.6, "drop04": 48},
+"pages": [
     ("IMG", "sarah-crowner/cover.jpg", "Cover", ["editorial", "brand"], {"split": False, "rotate": 90}),
     ("IMG", "sarah-crowner/beetle-in-the-leaves.jpg", "Beetle in the Leaves — essay opening", ["editorial"], {"split": False, "rotate": -90}),
     ("IMG", "sarah-crowner/standing-totems.jpg", "Standing Totem 1 and 2, 2015 — plates", ["editorial"], {"split": False, "rotate": -90}),
