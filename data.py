@@ -99,10 +99,10 @@ PROJECTS = [
   "cover": "a025",
   "group": "brand", "short": "Retail and brand design",
   "meta": "Verizon, Senior Design Consultant, 2022 to 2023, Retail and Brand Design",
-  "desc": ["I conducted research to identify effective approaches and opportunities to improve customer experience and look and feel across digital and retail.",
-           "I simplified and unified design standards across brand guidelines for digital and retail and UX.",
-           "I reviewed and updated design assets and customer experience under accessibility best practices.",
-           "I streamlined design standards, resulting in an increase in productivity for designers, shorter turnaround times for retail projects, and improved print quality."],
+  "desc": ["— I conducted research to identify effective approaches and opportunities to improve customer experience and look and feel across digital and retail.",
+           "— I simplified and unified design standards across brand guidelines for digital and retail and UX.",
+           "— I reviewed and updated design assets and customer experience under accessibility best practices.",
+           "— I streamlined design standards, resulting in an increase in productivity for designers, shorter turnaround times for retail projects, and improved print quality."],
   "pages": [
     # The deck's own title slide carries the wordmark on the slide ground, and
     # the Retail SEM title exists only at 1020px — too small to be a cover.
