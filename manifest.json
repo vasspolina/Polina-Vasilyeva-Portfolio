@@ -118,23 +118,6 @@
    "page": 2
   },
   {
-   "stem": "c002-2",
-   "caption": "Printed assets for national retail, one type system across every format",
-   "tags": [
-    "brand"
-   ],
-   "w": 1690,
-   "h": 813,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1690
-   ],
-   "source": "C",
-   "page": 2
-  },
-  {
    "stem": "drop01",
    "caption": "Verizon Prepaid, the price grid",
    "tags": [
@@ -7259,128 +7242,157 @@
  ],
  "sasha-sedelnikov": [
   {
-   "stem": "b091",
-   "caption": "See you later, landscape spread",
+   "stem": "drop01",
+   "caption": "See you later, the pier and the portrait",
    "tags": [
-    "editorial"
+    "brand"
    ],
-   "w": 739,
-   "h": 564,
+   "w": 2400,
+   "h": 1832,
    "widths": [
     600,
-    739
+    1200,
+    1600,
+    2400
    ],
-   "source": "B",
-   "page": 91
+   "source": "DROP",
+   "page": "drop01"
   },
   {
-   "stem": "b092",
-   "caption": "See you later, horizon spread",
+   "stem": "drop02",
+   "caption": "See you later, water and figure",
    "tags": [
-    "editorial"
+    "brand"
    ],
-   "w": 746,
-   "h": 577,
+   "w": 2400,
+   "h": 1832,
    "widths": [
     600,
-    746
+    1200,
+    1600,
+    2400
    ],
-   "source": "B",
-   "page": 92
+   "source": "DROP",
+   "page": "drop02"
   },
   {
-   "stem": "b093",
-   "caption": "See you later, water spread",
+   "stem": "drop03",
+   "caption": "See you later, the field and the fence",
    "tags": [
-    "editorial"
+    "brand"
    ],
-   "w": 736,
-   "h": 586,
+   "w": 1650,
+   "h": 1290,
    "widths": [
     600,
-    736
+    1200,
+    1600,
+    1650
    ],
-   "source": "B",
-   "page": 93
+   "source": "DROP",
+   "page": "drop03"
   },
   {
-   "stem": "b094",
-   "caption": "See you later, portrait spread",
+   "stem": "drop04",
+   "caption": "Пучки серебряного света, the city centre",
    "tags": [
-    "editorial"
+    "brand"
    ],
-   "w": 746,
-   "h": 576,
+   "w": 2400,
+   "h": 3398,
    "widths": [
     600,
-    746
+    1200,
+    1600,
+    2400
    ],
-   "source": "B",
-   "page": 94
+   "source": "DROP",
+   "page": "drop04"
   },
   {
-   "stem": "b095-1",
-   "caption": "Пучки серебряного света, one poster, four images, on the street",
+   "stem": "drop05",
+   "caption": "Пучки серебряного света, the advocates",
    "tags": [
-    "brand",
-    "editorial"
+    "brand"
    ],
-   "w": 1190,
-   "h": 1687,
+   "w": 1826,
+   "h": 2588,
    "widths": [
     600,
-    1190
+    1200,
+    1600,
+    1826
    ],
-   "source": "B",
-   "page": 95
+   "source": "DROP",
+   "page": "drop05"
   },
   {
-   "stem": "b095-2",
-   "caption": "Пучки серебряного света, one poster, four images, on the street",
+   "stem": "drop06",
+   "caption": "Пучки серебряного света, the poster series two",
    "tags": [
-    "brand",
-    "editorial"
+    "brand"
    ],
-   "w": 1190,
-   "h": 1687,
+   "w": 2400,
+   "h": 3398,
    "widths": [
     600,
-    1190
+    1200,
+    1600,
+    2400
    ],
-   "source": "B",
-   "page": 95
+   "source": "DROP",
+   "page": "drop06"
   },
   {
-   "stem": "b096-1",
-   "caption": "Пучки серебряного света, one poster, four images, on the street",
+   "stem": "drop07",
+   "caption": "Пучки серебряного света, the poster series three",
    "tags": [
-    "brand",
-    "editorial"
+    "brand"
    ],
-   "w": 1190,
-   "h": 1687,
+   "w": 2400,
+   "h": 3398,
    "widths": [
     600,
-    1190
+    1200,
+    1600,
+    2400
    ],
-   "source": "B",
-   "page": 96
+   "source": "DROP",
+   "page": "drop07"
   },
   {
-   "stem": "b096-2",
-   "caption": "Пучки серебряного света, one poster, four images, on the street",
+   "stem": "drop08",
+   "caption": "Пучки серебряного света, the poster series four",
    "tags": [
-    "brand",
-    "editorial"
+    "brand"
    ],
-   "w": 1190,
-   "h": 1687,
+   "w": 2400,
+   "h": 3398,
    "widths": [
     600,
-    1190
+    1200,
+    1600,
+    2400
    ],
-   "source": "B",
-   "page": 96
+   "source": "DROP",
+   "page": "drop08"
+  },
+  {
+   "stem": "drop09",
+   "caption": "Пучки серебряного света, the poster series five",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 3398,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop09"
   }
  ],
  "sarah-crowner": [

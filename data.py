@@ -747,20 +747,18 @@ PROJECTS = [
  },
  {
   "slug": "sasha-sedelnikov", "title": "Sasha Sedelnikov",
-  "cover": "b091",
+  "cover": "drop04",
+  # The spreads pair off; the posters run three to a row.
+  "piece_width": {"drop01": 48, "drop02": 48, "drop03": 48,
+                  "drop04": 30, "drop05": 30, "drop06": 30,
+                  "drop07": 30, "drop08": 30, "drop09": 30},
   "group": "book", "short": "Publication and show identity",
   "meta": "Sasha Sedelnikov, Publication Design and Show Identity",
   "desc": ["I designed <em>See you later</em>, a photobook by Sasha Sedelnikov held in the Garage Museum of Contemporary Art in Moscow. I paced the monochrome sequences against the colour ones and against the paper, so the images set their own rhythm.",
            "I designed the show identity for <em>Пучки серебряного света</em> (Bundles of Silver Light) at the Museum of the History of Yekaterinburg. The title runs vertically down the poster and each photograph takes the rest of the sheet."],
   "pages": [
-    ("B", 91, "See you later – landscape spread", ["editorial"], {"cutout": 45, "scale": 4.0}),
-    ("B", 92, "See you later – horizon spread", ["editorial"], {"cutout": 45, "scale": 4.0}),
-    ("B", 93, "See you later – water spread", ["editorial"], {"cutout": 45, "scale": 4.0}),
-    ("B", 94, "See you later – portrait spread", ["editorial"], {"cutout": 45, "scale": 4.0}),
-    ("B", 95, "Пучки серебряного света – one poster, four images, on the street",
-     ["brand", "editorial"]),
-    ("B", 96, "Пучки серебряного света – one poster, four images, on the street",
-     ["brand", "editorial"]),
+    # The folder holds the originals: the book scans at 6392px and the posters
+    # at 3508px, where the deck cut them out at about 740.
   ],
  },
  {
@@ -827,19 +825,18 @@ PROJECTS = [
   "slug": "isaac-howell", "title": "Isaac Howell",
   "year": "Ongoing",
   # The posters read at a third of the measure rather than a half.
-  "piece_width": {"drop09": 30, "drop10": 48, "drop11": 48,
-                  "drop03": 34, "drop04": 34, "drop05": 34,
-                  "drop06": 34, "drop07": 34},
+  # The posters read at a third of the measure; the two newspaper spreads are
+  # a pair, and the instruction sheet takes a row.
+  "piece_width": {"drop01": 48, "drop02": 48, "drop08": 100, "drop09": 30,
+                  "drop10": 48, "drop11": 48, "drop03": 34, "drop04": 34,
+                  "drop05": 34, "drop06": 34, "drop07": 34},
   "cover": "drop03",
   "group": "book", "short": "Exhibition identity and publication",
   "meta": "Isaac Howell, Exhibition Identity and Publication",
   "desc": ["I designed the identity and the one page publications for solo shows of the artist Isaac Soh Fujita Howell, at Public Gallery in London and at T293 in Rome. For <em>A rabid dog has no choice but to bite</em> the title circles the edge of the poster as a frame, and the painting holds the centre.",
            "Two shows at T293 followed. <em>By order from above (and we are all dutiful citizens)</em> sets the details on overlapping black cards that lock into one another like a puzzle. <em>Malign Influence on the Information Interchange</em> rings the sheet with its own title, then runs the same sheet inverted with photographs set into the ring.",
            "The run extends into newsprint, where the text turns with the page, and into <em>The Man Who Turned into a Wall</em>, which sequences drawings against script."],
-    # The two newspaper spreads read as a pair; the rest of that run takes a
-  # row each.
-  "piece_width": {"drop01": 48, "drop02": 48, "drop08": 100},
-"pages": [
+  "pages": [
     # Everything comes from drop/isaac-howell/: the print files carry these
     # sheets at 6142px, where the deck cuts them at 1301.
   ],
