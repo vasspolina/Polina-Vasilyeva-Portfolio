@@ -6979,6 +6979,23 @@
   },
   {
    "stem": "drop10",
+   "caption": "Brooklyn Market Report, the reverse",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1036,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop10"
+  },
+  {
+   "stem": "drop11",
    "caption": "Benjamin Gernandt, the logo concepts",
    "tags": [
     "brand"
@@ -6992,28 +7009,11 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop10"
-  },
-  {
-   "stem": "drop11",
-   "caption": "Los Angeles, the coordinate mark",
-   "tags": [
-    "brand"
-   ],
-   "w": 1776,
-   "h": 1802,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1776
-   ],
-   "source": "DROP",
    "page": "drop11"
   },
   {
    "stem": "drop12",
-   "caption": "New York City, the coordinate mark",
+   "caption": "Los Angeles, the coordinate mark",
    "tags": [
     "brand"
    ],
@@ -7030,6 +7030,23 @@
   },
   {
    "stem": "drop13",
+   "caption": "New York City, the coordinate mark",
+   "tags": [
+    "brand"
+   ],
+   "w": 1776,
+   "h": 1802,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1776
+   ],
+   "source": "DROP",
+   "page": "drop13"
+  },
+  {
+   "stem": "drop14",
    "caption": "The Hamptons, the coordinate mark",
    "tags": [
     "brand"
@@ -7043,7 +7060,7 @@
     1778
    ],
    "source": "DROP",
-   "page": "drop13"
+   "page": "drop14"
   }
  ],
  "pratt": [

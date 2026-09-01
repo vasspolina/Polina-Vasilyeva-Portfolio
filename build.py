@@ -241,6 +241,7 @@ for proj in PROJECTS:
         sizes = GRID_SIZES_PORTRAIT if port else GRID_SIZES
         tiles.append(
             f'<a class="{cls}" href="projects/{slug}.html" '
+            f'data-tile="{slug}/{item["stem"]}" '
             f'data-tags="{",".join(item["tags"])}">\n'
             f'  {picture(slug, item, alt, 0, sizes)}\n'
             f'  <span class="caption">{esc(alt)}</span>\n'
@@ -488,7 +489,8 @@ def figure(slug, item, eager=False, widths=None, show_caption=True):
     # repeating the same line under every half.
     caption = (f'\n  <figcaption class="caption">{esc(item["caption"])}</figcaption>'
                if show_caption else '')
-    return (f'<figure class="{cls}"{style} data-tags="{tags}">\n  {media}{caption}\n'
+    return (f'<figure class="{cls}"{style} data-piece="{slug}/{item["stem"]}" '
+            f'data-tags="{tags}">\n  {media}{caption}\n'
             f'</figure>')
 
 

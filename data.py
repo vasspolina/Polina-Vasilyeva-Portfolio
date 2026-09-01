@@ -698,12 +698,12 @@ PROJECTS = [
   "piece_crop": {},
   # d005 comes off the deck at 1279px, so it sits smaller than the deck
   # pages beside it. The two broker covers pair, black beside white.
-  "piece_width": {"drop04": 60, "drop05": 48, "drop06": 48,
+  "piece_width": {"drop09": 100, "drop10": 100,
+                  "drop04": 60, "drop05": 48, "drop06": 48,
                   "d005": 48, "d006": 48, "d007": 48, "d008": 48,
                   # both cards are small objects and are shown as such
                   "drop02": 30, "drop03": 30,
-                  # the listing map is dense and needs the room
-                  "drop11": 30, "drop12": 30, "drop13": 30},
+                  "drop12": 30, "drop13": 30, "drop14": 30},
   "cover": "d004-1",
   "group": "brand", "short": "Real estate marketing design",
   "meta": "Compass, Real Estate Marketing Design",
@@ -824,7 +824,8 @@ PROJECTS = [
   "slug": "isaac-howell", "title": "Isaac Howell",
   "year": "Ongoing",
   # The posters read at a third of the measure rather than a half.
-  "piece_width": {"drop03": 34, "drop04": 34, "drop05": 34,
+  "piece_width": {"drop09": 30, "drop10": 48, "drop11": 48,
+                  "drop03": 34, "drop04": 34, "drop05": 34,
                   "drop06": 34, "drop07": 34},
   "cover": "drop03",
   "group": "book", "short": "Exhibition identity and publication",
