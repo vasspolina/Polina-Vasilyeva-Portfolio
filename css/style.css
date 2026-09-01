@@ -850,15 +850,6 @@ em, i, cite, address, dfn, var { font-style: normal; }
 }
 
 .filter[data-filter="all"].is-active { background-color: #0861ca; }
-  :root:not([data-theme="light"]) img[src*="/dada/"]:not([src*="inverted"]),
-:root:not([data-theme="light"]) img[src*="/spiritual-labour/"] {
-    filter: invert(1);
-  }
-}
-:root[data-theme="dark"] img[src*="/dada/"]:not([src*="inverted"]),
-:root[data-theme="dark"] img[src*="/spiritual-labour/"] {
-  filter: invert(1);
-}
 
 .filter[data-filter="all"]:hover { background-color: #0861ca; }
 .filter[data-filter="web"].is-active { background-color: #236237; }
