@@ -85,7 +85,7 @@ PROJECTS = [
   "year": "2022 to 2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
-  "piece_width": {"i001": 45, "drop12": 45, "drop09": 30,
+  "piece_width": {"i001": 45, "drop12": 32, "drop09": 30,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
   # The logo slide carries the deck's own small header top-left; it comes
   # off, and the same again off the foot so the mark stays centred.
