@@ -7041,19 +7041,88 @@
   },
   {
    "stem": "drop09",
-   "caption": "245 10th Avenue, neighbourhood points of interest",
+   "caption": "Brooklyn Market Report, the mailer spread",
    "tags": [
     "brand"
    ],
-   "w": 1284,
-   "h": 1542,
+   "w": 2400,
+   "h": 1036,
    "widths": [
     600,
     1200,
-    1284
+    1600,
+    2400
    ],
    "source": "DROP",
    "page": "drop09"
+  },
+  {
+   "stem": "drop10",
+   "caption": "Benjamin Gernandt, the logo concepts",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1565,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop10"
+  },
+  {
+   "stem": "drop11",
+   "caption": "Los Angeles, the coordinate mark",
+   "tags": [
+    "brand"
+   ],
+   "w": 1776,
+   "h": 1802,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1776
+   ],
+   "source": "DROP",
+   "page": "drop11"
+  },
+  {
+   "stem": "drop12",
+   "caption": "New York City, the coordinate mark",
+   "tags": [
+    "brand"
+   ],
+   "w": 1776,
+   "h": 1802,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1776
+   ],
+   "source": "DROP",
+   "page": "drop12"
+  },
+  {
+   "stem": "drop13",
+   "caption": "The Hamptons, the coordinate mark",
+   "tags": [
+    "brand"
+   ],
+   "w": 1778,
+   "h": 1798,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1778
+   ],
+   "source": "DROP",
+   "page": "drop13"
   }
  ],
  "pratt": [

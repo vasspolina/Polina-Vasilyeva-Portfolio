@@ -709,7 +709,7 @@ PROJECTS = [
                   # both cards are small objects and are shown as such
                   "drop02": 30, "drop03": 30,
                   # the listing map is dense and needs the room
-                  "drop09": 47},
+                  "drop11": 30, "drop12": 30, "drop13": 30},
   "cover": "d004-1",
   "group": "brand", "short": "Real estate marketing design",
   "meta": "Compass, Real Estate Marketing Design",
