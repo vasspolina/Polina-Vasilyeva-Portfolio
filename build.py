@@ -247,9 +247,16 @@ for proj in PROJECTS:
             f'  <span class="caption">{esc(alt)}</span>\n'
             f'</a>')
 
+def badge(label):
+    """Sentence case, but UX keeps its capitals."""
+    if label.startswith("ux"):
+        return "UX" + label[2:]
+    return label[0].upper() + label[1:]
+
+
 filters = "\n".join(
     f'<button type="button" class="filter{" is-active" if k == "all" else ""}" '
-    f'data-filter="{k}" aria-pressed="{"true" if k == "all" else "false"}">{label}</button>'
+    f'data-filter="{k}" aria-pressed="{"true" if k == "all" else "false"}">{badge(label)}</button>'
     for k, label in data.FILTERS)
 
 # One cover per project, gathered under its group — a way in before the
@@ -270,12 +277,6 @@ for key, label in data.GROUPS:
         # the filter bar lists them so two cards never disagree on sequence.
         got = {t for it in MANIFEST[p["slug"]] for t in it["tags"]}
         keys = [k for k, _ in data.FILTERS if k != "all" and k in got]
-        def badge(label):
-            """Sentence case, but UX keeps its capitals."""
-            if label.startswith("ux"):
-                return "UX" + label[2:]
-            return label[0].upper() + label[1:]
-
         chips = "".join(
             f'<span class="ov-tag">{badge(dict(data.FILTERS)[k])}</span>'
             for k in keys)
@@ -624,8 +625,11 @@ for i, proj in enumerate(PROJECTS):
     figures = []
     for item in items:
         cap = item["caption"]
+        # A project can opt out of captions entirely: the pictures are the
+        # point and a line naming what is visible under each one adds nothing.
         figures.append(figure(slug, item, len(figures) < 4, proj.get("piece_width"),
-                               show_caption=cap not in seen_captions))
+                               show_caption=proj.get("captions", True)
+                               and cap not in seen_captions))
         seen_captions.add(cap)
     figures = "\n".join(figures)
 

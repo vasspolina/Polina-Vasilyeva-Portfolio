@@ -5566,7 +5566,7 @@
   },
   {
    "stem": "f021",
-   "caption": "Featured, Sofas &amp; Sectionals",
+   "caption": "Featured, Sofas and Sectionals",
    "tags": [
     "web",
     "product"
@@ -7247,13 +7247,13 @@
    "tags": [
     "brand"
    ],
-   "w": 2400,
-   "h": 1832,
+   "w": 1644,
+   "h": 1272,
    "widths": [
     600,
     1200,
     1600,
-    2400
+    1644
    ],
    "source": "DROP",
    "page": "drop01"
@@ -7264,13 +7264,13 @@
    "tags": [
     "brand"
    ],
-   "w": 2400,
-   "h": 1832,
+   "w": 1624,
+   "h": 1293,
    "widths": [
     600,
     1200,
     1600,
-    2400
+    1624
    ],
    "source": "DROP",
    "page": "drop02"
@@ -7281,20 +7281,19 @@
    "tags": [
     "brand"
    ],
-   "w": 1650,
-   "h": 1290,
+   "w": 1563,
+   "h": 1206,
    "widths": [
     600,
     1200,
-    1600,
-    1650
+    1563
    ],
    "source": "DROP",
    "page": "drop03"
   },
   {
    "stem": "drop04",
-   "caption": "Пучки серебряного света, the city centre",
+   "caption": "Пучки серебряного света, the poster series",
    "tags": [
     "brand"
    ],
@@ -7311,7 +7310,7 @@
   },
   {
    "stem": "drop05",
-   "caption": "Пучки серебряного света, the advocates",
+   "caption": "The advocates",
    "tags": [
     "brand"
    ],
@@ -7328,7 +7327,7 @@
   },
   {
    "stem": "drop06",
-   "caption": "Пучки серебряного света, the poster series two",
+   "caption": "The empty house",
    "tags": [
     "brand"
    ],
@@ -7345,7 +7344,7 @@
   },
   {
    "stem": "drop07",
-   "caption": "Пучки серебряного света, the poster series three",
+   "caption": "The driver",
    "tags": [
     "brand"
    ],
@@ -7362,7 +7361,7 @@
   },
   {
    "stem": "drop08",
-   "caption": "Пучки серебряного света, the poster series four",
+   "caption": "Outside the advocates",
    "tags": [
     "brand"
    ],
@@ -7379,7 +7378,7 @@
   },
   {
    "stem": "drop09",
-   "caption": "Пучки серебряного света, the poster series five",
+   "caption": "The swimmer",
    "tags": [
     "brand"
    ],
@@ -7402,11 +7401,11 @@
    "tags": [
     "editorial"
    ],
-   "w": 1051,
-   "h": 1355,
+   "w": 1053,
+   "h": 1357,
    "widths": [
     600,
-    1051
+    1053
    ],
    "source": "DROP",
    "page": "drop01"
@@ -7418,7 +7417,7 @@
     "editorial"
    ],
    "w": 2129,
-   "h": 1500,
+   "h": 1343,
    "widths": [
     600,
     1200,
@@ -7435,7 +7434,7 @@
     "editorial"
    ],
    "w": 2159,
-   "h": 1500,
+   "h": 1361,
    "widths": [
     600,
     1200,
@@ -7452,7 +7451,7 @@
     "editorial"
    ],
    "w": 2128,
-   "h": 1500,
+   "h": 1342,
    "widths": [
     600,
     1200,
@@ -7748,12 +7747,12 @@
    "tags": [
     "brand"
    ],
-   "w": 1498,
-   "h": 745,
+   "w": 1473,
+   "h": 716,
    "widths": [
     600,
     1200,
-    1498
+    1473
    ],
    "source": "DROP",
    "page": "drop08"
@@ -7870,13 +7869,13 @@
    "tags": [
     "brand"
    ],
-   "w": 1994,
-   "h": 1300,
+   "w": 1993,
+   "h": 1288,
    "widths": [
     600,
     1200,
     1600,
-    1994
+    1993
    ],
    "source": "DROP",
    "page": "drop01"
@@ -7887,13 +7886,13 @@
    "tags": [
     "brand"
    ],
-   "w": 2285,
-   "h": 1494,
+   "w": 2279,
+   "h": 1472,
    "widths": [
     600,
     1200,
     1600,
-    2285
+    2279
    ],
    "source": "DROP",
    "page": "drop02"
@@ -7905,7 +7904,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 1554,
+   "h": 1548,
    "widths": [
     600,
     1200,
@@ -7921,13 +7920,13 @@
    "tags": [
     "brand"
    ],
-   "w": 2308,
-   "h": 1500,
+   "w": 2293,
+   "h": 1485,
    "widths": [
     600,
     1200,
     1600,
-    2308
+    2293
    ],
    "source": "DROP",
    "page": "drop04"

@@ -764,6 +764,7 @@ PROJECTS = [
   "slug": "sarah-crowner", "title": "Sarah Crowner",
   "year": "2016",
   "layout": "row",
+  "captions": False,
   "group": "book", "short": "Monograph design",
   "meta": "Sarah Crowner, Monograph, Publication Design",
   "desc": ["I designed the complete monograph on the painter Sarah Crowner, whose sewn canvases sit between fine and applied art. I designed the cover, the typography, the grid, and the order the essays and plates run in.",

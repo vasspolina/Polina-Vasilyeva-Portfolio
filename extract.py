@@ -1147,6 +1147,25 @@ def main():
                 piece = trim_edge_lines(piece)
             if not proj.get("keep_ground"):
                 piece = whiten_corners(piece)
+                # Keying the ground away leaves the artwork sitting inside a
+                # band of transparency wherever the photograph had margin
+                # around it. The band paints nothing, but it still occupies
+                # the figure's box, so two pieces side by side hang from
+                # different lines. Crop to what actually paints.
+                # getbbox() is per-pixel, and the keyed band is not empty —
+                # it holds speckles the key could not resolve, a dust mote or
+                # a corner of the sheet. One such pixel keeps its whole row,
+                # so the band survives the crop it was meant to lose. Ask
+                # instead how much of each row and column actually paints, and
+                # cut the runs at the edges that paint almost nothing.
+                if piece.mode == "RGBA":
+                    solid = np.asarray(piece.getchannel("A"), dtype=np.uint8) > 8
+                    rows, cols = solid.mean(axis=1), solid.mean(axis=0)
+                    keep_r = np.flatnonzero(rows > 0.02)
+                    keep_c = np.flatnonzero(cols > 0.02)
+                    if len(keep_r) and len(keep_c):
+                        piece = piece.crop((int(keep_c[0]), int(keep_r[0]),
+                                            int(keep_c[-1]) + 1, int(keep_r[-1]) + 1))
             targets = [t for t in WIDTHS if t < piece.width]
             targets.append(min(piece.width, WIDTHS[-1]))
             widths = []
