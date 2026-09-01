@@ -101,6 +101,40 @@
    "page": 11
   },
   {
+   "stem": "c002-1",
+   "caption": "Printed assets for national retail, one type system across every format",
+   "tags": [
+    "brand"
+   ],
+   "w": 2397,
+   "h": 1044,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2397
+   ],
+   "source": "C",
+   "page": 2
+  },
+  {
+   "stem": "c002-2",
+   "caption": "Printed assets for national retail, one type system across every format",
+   "tags": [
+    "brand"
+   ],
+   "w": 1690,
+   "h": 813,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1690
+   ],
+   "source": "C",
+   "page": 2
+  },
+  {
    "stem": "drop01",
    "caption": "Verizon Prepaid, the price grid",
    "tags": [
@@ -930,40 +964,6 @@
    ],
    "source": "DROP",
    "page": "drop64"
-  },
-  {
-   "stem": "c002-1",
-   "caption": "Printed assets for national retail, one type system across every format",
-   "tags": [
-    "brand"
-   ],
-   "w": 2397,
-   "h": 1044,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2397
-   ],
-   "source": "C",
-   "page": 2
-  },
-  {
-   "stem": "c002-2",
-   "caption": "Printed assets for national retail, one type system across every format",
-   "tags": [
-    "brand"
-   ],
-   "w": 1690,
-   "h": 813,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1690
-   ],
-   "source": "C",
-   "page": 2
   },
   {
    "stem": "c003-1",
@@ -6069,6 +6069,42 @@
  ],
  "lenka-ilic": [
   {
+   "stem": "drop16",
+   "caption": "The debossed signature, close",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop16"
+  },
+  {
+   "stem": "drop17",
+   "caption": "Aluminium sheet before folding",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1601,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop17"
+  },
+  {
    "stem": "drop01",
    "caption": "Lenka Ilic, the wordmark",
    "tags": [
@@ -6283,42 +6319,6 @@
    ],
    "source": "DROP",
    "page": "drop15"
-  },
-  {
-   "stem": "drop16",
-   "caption": "The debossed signature, close",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop16"
-  },
-  {
-   "stem": "drop17",
-   "caption": "Aluminium sheet before folding",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1601,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop17"
   },
   {
    "stem": "drop03",
