@@ -243,6 +243,7 @@ a:focus-visible, button:focus-visible {
   letter-spacing: 0.01em;
   cursor: pointer;
   padding: 2px 4px;
+  text-transform: uppercase;
   transition: background var(--dur), color var(--dur);
 }
 
