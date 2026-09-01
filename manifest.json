@@ -1,6 +1,23 @@
 {
  "verizon": [
   {
+   "stem": "a025",
+   "caption": "Verizon, the mark",
+   "tags": [
+    "brand"
+   ],
+   "w": 2400,
+   "h": 1143,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "A",
+   "page": 25
+  },
+  {
    "stem": "drop06",
    "caption": "Verizon.com homepage, connecting you with what matters",
    "tags": [
@@ -915,21 +932,105 @@
    "page": "drop64"
   },
   {
-   "stem": "i002",
-   "caption": "Plan prices across every tier, the counter strip",
+   "stem": "c002-1",
+   "caption": "Printed assets for national retail, one type system across every format",
    "tags": [
     "brand"
    ],
-   "w": 2400,
-   "h": 190,
+   "w": 2397,
+   "h": 1044,
    "widths": [
     600,
     1200,
     1600,
-    2400
+    2397
    ],
-   "source": "I",
+   "source": "C",
    "page": 2
+  },
+  {
+   "stem": "c002-2",
+   "caption": "Printed assets for national retail, one type system across every format",
+   "tags": [
+    "brand"
+   ],
+   "w": 1690,
+   "h": 813,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1690
+   ],
+   "source": "C",
+   "page": 2
+  },
+  {
+   "stem": "c003-1",
+   "caption": "Ultra signage, the counter unit",
+   "tags": [
+    "brand"
+   ],
+   "w": 1722,
+   "h": 1167,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1722
+   ],
+   "source": "C",
+   "page": 3
+  },
+  {
+   "stem": "c003-2",
+   "caption": "Nuestros mejores planes, the wall",
+   "tags": [
+    "brand"
+   ],
+   "w": 2292,
+   "h": 1565,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2292
+   ],
+   "source": "C",
+   "page": 3
+  },
+  {
+   "stem": "c004-1",
+   "caption": "Our best plan ever, the light box",
+   "tags": [
+    "brand"
+   ],
+   "w": 1384,
+   "h": 892,
+   "widths": [
+    600,
+    1200,
+    1384
+   ],
+   "source": "C",
+   "page": 4
+  },
+  {
+   "stem": "c004-2",
+   "caption": "The Ultra table",
+   "tags": [
+    "brand"
+   ],
+   "w": 2292,
+   "h": 1565,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2292
+   ],
+   "source": "C",
+   "page": 4
   },
   {
    "stem": "i003",
@@ -947,23 +1048,6 @@
    ],
    "source": "I",
    "page": 3
-  },
-  {
-   "stem": "i004",
-   "caption": "America's most reliable network is going Ultra, the strip",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 190,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "I",
-   "page": 4
   },
   {
    "stem": "i005",
@@ -1074,7 +1158,7 @@
     "brand"
    ],
    "w": 2400,
-   "h": 700,
+   "h": 697,
    "widths": [
     600,
     1200,
@@ -1102,23 +1186,6 @@
    "page": 18
   },
   {
-   "stem": "a025",
-   "caption": "Verizon, the mark",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 1143,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "A",
-   "page": 25
-  },
-  {
    "stem": "p01",
    "caption": "Retail SEM, the working deck",
    "tags": [
@@ -1132,107 +1199,6 @@
    ],
    "source": "IMG",
    "page": "verizon-sem/p01.jpg"
-  },
-  {
-   "stem": "c002-1",
-   "caption": "Printed assets for national retail, one type system across every format",
-   "tags": [
-    "brand"
-   ],
-   "w": 2397,
-   "h": 1220,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2397
-   ],
-   "source": "C",
-   "page": 2
-  },
-  {
-   "stem": "c002-2",
-   "caption": "Printed assets for national retail, one type system across every format",
-   "tags": [
-    "brand"
-   ],
-   "w": 1690,
-   "h": 950,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1690
-   ],
-   "source": "C",
-   "page": 2
-  },
-  {
-   "stem": "c003-1",
-   "caption": "Ultra signage, the counter unit",
-   "tags": [
-    "brand"
-   ],
-   "w": 1722,
-   "h": 1167,
-   "widths": [
-    600,
-    1200,
-    1600,
-    1722
-   ],
-   "source": "C",
-   "page": 3
-  },
-  {
-   "stem": "c003-2",
-   "caption": "Nuestros mejores planes, the wall",
-   "tags": [
-    "brand"
-   ],
-   "w": 2292,
-   "h": 1565,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2292
-   ],
-   "source": "C",
-   "page": 3
-  },
-  {
-   "stem": "c004-1",
-   "caption": "Our best plan ever, the light box",
-   "tags": [
-    "brand"
-   ],
-   "w": 1384,
-   "h": 892,
-   "widths": [
-    600,
-    1200,
-    1384
-   ],
-   "source": "C",
-   "page": 4
-  },
-  {
-   "stem": "c004-2",
-   "caption": "The Ultra table",
-   "tags": [
-    "brand"
-   ],
-   "w": 2292,
-   "h": 1565,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2292
-   ],
-   "source": "C",
-   "page": 4
   },
   {
    "stem": "c020-3",

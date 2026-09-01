@@ -85,24 +85,29 @@ PROJECTS = [
   "year": "2022 to 2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
-  "piece_width": {"i001": 27, "drop12": 32, "drop09": 30,
+  "piece_width": {"p01": 26,
+                  "i001": 27, "drop12": 32, "drop09": 30,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
   # The logo slide carries the deck's own small header top-left; it comes
   # off, and the same again off the foot so the mark stays centred.
   # Framed like Haworth's mark: the mark an eighth of the height,
   # centred, at one aspect, so the two covers read as a pair.
-  "piece_crop": {"a025": (0.122, 0.058, 0.130, 0.059)},
+  "piece_crop": {"i017": (0.004, 0.0015, 0.004, 0.0015),
+                 "c002-1": (0, 0, 0.145, 0),
+                 "c002-2": (0, 0, 0.145, 0),
+                 "a025": (0.122, 0.058, 0.130, 0.059)},
   "drops_first": True,
-  "lead": ["drop06", "drop07", "drop09", "i001", "i011"],
-  "before_decks": ["i0%02d" % n for n in (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 17, 18)],
-  "keep_always": ["i0%02d" % n for n in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 17, 18)],
+  "lead": ["a025", "drop06", "drop07", "drop09", "i001", "i011"],
+  "before_decks": (["i0%02d" % n for n in (3, 5, 6, 7, 8, 9, 10, 11, 17, 18)]
+                   + ["c002-1", "c002-2", "c003-1", "c003-2", "c004-1", "c004-2"]),
+  "keep_always": ["i0%02d" % n for n in (1, 3, 5, 6, 7, 8, 9, 10, 11, 17, 18)],
   "cover": "a025",
   "group": "brand", "short": "Retail and brand design",
   "meta": "Verizon, Senior Design Consultant, 2022 to 2023, Retail and Brand Design",
-  "desc": ["— I conducted research to identify effective approaches and opportunities to improve customer experience and look and feel across digital and retail.",
-           "— I simplified and unified design standards across brand guidelines for digital and retail and UX.",
-           "— I reviewed and updated design assets and customer experience under accessibility best practices.",
-           "— I streamlined design standards, resulting in an increase in productivity for designers, shorter turnaround times for retail projects, and improved print quality."],
+  "desc": ["— Ran research across digital and retail touchpoints to identify opportunities to improve customer experience and brand look and feel.",
+           "— Unified fragmented design standards spanning brand guidelines, retail, and UX into a single simplified system.",
+           "— Audited and updated design assets and customer-facing experiences against accessibility best practices.",
+           "— Streamlining these standards raised designer productivity, shortened retail project turnaround, and improved print quality."],
   "pages": [
     # The deck's own title slide carries the wordmark on the slide ground, and
     # the Retail SEM title exists only at 1020px — too small to be a cover.
@@ -125,11 +130,7 @@ PROJECTS = [
     # The retail signage artwork itself, a banner to a page.
     ("I", 1, "Stretch your data, not your budget — the price sheet", ["brand"],
      {"crop": False, "split": False}),
-    ("I", 2, "Plan prices across every tier — the counter strip", ["brand"],
-     {"crop": False, "split": False}),
     ("I", 3, "The reliability line — the counter strip", ["brand"],
-     {"crop": False, "split": False}),
-    ("I", 4, "America's most reliable network is going Ultra — the strip", ["brand"],
      {"crop": False, "split": False}),
     ("I", 5, "Introducing our best Unlimited plans — the strip", ["brand"],
      {"crop": False, "split": False}),
@@ -202,11 +203,13 @@ PROJECTS = [
   "cover": "b062",
   "group": "brand", "short": "Brand and online store design",
   "meta": "Haworth, with Apartamento Studios, Brand and Online Store Design",
-  "desc": ["While at Apartamento, I worked on re-branding Haworth, a leading office furniture manufacturer. I developed branding systems, including the brand narrative, collateral, and digital strategy to articulate the company's position in the market, befitting its leadership role within the contract furnishings industry. The re-brand led to winning new customers, market repositioning, attracting targeted audiences, and increasing sales.",
-           "In collaboration with an in-house business strategist I developed the solutions for Haworth brand to transition from furniture manufacturer to premium office solutions provider. I worked closely with the in-house business strategist to help Haworth achieve its cultural and sales strategy goals through the design and align verbal and visual language to target the right customers.",
-           "I created flexible and scalable easy to use brand systems and brand guidelines for company in-house design and marketing teams, which optimized workflow, leading to increased efficiency, brand consistency, and, as a result, brand recognition.",
-           "I developed a digital marketing campaign, including social media advertising, and created digital asset production guidelines. The digital marketing campaign increased online conversions by 15%.",
-           "I developed environmental signage for Haworth showrooms and exhibition graphics for annual National Exposition of Contract Interior Furnishings NeoCon. I created guidelines for print advertisement materials, brochures and magazines. I oversaw brand application, user experience, and user interface for Haworth's e-commerce website."],
+  "desc": ["— Led the rebrand of Haworth, a leading office furniture manufacturer, developing the brand narrative, collateral, and digital strategy that repositioned the company as a premium office solutions provider rather than a furniture manufacturer.",
+           "— Partnered with Haworth's in-house business strategist to align verbal and visual language with the company's cultural and sales strategy goals and target audiences.",
+           "— Built flexible, scalable brand systems and guidelines for Haworth's in-house design and marketing teams, optimizing workflow and increasing efficiency, brand consistency, and brand recognition.",
+           "— Developed a digital marketing campaign including social media advertising and digital asset production guidelines — increased online conversions by 15%.",
+           "— Designed environmental signage for Haworth showrooms and exhibition graphics for NeoCon; authored guidelines for print advertising, brochures, and magazines.",
+           "— Oversaw brand application, UX, and UI for Haworth's e-commerce website.",
+           "— Outcome: market repositioning, new customer acquisition, and increased sales."],
   "pages": [
     ("B", 62, "Haworth — logo design", ["brand"], {"crop": False}),
     ("E", 16, "Haworth — the logotype on white", ["brand"], {"crop": False, "split": False}),
@@ -442,9 +445,10 @@ PROJECTS = [
   "cover": "b037",
   "group": "brand", "short": "Brand and packaging design",
   "meta": "Alexander Wang, Senior Designer and Art Director, 2021 to 2022, Brand and Packaging Design",
-  "desc": ["I developed multiple promo campaigns for AW spring, summer and autumn with static and dynamic digital media along with printed materials.",
-           "I originated and launched branding, campaign and packaging design for AW Bodywear.",
-           "I administered and maintained AW e-commerce, and designed an e-commerce site for AW special offers sales. I supported planning and logistics of AW events, and provided guidance with PR and social media design and copywriting strategies."],
+  "desc": ["— Developed seasonal promotional campaigns (spring, summer, autumn) spanning static and dynamic digital media and print.",
+           "— Originated and launched branding, campaign, and packaging design for AW Bodywear.",
+           "— Administered and maintained AW e-commerce; designed a dedicated e-commerce site for special offers sales.",
+           "— Supported planning and logistics for AW events, and directed PR and social media design and copywriting strategy."],
   "pages": [
     ("B", 3,  "bodywear — brand lockup", ["brand"], {"crop": False}),
     ("B", 5,  "The a mark", ["brand"], {"pad": 0.14}),
