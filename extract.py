@@ -1192,6 +1192,13 @@ def main():
                 print(f"{slug:18} {'':4} {'':18}  -- lead names no such piece: {missing}")
             front = [by[w] for w in want if w in by]
             keep = front + [k for k in keep if k["stem"] not in set(want)]
+        if proj.get("sink"):
+            # A few pieces read better after everything else, whatever order
+            # the folder puts them in.
+            last = list(proj["sink"])
+            by = {k["stem"]: k for k in keep}
+            tail = [by[w] for w in last if w in by]
+            keep = [k for k in keep if k["stem"] not in set(last)] + tail
         if proj.get("drops_first"):
             # The folder images are the work itself; the deck pages document
             # it. Some projects read better with the work first.

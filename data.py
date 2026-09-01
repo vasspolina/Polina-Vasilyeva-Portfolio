@@ -85,8 +85,7 @@ PROJECTS = [
   "year": "2022 to 2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
-  "piece_width": {"p01": 26,
-                  "i001": 27, "drop12": 32, "drop09": 30,
+  "piece_width": {"i001": 27, "drop12": 32, "drop09": 30,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
   # The logo slide carries the deck's own small header top-left; it comes
   # off, and the same again off the foot so the mark stays centred.
@@ -115,7 +114,6 @@ PROJECTS = [
     # wayfinding tiers, and the store as it was built and as it will be.
     # The deck's own logo slide, black ground, no footer: the cover.
     ("A", 25, "Verizon — the mark", ["brand"], {"crop": False, "split": False}),
-    ("IMG", "verizon-sem/p01.jpg", "Retail SEM — the working deck", ["brand"], {"crop": False, "split": False}),
     ("C", 2,  "Printed assets for national retail — one type system across every format",
               ["brand"], {"rows": True, "keep": [1, 2]}),
     ("C", 3,  ["Ultra signage — the counter unit",
@@ -124,8 +122,6 @@ PROJECTS = [
     ("C", 4,  ["Our best plan ever — the light box",
                "The Ultra table"], ["brand"],
               {"slices": [(0.024, 0.331), (0.404, 0.914)]}),
-    ("C", 20, ["The store, looking in", "Product table merchandising",
-               "The storefront"], ["brand"], {"rows": True, "keep": [3]}),
     ("A", 32, "Executing growth across five vectors — strategy deck", ["strategy"]),
     # The retail signage artwork itself, a banner to a page.
     ("I", 1, "Stretch your data, not your budget — the price sheet", ["brand"],
@@ -437,7 +433,6 @@ PROJECTS = [
   # The lockup alone: the slide's own caption line sits below it.
   # The lockup and the mark it is built from, side by side.
   "piece_width": {"b003": 48, "b005": 48,
-                  "b009-1": 30, "b009-2": 30, "b009-3": 30,
                   "b031-1": 30, "b031-2": 30, "b033": 30,
                   "b035-1": 30, "b035-2": 30},
   "piece_crop": {"b003": (0.02, 0.088, 0.10, 0.088)},
@@ -452,8 +447,6 @@ PROJECTS = [
   "pages": [
     ("B", 3,  "bodywear — brand lockup", ["brand"], {"crop": False}),
     ("B", 5,  "The a mark", ["brand"], {"pad": 0.14}),
-    ("B", 9,  "Care label — designed and supervised through production", ["brand"],
-     {"scale": 6.0}),
     ("B", 13, "Packaging — the Classic Briefs bag", ["brand"], {"split": False}),
     ("IMG", "alexander-wang/spec-sheets.png",
      "Product spec sheets — mid-rise briefs and crewneck", ["brand"],
@@ -656,7 +649,8 @@ PROJECTS = [
   # pages: the material, the maker, the city, the year of founding.
   "desc": ["I designed the identity and the website for Lenka Ilic Studio, a furniture practice in Miami and New York, and art directed the photography. The studio folds each object from recycled aluminium by hand in Delanson, New York. Each carries a debossed signature and a serial number.",
            "The mark sits in one weight, small in the corner of the page and small on the metal, so the object is what you look at. The photographs put a grid of white forms on white, against the roofline and in the rooms they belong to."],
-  "pages": [
+    "sink": ["drop03", "drop04", "drop05"],
+"pages": [
     # Everything comes from drop/lenka-ilic/.
   ],
  },

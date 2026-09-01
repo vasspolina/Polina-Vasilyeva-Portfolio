@@ -1186,37 +1186,6 @@
    "page": 18
   },
   {
-   "stem": "p01",
-   "caption": "Retail SEM, the working deck",
-   "tags": [
-    "brand"
-   ],
-   "w": 1020,
-   "h": 574,
-   "widths": [
-    600,
-    1020
-   ],
-   "source": "IMG",
-   "page": "verizon-sem/p01.jpg"
-  },
-  {
-   "stem": "c020-3",
-   "caption": "The storefront",
-   "tags": [
-    "brand"
-   ],
-   "w": 1342,
-   "h": 699,
-   "widths": [
-    600,
-    1200,
-    1342
-   ],
-   "source": "C",
-   "page": 20
-  },
-  {
    "stem": "a032",
    "caption": "Executing growth across five vectors, strategy deck",
    "tags": [
@@ -3838,54 +3807,6 @@
    "page": 5
   },
   {
-   "stem": "b009-1",
-   "caption": "Care label, designed and supervised through production",
-   "tags": [
-    "brand"
-   ],
-   "w": 1381,
-   "h": 3723,
-   "widths": [
-    600,
-    1200,
-    1381
-   ],
-   "source": "B",
-   "page": 9
-  },
-  {
-   "stem": "b009-2",
-   "caption": "Care label, designed and supervised through production",
-   "tags": [
-    "brand"
-   ],
-   "w": 1381,
-   "h": 4100,
-   "widths": [
-    600,
-    1200,
-    1381
-   ],
-   "source": "B",
-   "page": 9
-  },
-  {
-   "stem": "b009-3",
-   "caption": "Care label, designed and supervised through production",
-   "tags": [
-    "brand"
-   ],
-   "w": 1381,
-   "h": 4109,
-   "widths": [
-    600,
-    1200,
-    1381
-   ],
-   "source": "B",
-   "page": 9
-  },
-  {
    "stem": "b013",
    "caption": "Packaging, the Classic Briefs bag",
    "tags": [
@@ -6184,60 +6105,6 @@
    "page": "drop02"
   },
   {
-   "stem": "drop03",
-   "caption": "lenkailic.com, Conscious Object, desktop and mobile",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 4485,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop03"
-  },
-  {
-   "stem": "drop04",
-   "caption": "Sideboard, the product page, desktop and mobile",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 6684,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop04"
-  },
-  {
-   "stem": "drop05",
-   "caption": "Philosophy and bio, the page, desktop and mobile",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 6279,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop05"
-  },
-  {
    "stem": "drop06",
    "caption": "Authenticity mark, the signed plate",
    "tags": [
@@ -6452,6 +6319,60 @@
    ],
    "source": "DROP",
    "page": "drop17"
+  },
+  {
+   "stem": "drop03",
+   "caption": "lenkailic.com, Conscious Object, desktop and mobile",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 4485,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
+   "caption": "Sideboard, the product page, desktop and mobile",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 6684,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "Philosophy and bio, the page, desktop and mobile",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 6279,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop05"
   }
  ],
  "bts-advocaten": [
