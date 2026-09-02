@@ -355,10 +355,10 @@ open(os.path.join(ROOT, "index.html"), "w").write(index)
 bio = "\n".join(f"    <p>{no_orphan(p)}</p>" for p in data.ABOUT)
 clients = "\n".join(f"      <li>{c}</li>" for c in data.CLIENTS)
 teaching = "\n".join(
-    f"      <li>{where}<span class=\"about-note\">{what}</span></li>"
+    f"      <li>{where}<span class=\"about-note\">{no_orphan(what)}</span></li>"
     for where, what in data.TEACHING)
 education = "\n".join(
-    f"      <li>{where}<span class=\"about-note\">{what}</span></li>"
+    f"      <li>{where}<span class=\"about-note\">{no_orphan(what)}</span></li>"
     for where, what in data.EDUCATION)
 
 about = head(f"About, {data.NAME}", 0, data.ABOUT[0]) + nav(0, "about") + f"""<main id="main">
@@ -420,7 +420,7 @@ def span_of(item):
                                       # brochure opened flat
 
 
-def figure(slug, item, eager=False, widths=None, show_caption=True):
+def figure(slug, item, eager=False, widths=None, show_caption=True, label=None):
     """One piece on a project page — a picture, or a player if it is a clip."""
     port = is_portrait(item)
     span = item.get("span") or (12 if item.get("frac") else span_of(item))
@@ -488,7 +488,7 @@ def figure(slug, item, eager=False, widths=None, show_caption=True):
     # A slide that split into several crops (see ALT_SUFFIX) is one piece, not
     # several — the caption names it once, on the first crop, instead of
     # repeating the same line under every half.
-    caption = (f'\n  <figcaption class="caption">{esc(item["caption"])}</figcaption>'
+    caption = (f'\n  <figcaption class="caption">{esc(label or item["caption"])}</figcaption>'
                if show_caption else '')
     return (f'<figure class="{cls}"{style} data-piece="{slug}/{item["stem"]}" '
             f'data-tags="{tags}">\n  {media}{caption}\n'
@@ -623,13 +623,21 @@ for i, proj in enumerate(PROJECTS):
     # project) — show it once, on the first crop, not once per crop.
     seen_captions = set()
     figures = []
+    # A run of pieces from one series names the series once. "Brand book,
+    # colour" after "Brand book, typography" shows as "Colour": the leading
+    # segment is stated on the first of the run and dropped on the rest. The
+    # alt text keeps the full caption.
+    prev_series = None
     for item in items:
         cap = item["caption"]
+        series, sep, rest = cap.partition(", ")
+        label = rest[0].upper() + rest[1:] if sep and series == prev_series else None
+        prev_series = series if sep else None
         # A project can opt out of captions entirely: the pictures are the
         # point and a line naming what is visible under each one adds nothing.
         figures.append(figure(slug, item, len(figures) < 4, proj.get("piece_width"),
                                show_caption=proj.get("captions", True)
-                               and cap not in seen_captions))
+                               and cap not in seen_captions, label=label))
         seen_captions.add(cap)
     figures = "\n".join(figures)
 
