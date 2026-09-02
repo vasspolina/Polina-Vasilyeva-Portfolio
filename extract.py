@@ -41,7 +41,7 @@ EDGE = 0.10            # ...and only when it sits this close to the top or botto
 # Display renditions, in WebP. The raw crop (up to ~3800px) is deliberately not
 # published: at DPR 2 a 604px column asks for ~1208px, and if the only larger
 # candidate is the original the browser downloads all 3800px of it.
-WIDTHS = (600, 1200, 1600, 2400)
+WIDTHS = (600, 1200, 1600, 2400, 3600)
 QUALITY = 80
 
 
