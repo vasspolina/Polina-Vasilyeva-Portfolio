@@ -649,8 +649,7 @@ PROJECTS = [
   # pages: the material, the maker, the city, the year of founding.
   "desc": ["I designed the identity and the website for Lenka Ilic Studio, a furniture practice in Miami and New York, and art directed the photography. The studio folds each object from recycled aluminium by hand in Delanson, New York. Each carries a debossed signature and a serial number.",
            "The mark sits in one weight, small in the corner of the page and small on the metal, so the object is what you look at."],
-    "lead": ["drop16", "drop17"],
-  "sink": ["drop03", "drop04", "drop05"],
+    "sink": ["drop03", "drop04", "drop05"],
 "pages": [
     # Everything comes from drop/lenka-ilic/.
   ],

@@ -6052,42 +6052,6 @@
  ],
  "lenka-ilic": [
   {
-   "stem": "drop16",
-   "caption": "The debossed signature, close",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1600,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop16"
-  },
-  {
-   "stem": "drop17",
-   "caption": "Aluminium sheet before folding",
-   "tags": [
-    "brand",
-    "web"
-   ],
-   "w": 2400,
-   "h": 1601,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop17"
-  },
-  {
    "stem": "drop01",
    "caption": "Lenka Ilic, the wordmark",
    "tags": [
@@ -6161,43 +6125,43 @@
   },
   {
    "stem": "drop08",
-   "caption": "Bench along the parapet",
+   "caption": "The debossed signature, close",
    "tags": [
     "brand",
     "web"
    ],
-   "w": 2336,
-   "h": 3504,
+   "w": 2400,
+   "h": 1600,
    "widths": [
     600,
     1200,
     1600,
-    2336
+    2400
    ],
    "source": "DROP",
    "page": "drop08"
   },
   {
    "stem": "drop09",
-   "caption": "Side table against the sofa",
+   "caption": "Aluminium sheet before folding",
    "tags": [
     "brand",
     "web"
    ],
-   "w": 2336,
-   "h": 3504,
+   "w": 2400,
+   "h": 1601,
    "widths": [
     600,
     1200,
     1600,
-    2336
+    2400
    ],
    "source": "DROP",
    "page": "drop09"
   },
   {
    "stem": "drop10",
-   "caption": "Stand between the seats",
+   "caption": "Bench along the parapet",
    "tags": [
     "brand",
     "web"
@@ -6215,7 +6179,7 @@
   },
   {
    "stem": "drop11",
-   "caption": "Stand in the meeting room",
+   "caption": "Side table against the sofa",
    "tags": [
     "brand",
     "web"
@@ -6233,7 +6197,7 @@
   },
   {
    "stem": "drop12",
-   "caption": "Stand in use",
+   "caption": "Stand between the seats",
    "tags": [
     "brand",
     "web"
@@ -6251,7 +6215,7 @@
   },
   {
    "stem": "drop13",
-   "caption": "Stand beside the yellow chair",
+   "caption": "Stand in the meeting room",
    "tags": [
     "brand",
     "web"
@@ -6269,25 +6233,25 @@
   },
   {
    "stem": "drop14",
-   "caption": "Console, open form",
+   "caption": "Stand in use",
    "tags": [
     "brand",
     "web"
    ],
-   "w": 2400,
-   "h": 1600,
+   "w": 2336,
+   "h": 3504,
    "widths": [
     600,
     1200,
     1600,
-    2400
+    2336
    ],
    "source": "DROP",
    "page": "drop14"
   },
   {
    "stem": "drop15",
-   "caption": "Console from the front",
+   "caption": "Stand beside the yellow chair",
    "tags": [
     "brand",
     "web"
@@ -6302,6 +6266,42 @@
    ],
    "source": "DROP",
    "page": "drop15"
+  },
+  {
+   "stem": "drop16",
+   "caption": "Console, open form",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2400,
+   "h": 1600,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400
+   ],
+   "source": "DROP",
+   "page": "drop16"
+  },
+  {
+   "stem": "drop17",
+   "caption": "Console from the front",
+   "tags": [
+    "brand",
+    "web"
+   ],
+   "w": 2336,
+   "h": 3504,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2336
+   ],
+   "source": "DROP",
+   "page": "drop17"
   },
   {
    "stem": "drop03",

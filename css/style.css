@@ -1089,12 +1089,3 @@ em, i, cite, address, dfn, var { font-style: normal; }
    a printed sheet needs the extra third to be legible in the listing. */
 .grid-item[data-tile="verizon/i001"].is-portrait img { max-width: 312px; }
 
-/* The Crowner cover is a bare book; the spreads are books photographed with
-   ground above and below, so at one row height the cover read taller than the
-   book beside it. The cover takes the height the book itself occupies there,
-   which is 0.8953 of the frame. */
-@media (min-width: 1024px) {
-  .project-images.is-row .work-figure[data-piece="sarah-crowner/drop01"] img {
-    height: 546px;
-  }
-}
