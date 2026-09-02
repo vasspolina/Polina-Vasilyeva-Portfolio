@@ -432,10 +432,13 @@ PROJECTS = [
   "slug": "alexander-wang", "title": "Alexander Wang",
   # The lockup alone: the slide's own caption line sits below it.
   # The lockup and the mark it is built from, side by side.
-  "piece_width": {"b003": 48, "b005": 48,
+  "piece_width": {"classic-briefs-bag": 58,
+                  "drop12": 30, "drop13": 30, "drop14": 30,
+                  "b003": 48, "b005": 48,
                   "b031-1": 30, "b031-2": 30, "b033": 30,
                   "b035-1": 30, "b035-2": 30},
-  "piece_crop": {"retail-display-trays": (0.006, 0.010, 0.003, 0.021),
+  "piece_crop": {"classic-briefs-bag": (0.047, 0, 0.299, 0),
+                 "retail-display-trays": (0.006, 0.010, 0.003, 0.021),
                  "display-case": (0.021, 0.001, 0.001, 0.009),
                  "b003": (0.02, 0.088, 0.10, 0.088)},
   "year": "2021 to 2022",
@@ -449,7 +452,8 @@ PROJECTS = [
   "pages": [
     ("B", 3,  "bodywear – brand lockup", ["brand"], {"crop": False}),
     ("B", 5,  "The a mark", ["brand"], {"pad": 0.14}),
-    ("B", 13, "Packaging – the Classic Briefs bag", ["brand"], {"split": False}),
+    ("IMG", "alexander-wang/classic-briefs-bag.jpg", "Packaging, the Classic Briefs bag", ["brand"],
+     {"split": False, "crop": False}),
     ("IMG", "alexander-wang/spec-sheets.png",
      "Product spec sheets", ["brand"],
      {"crop": False, "split": False}),

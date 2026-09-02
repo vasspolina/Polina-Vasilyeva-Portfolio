@@ -700,7 +700,7 @@ def regions(im, split=True, crop=True, rows=False):
 
 SPARSE = 0.75          # ink density below this reads as a mark, not a photograph
 DROP = os.path.join(ROOT, "drop")   # hand-picked images, one folder per project
-DROP_LONG = 2600       # keep enough pixels for the 2400 rendition
+DROP_LONG = 3600       # a full-width page keeps up to this many pixels across
 DROP_TALL = 12000      # a page can be long; past this it is not worth the bytes
 
 

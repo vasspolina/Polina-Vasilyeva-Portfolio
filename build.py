@@ -237,7 +237,8 @@ for proj in PROJECTS:
     for item in MANIFEST[slug]:
         alt = f"{title}, {item['caption']}"
         port = is_portrait(item)
-        cls = "grid-item is-portrait" if port else "grid-item"
+        wide = item["w"] > 4 * item["h"]
+        cls = "grid-item is-portrait" if port else ("grid-item is-wide" if wide else "grid-item")
         sizes = GRID_SIZES_PORTRAIT if port else GRID_SIZES
         tiles.append(
             f'<a class="{cls}" href="projects/{slug}.html" '
