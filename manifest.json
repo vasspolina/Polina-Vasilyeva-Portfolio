@@ -3860,12 +3860,12 @@
    "tags": [
     "brand"
    ],
-   "w": 1372,
-   "h": 2384,
+   "w": 1329,
+   "h": 2363,
    "widths": [
     600,
     1200,
-    1372
+    1329
    ],
    "source": "IMG",
    "page": "alexander-wang/retail-display-trays.png"
@@ -3876,12 +3876,12 @@
    "tags": [
     "brand"
    ],
-   "w": 1342,
-   "h": 2370,
+   "w": 1329,
+   "h": 2318,
    "widths": [
     600,
     1200,
-    1342
+    1329
    ],
    "source": "IMG",
    "page": "alexander-wang/display-case.png"
@@ -6379,24 +6379,38 @@
   },
   {
    "stem": "drop02",
-   "caption": "Business cards, the studio and its partner",
+   "caption": "Business card, the front",
    "tags": [
     "web",
     "brand"
    ],
-   "w": 2400,
-   "h": 990,
+   "w": 1004,
+   "h": 650,
    "widths": [
     600,
-    1200,
-    1600,
-    2400
+    1004
    ],
    "source": "DROP",
    "page": "drop02"
   },
   {
    "stem": "drop03",
+   "caption": "Business card, the back",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 1004,
+   "h": 650,
+   "widths": [
+    600,
+    1004
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
    "caption": "Home, desktop and mobile",
    "tags": [
     "web",
@@ -6411,10 +6425,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop03"
+   "page": "drop04"
   },
   {
-   "stem": "drop04",
+   "stem": "drop05",
    "caption": "Expertise, desktop and mobile",
    "tags": [
     "web",
@@ -6429,10 +6443,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop04"
+   "page": "drop05"
   },
   {
-   "stem": "drop05",
+   "stem": "drop06",
    "caption": "Lawyers, desktop and mobile",
    "tags": [
     "web",
@@ -6447,10 +6461,10 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop05"
+   "page": "drop06"
   },
   {
-   "stem": "drop06",
+   "stem": "drop07",
    "caption": "Contact, desktop and mobile",
    "tags": [
     "web",
@@ -6465,7 +6479,7 @@
     2400
    ],
    "source": "DROP",
-   "page": "drop06"
+   "page": "drop07"
   }
  ],
  "florida-blue": [
@@ -7243,50 +7257,51 @@
  "sasha-sedelnikov": [
   {
    "stem": "drop01",
-   "caption": "See you later, the pier and the portrait",
+   "caption": "Пучки серебряного света, the poster",
    "tags": [
     "brand"
    ],
-   "w": 1644,
-   "h": 1272,
+   "w": 2400,
+   "h": 3398,
    "widths": [
     600,
     1200,
     1600,
-    1644
+    2400
    ],
    "source": "DROP",
    "page": "drop01"
   },
   {
    "stem": "drop02",
-   "caption": "See you later, water and figure",
+   "caption": "Пучки серебряного света, the poster",
    "tags": [
     "brand"
    ],
-   "w": 1624,
-   "h": 1293,
+   "w": 1826,
+   "h": 2588,
    "widths": [
     600,
     1200,
     1600,
-    1624
+    1826
    ],
    "source": "DROP",
    "page": "drop02"
   },
   {
    "stem": "drop03",
-   "caption": "See you later, the field and the fence",
+   "caption": "Пучки серебряного света, the poster",
    "tags": [
     "brand"
    ],
-   "w": 1563,
-   "h": 1206,
+   "w": 2400,
+   "h": 3398,
    "widths": [
     600,
     1200,
-    1563
+    1600,
+    2400
    ],
    "source": "DROP",
    "page": "drop03"
@@ -7310,24 +7325,24 @@
   },
   {
    "stem": "drop05",
-   "caption": "The advocates",
+   "caption": "Пучки серебряного света, the poster",
    "tags": [
     "brand"
    ],
-   "w": 1826,
-   "h": 2588,
+   "w": 2400,
+   "h": 3398,
    "widths": [
     600,
     1200,
     1600,
-    1826
+    2400
    ],
    "source": "DROP",
    "page": "drop05"
   },
   {
    "stem": "drop06",
-   "caption": "The empty house",
+   "caption": "Пучки серебряного света, the poster",
    "tags": [
     "brand"
    ],
@@ -7341,57 +7356,6 @@
    ],
    "source": "DROP",
    "page": "drop06"
-  },
-  {
-   "stem": "drop07",
-   "caption": "The driver",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 3398,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop07"
-  },
-  {
-   "stem": "drop08",
-   "caption": "Outside the advocates",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 3398,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop08"
-  },
-  {
-   "stem": "drop09",
-   "caption": "The swimmer",
-   "tags": [
-    "brand"
-   ],
-   "w": 2400,
-   "h": 3398,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400
-   ],
-   "source": "DROP",
-   "page": "drop09"
   }
  ],
  "sarah-crowner": [

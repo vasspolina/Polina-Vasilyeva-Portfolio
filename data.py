@@ -435,7 +435,9 @@ PROJECTS = [
   "piece_width": {"b003": 48, "b005": 48,
                   "b031-1": 30, "b031-2": 30, "b033": 30,
                   "b035-1": 30, "b035-2": 30},
-  "piece_crop": {"b003": (0.02, 0.088, 0.10, 0.088)},
+  "piece_crop": {"retail-display-trays": (0.006, 0.010, 0.003, 0.021),
+                 "display-case": (0.021, 0.001, 0.001, 0.009),
+                 "b003": (0.02, 0.088, 0.10, 0.088)},
   "year": "2021 to 2022",
   "cover": "b037",
   "group": "brand", "short": "Brand and packaging design",
@@ -658,8 +660,8 @@ PROJECTS = [
   "year": "2026",
   "drop_tags": ["web", "brand"],
   # Two pages, each with its phone, to a row.
-  "piece_width": {"drop03": 100, "drop04": 100, "drop05": 100,
-                  "drop06": 100},
+  "piece_width": {"drop02": 48, "drop03": 48, "drop04": 100, "drop05": 100,
+                  "drop06": 100, "drop07": 100},
   "cover": "drop01",
   "group": "product", "short": "Website and identity",
   "meta": "Bektesevic Ter Steeg Advocaten, Website and Identity",
@@ -744,11 +746,9 @@ PROJECTS = [
  },
  {
   "slug": "sasha-sedelnikov", "title": "Sasha Sedelnikov",
-  "cover": "drop04",
-  # The spreads pair off; the posters run three to a row.
-  "piece_width": {"drop01": 48, "drop02": 48, "drop03": 48,
-                  "drop04": 30, "drop05": 30, "drop06": 30,
-                  "drop07": 30, "drop08": 30, "drop09": 30},
+  "cover": "drop01",
+  # The posters run three to a row.
+  "piece_width": {"drop%02d" % n: 30 for n in range(1, 7)},
   "group": "book", "short": "Publication and show identity",
   "meta": "Sasha Sedelnikov, Publication Design and Show Identity",
   "desc": ["I designed <em>See you later</em>, a photobook by Sasha Sedelnikov held in the Garage Museum of Contemporary Art in Moscow. I paced the monochrome sequences against the colour ones and against the paper, so the images set their own rhythm.",
