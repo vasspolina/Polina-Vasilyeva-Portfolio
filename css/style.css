@@ -110,9 +110,6 @@ a:focus-visible, button:focus-visible {
 }
 .nav-name { font-weight: 300; margin-right: auto; }
 .nav-link.is-active { color: var(--accent); }
-/* The about page states the name again as its own h1; the wordmark beside it
-   would say it twice. */
-.nav:has(.nav-link.is-active[href$="about.html"]) .nav-name { display: none; }
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -455,6 +452,12 @@ a:focus-visible, button:focus-visible {
 .about-role {
   /* Set wider than the 0.01em the rest of the site uses: this one line is a
      standfirst and is meant to open up. */
+  /* It is the page's h1 now that the name has come out of the article — the
+     nav states the name, and saying it twice was the reason the wordmark
+     used to be hidden here. Weight and top margin are set explicitly so the
+     browser's own h1 styling cannot pull in a bold the type rules disallow. */
+  font-weight: 400;
+  margin-top: 0;
   font-size: 24px;
   letter-spacing: 1pt;
   color: var(--muted);

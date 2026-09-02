@@ -364,8 +364,7 @@ education = "\n".join(
 
 about = head(f"About, {data.NAME}", 0, data.ABOUT[0]) + nav(0, "about") + f"""<main id="main">
 <article class="about">
-  <h1 class="project-title">{data.NAME}</h1>
-  <p class="about-role">{data.ROLE}, {data.LOCATION}</p>
+  <h1 class="about-role">{data.ROLE}, {data.LOCATION}</h1>
   <div class="about-bio">
 {bio}
   </div>
