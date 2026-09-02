@@ -349,8 +349,10 @@ a:focus-visible, button:focus-visible {
 /* A website screenshot pairs with the next one, like a deck slide: at the
    full measure a single screenshot swallowed the page. */
 .project-images > .work-figure.is-site { flex: 0 0 calc(50% - 18px); }
-/* A piece given an explicit width sits alone on its line, centred. */
-.project-images > .work-figure.is-set { margin-left: auto; margin-right: auto; }
+/* A piece wide enough to have no company on its line is centred. Narrower
+   set widths share a line, where an auto margin would eat the leftover
+   measure and leave the gaps between them unequal. */
+.project-images > .work-figure.is-alone { margin-left: auto; margin-right: auto; }
 .project-images > .work-figure.is-deck { flex: 0 0 calc(50% - 18px); }
 /* These are sized by width, so the row-height cap must not also apply: with
    both in force the picture is squashed to fit. */

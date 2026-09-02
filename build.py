@@ -441,6 +441,12 @@ def figure(slug, item, eager=False, widths=None, show_caption=True, label=None):
     pct = (widths or {}).get(item["stem"])
     if pct:
         cls += " is-set"
+        # Centring is for a piece that really does run alone. Three 30% pieces
+        # share a line, and the auto margins that centre a lone piece would
+        # each swallow the leftover measure instead, so the gaps between them
+        # come out unequal. Only a piece too wide to have company is centred.
+        if pct > 50:
+            cls += " is-alone"
     elif "web" in item.get("tags", []) and ratio >= 1.2:
         cls += " is-site"
     elif 1.62 <= ratio <= 2.6 and "is-bleed" not in cls:
