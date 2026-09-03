@@ -648,7 +648,7 @@ for i, proj in enumerate(PROJECTS):
     figures = "\n".join(figures)
 
     desc = "\n".join(f"<p>{no_orphan(d)}</p>" for d in proj["desc"])
-    plain = proj["desc"][0].replace("<em>", "").replace("</em>", "")
+    plain = (proj["desc"][0] if proj["desc"] else proj["short"]).replace("<em>", "").replace("</em>", "")
 
     pager = f"""  <nav class="pager" aria-label="More projects">
     <a href="{prev_p["slug"]}.html"><span class="arrow">←</span>{prev_p["title"]}</a>

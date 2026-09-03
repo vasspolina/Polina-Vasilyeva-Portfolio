@@ -862,14 +862,13 @@ PROJECTS = [
   # wide but not the full width.
   "piece_width": {"drop01": 48, "drop02": 48, "drop08": 60, "drop09": 30,
                   "drop10": 32, "drop11": 32, "drop12": 32, "drop13": 32, "drop03": 34, "drop04": 34,
-                  "drop05": 34, "drop06": 34, "drop07": 34},
+                  "drop05": 31, "drop06": 31, "drop07": 34},
+  "piece_crop": {"drop02": (0.005, 0.005, 0.005, 0.005)},
   "lead": ["drop12", "drop13", "drop10", "drop11"],
   "cover": "drop10",
   "group": "book", "short": "Exhibition identity and publication",
   "meta": "Isaac Howell, Exhibition Identity and Publication",
-  "desc": ["I designed the identity and the one page publications for solo shows of the artist Isaac Soh Fujita Howell, at Public Gallery in London and at T293 in Rome. For <em>A rabid dog has no choice but to bite</em> the title circles the edge of the poster as a frame, and the painting holds the centre.",
-           "Two shows at T293 followed. <em>By order from above (and we are all dutiful citizens)</em> sets the details on overlapping black cards that lock into one another like a puzzle. <em>Malign Influence on the Information Interchange</em> rings the sheet with its own title, then runs the same sheet inverted with photographs set into the ring.",
-           "The run extends into newsprint, where the text turns with the page, and into <em>The Man Who Turned into a Wall</em>, which sequences drawings against script."],
+  "desc": ["Ongoing work for Isaac Howell: identity and publication design for his solo exhibitions."],
   "pages": [
     # Everything comes from drop/isaac-howell/: the print files carry these
     # sheets at 6142px, where the deck cuts them at 1301.
