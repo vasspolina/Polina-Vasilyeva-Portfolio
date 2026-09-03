@@ -668,8 +668,7 @@ PROJECTS = [
   "cover": "drop01",
   "group": "brand", "short": "Identity",
   "meta": "Indoor Plant Care, Identity",
-  "desc": ["Identity for Indoor Plant Care, a service that maintains and styles plants in offices and interior spaces.",
-           "Four leaves in the colours of the palette make the mark, and it sets beside the name or stands on its own. It carries onto the shirt the gardeners wear and onto the cards."],
+  "desc": ["Identity for Indoor Plant Care, a service that maintains and styles plants in offices and interior spaces."],
   "pages": [
     # Everything comes from drop/indoor-plant-care/: the marks rendered from
     # their vectors, the cards as supplied.
