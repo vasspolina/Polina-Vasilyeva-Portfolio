@@ -530,7 +530,8 @@ PROJECTS = [
   "year": "2024",
   # Emails and display units at one width, so the set reads as a set
   # rather than as pieces of different importance.
-  "piece_width": {**{f"drop{n:02d}": 23 for n in range(1, 14)},
+  "piece_width": {"drop14": 23, "drop15": 23,
+                  **{f"drop{n:02d}": 23 for n in range(1, 14)},
                   "ad-tall": 23},
   "cover": "ad-tall",
   "group": "brand", "short": "Subscription campaign design",

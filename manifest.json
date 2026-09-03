@@ -5329,6 +5329,42 @@
    ],
    "source": "DROP",
    "page": "drop13"
+  },
+  {
+   "stem": "drop14",
+   "caption": "Podcasts, the display lockup",
+   "tags": [
+    "brand"
+   ],
+   "w": 3072,
+   "h": 4066,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3072
+   ],
+   "source": "DROP",
+   "page": "drop14"
+  },
+  {
+   "stem": "drop15",
+   "caption": "Healthy Habits, the course unit",
+   "tags": [
+    "brand"
+   ],
+   "w": 2928,
+   "h": 7366,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    2928
+   ],
+   "source": "DROP",
+   "page": "drop15"
   }
  ],
  "clinique": [
