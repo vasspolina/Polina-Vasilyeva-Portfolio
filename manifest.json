@@ -7930,13 +7930,13 @@
    "tags": [
     "brand"
    ],
-   "w": 2400,
-   "h": 1350,
+   "w": 2000,
+   "h": 1125,
    "widths": [
     600,
     1200,
     1600,
-    2400
+    2000
    ],
    "source": "IMG",
    "page": "spirituallabour/charset.png"
