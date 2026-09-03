@@ -663,6 +663,7 @@ PROJECTS = [
  {
   "slug": "indoor-plant-care", "title": "Indoor Plant Care",
   "year": "2026",
+  "piece_crop": {"drop01": (0, 0.24, 0, 0.24)},
   "piece_width": {"drop01": 48, "drop02": 30, "drop03": 48,
                   "drop04": 29, "drop05": 29},
   "cover": "drop01",
