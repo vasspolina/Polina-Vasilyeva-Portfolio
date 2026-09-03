@@ -207,7 +207,7 @@ PROJECTS = [
            "–Oversaw brand application, UX, and UI for Haworth's e-commerce website.",
            "–Outcome: market repositioning, new customer acquisition, and increased sales."],
   "pages": [
-    ("B", 62, "Haworth – logo design", ["brand"], {"crop": False}),
+    ("B", 62, "Haworth – logo design", ["brand"], {"crop": False, "scale": 4.0}),
     ("E", 16, "Haworth – the logotype on white", ["brand"], {"crop": False, "split": False}),
     ("IMG", "haworth/collection-lockup.png", "Haworth Collection lockup on navy",
      ["brand"], {"crop": False}),
@@ -658,6 +658,40 @@ PROJECTS = [
     "sink": ["drop03", "drop04", "drop05"],
 "pages": [
     # Everything comes from drop/lenka-ilic/.
+  ],
+ },
+ {
+  "slug": "indoor-plant-care", "title": "Indoor Plant Care",
+  "year": "2026",
+  "piece_width": {"drop01": 48, "drop02": 30, "drop03": 48,
+                  "drop04": 29, "drop05": 29},
+  "cover": "drop01",
+  "group": "brand", "short": "Identity",
+  "meta": "Indoor Plant Care, Identity",
+  "desc": ["Identity for Indoor Plant Care, a service that maintains and styles plants in offices and interior spaces.",
+           "Four leaves in the colours of the palette make the mark, and it sets beside the name or stands on its own. It carries onto the shirt the gardeners wear and onto the cards."],
+  "pages": [
+    # Everything comes from drop/indoor-plant-care/: the marks rendered from
+    # their vectors, the cards as supplied.
+  ],
+ },
+ {
+  "slug": "van-meekren", "title": "Van Meekren Advocatuur",
+  "year": "2025",
+  # Framed like the Haworth and BTS marks: the wordmark 0.517 of the frame,
+  # centred, at one aspect, so the three read as a set.
+  "piece_crop": {"drop01": (0.1475, 0.2279, 0.1498, 0.2265)},
+  "piece_width": {"drop01": 30, "drop02": 29,
+                  "drop03": 100, "drop04": 100, "drop05": 100,
+                  "drop06": 100, "drop07": 100, "drop08": 100},
+  "cover": "drop01",
+  "group": "brand", "short": "Website and identity",
+  "meta": "Van Meekren Advocatuur, Website and Identity",
+  "desc": ["Identity and website for Van Meekren Advocatuur, a criminal law practice in the Netherlands.",
+           "The pages carry long stretches of legal writing, so the type does the work: a running measure for the argument, the practice areas and the team listed down the right, and the whole site set in two languages. Designed for the desktop and the phone."],
+  "pages": [
+    # Everything comes from drop/van-meekren/: the page captures at 5760px and
+    # the phone captures at 1170.
   ],
  },
  {

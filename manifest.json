@@ -1688,13 +1688,14 @@
    "tags": [
     "brand"
    ],
-   "w": 1751,
-   "h": 833,
+   "w": 3502,
+   "h": 1668,
    "widths": [
     600,
     1200,
     1600,
-    1751
+    2400,
+    3502
    ],
    "source": "B",
    "page": 62
@@ -8307,6 +8308,234 @@
     1200,
     1600,
     1839
+   ],
+   "source": "DROP",
+   "page": "drop05"
+  }
+ ],
+ "van-meekren": [
+  {
+   "stem": "drop01",
+   "caption": "The wordmark",
+   "tags": [
+    "brand"
+   ],
+   "w": 1965,
+   "h": 936,
+   "widths": [
+    600,
+    1200,
+    1600,
+    1965
+   ],
+   "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop02",
+   "caption": "Business card",
+   "tags": [
+    "brand"
+   ],
+   "w": 992,
+   "h": 650,
+   "widths": [
+    600,
+    992
+   ],
+   "source": "DROP",
+   "page": "drop02"
+  },
+  {
+   "stem": "drop03",
+   "caption": "Home, desktop and mobile",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 1727,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
+   "caption": "Health Law, desktop and mobile",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 1869,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "K. Janszen, desktop and mobile",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 2537,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop05"
+  },
+  {
+   "stem": "drop06",
+   "caption": "Team, desktop and mobile",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 5387,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop06"
+  },
+  {
+   "stem": "drop07",
+   "caption": "News, desktop and mobile",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 3019,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop07"
+  },
+  {
+   "stem": "drop08",
+   "caption": "Police interrogation, the article",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 5605,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop08"
+  }
+ ],
+ "indoor-plant-care": [
+  {
+   "stem": "drop01",
+   "caption": "The logotype",
+   "tags": [
+    "brand"
+   ],
+   "w": 3466,
+   "h": 1056,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3466
+   ],
+   "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop02",
+   "caption": "The mark",
+   "tags": [
+    "brand"
+   ],
+   "w": 3466,
+   "h": 1288,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3466
+   ],
+   "source": "DROP",
+   "page": "drop02"
+  },
+  {
+   "stem": "drop03",
+   "caption": "The shirt, front and back",
+   "tags": [
+    "brand"
+   ],
+   "w": 3466,
+   "h": 1288,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3466
+   ],
+   "source": "DROP",
+   "page": "drop03"
+  },
+  {
+   "stem": "drop04",
+   "caption": "Business card, the front",
+   "tags": [
+    "brand"
+   ],
+   "w": 992,
+   "h": 650,
+   "widths": [
+    600,
+    992
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
+   "caption": "Business card, the back",
+   "tags": [
+    "brand"
+   ],
+   "w": 992,
+   "h": 650,
+   "widths": [
+    600,
+    992
    ],
    "source": "DROP",
    "page": "drop05"
