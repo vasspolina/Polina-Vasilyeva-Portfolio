@@ -665,8 +665,9 @@ PROJECTS = [
   "year": "2026",
   "drop_tags": ["web", "brand"],
   # Two pages, each with its phone, to a row.
-  "piece_width": {"drop01": 100, "drop02": 29, "drop03": 29, "drop04": 100, "drop05": 100,
+  "piece_width": {"drop01": 30, "drop02": 29, "drop03": 29, "drop04": 100, "drop05": 100,
                   "drop06": 100, "drop07": 100},
+  "piece_crop": {"drop01": (0.2952, 0.3264, 0.2963, 0.3255)},
   "cover": "drop01",
   "group": "product", "short": "Website and identity",
   "meta": "Bektesevic Ter Steeg Advocaten, Website and Identity",
