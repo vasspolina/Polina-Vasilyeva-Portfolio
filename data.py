@@ -671,8 +671,8 @@ PROJECTS = [
   "meta": "Bektesevic Ter Steeg Advocaten, Website and Identity",
   # The site is designed but the copy on it is the firm's own; nothing here
   # describes the practice beyond what the pages themselves state.
-  "desc": ["I designed the website and the identity for Bektesevic Ter Steeg Advocaten, a criminal defence practice in Amsterdam. The wordmark sets the two names in a grotesque and the word <em>advocaten</em> in a serif. The pages hold that pairing. A sentence runs between the two faces, so the emphasis falls inside the line rather than on a heading above it.",
-           "Bands of pale blue and white carry the argument down the page. I set the type large enough to read at arm's length. The expertise, lawyers and contact pages take the same structure, on the desktop and on the phone."],
+  "desc": ["In collaboration with Anna Zubkova",
+           "Identity and website for Bektesevic Ter Steeg Advocaten, a criminal defence practice in Amsterdam. A serif font highlights key words in the text heavy content and shows the mission behind the practice."],
   "pages": [
     # Everything comes from drop/bts-advocaten/.
   ],
