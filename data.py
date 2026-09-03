@@ -781,6 +781,7 @@ PROJECTS = [
  },
  {
   "slug": "sasha-sedelnikov", "title": "Sasha Sedelnikov",
+  "year": "Ongoing",
   "cover": "drop01",
   # The posters run three to a row.
   "piece_width": {"drop%02d" % n: 30 for n in range(1, 7)},
