@@ -975,6 +975,24 @@
    "page": "drop64"
   },
   {
+   "stem": "drop65",
+   "caption": "Unlimited plans, the pricing grid",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 4582,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop65"
+  },
+  {
    "stem": "c003-1",
    "caption": "Ultra signage, the counter unit",
    "tags": [
@@ -7924,6 +7942,42 @@
   }
  ],
  "isaac-howell": [
+  {
+   "stem": "drop12",
+   "caption": "Audiovisual, the poster front",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 4659,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop12"
+  },
+  {
+   "stem": "drop13",
+   "caption": "Audiovisual, the poster back",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 4659,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop13"
+  },
   {
    "stem": "drop10",
    "caption": "Malign Influence, the poster",

@@ -831,9 +831,9 @@ PROJECTS = [
   # sheets are a pair and open the project, and the instruction spread runs
   # wide but not the full width.
   "piece_width": {"drop01": 48, "drop02": 48, "drop08": 60, "drop09": 30,
-                  "drop10": 40, "drop11": 40, "drop03": 34, "drop04": 34,
+                  "drop10": 40, "drop11": 40, "drop12": 40, "drop13": 40, "drop03": 34, "drop04": 34,
                   "drop05": 34, "drop06": 34, "drop07": 34},
-  "lead": ["drop10", "drop11"],
+  "lead": ["drop12", "drop13", "drop10", "drop11"],
   "cover": "drop10",
   "group": "book", "short": "Exhibition identity and publication",
   "meta": "Isaac Howell, Exhibition Identity and Publication",
