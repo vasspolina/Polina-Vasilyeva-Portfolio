@@ -266,7 +266,7 @@ a:focus-visible, button:focus-visible {
    height, so the browser can reserve the box from the width/height attributes
    before the image loads. */
 .grid-item.is-portrait img {
-  max-width: 240px;
+  max-width: 288px;
   margin: 0 auto;
 }
 .grid-item:hover img { opacity: 0.92; transition: opacity var(--dur); }
@@ -605,7 +605,8 @@ a:focus-visible, button:focus-visible {
   line-height: 1.2;
   letter-spacing: 0;
 }
-.spec-charset { margin-top: var(--space-2); }
+.spec-charset { margin-top: var(--space-2); text-align: left; }
+.spec-row { text-align: left; }
 .spec-row {
   font-family: var(--spec-face, "Dada"), sans-serif;
   font-size: clamp(28px, 6vw, 68px);
@@ -1093,4 +1094,5 @@ em, i, cite, address, dfn, var { font-style: normal; }
 /* One tile shows at its own size. The portrait cap suits a phone mockup;
    a printed sheet needs the extra third to be legible in the listing. */
 .grid-item[data-tile="verizon/i001"].is-portrait img { max-width: 312px; }
+.grid-item[data-tile="verizon/drop12"].is-portrait img { max-width: 374px; }
 
