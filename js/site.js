@@ -30,11 +30,17 @@
   if (grid) {
     var ROW = 8; // matches grid-auto-rows
     function layout() {
-      if (getComputedStyle(grid).gridAutoRows === "auto") return;
       var items = [].filter.call(
         grid.querySelectorAll(".grid-item"),
         function (i) { return !i.classList.contains("is-hidden"); }
       );
+      // A single column packs nothing, so leave the rows alone: on a phone
+      // the browser fires resize on every scroll as its bar shows and hides,
+      // and laying out every tile each time made the page stick.
+      if (getComputedStyle(grid).gridAutoRows === "auto") {
+        items.forEach(function (i) { i.style.gridRowEnd = ""; });
+        return;
+      }
       // collapse all tracks first so scrollHeight reports content height
       items.forEach(function (i) { i.style.gridRowEnd = "span 1"; });
       var heights = items.map(function (i) { return i.scrollHeight; });
@@ -47,7 +53,14 @@
       cancelAnimationFrame(pending);
       pending = requestAnimationFrame(layout);
     }
-    addEventListener("resize", schedule);
+    // Only a change of width can change the packing; a height-only resize
+    // is the mobile address bar and happens on every scroll.
+    var lastWidth = innerWidth;
+    addEventListener("resize", function () {
+      if (innerWidth === lastWidth) return;
+      lastWidth = innerWidth;
+      schedule();
+    });
     addEventListener("load", layout);
     grid.querySelectorAll("img").forEach(function (img) {
       if (img.complete) return;
