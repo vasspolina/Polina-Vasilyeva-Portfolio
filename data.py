@@ -827,13 +827,14 @@ PROJECTS = [
  {
   "slug": "isaac-howell", "title": "Isaac Howell",
   "year": "Ongoing",
-  # The posters read at a third of the measure rather than a half.
-  # The posters read at a third of the measure; the two newspaper spreads are
-  # a pair, and the instruction sheet takes a row.
-  "piece_width": {"drop01": 48, "drop02": 48, "drop08": 100, "drop09": 30,
-                  "drop10": 48, "drop11": 48, "drop03": 34, "drop04": 34,
+  # The posters read at a third of the measure; the two Malign Influence
+  # sheets are a pair and open the project, and the instruction spread runs
+  # wide but not the full width.
+  "piece_width": {"drop01": 48, "drop02": 48, "drop08": 60, "drop09": 30,
+                  "drop10": 40, "drop11": 40, "drop03": 34, "drop04": 34,
                   "drop05": 34, "drop06": 34, "drop07": 34},
-  "cover": "drop03",
+  "lead": ["drop10", "drop11"],
+  "cover": "drop10",
   "group": "book", "short": "Exhibition identity and publication",
   "meta": "Isaac Howell, Exhibition Identity and Publication",
   "desc": ["I designed the identity and the one page publications for solo shows of the artist Isaac Soh Fujita Howell, at Public Gallery in London and at T293 in Rome. For <em>A rabid dog has no choice but to bite</em> the title circles the edge of the poster as a frame, and the painting holds the centre.",

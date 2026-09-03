@@ -7925,6 +7925,42 @@
  ],
  "isaac-howell": [
   {
+   "stem": "drop10",
+   "caption": "Malign Influence, the poster",
+   "tags": [
+    "brand"
+   ],
+   "w": 2433,
+   "h": 3243,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    2433
+   ],
+   "source": "DROP",
+   "page": "drop10"
+  },
+  {
+   "stem": "drop11",
+   "caption": "Malign Influence, with photographs",
+   "tags": [
+    "brand"
+   ],
+   "w": 2433,
+   "h": 3243,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    2433
+   ],
+   "source": "DROP",
+   "page": "drop11"
+  },
+  {
    "stem": "drop01",
    "caption": "The Man Who Turned into a Wall",
    "tags": [
@@ -8077,42 +8113,6 @@
    ],
    "source": "DROP",
    "page": "drop09"
-  },
-  {
-   "stem": "drop10",
-   "caption": "Malign Influence, the poster",
-   "tags": [
-    "brand"
-   ],
-   "w": 2433,
-   "h": 3243,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400,
-    2433
-   ],
-   "source": "DROP",
-   "page": "drop10"
-  },
-  {
-   "stem": "drop11",
-   "caption": "Malign Influence, with photographs",
-   "tags": [
-    "brand"
-   ],
-   "w": 2433,
-   "h": 3243,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400,
-    2433
-   ],
-   "source": "DROP",
-   "page": "drop11"
   }
  ],
  "willow-and-wu": [
