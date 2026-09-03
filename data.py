@@ -183,20 +183,19 @@ PROJECTS = [
     # The identity opens the project, then the work, then the brand book that
   # documents it. Naming the openers keeps them ahead of the drop folder.
   "drops_first": True,
-  "lead": ["b062", "e016", "collection-lockup", "e077", "a059", "a060",
+  "lead": ["wordmark-navy", "e016", "collection-lockup", "e077", "a059", "a060",
            "social-five-screens", "b064-2", "b065-1", "b065-2", "b066",
            "b068-1", "b068-2"],
   "before_decks": ["haworth-opening-title", "haworth-motion"],
 "keep_always": ["e016", "e077"],
-  "piece_crop": {"b062": (0.310, 0.271, 0.304, 0.273),
-                 "e016": (0.0964, 0.1816, 0.3797, 0.1996),
+  "piece_crop": {"e016": (0.0964, 0.1816, 0.3797, 0.1996),
                  "collection-lockup": (0.242, 0.1955, 0.242, 0.1955)},
   # The research pages are spreads of type; two to a row keeps them
   # readable without letting one fill the measure alone.
   "piece_width": {"social-five-screens": 100,
                   "drop05": 48, "drop06": 48, "drop07": 48,
                   "a059": 48, "a060": 48, "b064-2": 30, "b065-1": 30, "b065-2": 30},
-  "cover": "b062",
+  "cover": "wordmark-navy",
   "group": "brand", "short": "Brand and online store design",
   "meta": "Haworth, with Apartamento Studios, Brand and Online Store Design",
   "desc": ["–Led the rebrand of Haworth, a leading office furniture manufacturer, developing the brand narrative, collateral, and digital strategy that repositioned the company as a premium office solutions provider rather than a furniture manufacturer.",
@@ -207,7 +206,7 @@ PROJECTS = [
            "–Oversaw brand application, UX, and UI for Haworth's e-commerce website.",
            "–Outcome: market repositioning, new customer acquisition, and increased sales."],
   "pages": [
-    ("B", 62, "Haworth – logo design", ["brand"], {"crop": False, "scale": 4.0}),
+    ("IMG", "haworth/wordmark-navy.png", "Haworth – logo design", ["brand"], {"crop": False, "split": False}),
     ("E", 16, "Haworth – the logotype on white", ["brand"], {"crop": False, "split": False}),
     ("IMG", "haworth/collection-lockup.png", "Haworth Collection lockup on navy",
      ["brand"], {"crop": False}),
@@ -683,8 +682,8 @@ PROJECTS = [
   "cover": "drop01",
   "group": "brand", "short": "Website and identity",
   "meta": "Van Meekren Advocatuur, Website and Identity",
-  "desc": ["Identity and website for Van Meekren Advocatuur, a criminal law practice in the Netherlands.",
-           "The pages carry long stretches of legal writing, so the type does the work: a running measure for the argument, the practice areas and the team listed down the right, and the whole site set in two languages. Designed for the desktop and the phone."],
+  "desc": ["In collaboration with Anna Zubkova",
+           "Identity and website for Van Meekren Advocatuur, a criminal law practice in the Netherlands."],
   "pages": [
     # Everything comes from drop/van-meekren/: the page captures at 5760px and
     # the phone captures at 1170.

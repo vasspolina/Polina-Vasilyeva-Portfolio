@@ -1683,22 +1683,22 @@
  ],
  "haworth": [
   {
-   "stem": "b062",
+   "stem": "wordmark-navy",
    "caption": "Haworth, logo design",
    "tags": [
     "brand"
    ],
-   "w": 3502,
-   "h": 1668,
+   "w": 3600,
+   "h": 1714,
    "widths": [
     600,
     1200,
     1600,
     2400,
-    3502
+    3600
    ],
-   "source": "B",
-   "page": 62
+   "source": "IMG",
+   "page": "haworth/wordmark-navy.png"
   },
   {
    "stem": "e016",
