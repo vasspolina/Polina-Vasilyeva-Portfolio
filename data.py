@@ -663,7 +663,6 @@ PROJECTS = [
  {
   "slug": "indoor-plant-care", "title": "Indoor Plant Care",
   "year": "2026",
-  "piece_crop": {"drop01": (0, 0.24, 0, 0.24)},
   "piece_width": {"drop01": 48, "drop02": 30, "drop03": 48,
                   "drop04": 29, "drop05": 29},
   "cover": "drop01",
@@ -679,10 +678,7 @@ PROJECTS = [
  {
   "slug": "van-meekren", "title": "Van Meekren Advocatuur",
   "year": "2025",
-  # Framed like the Haworth and BTS marks: the wordmark 0.517 of the frame,
-  # centred, at one aspect, so the three read as a set.
-  "piece_crop": {"drop01": (0.1475, 0.2279, 0.1498, 0.2265)},
-  "piece_width": {"drop01": 30, "drop02": 29,
+  "piece_width": {"drop01": 100, "drop02": 29,
                   "drop03": 100, "drop04": 100, "drop05": 100,
                   "drop06": 100, "drop07": 100, "drop08": 100},
   "cover": "drop01",
