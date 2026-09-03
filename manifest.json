@@ -8463,14 +8463,14 @@
    "tags": [
     "brand"
    ],
-   "w": 3466,
-   "h": 1056,
+   "w": 3600,
+   "h": 1650,
    "widths": [
     600,
     1200,
     1600,
     2400,
-    3466
+    3600
    ],
    "source": "DROP",
    "page": "drop01"
@@ -8481,14 +8481,14 @@
    "tags": [
     "brand"
    ],
-   "w": 3466,
-   "h": 1288,
+   "w": 3600,
+   "h": 2022,
    "widths": [
     600,
     1200,
     1600,
     2400,
-    3466
+    3600
    ],
    "source": "DROP",
    "page": "drop02"
@@ -8499,14 +8499,14 @@
    "tags": [
     "brand"
    ],
-   "w": 3600,
-   "h": 1338,
+   "w": 3447,
+   "h": 1932,
    "widths": [
     600,
     1200,
     1600,
     2400,
-    3600
+    3447
    ],
    "source": "DROP",
    "page": "drop03"
@@ -8540,6 +8540,24 @@
    ],
    "source": "DROP",
    "page": "drop05"
+  },
+  {
+   "stem": "drop06",
+   "caption": "indoorplantcare.de, desktop and mobile",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 6015,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop06"
   }
  ]
 }

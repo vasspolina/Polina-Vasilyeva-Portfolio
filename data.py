@@ -663,8 +663,8 @@ PROJECTS = [
  {
   "slug": "indoor-plant-care", "title": "Indoor Plant Care",
   "year": "2026",
-  "piece_width": {"drop01": 100, "drop02": 30, "drop03": 100,
-                  "drop04": 29, "drop05": 29},
+  "piece_width": {"drop01": 100, "drop02": 100, "drop03": 100,
+                  "drop04": 29, "drop05": 29, "drop06": 100},
   "cover": "drop01",
   "group": "brand", "short": "Identity",
   "meta": "Indoor Plant Care, Identity",
