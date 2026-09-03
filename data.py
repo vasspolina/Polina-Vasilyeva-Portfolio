@@ -84,7 +84,7 @@ PROJECTS = [
   "year": "2022 to 2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
-  "piece_width": {"c002-1": 70,
+  "piece_width": {"c002-1": 26, "drop13": 32,
                   "i001": 27, "drop12": 32, "drop09": 30,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
   # The logo slide carries the deck's own small header top-left; it comes
@@ -92,11 +92,11 @@ PROJECTS = [
   # Framed like Haworth's mark: the mark an eighth of the height,
   # centred, at one aspect, so the two covers read as a pair.
   "piece_crop": {"i017": (0.004, 0.0015, 0.004, 0.0015),
-                 "c002-1": (0, 0, 0.145, 0),
+                 "c002-1": (0.1044, 0.6625, 0.0760, 0.1060),
                  "a025": (0.122, 0.058, 0.130, 0.059)},
   "drops_first": True,
   "lead": ["a025", "drop06", "drop07", "drop09", "i001", "i011",
-           "c002-1"],
+           "drop65", "c002-1"],
   "before_decks": (["i0%02d" % n for n in (3, 5, 6, 7, 8, 9, 10, 11, 17, 18)]
                    + ["c003-1", "c003-2", "c004-1", "c004-2"]),
   "keep_always": ["i0%02d" % n for n in (1, 3, 5, 6, 7, 8, 9, 10, 11, 17, 18)],

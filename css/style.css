@@ -266,8 +266,8 @@ a:focus-visible, button:focus-visible {
    height, so the browser can reserve the box from the width/height attributes
    before the image loads. */
 .grid-item.is-portrait img {
-  max-width: 346px;
-  margin: 0 auto;
+  max-width: 415px;
+  margin: 0;
 }
 .grid-item:hover img { opacity: 0.92; transition: opacity var(--dur); }
 .caption {

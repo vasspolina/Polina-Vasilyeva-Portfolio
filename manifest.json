@@ -104,18 +104,33 @@
    "page": 11
   },
   {
+   "stem": "drop65",
+   "caption": "Unlimited plans, the pricing grid",
+   "tags": [
+    "brand"
+   ],
+   "w": 3600,
+   "h": 4582,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2400,
+    3600
+   ],
+   "source": "DROP",
+   "page": "drop65"
+  },
+  {
    "stem": "c002-1",
    "caption": "Printed assets for national retail",
    "tags": [
     "brand"
    ],
-   "w": 2397,
-   "h": 1044,
+   "w": 556,
+   "h": 1001,
    "widths": [
-    600,
-    1200,
-    1600,
-    2397
+    556
    ],
    "source": "C",
    "page": 2
@@ -973,24 +988,6 @@
    ],
    "source": "DROP",
    "page": "drop64"
-  },
-  {
-   "stem": "drop65",
-   "caption": "Unlimited plans, the pricing grid",
-   "tags": [
-    "brand"
-   ],
-   "w": 3600,
-   "h": 4582,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400,
-    3600
-   ],
-   "source": "DROP",
-   "page": "drop65"
   },
   {
    "stem": "c003-1",
