@@ -84,8 +84,8 @@ PROJECTS = [
   "year": "2022 to 2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
-  "piece_width": {"c002-1": 70, "drop13": 32,
-                  "i001": 27, "drop12": 32, "drop09": 30,
+  "piece_width": {"c002-1": 70, "drop08": 36, "drop13": 30,
+                  "i001": 27, "drop12": 30, "drop09": 30,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
   # The logo slide carries the deck's own small header top-left; it comes
   # off, and the same again off the foot so the mark stays centred.
@@ -741,8 +741,8 @@ PROJECTS = [
                   "drop02": 30, "drop03": 30,
                   "drop12": 30, "drop13": 30, "drop14": 30},
   "cover": "d004-1",
-  "group": "brand", "short": "Real estate marketing design",
-  "meta": "Compass, Real Estate Marketing Design",
+  "group": "brand", "short": "Brand Design for Real estate",
+  "meta": "Compass, Brand Design for Real estate",
   "desc": ["As a part of the Compass Real Estate Branding team and under the supervision of Jay Peter Salvas I oversaw the typography and design within the brand's identity, maintained consistency across the projects and designed multiple logos, digital and print collateral for real estate agents.",
            "I worked closely with the Compass marketing team to help Compass Agents to achieve the sales strategy goals through the design. I developed environmental signage for Compass agents and companies affiliated with Compass.",
            "I created print advertisement materials, magazines, brochures, business cards, door hangers. I oversaw brand application, user experience, and user interface for Compass website and email advertisement. I created digital marketing assets, social media, ad banners and email design."],
