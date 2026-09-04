@@ -84,7 +84,7 @@ PROJECTS = [
   "year": "2022 to 2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
-  "piece_width": {"c002-1": 24, "drop65": 30, "drop08": 34, "drop13": 46,
+  "piece_width": {"drop65": 30, "drop08": 34, "drop13": 46,
                   "drop01": 100, "drop02": 100, "drop03": 100, "drop04": 48, "drop05": 48,
                   "i001": 27, "drop12": 32, "drop09": 30,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
@@ -93,11 +93,10 @@ PROJECTS = [
   # Framed like Haworth's mark: the mark an eighth of the height,
   # centred, at one aspect, so the two covers read as a pair.
   "piece_crop": {"i017": (0.004, 0.0015, 0.004, 0.0015),
-                 "c002-1": (0.0917, 0.6637, 0.1982, 0.0634),
                  "a025": (0.122, 0.058, 0.130, 0.059)},
   "drops_first": True,
   "lead": ["a025", "drop06", "drop07", "drop09", "i001", "i011",
-           "c002-1", "drop65", "drop08"],
+           "drop65", "drop08"],
   "before_decks": (["i0%02d" % n for n in (3, 5, 6, 7, 8, 9, 10, 11, 17, 18)]
                    + ["c003-1", "c003-2", "c004-1", "c004-2"]),
   "keep_always": ["i0%02d" % n for n in (1, 3, 5, 6, 7, 8, 9, 10, 11, 17, 18)],
@@ -115,8 +114,6 @@ PROJECTS = [
     # wayfinding tiers, and the store as it was built and as it will be.
     # The deck's own logo slide, black ground, no footer: the cover.
     ("A", 25, "Verizon – the mark", ["brand"], {"crop": False, "split": False}),
-    ("C", 2,  "Printed assets for national retail",
-              ["brand"], {"rows": True, "keep": [1]}),
     ("C", 3,  ["Ultra signage – the counter unit",
                "The Spanish plans wall"], ["brand"],
               {"slices": [(0.024, 0.404), (0.404, 0.914)]}),
