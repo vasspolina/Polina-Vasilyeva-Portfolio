@@ -86,7 +86,7 @@ PROJECTS = [
   # sets them level, two to a row.
   "piece_width": {"c002-1": 24, "drop65": 30, "drop08": 34, "drop13": 46,
                   "drop01": 100, "drop02": 100, "drop03": 100, "drop04": 48, "drop05": 48,
-                  "i001": 27, "drop12": 46, "drop09": 30,
+                  "i001": 27, "drop12": 32, "drop09": 30,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
   # The logo slide carries the deck's own small header top-left; it comes
   # off, and the same again off the foot so the mark stays centred.
