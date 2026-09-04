@@ -224,14 +224,19 @@ PAGE_SPAN_SIZES = {
 # here under-declares a wide cover and the browser fetches a rendition too
 # small for it, which is what made the landscape covers soft.
 OV_H = {"desktop": 456, "tablet": 336, "phone": 252}
+# Cards whose frame the stylesheet makes taller from 768px up
+# (css .ov-card[href$=...] .ov-frame): the hint has to match, or the browser
+# sizes the image to the shorter frame and the taller one stays empty.
+OV_FRAME_SCALE = {"isaac-howell": 1.3}
 ROW_H = 620          # matches --row-h: the common height a row of pieces takes
 
 
-def ov_sizes(item):
+def ov_sizes(item, slug):
     r = item["w"] / item["h"]
+    k = OV_FRAME_SCALE.get(slug, 1)
     return (f'(max-width: 599px) {round(OV_H["phone"] * r)}px, '
-            f'(max-width: 1023px) {round(OV_H["tablet"] * r)}px, '
-            f'{round(OV_H["desktop"] * r)}px')
+            f'(max-width: 1023px) {round(OV_H["tablet"] * r * k)}px, '
+            f'{round(OV_H["desktop"] * r * k)}px')
 
 
 # ---------------------------------------------------------------- index
@@ -291,7 +296,7 @@ for key, label in data.GROUPS:
             f'    <a class="ov-card" href="projects/{p["slug"]}.html" '
             f'data-tags="{",".join(keys)}">\n'
             f'      <span class="ov-frame">'
-            f'{picture(p["slug"], cover, p["title"], 0, ov_sizes(cover), eager)}</span>\n'
+            f'{picture(p["slug"], cover, p["title"], 0, ov_sizes(cover, p["slug"]), eager)}</span>\n'
             f'      <span class="ov-name">{p["title"]}</span>\n'
             f'      <span class="ov-short">{p["short"]}</span>\n'
             f'      <span class="ov-tags">{chips}</span>\n'

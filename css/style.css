@@ -675,6 +675,11 @@ a:focus-visible, button:focus-visible {
   display: block;
 }
 .ov-card:hover .ov-frame img { opacity: 0.92; transition: opacity var(--dur); }
+/* An A2 poster reads bigger than a book: the Isaac Howell cover gets a
+   taller frame, so it is 30% wider than the other portrait covers. */
+@media (min-width: 768px) {
+  .ov-card[href$="isaac-howell.html"] .ov-frame { height: calc(var(--ov-h) * 1.3); }
+}
 .ov-name {
   display: block;
   font-size: 24px;
