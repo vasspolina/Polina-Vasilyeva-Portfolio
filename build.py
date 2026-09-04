@@ -203,7 +203,11 @@ def is_portrait(item):
 #   span-4    = content                 = 100vw - 72px
 #   index col = (content - 36) / 2      = (100vw - 108px) / 2
 GRID_SIZES = "(max-width: 767px) 100vw, calc((100vw - 108px) / 2)"
-GRID_SIZES_PORTRAIT = "(max-width: 767px) 62vw, 300px"
+# Portrait tiles cap at 415px (css .grid-item.is-portrait img); a few carry a
+# per-tile cap in the stylesheet, mirrored here so the srcset hint matches.
+PORTRAIT_TILE_PX = {"verizon/i001": 312, "verizon/drop12": 374, "isaac-howell/drop10": 913}
+def portrait_sizes(key):
+    return f"(max-width: 767px) 62vw, {PORTRAIT_TILE_PX.get(key, 415)}px"
 # Twelve columns with a 36px gutter: a cell of n columns measures
 #   n/12 of (100vw - 72px - 11*36) plus (n-1) gutters.
 PAGE_SPAN_SIZES = {
@@ -241,7 +245,7 @@ for proj in PROJECTS:
         port = is_portrait(item)
         wide = item["w"] > 4 * item["h"]
         cls = "grid-item is-portrait" if port else ("grid-item is-wide" if wide else "grid-item")
-        sizes = GRID_SIZES_PORTRAIT if port else GRID_SIZES
+        sizes = portrait_sizes(f"{slug}/{item['stem']}") if port else GRID_SIZES
         tiles.append(
             f'<a class="{cls}" href="projects/{slug}.html" '
             f'data-tile="{slug}/{item["stem"]}" '

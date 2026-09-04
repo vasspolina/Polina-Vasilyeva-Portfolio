@@ -664,7 +664,7 @@ a:focus-visible, button:focus-visible {
 .ov-frame {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: var(--ov-h);
 }
 .ov-frame img {
