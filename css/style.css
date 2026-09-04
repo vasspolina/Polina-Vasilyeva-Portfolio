@@ -252,7 +252,7 @@ a:focus-visible, button:focus-visible {
 }
 .grid-item {
   display: block;
-  padding-bottom: calc(var(--space-3) + 10px);
+  padding-bottom: 12px; /* the gap under a caption; the 8px row adds 0-7px */
 }
 .grid-item.is-hidden { display: none; }
 .grid-item.is-wide { grid-column: 1 / -1; }

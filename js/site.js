@@ -41,9 +41,13 @@
         items.forEach(function (i) { i.style.gridRowEnd = ""; });
         return;
       }
-      // collapse all tracks first so scrollHeight reports content height
+      // collapse all tracks first so scrollHeight reports content height.
+      // scrollHeight leaves out the bottom padding, so add it back or the
+      // gap under a caption is only the rounding slack.
       items.forEach(function (i) { i.style.gridRowEnd = "span 1"; });
-      var heights = items.map(function (i) { return i.scrollHeight; });
+      var heights = items.map(function (i) {
+        return i.scrollHeight + parseFloat(getComputedStyle(i).paddingBottom);
+      });
       items.forEach(function (i, k) {
         i.style.gridRowEnd = "span " + Math.ceil(heights[k] / ROW);
       });
