@@ -84,7 +84,7 @@ PROJECTS = [
   "year": "2022 to 2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
-  "piece_width": {"drop65": 30, "drop08": 34, "drop13": 46,
+  "piece_width": {"drop65": 30, "drop08": 48, "drop13": 46,
                   "drop01": 100, "drop02": 100, "drop03": 100, "drop04": 48, "drop05": 48,
                   "i001": 27, "drop12": 32, "drop09": 30,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
@@ -691,8 +691,8 @@ PROJECTS = [
   # Two pages, each with its phone, to a row.
   "piece_width": {"drop01": 100, "drop02": 100, "drop03": 29, "drop04": 29, "drop05": 100, "drop06": 100,
                   "drop07": 100, "drop08": 100},
-  "index_only": ["drop02"],
-  "page_only": ["drop01"],
+  "index_only": ["drop01"],
+  "page_only": ["drop02"],
   "cover": "drop01",
   "group": "product", "short": "Website and identity",
   "meta": "Bektesevic Ter Steeg Advocaten, Website and Identity",
