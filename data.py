@@ -432,13 +432,11 @@ PROJECTS = [
   "slug": "alexander-wang", "title": "Alexander Wang",
   # The lockup alone: the slide's own caption line sits below it.
   # The lockup and the mark it is built from, side by side.
-  "piece_width": {"classic-briefs-bag": 58,
-                  "drop12": 30, "drop13": 30, "drop14": 30,
+  "piece_width": {"drop12": 30, "drop13": 30, "drop14": 30,
                   "b003": 48, "b005": 48,
                   "b031-1": 30, "b031-2": 30, "b033": 30,
                   "b035-1": 30, "b035-2": 30},
-  "piece_crop": {"classic-briefs-bag": (0.1570, 0.2807, 0.1629, 0.2286),
-                 "retail-display-trays": (0.006, 0.010, 0.003, 0.021),
+  "piece_crop": {"retail-display-trays": (0.006, 0.010, 0.003, 0.021),
                  "display-case": (0.021, 0.001, 0.001, 0.009),
                  "b003": (0.02, 0.088, 0.10, 0.088)},
   "year": "2021 to 2022",
@@ -452,8 +450,6 @@ PROJECTS = [
   "pages": [
     ("B", 3,  "bodywear – brand lockup", ["brand"], {"crop": False}),
     ("B", 5,  "The a mark", ["brand"], {"pad": 0.14}),
-    ("IMG", "alexander-wang/classic-briefs-bag.jpg", "Packaging, the Classic Briefs bag", ["brand"],
-     {"split": False, "crop": False}),
     ("IMG", "alexander-wang/spec-sheets.png",
      "Product spec sheets", ["brand"],
      {"crop": False, "split": False}),
@@ -698,10 +694,10 @@ PROJECTS = [
   "year": "2026",
   "drop_tags": ["web", "brand"],
   # Two pages, each with its phone, to a row.
-  "piece_width": {"drop02": 100, "drop03": 29, "drop04": 29, "drop05": 100, "drop06": 100,
+  "piece_width": {"drop01": 100, "drop02": 100, "drop03": 29, "drop04": 29, "drop05": 100, "drop06": 100,
                   "drop07": 100, "drop08": 100},
-  "index_only": ["drop01"],
-  "page_only": ["drop02"],
+  "index_only": ["drop02"],
+  "page_only": ["drop01"],
   "cover": "drop01",
   "group": "product", "short": "Website and identity",
   "meta": "Bektesevic Ter Steeg Advocaten, Website and Identity",

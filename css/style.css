@@ -1095,5 +1095,5 @@ em, i, cite, address, dfn, var { font-style: normal; }
    a printed sheet needs the extra third to be legible in the listing. */
 .grid-item[data-tile="verizon/i001"].is-portrait img { max-width: 312px; }
 .grid-item[data-tile="verizon/drop12"].is-portrait img { max-width: 374px; }
-.grid-item[data-tile="isaac-howell/drop10"].is-portrait img { max-width: 540px; }
+.grid-item[data-tile="isaac-howell/drop10"].is-portrait img { max-width: 702px; }
 
