@@ -663,7 +663,7 @@ a:focus-visible, button:focus-visible {
    size — the same cover showing a different crop on a phone and a laptop. */
 .ov-frame {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-start;
   height: var(--ov-h);
 }
