@@ -76,7 +76,7 @@ a:not([class]) {
   /* Below the descenders, not through them, and unbroken: skip-ink would
      notch the line around every p and g rather than clearing them. */
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 1.5px;
+  text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
 }
 a:hover { color: var(--accent); }
@@ -200,7 +200,7 @@ a:focus-visible, button:focus-visible {
 .intro-note a {
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 1.5px;
+  text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
 }
 
@@ -504,7 +504,7 @@ a:focus-visible, button:focus-visible {
 .about-list a:hover {
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 1.5px;
+  text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
 }
 
