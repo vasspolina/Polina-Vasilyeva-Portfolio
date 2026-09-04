@@ -92,7 +92,7 @@ PROJECTS = [
   # Framed like Haworth's mark: the mark an eighth of the height,
   # centred, at one aspect, so the two covers read as a pair.
   "piece_crop": {"i017": (0.004, 0.0015, 0.004, 0.0015),
-                 "c002-1": (0.0942, 0.6650, 0.2000, 0.1039),
+                 "c002-1": (0.0942, 0.6650, 0.2000, 0.1085),
                  "a025": (0.122, 0.058, 0.130, 0.059)},
   "drops_first": True,
   "lead": ["a025", "drop06", "drop07", "drop09", "i001", "i011",
