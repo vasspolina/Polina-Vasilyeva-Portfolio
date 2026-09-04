@@ -532,7 +532,7 @@ PROJECTS = [
   "cover": "ad-tall",
   "group": "brand", "short": "Subscription campaign design",
   "meta": "The Wall Street Journal, Subscription Campaign Design",
-  "desc": ["Designed the email stage of the subscription marketing funnel, working with marketing representative to develop the content for each email. I drew on The Wall Street Journal’s reporting and podcasts to suggest subjects. Podcast titles became subject lines, with each show assigned its own color. Subscription prices were treated as a central visual element rather than supporting information. The emails were set in Escrow, the Journal’s own typeface."],
+  "desc": ["Designed the email stage of the subscription marketing funnel, working with a marketing representative to develop the content for each email. I drew on The Wall Street Journal’s reporting and podcasts to suggest subjects. Podcast titles became subject lines, with each show assigned its own color. Subscription prices were treated as central visual elements rather than supporting information. The emails were set in Escrow, the Journal’s own typeface."],
   "pages": [
     ("IMG", "wsj/ad-tall.png", "Make Art Feuds Your Business – tall unit",
      ["brand"], {"crop": False}),
