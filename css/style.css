@@ -252,7 +252,7 @@ a:focus-visible, button:focus-visible {
 }
 .grid-item {
   display: block;
-  padding-bottom: var(--space-3);
+  padding-bottom: calc(var(--space-3) + 10px);
 }
 .grid-item.is-hidden { display: none; }
 .grid-item.is-wide { grid-column: 1 / -1; }
@@ -1095,4 +1095,5 @@ em, i, cite, address, dfn, var { font-style: normal; }
    a printed sheet needs the extra third to be legible in the listing. */
 .grid-item[data-tile="verizon/i001"].is-portrait img { max-width: 312px; }
 .grid-item[data-tile="verizon/drop12"].is-portrait img { max-width: 374px; }
+.grid-item[data-tile="isaac-howell/drop10"].is-portrait img { max-width: 540px; }
 

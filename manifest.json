@@ -104,6 +104,20 @@
    "page": 11
   },
   {
+   "stem": "c002-1",
+   "caption": "Printed assets for national retail",
+   "tags": [
+    "brand"
+   ],
+   "w": 555,
+   "h": 862,
+   "widths": [
+    555
+   ],
+   "source": "C",
+   "page": 2
+  },
+  {
    "stem": "drop65",
    "caption": "Unlimited plans, the pricing grid",
    "tags": [
@@ -122,21 +136,22 @@
    "page": "drop65"
   },
   {
-   "stem": "c002-1",
-   "caption": "Printed assets for national retail",
+   "stem": "drop08",
+   "caption": "Voice assistant states, idle to error",
    "tags": [
     "brand"
    ],
-   "w": 2397,
-   "h": 1044,
+   "w": 3132,
+   "h": 1774,
    "widths": [
     600,
     1200,
     1600,
-    2397
+    2400,
+    3132
    ],
-   "source": "C",
-   "page": 2
+   "source": "DROP",
+   "page": "drop08"
   },
   {
    "stem": "drop01",
@@ -227,24 +242,6 @@
    ],
    "source": "DROP",
    "page": "drop05"
-  },
-  {
-   "stem": "drop08",
-   "caption": "Voice assistant states, idle to error",
-   "tags": [
-    "brand"
-   ],
-   "w": 3132,
-   "h": 1774,
-   "widths": [
-    600,
-    1200,
-    1600,
-    2400,
-    3132
-   ],
-   "source": "DROP",
-   "page": "drop08"
   },
   {
    "stem": "drop12",
@@ -6601,6 +6598,24 @@
  "bts-advocaten": [
   {
    "stem": "drop01",
+   "caption": "The wordmark, small",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 2228,
+   "h": 904,
+   "widths": [
+    600,
+    1200,
+    1600,
+    2228
+   ],
+   "source": "DROP",
+   "page": "drop01"
+  },
+  {
+   "stem": "drop02",
    "caption": "The wordmark",
    "tags": [
     "web",
@@ -6615,27 +6630,11 @@
     2325
    ],
    "source": "DROP",
-   "page": "drop01"
-  },
-  {
-   "stem": "drop02",
-   "caption": "Business card, the front",
-   "tags": [
-    "web",
-    "brand"
-   ],
-   "w": 1004,
-   "h": 650,
-   "widths": [
-    600,
-    1004
-   ],
-   "source": "DROP",
    "page": "drop02"
   },
   {
    "stem": "drop03",
-   "caption": "Business card, the back",
+   "caption": "Business card, the front",
    "tags": [
     "web",
     "brand"
@@ -6651,6 +6650,22 @@
   },
   {
    "stem": "drop04",
+   "caption": "Business card, the back",
+   "tags": [
+    "web",
+    "brand"
+   ],
+   "w": 1004,
+   "h": 650,
+   "widths": [
+    600,
+    1004
+   ],
+   "source": "DROP",
+   "page": "drop04"
+  },
+  {
+   "stem": "drop05",
    "caption": "Home, desktop and mobile",
    "tags": [
     "web",
@@ -6666,10 +6681,10 @@
     2702
    ],
    "source": "DROP",
-   "page": "drop04"
+   "page": "drop05"
   },
   {
-   "stem": "drop05",
+   "stem": "drop06",
    "caption": "Expertise, desktop and mobile",
    "tags": [
     "web",
@@ -6685,10 +6700,10 @@
     2702
    ],
    "source": "DROP",
-   "page": "drop05"
+   "page": "drop06"
   },
   {
-   "stem": "drop06",
+   "stem": "drop07",
    "caption": "Lawyers, desktop and mobile",
    "tags": [
     "web",
@@ -6704,10 +6719,10 @@
     2702
    ],
    "source": "DROP",
-   "page": "drop06"
+   "page": "drop07"
   },
   {
-   "stem": "drop07",
+   "stem": "drop08",
    "caption": "Contact, desktop and mobile",
    "tags": [
     "web",
@@ -6723,7 +6738,7 @@
     2702
    ],
    "source": "DROP",
-   "page": "drop07"
+   "page": "drop08"
   }
  ],
  "florida-blue": [

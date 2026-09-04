@@ -235,6 +235,8 @@ tiles = []
 for proj in PROJECTS:
     slug, title = proj["slug"], proj["title"]
     for item in MANIFEST[slug]:
+        if item["stem"] in (proj.get("page_only") or ()):
+            continue
         alt = f"{title}, {item['caption']}"
         port = is_portrait(item)
         wide = item["w"] > 4 * item["h"]
@@ -623,7 +625,7 @@ for i, proj in enumerate(PROJECTS):
     prev_p = PROJECTS[i - 1]
     next_p = PROJECTS[(i + 1) % len(PROJECTS)]
 
-    items = MANIFEST[slug]
+    items = [i for i in MANIFEST[slug] if i["stem"] not in (proj.get("index_only") or ())]
     # A slide that split into several crops shares one caption across all of
     # them (see ALT_SUFFIX, grouped the same way, by caption within the
     # project) — show it once, on the first crop, not once per crop.

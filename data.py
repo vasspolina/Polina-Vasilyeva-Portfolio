@@ -84,7 +84,7 @@ PROJECTS = [
   "year": "2022 to 2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
-  "piece_width": {"c002-1": 70, "drop08": 34, "drop13": 29,
+  "piece_width": {"c002-1": 26, "drop08": 34, "drop13": 29,
                   "i001": 27, "drop12": 29, "drop09": 30,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
   # The logo slide carries the deck's own small header top-left; it comes
@@ -92,11 +92,11 @@ PROJECTS = [
   # Framed like Haworth's mark: the mark an eighth of the height,
   # centred, at one aspect, so the two covers read as a pair.
   "piece_crop": {"i017": (0.004, 0.0015, 0.004, 0.0015),
-                 "c002-1": (0, 0, 0.145, 0),
+                 "c002-1": (0.0942, 0.6650, 0.2000, 0.1039),
                  "a025": (0.122, 0.058, 0.130, 0.059)},
   "drops_first": True,
   "lead": ["a025", "drop06", "drop07", "drop09", "i001", "i011",
-           "drop65", "c002-1"],
+           "c002-1", "drop65", "drop08"],
   "before_decks": (["i0%02d" % n for n in (3, 5, 6, 7, 8, 9, 10, 11, 17, 18)]
                    + ["c003-1", "c003-2", "c004-1", "c004-2"]),
   "keep_always": ["i0%02d" % n for n in (1, 3, 5, 6, 7, 8, 9, 10, 11, 17, 18)],
@@ -697,8 +697,10 @@ PROJECTS = [
   "year": "2026",
   "drop_tags": ["web", "brand"],
   # Two pages, each with its phone, to a row.
-  "piece_width": {"drop01": 100, "drop02": 29, "drop03": 29, "drop04": 100, "drop05": 100,
-                  "drop06": 100, "drop07": 100},
+  "piece_width": {"drop02": 100, "drop03": 29, "drop04": 29, "drop05": 100, "drop06": 100,
+                  "drop07": 100, "drop08": 100},
+  "index_only": ["drop01"],
+  "page_only": ["drop02"],
   "cover": "drop01",
   "group": "product", "short": "Website and identity",
   "meta": "Bektesevic Ter Steeg Advocaten, Website and Identity",
