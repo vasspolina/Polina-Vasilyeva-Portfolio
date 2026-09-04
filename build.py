@@ -122,7 +122,11 @@ def head(title, depth, desc):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{esc(desc)}">
+<link rel="icon" href="{pre}favicon.ico?v={CSS_V}" sizes="32x32">
 <link rel="icon" href="{pre}favicon.svg?v={CSS_V}" type="image/svg+xml">
+<link rel="icon" href="{pre}favicon-32.png?v={CSS_V}" type="image/png" sizes="32x32">
+<link rel="icon" href="{pre}favicon-192.png?v={CSS_V}" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="{pre}apple-touch-icon.png?v={CSS_V}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
