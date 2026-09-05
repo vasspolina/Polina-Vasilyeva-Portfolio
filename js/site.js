@@ -5,7 +5,7 @@
   function currentDark() {
     var t = document.documentElement.dataset.theme;
     if (t) return t === "dark";
-    return matchMedia("(prefers-color-scheme: dark)").matches;
+    return true; // the site lands dark until the visitor flips it
   }
   function reflect() {
     if (toggle) {
@@ -19,7 +19,7 @@
     toggle.addEventListener("click", function () {
       var next = currentDark() ? "light" : "dark";
       document.documentElement.dataset.theme = next;
-      localStorage.setItem("theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
       reflect();
     });
     reflect();

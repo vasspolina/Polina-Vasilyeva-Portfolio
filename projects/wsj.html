@@ -18,7 +18,7 @@
 <link rel="preload" href="../fonts/PPTelegraf-Regular.otf" as="font" type="font/otf" crossorigin>
 <link rel="stylesheet" href="../css/style.css?v=1788533936">
 <script>
-(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;})();
+(function(){var t=null;try{t=localStorage.getItem('theme');}catch(e){}document.documentElement.dataset.theme=(t==='light'||t==='dark')?t:'dark';})();
 </script>
 </head>
 <body>
@@ -119,6 +119,6 @@
      <a href="https://www.linkedin.com/in/polina-vasilyeva-265aa031/" rel="me noopener">LinkedIn</a></p>
   <p class="footer-copy">New York / Madrid · © 2026 Polina Vasilyeva</p>
 </footer>
-<script src="../js/site.js?v=1788533897"></script>
+<script src="../js/site.js?v=1788603968"></script>
 </body>
 </html>

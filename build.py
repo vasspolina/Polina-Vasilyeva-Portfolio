@@ -135,7 +135,7 @@ def head(title, depth, desc):
 <link rel="preload" href="{pre}fonts/PPTelegraf-Regular.otf" as="font" type="font/otf" crossorigin>
 <link rel="stylesheet" href="{pre}css/style.css?v={CSS_V}">
 <script>
-(function(){{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}})();
+(function(){{var t=null;try{{t=localStorage.getItem('theme');}}catch(e){{}}document.documentElement.dataset.theme=(t==='light'||t==='dark')?t:'dark';}})();
 </script>
 </head>
 <body>
