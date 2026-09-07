@@ -59,7 +59,7 @@ SOURCES = {
 }
 
 FILTERS = [
-    ("all", "all"),
+    ("all", "all projects"),
     ("web", "web"),
     ("mobile", "mobile"),
     ("ecommerce", "ecommerce"),
