@@ -320,7 +320,7 @@ rows = []
 for p in PROJECTS:
     got = {t for it in MANIFEST[p["slug"]] for t in it["tags"]}
     keys = [k for k, _ in data.FILTERS if k != "all" and k in got]
-    labels = ", ".join(dict(data.FILTERS)[k] for k in keys)
+    labels = ", ".join(badge(dict(data.FILTERS)[k]) for k in keys)
     rows.append(
         f'  <a class="idx-row" href="projects/{p["slug"]}.html" '
         f'data-tags="{",".join(keys)}">\n'

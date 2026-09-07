@@ -225,7 +225,7 @@ a:focus-visible, button:focus-visible {
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 18px;
 }
 /* A pill rather than a word in a row: the set reads as one control, and the
    chosen one is filled instead of merely recoloured, so it is legible without
@@ -245,7 +245,7 @@ a:focus-visible, button:focus-visible {
   line-height: 1.2;
   letter-spacing: 0.4pt;
   cursor: pointer;
-  padding: 2px 6px;
+  padding: 1px 6px;
   transition: background var(--dur), color var(--dur);
 }
 
@@ -315,7 +315,7 @@ a:focus-visible, button:focus-visible {
   .nav { font-size: 18px; gap: var(--space-2); }
   .theme-toggle { font-size: 18px; }
   .intro { font-size: 24px; }
-  .filter { font-size: 18px; padding: 2px 6px; }
+  .filter { font-size: 18px; padding: 1px 6px; }
   .caption { font-size: 16px; }
   .grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
   .grid-item.is-portrait img { max-width: 50%; }
@@ -1048,7 +1048,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .index-view { margin-bottom: var(--space-4); }
 .idx-head, .idx-row {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 9fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 9fr) max-content; /* the year never wraps */
   gap: var(--space-3);
   align-items: baseline;
   padding: var(--space-2) 0;
@@ -1069,7 +1069,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .idx-row:hover .idx-work, .idx-row:hover .idx-year { color: var(--accent); }
 .idx-name { font-size: 36px; letter-spacing: 0.4pt; }
 .idx-work { font-size: 36px; color: var(--muted); letter-spacing: 0.4pt; }
-.idx-year { font-size: 36px; color: var(--muted); letter-spacing: 0.4pt; text-align: right; }
+.idx-year { font-size: 36px; color: var(--muted); letter-spacing: 0.4pt; text-align: right; white-space: nowrap; }
 .idx-row.is-hidden { display: none; }
 
 @media (max-width: 767px) {
