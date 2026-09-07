@@ -254,7 +254,10 @@ a:focus-visible, button:focus-visible {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 36px;
-  grid-auto-rows: 1px;
+  /* True rows, not masonry: two tiles that share a row start on the same
+     line, whatever came before them. The script stands down on auto rows. */
+  grid-auto-rows: auto;
+  align-items: start;
 }
 .grid-item {
   display: block;
@@ -1152,7 +1155,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
 
 /* One tile shows at its own size. The portrait cap suits a phone mockup;
    a printed sheet needs the extra third to be legible in the listing. */
-.grid-item[data-tile="verizon/i001"].is-portrait img { max-width: 312px; }
+.grid-item[data-tile="verizon/i001"].is-portrait img { max-width: 406px; }
 .grid-item[data-tile="verizon/drop12"].is-portrait img { max-width: 374px; }
 .grid-item[data-tile="isaac-howell/drop10"].is-portrait img { max-width: 913px; }
 .grid-item[data-tile="isaac-howell/drop10"] { grid-column: 1 / -1; }

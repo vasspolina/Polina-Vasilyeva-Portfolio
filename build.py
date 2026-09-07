@@ -210,7 +210,7 @@ GRID_SIZES = "(max-width: 767px) 100vw, calc((100vw - 108px) / 2)"
 # Portrait tiles cap at 415px (css .grid-item.is-portrait img); a few carry a
 # per-tile cap in the stylesheet, mirrored here so the srcset hint matches.
 WIDE_TILES = {"willow-and-wu/b100"}   # landscape tiles the stylesheet spans across both columns
-PORTRAIT_TILE_PX = {"verizon/i001": 312, "verizon/drop12": 374, "isaac-howell/drop10": 913}
+PORTRAIT_TILE_PX = {"verizon/i001": 406, "verizon/drop12": 374, "isaac-howell/drop10": 913}
 def portrait_sizes(key):
     return f"(max-width: 767px) 62vw, {PORTRAIT_TILE_PX.get(key, 415)}px"
 # Twelve columns with a 36px gutter: a cell of n columns measures
