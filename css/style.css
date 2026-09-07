@@ -9,45 +9,48 @@
   font-display: swap;
 }
 :root {
-  --bg: #e3e2dd;
+  --bg: #f4f4f4;     /* Carbon Gray 10 */
   --fg: #000000;
-  --muted: #236237;
-  --accent: #103fca;
+  --muted: #198038;  /* Carbon Green 60 */
+  --view: #198038;   /* Carbon Green 60: the Gallery / Index switch */
+  --accent: #0f62fe; /* Carbon Blue 60 */
   --hairline: #b4654a;   /* terracotta, the 1px rules */
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 32px;
   --space-4: 64px;
   --rule: #4a3428;   /* the brown the section rules and headings are set in */
-  --chip: #d5d4ce;   /* the ground a filter or tag pill sits on */
+  --chip: #e0e0e0;   /* Carbon Gray 20: the ground a filter or tag pill sits on */
   --ov-h: 456px;      /* every overview cover is shown at this height */
   --row-h: 620px;    /* the common height a row of pieces is set to */
   --page-pad: 36px;   /* matches the 36px margin measured on the reference at 1440 */
   --dur: 160ms;
-  --mobile-nav: #a71dba;
+  --mobile-nav: #8a3ffc; /* Carbon Purple 60 */
 }
 :root:not([data-theme="light"]) {
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #14232a;
+    --bg: #161616;     /* Carbon Gray 100 */
     --fg: #f2f2f2;
-    --muted: #71cc8d;
-    --accent: #62a7f9;
+    --muted: #42be65;  /* Carbon Green 40 */
+    --view: #42be65;   /* Carbon Green 40 */
+    --accent: #78a9ff; /* Carbon Blue 40 */
     --hairline: #c47a5c;
     --rule: #f2f2f2;
-    --chip: #22343d;
+    --chip: #262626;   /* Carbon Gray 90 */
   }
 }
 :root[data-theme="dark"] {
-  --bg: #14232a;
+  --bg: #161616;
   --fg: #f2f2f2;
-  --muted: #71cc8d;
-  --accent: #62a7f9;
+  --muted: #42be65;
+  --view: #42be65;
+  --accent: #78a9ff;
   --hairline: #c47a5c;
   --rule: #f2f2f2;
-  --chip: #22343d;
+  --chip: #262626;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -681,7 +684,8 @@ a:focus-visible, button:focus-visible {
 /* An A2 poster reads bigger than a book: the Isaac Howell cover gets a
    taller frame, so it is 30% wider than the other portrait covers. */
 @media (min-width: 768px) {
-  .ov-card[href$="isaac-howell.html"] .ov-frame { height: calc(var(--ov-h) * 1.3); }
+  .ov-card[href$="isaac-howell.html"] .ov-frame,
+  .ov-card[href$="sasha-sedelnikov.html"] .ov-frame { height: calc(var(--ov-h) * 1.3); }
 }
 .ov-name {
   display: block;
@@ -724,9 +728,9 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 1px solid #8ff681;
+  border: 1px solid #198038;
   border-radius: 8px;
-  color: #227038;
+  color: #198038;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0.4pt;
@@ -837,9 +841,9 @@ em, i, cite, address, dfn, var { font-style: normal; }
   :root:not([data-theme="light"]) .filter[data-filter="social"] { background: transparent; border: 1px solid #ff8389; color: #ff8389; }
 }
 
-:root[data-theme="dark"] { --mobile-nav: #d457e5; }
+:root[data-theme="dark"] { --mobile-nav: #a56eff; } /* Carbon Purple 40 */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --mobile-nav: #d457e5; }
+  :root:not([data-theme="light"]) { --mobile-nav: #a56eff; }
 }
 :root[data-theme="dark"] .filter[data-filter="all"] { background: transparent; border: 1px solid #78a9ff; color: #78a9ff; }
 :root[data-theme="dark"] .filter[data-filter="web"] { background: transparent; border: 1px solid #42be65; color: #42be65; }
@@ -962,9 +966,9 @@ em, i, cite, address, dfn, var { font-style: normal; }
   appearance: none;
   -webkit-appearance: none;
   background: transparent;
-  border: 2px solid var(--muted);
+  border: 2px solid var(--view);
   border-radius: 999px;
-  color: var(--muted);
+  color: var(--view);
   font-family: inherit;
   font-size: 18px;
   font-weight: 300;
@@ -973,7 +977,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
   padding: 4px 16px;
   cursor: pointer;
 }
-.view.is-on { background: var(--muted); color: var(--bg); }
+.view.is-on { background: var(--view); color: var(--bg); }
 
 .index-view { margin-bottom: var(--space-4); }
 .idx-head, .idx-row {
@@ -1016,9 +1020,9 @@ em, i, cite, address, dfn, var { font-style: normal; }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .ov-tag { color: #8ff681; }
+  :root:not([data-theme="light"]) .ov-tag { color: #42be65; border-color: #42be65; }
 }
-:root[data-theme="dark"] .ov-tag { color: #8ff681; }
+:root[data-theme="dark"] .ov-tag { color: #42be65; border-color: #42be65; }
 
 /* ---- narrow screens: one column, and the index in place of the filters ---- */
 @media (max-width: 767px) {
