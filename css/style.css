@@ -754,6 +754,19 @@ a:focus-visible, button:focus-visible {
 /* ---- Light for reading, Medium for naming ---- */
 /* One weight. Medium is not used. */
 h1, h2, h3, h4, h5, h6, .ov-name { font-weight: 300; }
+/* Light text on a dark ground renders heavier under subpixel smoothing on
+   macOS, so the Light cut read like Regular in dark mode. Grayscale
+   antialiasing keeps it the same thin face. */
+:root[data-theme="dark"] body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
 strong, b { font-weight: inherit; }
 em, i, cite, address, dfn, var { font-style: normal; }
 
