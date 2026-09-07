@@ -82,7 +82,7 @@ a:not([class]) {
   /* Below the descenders, not through them, and unbroken: skip-ink would
      notch the line around every p and g rather than clearing them. */
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.9px;
+  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
   text-decoration-skip-ink: none;
 }
 a:hover { color: var(--accent); }
@@ -206,7 +206,7 @@ a:focus-visible, button:focus-visible {
 .intro-note a {
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.9px;
+  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
   text-decoration-skip-ink: none;
 }
 
@@ -285,7 +285,7 @@ a:focus-visible, button:focus-visible {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.9px;
+  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
 }
 
 @media (max-width: 1023px) {
@@ -514,7 +514,7 @@ a:focus-visible, button:focus-visible {
 .about-list a:hover {
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.9px;
+  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
   text-decoration-skip-ink: none;
 }
 
@@ -754,7 +754,7 @@ a:focus-visible, button:focus-visible {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.9px;
+  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
 }
 .ov-short {
   display: block;
@@ -1038,7 +1038,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .view.is-on {
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.9px;
+  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
 }
 .views { gap: var(--space-2); }
 
@@ -1061,7 +1061,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .idx-row:hover .idx-name {
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.9px;
+  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
 }
 .idx-row:hover .idx-work, .idx-row:hover .idx-year { color: var(--accent); }
 .idx-name { font-size: 36px; letter-spacing: 0.4pt; }
