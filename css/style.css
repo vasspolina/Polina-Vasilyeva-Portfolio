@@ -732,7 +732,7 @@ a:focus-visible, button:focus-visible {
 /* An A2 poster reads bigger than a book: the Isaac Howell cover gets a
    taller frame, so it is 30% wider than the other portrait covers. */
 @media (min-width: 768px) {
-  .ov-card[href$="isaac-howell.html"] .ov-frame img,
+  .ov-card[href$="isaac-howell.html"] .ov-frame img { max-height: calc(var(--ov-h) * 1.56); }
   .ov-card[href$="sasha-sedelnikov.html"] .ov-frame img,
   .ov-card[href$="literature-paper.html"] .ov-frame img,
   .ov-card[href$="dada.html"] .ov-frame img,
