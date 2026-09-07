@@ -740,7 +740,7 @@ a:focus-visible, button:focus-visible {
   .ov-card[href$="wsj.html"] .ov-frame img,
   .ov-card[href$="compass.html"] .ov-frame img { max-height: calc(var(--ov-h) * 1.2); }
   /* Clinique is as wide as its column, so it comes down by width. */
-  .ov-card[href$="clinique.html"] .ov-frame img { max-width: 80%; }
+  .ov-card[href$="clinique.html"] .ov-frame img { max-width: 72%; }
   /* A spread or a character sheet is as wide as its column already, so it
      spans both columns to grow. */
   .ov-card[href$="literature-paper.html"],
