@@ -65,7 +65,7 @@ body {
   font-weight: 300;
   font-size: 18px;
   line-height: 1.2;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   padding: 0 var(--page-pad);
 }
 
@@ -120,7 +120,7 @@ a:focus-visible, button:focus-visible {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   cursor: pointer;
   line-height: 1.2;
   padding: 0;
@@ -192,7 +192,7 @@ a:focus-visible, button:focus-visible {
 }
 .intro-note {
   font-size: 24px;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   color: var(--muted);
   max-width: 34em;
   margin: calc(var(--space-3) * -1 + var(--space-1)) 0 var(--space-3);
@@ -213,7 +213,7 @@ a:focus-visible, button:focus-visible {
 }
 .filter-label {
   font-size: 18px;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   color: var(--muted);
 }
 .filters {
@@ -237,7 +237,7 @@ a:focus-visible, button:focus-visible {
   font-weight: 300;
   font-size: 18px;
   line-height: 1.2;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   cursor: pointer;
   padding: 2px 6px;
   transition: background var(--dur), color var(--dur);
@@ -461,7 +461,7 @@ a:focus-visible, button:focus-visible {
   font-weight: 400;
   margin-top: 0;
   font-size: 24px;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   color: var(--muted);
   margin-bottom: var(--space-3);
 }
@@ -482,7 +482,7 @@ a:focus-visible, button:focus-visible {
 .about-h {
   font-size: 18px;
   font-weight: 300;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   line-height: 1.2;
   color: var(--muted);
   margin-bottom: var(--space-2);
@@ -490,14 +490,14 @@ a:focus-visible, button:focus-visible {
 .about-list {
   list-style: none;
   font-size: 24px;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   line-height: 1.2;
 }
 .about-list li + li { margin-top: var(--space-1); }
 .about-note {
   display: block;
   font-size: 18px;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   color: var(--muted);
 }
 .about-list a { text-decoration: none; }
@@ -552,7 +552,7 @@ a:focus-visible, button:focus-visible {
   grid-template-columns: auto 1fr;
   gap: var(--space-1) var(--space-2);
   font-size: 16px;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   border-top: 1px solid var(--hairline);
   padding-top: var(--space-2);
 }
@@ -574,7 +574,7 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   gap: var(--space-1);
   font-size: 16px;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   color: var(--muted);
 }
 .spec-slider input { accent-color: var(--accent); width: 180px; }
@@ -635,7 +635,7 @@ a:focus-visible, button:focus-visible {
 .ov-h {
   font-size: 24px;
   font-weight: 300;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   color: var(--rule);
   padding-bottom: var(--space-1);
   border-bottom: 1px solid var(--rule);
@@ -683,14 +683,14 @@ a:focus-visible, button:focus-visible {
 .ov-name {
   display: block;
   font-size: 24px;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   padding-top: var(--space-1);
 }
 .ov-card:hover .ov-name { color: var(--accent); }
 .ov-short {
   display: block;
   font-size: 24px;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   color: var(--fg);
 }
 /* The disciplines a project actually covers, shown on the card so the filter
@@ -721,7 +721,7 @@ a:focus-visible, button:focus-visible {
   color: #227038;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   padding: 4px 8px;
 }
 .ov-card.is-hidden, .ov-group.is-hidden { display: none; }
@@ -729,7 +729,7 @@ a:focus-visible, button:focus-visible {
 .all-h {
   font-size: 24px;
   font-weight: 300;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   color: var(--rule);
   padding-bottom: var(--space-1);
   border-bottom: 1px solid var(--rule);
@@ -947,7 +947,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
   font-family: inherit;
   font-size: 18px;
   font-weight: 300;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
   line-height: 1.2;
   padding: 4px 16px;
   cursor: pointer;
@@ -966,14 +966,14 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .idx-head {
   color: var(--rule);
   font-size: 18px;
-  letter-spacing: 1pt;
+  letter-spacing: 0.4pt;
 }
 .idx-row { color: var(--fg); text-decoration: none; }
 .idx-row:hover { color: var(--accent); }
 .idx-row:hover .idx-work, .idx-row:hover .idx-year { color: var(--accent); }
-.idx-name { font-size: 24px; letter-spacing: 1pt; }
-.idx-work { font-size: 18px; color: var(--muted); letter-spacing: 1pt; }
-.idx-year { font-size: 18px; color: var(--muted); letter-spacing: 1pt; text-align: right; }
+.idx-name { font-size: 24px; letter-spacing: 0.4pt; }
+.idx-work { font-size: 18px; color: var(--muted); letter-spacing: 0.4pt; }
+.idx-year { font-size: 18px; color: var(--muted); letter-spacing: 0.4pt; text-align: right; }
 .idx-row.is-hidden { display: none; }
 
 @media (max-width: 767px) {
