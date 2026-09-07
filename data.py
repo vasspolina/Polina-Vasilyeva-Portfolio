@@ -579,12 +579,11 @@ PROJECTS = [
   "lead": ["f001", "f019"],
   # A hairline of the page white survives on two edges of this slide.
   "piece_crop": {"f004": (0, 0, 0.010, 0.006)},
-  "cover": "f012",
+  "cover": "f001",
   "group": "product", "short": "Web design and digital accessibility",
   "meta": "Furniture.com, with McKinsey and studio Dumbar, 2022, Web Design and Digital Accessibility",
-  "desc": ["I designed Furniture.com and its accessibility, with McKinsey and with studio Dumbar. Search drives the shopping experience, from the sofa a shopper starts with to the room they browse it in. A warm identity carries it, with a furniture icon set drawn for the job.",
-           "Eight colours carry the furniture categories, one each. Every icon and campaign module sits on that palette, and I checked each against black, white and every neutral base for contrast.",
-           "I designed it responsively, from the large screen heroes down to the mobile flows."],
+  "desc": ["Designed with McKinsey as a design consultant and product designer, developing accessible UX and visual design systems and strategies for the client. I translated quantitative data, qualitative insights and prior experimentation results into design solutions and new product concepts.",
+           "I identified the activities and communications needed to deliver the digital product strategy to the client, communicated with key stakeholders at all levels through every deployment phase, and designed an easy-to-use component library tailored for the development team."],
   "pages": [
     ("IMG", "furniture/mobile-set-1.png", "Mobile – home, categories, and the little ones",
      ["mobile"], {"crop": False, "split": False}),
