@@ -715,14 +715,15 @@ a:focus-visible, button:focus-visible {
 /* Fit, never clip. The card's width changes with the viewport, so an image
    taller than it is wide used to be cropped by a different amount at every
    size — the same cover showing a different crop on a phone and a laptop. */
+/* Covers hang from the top of their row and the title follows each one
+   directly: the frame has no fixed height, the cap sits on the image. */
 .ov-frame {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
-  height: var(--ov-h);
 }
 .ov-frame img {
-  max-height: 100%;
+  max-height: var(--ov-h);
   max-width: 100%;
   width: auto;
   height: auto;
@@ -731,13 +732,15 @@ a:focus-visible, button:focus-visible {
 /* An A2 poster reads bigger than a book: the Isaac Howell cover gets a
    taller frame, so it is 30% wider than the other portrait covers. */
 @media (min-width: 768px) {
-  .ov-card[href$="isaac-howell.html"] .ov-frame,
-  .ov-card[href$="sasha-sedelnikov.html"] .ov-frame,
-  .ov-card[href$="literature-paper.html"] .ov-frame,
-  .ov-card[href$="dada.html"] .ov-frame,
-  .ov-card[href$="spiritual-labour.html"] .ov-frame { height: calc(var(--ov-h) * 1.3); }
-  .ov-card[href$="wsj.html"] .ov-frame,
-  .ov-card[href$="compass.html"] .ov-frame { height: calc(var(--ov-h) * 1.2); }
+  .ov-card[href$="isaac-howell.html"] .ov-frame img,
+  .ov-card[href$="sasha-sedelnikov.html"] .ov-frame img,
+  .ov-card[href$="literature-paper.html"] .ov-frame img,
+  .ov-card[href$="dada.html"] .ov-frame img,
+  .ov-card[href$="spiritual-labour.html"] .ov-frame img { max-height: calc(var(--ov-h) * 1.3); }
+  .ov-card[href$="wsj.html"] .ov-frame img,
+  .ov-card[href$="compass.html"] .ov-frame img { max-height: calc(var(--ov-h) * 1.2); }
+  /* Clinique is as wide as its column, so it comes down by width. */
+  .ov-card[href$="clinique.html"] .ov-frame img { max-width: 80%; }
   /* A spread or a character sheet is as wide as its column already, so it
      spans both columns to grow. */
   .ov-card[href$="literature-paper.html"],

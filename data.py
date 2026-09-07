@@ -441,7 +441,7 @@ PROJECTS = [
                  "b003": (0.02, 0.088, 0.10, 0.088)},
   "year": "2021 to 2022",
   "cover": "drop03",
-  "group": "brand", "short": "Brand and packaging design",
+  "group": "brand", "short": "Art direction and animation",
   "meta": "Alexander Wang, Senior Designer and Art Director, 2021 to 2022, Brand and Packaging Design",
   "desc": ["–Developed seasonal promotional campaigns (spring, summer, autumn) spanning static and dynamic digital media and print.",
            "–Originated and launched branding, campaign, and packaging design for AW Bodywear.",
@@ -546,7 +546,7 @@ PROJECTS = [
   # a personal bookmarks bar. The page begins about 6.8% down.
   "piece_crop": {"drop05": (0.068, 0, 0, 0), "drop06": (0.068, 0, 0, 0),
                  "drop07": (0.068, 0, 0, 0), "drop08": (0.068, 0, 0, 0)},
-  "cover": "drop01",
+  "cover": "drop02",
   "group": "product", "short": "Online store and campaign design",
   "meta": "Clinique, clinique iD, Online Store and Campaign Design",
   "desc": ["I designed the campaign and the online store for clinique iD, a hydrator built in two parts. A base takes a cartridge of concentrate. The product page sells it as an equation, base plus cartridge equals the bottle you end up with.",
