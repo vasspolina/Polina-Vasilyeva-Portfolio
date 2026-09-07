@@ -4878,6 +4878,54 @@
    "page": "drop07"
   },
   {
+   "stem": "drop12",
+   "caption": "Velour Couture, the story card",
+   "tags": [
+    "brand"
+   ],
+   "w": 1349,
+   "h": 1687,
+   "widths": [
+    600,
+    1200,
+    1349
+   ],
+   "source": "DROP",
+   "page": "drop12"
+  },
+  {
+   "stem": "drop13",
+   "caption": "Night swim, the story card",
+   "tags": [
+    "brand"
+   ],
+   "w": 1440,
+   "h": 1800,
+   "widths": [
+    600,
+    1200,
+    1440
+   ],
+   "source": "DROP",
+   "page": "drop13"
+  },
+  {
+   "stem": "drop14",
+   "caption": "Basement Prep, the story card",
+   "tags": [
+    "brand"
+   ],
+   "w": 1440,
+   "h": 1800,
+   "widths": [
+    600,
+    1200,
+    1440
+   ],
+   "source": "DROP",
+   "page": "drop14"
+  },
+  {
    "stem": "drop09",
    "caption": "Velour Couture, the four panel story",
    "tags": [
@@ -4929,54 +4977,6 @@
    ],
    "source": "DROP",
    "page": "drop11"
-  },
-  {
-   "stem": "drop12",
-   "caption": "Velour Couture, the story card",
-   "tags": [
-    "brand"
-   ],
-   "w": 1349,
-   "h": 1687,
-   "widths": [
-    600,
-    1200,
-    1349
-   ],
-   "source": "DROP",
-   "page": "drop12"
-  },
-  {
-   "stem": "drop13",
-   "caption": "Night swim, the story card",
-   "tags": [
-    "brand"
-   ],
-   "w": 1440,
-   "h": 1800,
-   "widths": [
-    600,
-    1200,
-    1440
-   ],
-   "source": "DROP",
-   "page": "drop13"
-  },
-  {
-   "stem": "drop14",
-   "caption": "Basement Prep, the story card",
-   "tags": [
-    "brand"
-   ],
-   "w": 1440,
-   "h": 1800,
-   "widths": [
-    600,
-    1200,
-    1440
-   ],
-   "source": "DROP",
-   "page": "drop14"
   }
  ],
  "wsj": [

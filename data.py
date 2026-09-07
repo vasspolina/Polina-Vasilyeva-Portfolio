@@ -429,6 +429,9 @@ PROJECTS = [
   "slug": "alexander-wang", "title": "Alexander Wang",
   # The lockup alone: the slide's own caption line sits below it.
   # The lockup and the mark it is built from, side by side.
+  # The three story cards lead; the four-panel story, the three looks and
+  # the Basement Prep look follow them.
+  "sink": ["drop09", "drop10", "drop11"],
   "piece_width": {"drop12": 30, "drop13": 30, "drop14": 30,
                   "b003": 48, "b005": 48,
                   "b031-1": 30, "b031-2": 30, "b033": 30,
@@ -437,7 +440,7 @@ PROJECTS = [
                  "display-case": (0.021, 0.001, 0.001, 0.009),
                  "b003": (0.02, 0.088, 0.10, 0.088)},
   "year": "2021 to 2022",
-  "cover": "b037",
+  "cover": "drop03",
   "group": "brand", "short": "Brand and packaging design",
   "meta": "Alexander Wang, Senior Designer and Art Director, 2021 to 2022, Brand and Packaging Design",
   "desc": ["–Developed seasonal promotional campaigns (spring, summer, autumn) spanning static and dynamic digital media and print.",
