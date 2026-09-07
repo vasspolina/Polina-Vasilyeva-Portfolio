@@ -21,6 +21,7 @@
   --space-4: 64px;
   --rule: #4a3428;   /* the brown the section rules and headings are set in */
   --chip: #e0e0e0;   /* Carbon Gray 20: the ground a filter or tag pill sits on */
+  --track: #c6c6c6;  /* Carbon Gray 30: the unfilled part of the slider */
   --ov-h: 456px;      /* every overview cover is shown at this height */
   --row-h: 620px;    /* the common height a row of pieces is set to */
   --page-pad: 36px;   /* matches the 36px margin measured on the reference at 1440 */
@@ -40,6 +41,7 @@
     --hairline: #c47a5c;
     --rule: #f2f2f2;
     --chip: #262626;   /* Carbon Gray 90 */
+    --track: #525252;  /* Carbon Gray 70 */
   }
 }
 :root[data-theme="dark"] {
@@ -51,6 +53,7 @@
   --hairline: #c47a5c;
   --rule: #f2f2f2;
   --chip: #262626;
+  --track: #525252;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -584,7 +587,51 @@ a:focus-visible, button:focus-visible {
   letter-spacing: 0.4pt;
   color: var(--muted);
 }
-.spec-slider input { accent-color: var(--accent); width: 180px; }
+/* The range is drawn by hand in Carbon tones: a 4px track in Gray 30/70,
+   the travelled part and the 14px thumb in the accent blue. The browser's own
+   track read as a foreign grey against the dark ground. */
+.spec-slider input {
+  --fill: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 180px;
+  height: 14px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.spec-slider input::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--accent) var(--fill), var(--track) var(--fill));
+}
+.spec-slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -5px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.spec-slider input::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--track);
+}
+.spec-slider input::-moz-range-progress {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.spec-slider input::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.spec-slider input:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
 
 .spec-stage {
   font-family: var(--spec-face, "Dada"), "PP Telegraf", sans-serif;
@@ -962,22 +1009,28 @@ em, i, cite, address, dfn, var { font-style: normal; }
   width: 100%;
 }
 .views { display: flex; gap: var(--space-1); flex: 0 0 auto; }
+/* Words, not pills: the chosen view is the underlined one. */
 .view {
   appearance: none;
   -webkit-appearance: none;
   background: transparent;
-  border: 2px solid var(--view);
-  border-radius: 999px;
+  border: 0;
+  border-radius: 0;
   color: var(--view);
   font-family: inherit;
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 0.4pt;
   line-height: 1.2;
-  padding: 4px 16px;
+  padding: 0;
   cursor: pointer;
 }
-.view.is-on { background: var(--view); color: var(--bg); }
+.view.is-on {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+}
+.views { gap: var(--space-2); }
 
 .index-view { margin-bottom: var(--space-4); }
 .idx-head, .idx-row {
@@ -1001,7 +1054,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
   text-decoration-thickness: 1px;
 }
 .idx-row:hover .idx-work, .idx-row:hover .idx-year { color: var(--accent); }
-.idx-name { font-size: 24px; letter-spacing: 0.4pt; }
+.idx-name { font-size: 18px; letter-spacing: 0.4pt; }
 .idx-work { font-size: 18px; color: var(--muted); letter-spacing: 0.4pt; }
 .idx-year { font-size: 18px; color: var(--muted); letter-spacing: 0.4pt; text-align: right; }
 .idx-row.is-hidden { display: none; }
@@ -1033,14 +1086,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
   .filter-row { justify-content: flex-start; }
   .views { gap: var(--space-1); }
   .view[data-view="grid"],
-  .view[data-view="index"] {
-    border-color: var(--accent);
-    color: var(--accent);
-    border-radius: 8px;
-    padding: 7px 14px;
-  }
-  .view[data-view="grid"].is-on,
-  .view[data-view="index"].is-on { background: var(--accent); color: var(--bg); }
+  .view[data-view="index"] { color: var(--accent); }
 
   /* One piece to a row, at the width of the screen, and never squashed:
      both dimensions stay maxima so the proportion is kept. */

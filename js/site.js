@@ -159,6 +159,9 @@
   function apply() {
     stage.style.fontSize = slider.value + "px";
     if (out) out.textContent = slider.value + "px";
+    // the travelled part of the track, for the hand-drawn range
+    var pct = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+    slider.style.setProperty("--fill", pct + "%");
   }
   slider.addEventListener("input", apply);
   apply();

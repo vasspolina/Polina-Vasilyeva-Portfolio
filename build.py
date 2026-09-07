@@ -332,9 +332,8 @@ index = head(f"{data.NAME}, Work", 0, data.INTRO) + nav(0) + f"""<main id="main"
 <p class="intro-note">{no_orphan(data.INTRO_NOTE)}</p>
 
 <div class="filter-bar">
-<span class="filter-label" id="filter-label">Show me:</span>
 <div class="filter-row">
-<div class="filters" role="group" aria-labelledby="filter-label">
+<div class="filters" role="group" aria-label="Show me">
 {filters}
 </div>
 <div class="views" role="group" aria-label="How to show the work">

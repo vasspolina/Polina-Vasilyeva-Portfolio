@@ -858,7 +858,7 @@ PROJECTS = [
   # The posters read at a third of the measure; the two Malign Influence
   # sheets are a pair and open the project, and the instruction spread runs
   # wide but not the full width.
-  "piece_width": {"drop01": 48, "drop02": 48, "drop08": 60, "drop09": 30,
+  "piece_width": {"drop01": 48, "drop02": 60, "drop08": 60, "drop09": 30,
                   "drop10": 32, "drop11": 32, "drop12": 32, "drop13": 32, "drop03": 34, "drop04": 34,
                   "drop05": 31, "drop06": 31, "drop07": 34},
   "piece_crop": {"drop02": (0.005, 0.005, 0.005, 0.005)},
