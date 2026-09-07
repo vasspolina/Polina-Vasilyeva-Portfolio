@@ -28,7 +28,7 @@
   // ---- masonry (index grid) ----
   var grid = document.querySelector(".grid");
   if (grid) {
-    var ROW = 8; // matches grid-auto-rows
+    var ROW = 1; // matches grid-auto-rows: exact spans, so columns stay in step
     function layout() {
       var items = [].filter.call(
         grid.querySelectorAll(".grid-item"),

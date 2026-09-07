@@ -86,7 +86,7 @@ PROJECTS = [
   # sets them level, two to a row.
   "piece_width": {"drop65": 30, "drop08": 48, "drop13": 46,
                   "drop01": 100, "drop02": 100, "drop03": 100, "drop04": 48, "drop05": 48,
-                  "i001": 27, "drop12": 32, "drop09": 30,
+                  "i001": 39, "drop12": 32, "drop09": 39,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
   # The logo slide carries the deck's own small header top-left; it comes
   # off, and the same again off the foot so the mark stays centred.
@@ -694,7 +694,7 @@ PROJECTS = [
   "index_only": ["drop01"],
   "page_only": ["drop02"],
   "cover": "drop01",
-  "group": "product", "short": "Website and identity",
+  "group": "brand", "short": "Website and identity",
   "meta": "Bektesevic Ter Steeg Advocaten, Website and Identity",
   # The site is designed but the copy on it is the firm's own; nothing here
   # describes the practice beyond what the pages themselves state.
@@ -878,7 +878,7 @@ PROJECTS = [
   "year": "2024",
   "piece_width": {"poster": 42, "b102": 100},
   "piece_crop": {"b100": (0.145, 0, 0.145, 0)},
-  "cover": "poster",
+  "cover": "b100",
   "group": "brand", "short": "Film identity and titles",
   "meta": "Kathy Meng, Film Identity and Titles",
   "desc": ["I designed the identity for <em>Willow and Wu</em>, a short independent film directed by Kathy Meng. A heavy condensed wordmark stacks into a block against the stills, with a full credit line under it.",
@@ -905,3 +905,15 @@ PROJECTS = [
   ],
  },
 ]
+
+# Order of the projects as the overview and the gallery walk them. Brand:
+# Compass takes the slot beside Indoor Plant Care; the three identity-and-
+# website practices, Van Meekren, BTS and Lenka Ilic, sit together after.
+ORDER = ["verizon", "haworth", "alexander-wang", "wsj",
+         "indoor-plant-care", "compass", "van-meekren", "bts-advocaten", "lenka-ilic",
+         "willow-and-wu",
+         "clinique", "chobani", "furniture", "florida-blue",
+         "pratt", "sasha-sedelnikov", "sarah-crowner", "isaac-howell", "literature-paper",
+         "dada", "spiritual-labour"]
+assert sorted(ORDER) == sorted(p["slug"] for p in PROJECTS), "ORDER must name every project once"
+PROJECTS.sort(key=lambda p: ORDER.index(p["slug"]))

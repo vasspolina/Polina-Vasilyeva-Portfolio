@@ -231,7 +231,7 @@ OV_H = {"desktop": 456, "tablet": 336, "phone": 252}
 # Cards whose frame the stylesheet makes taller from 768px up
 # (css .ov-card[href$=...] .ov-frame): the hint has to match, or the browser
 # sizes the image to the shorter frame and the taller one stays empty.
-OV_FRAME_SCALE = {"isaac-howell": 1.3, "sasha-sedelnikov": 1.3}
+OV_FRAME_SCALE = {"isaac-howell": 1.3, "sasha-sedelnikov": 1.3, "literature-paper": 1.3, "dada": 1.3, "spiritual-labour": 1.3, "willow-and-wu": 1.3}
 ROW_H = 620          # matches --row-h: the common height a row of pieces takes
 
 

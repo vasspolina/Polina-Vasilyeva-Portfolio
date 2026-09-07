@@ -80,7 +80,7 @@ def main():
     sheet(["ABCDEFGHIJKLM",
            "NOPQRSTUVWXYZ",
            "0123456789",
-           "&?!@#$%*() .,;:"], 150 * SCALE, leading=190 * SCALE).save(f"{OUT}/charset.png")
+           "&?!@#$%*() .,;:"], 150 * SCALE, leading=180 * SCALE).save(f"{OUT}/charset.png")  # 120% leading
 
     sheet(["MOMA", "QUARTZ", "PARIS"], 260 * SCALE, leading=320 * SCALE).save(f"{OUT}/words.png")
 
