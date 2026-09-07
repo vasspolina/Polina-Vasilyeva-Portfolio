@@ -807,15 +807,15 @@ em, i, cite, address, dfn, var { font-style: normal; }
    clears AA. The chosen one is marked by a ring as well as by fill, so the
    state is not carried by colour alone. */
 .filter { color: #ffffff; }   /* replaced by the outline rules below */
-.filter[data-filter="all"] { background: transparent; border: 1px solid #0861ca; color: #0861ca; }
-.filter[data-filter="web"] { background: transparent; border: 1px solid #236237; color: #236237; }
-.filter[data-filter="mobile"] { background: transparent; border: 1px solid #5b3a8e; color: #5b3a8e; }
-.filter[data-filter="ecommerce"] { background: transparent; border: 1px solid #0f5f66; color: #0f5f66; }
-.filter[data-filter="brand"] { background: transparent; border: 1px solid #8a4b2a; color: #8a4b2a; }
-.filter[data-filter="product"] { background: transparent; border: 1px solid #2f4858; color: #2f4858; }
-.filter[data-filter="editorial"] { background: transparent; border: 1px solid #4a3428; color: #4a3428; }
-.filter[data-filter="strategy"] { background: transparent; border: 1px solid #55611f; color: #55611f; }
-.filter[data-filter="social"] { background: transparent; border: 1px solid #8e5400; color: #8e5400; }
+.filter[data-filter="all"] { background: transparent; border: 1px solid #0f62fe; color: #0f62fe; }
+.filter[data-filter="web"] { background: transparent; border: 1px solid #198038; color: #198038; }
+.filter[data-filter="mobile"] { background: transparent; border: 1px solid #8a3ffc; color: #8a3ffc; }
+.filter[data-filter="ecommerce"] { background: transparent; border: 1px solid #007d79; color: #007d79; }
+.filter[data-filter="brand"] { background: transparent; border: 1px solid #ba4e00; color: #ba4e00; }
+.filter[data-filter="product"] { background: transparent; border: 1px solid #0072c3; color: #0072c3; }
+.filter[data-filter="editorial"] { background: transparent; border: 1px solid #d02670; color: #d02670; }
+.filter[data-filter="strategy"] { background: transparent; border: 1px solid #8e6a00; color: #8e6a00; }
+.filter[data-filter="social"] { background: transparent; border: 1px solid #da1e28; color: #da1e28; }
 
 /* The chosen one is filled with its own colour, so the state is carried by
    fill as well as by hue. currentColor cannot do this: it resolves against the
@@ -826,30 +826,30 @@ em, i, cite, address, dfn, var { font-style: normal; }
 
 @media (prefers-color-scheme: dark) {
   
-  :root:not([data-theme="light"]) .filter[data-filter="all"] { background: transparent; border: 1px solid #76b2fa; color: #76b2fa; }
-  :root:not([data-theme="light"]) .filter[data-filter="web"] { background: transparent; border: 1px solid #96d9ab; color: #96d9ab; }
-  :root:not([data-theme="light"]) .filter[data-filter="mobile"] { background: transparent; border: 1px solid #b197d8; color: #b197d8; }
-  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"] { background: transparent; border: 1px solid #83e4ed; color: #83e4ed; }
-  :root:not([data-theme="light"]) .filter[data-filter="brand"] { background: transparent; border: 1px solid #deac92; color: #deac92; }
-  :root:not([data-theme="light"]) .filter[data-filter="product"] { background: transparent; border: 1px solid #97bfd8; color: #97bfd8; }
-  :root:not([data-theme="light"]) .filter[data-filter="editorial"] { background: transparent; border: 1px solid #d8ae97; color: #d8ae97; }
-  :root:not([data-theme="light"]) .filter[data-filter="strategy"] { background: transparent; border: 1px solid #cfdc93; color: #cfdc93; }
-  :root:not([data-theme="light"]) .filter[data-filter="social"] { background: transparent; border: 1px solid #ffc570; color: #ffc570; }
+  :root:not([data-theme="light"]) .filter[data-filter="all"] { background: transparent; border: 1px solid #78a9ff; color: #78a9ff; }
+  :root:not([data-theme="light"]) .filter[data-filter="web"] { background: transparent; border: 1px solid #42be65; color: #42be65; }
+  :root:not([data-theme="light"]) .filter[data-filter="mobile"] { background: transparent; border: 1px solid #a56eff; color: #a56eff; }
+  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"] { background: transparent; border: 1px solid #08bdba; color: #08bdba; }
+  :root:not([data-theme="light"]) .filter[data-filter="brand"] { background: transparent; border: 1px solid #ff832b; color: #ff832b; }
+  :root:not([data-theme="light"]) .filter[data-filter="product"] { background: transparent; border: 1px solid #33b1ff; color: #33b1ff; }
+  :root:not([data-theme="light"]) .filter[data-filter="editorial"] { background: transparent; border: 1px solid #ff7eb6; color: #ff7eb6; }
+  :root:not([data-theme="light"]) .filter[data-filter="strategy"] { background: transparent; border: 1px solid #f1c21b; color: #f1c21b; }
+  :root:not([data-theme="light"]) .filter[data-filter="social"] { background: transparent; border: 1px solid #ff8389; color: #ff8389; }
 }
 
 :root[data-theme="dark"] { --mobile-nav: #d457e5; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) { --mobile-nav: #d457e5; }
 }
-:root[data-theme="dark"] .filter[data-filter="all"] { background: transparent; border: 1px solid #76b2fa; color: #76b2fa; }
-:root[data-theme="dark"] .filter[data-filter="web"] { background: transparent; border: 1px solid #96d9ab; color: #96d9ab; }
-:root[data-theme="dark"] .filter[data-filter="mobile"] { background: transparent; border: 1px solid #b197d8; color: #b197d8; }
-:root[data-theme="dark"] .filter[data-filter="ecommerce"] { background: transparent; border: 1px solid #83e4ed; color: #83e4ed; }
-:root[data-theme="dark"] .filter[data-filter="brand"] { background: transparent; border: 1px solid #deac92; color: #deac92; }
-:root[data-theme="dark"] .filter[data-filter="product"] { background: transparent; border: 1px solid #97bfd8; color: #97bfd8; }
-:root[data-theme="dark"] .filter[data-filter="editorial"] { background: transparent; border: 1px solid #d8ae97; color: #d8ae97; }
-:root[data-theme="dark"] .filter[data-filter="strategy"] { background: transparent; border: 1px solid #cfdc93; color: #cfdc93; }
-:root[data-theme="dark"] .filter[data-filter="social"] { background: transparent; border: 1px solid #ffc570; color: #ffc570; }
+:root[data-theme="dark"] .filter[data-filter="all"] { background: transparent; border: 1px solid #78a9ff; color: #78a9ff; }
+:root[data-theme="dark"] .filter[data-filter="web"] { background: transparent; border: 1px solid #42be65; color: #42be65; }
+:root[data-theme="dark"] .filter[data-filter="mobile"] { background: transparent; border: 1px solid #a56eff; color: #a56eff; }
+:root[data-theme="dark"] .filter[data-filter="ecommerce"] { background: transparent; border: 1px solid #08bdba; color: #08bdba; }
+:root[data-theme="dark"] .filter[data-filter="brand"] { background: transparent; border: 1px solid #ff832b; color: #ff832b; }
+:root[data-theme="dark"] .filter[data-filter="product"] { background: transparent; border: 1px solid #33b1ff; color: #33b1ff; }
+:root[data-theme="dark"] .filter[data-filter="editorial"] { background: transparent; border: 1px solid #ff7eb6; color: #ff7eb6; }
+:root[data-theme="dark"] .filter[data-filter="strategy"] { background: transparent; border: 1px solid #f1c21b; color: #f1c21b; }
+:root[data-theme="dark"] .filter[data-filter="social"] { background: transparent; border: 1px solid #ff8389; color: #ff8389; }
 
 /* A piece that runs the full window, past the page margin. */
 /* Out to the page edge, by cancelling the page padding rather than by
@@ -881,64 +881,64 @@ em, i, cite, address, dfn, var { font-style: normal; }
   filter: invert(1);
 }
 
-.filter[data-filter="all"].is-active { background-color: #0861ca; }
+.filter[data-filter="all"].is-active { background-color: #0f62fe; }
 
-.filter[data-filter="all"]:hover { background-color: #0861ca; }
-.filter[data-filter="web"].is-active { background-color: #236237; }
-.filter[data-filter="web"]:hover { background-color: #236237; }
-.filter[data-filter="mobile"].is-active { background-color: #5b3a8e; }
-.filter[data-filter="mobile"]:hover { background-color: #5b3a8e; }
-.filter[data-filter="ecommerce"].is-active { background-color: #0f5f66; }
-.filter[data-filter="ecommerce"]:hover { background-color: #0f5f66; }
-.filter[data-filter="brand"].is-active { background-color: #8a4b2a; }
-.filter[data-filter="brand"]:hover { background-color: #8a4b2a; }
-.filter[data-filter="product"].is-active { background-color: #2f4858; }
-.filter[data-filter="product"]:hover { background-color: #2f4858; }
-.filter[data-filter="editorial"].is-active { background-color: #4a3428; }
-.filter[data-filter="editorial"]:hover { background-color: #4a3428; }
-.filter[data-filter="strategy"].is-active { background-color: #55611f; }
-.filter[data-filter="strategy"]:hover { background-color: #55611f; }
-.filter[data-filter="social"].is-active { background-color: #8e5400; }
-.filter[data-filter="social"]:hover { background-color: #8e5400; }
+.filter[data-filter="all"]:hover { background-color: #0f62fe; }
+.filter[data-filter="web"].is-active { background-color: #198038; }
+.filter[data-filter="web"]:hover { background-color: #198038; }
+.filter[data-filter="mobile"].is-active { background-color: #8a3ffc; }
+.filter[data-filter="mobile"]:hover { background-color: #8a3ffc; }
+.filter[data-filter="ecommerce"].is-active { background-color: #007d79; }
+.filter[data-filter="ecommerce"]:hover { background-color: #007d79; }
+.filter[data-filter="brand"].is-active { background-color: #ba4e00; }
+.filter[data-filter="brand"]:hover { background-color: #ba4e00; }
+.filter[data-filter="product"].is-active { background-color: #0072c3; }
+.filter[data-filter="product"]:hover { background-color: #0072c3; }
+.filter[data-filter="editorial"].is-active { background-color: #d02670; }
+.filter[data-filter="editorial"]:hover { background-color: #d02670; }
+.filter[data-filter="strategy"].is-active { background-color: #8e6a00; }
+.filter[data-filter="strategy"]:hover { background-color: #8e6a00; }
+.filter[data-filter="social"].is-active { background-color: #da1e28; }
+.filter[data-filter="social"]:hover { background-color: #da1e28; }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .filter[data-filter="all"].is-active { background-color: #76b2fa; }
-  :root:not([data-theme="light"]) .filter[data-filter="all"]:hover { background-color: #76b2fa; }
-  :root:not([data-theme="light"]) .filter[data-filter="web"].is-active { background-color: #96d9ab; }
-  :root:not([data-theme="light"]) .filter[data-filter="web"]:hover { background-color: #96d9ab; }
-  :root:not([data-theme="light"]) .filter[data-filter="mobile"].is-active { background-color: #b197d8; }
-  :root:not([data-theme="light"]) .filter[data-filter="mobile"]:hover { background-color: #b197d8; }
-  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"].is-active { background-color: #83e4ed; }
-  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"]:hover { background-color: #83e4ed; }
-  :root:not([data-theme="light"]) .filter[data-filter="brand"].is-active { background-color: #deac92; }
-  :root:not([data-theme="light"]) .filter[data-filter="brand"]:hover { background-color: #deac92; }
-  :root:not([data-theme="light"]) .filter[data-filter="product"].is-active { background-color: #97bfd8; }
-  :root:not([data-theme="light"]) .filter[data-filter="product"]:hover { background-color: #97bfd8; }
-  :root:not([data-theme="light"]) .filter[data-filter="editorial"].is-active { background-color: #d8ae97; }
-  :root:not([data-theme="light"]) .filter[data-filter="editorial"]:hover { background-color: #d8ae97; }
-  :root:not([data-theme="light"]) .filter[data-filter="strategy"].is-active { background-color: #cfdc93; }
-  :root:not([data-theme="light"]) .filter[data-filter="strategy"]:hover { background-color: #cfdc93; }
-  :root:not([data-theme="light"]) .filter[data-filter="social"].is-active { background-color: #ffc570; }
-  :root:not([data-theme="light"]) .filter[data-filter="social"]:hover { background-color: #ffc570; }
+  :root:not([data-theme="light"]) .filter[data-filter="all"].is-active { background-color: #78a9ff; }
+  :root:not([data-theme="light"]) .filter[data-filter="all"]:hover { background-color: #78a9ff; }
+  :root:not([data-theme="light"]) .filter[data-filter="web"].is-active { background-color: #42be65; }
+  :root:not([data-theme="light"]) .filter[data-filter="web"]:hover { background-color: #42be65; }
+  :root:not([data-theme="light"]) .filter[data-filter="mobile"].is-active { background-color: #a56eff; }
+  :root:not([data-theme="light"]) .filter[data-filter="mobile"]:hover { background-color: #a56eff; }
+  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"].is-active { background-color: #08bdba; }
+  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"]:hover { background-color: #08bdba; }
+  :root:not([data-theme="light"]) .filter[data-filter="brand"].is-active { background-color: #ff832b; }
+  :root:not([data-theme="light"]) .filter[data-filter="brand"]:hover { background-color: #ff832b; }
+  :root:not([data-theme="light"]) .filter[data-filter="product"].is-active { background-color: #33b1ff; }
+  :root:not([data-theme="light"]) .filter[data-filter="product"]:hover { background-color: #33b1ff; }
+  :root:not([data-theme="light"]) .filter[data-filter="editorial"].is-active { background-color: #ff7eb6; }
+  :root:not([data-theme="light"]) .filter[data-filter="editorial"]:hover { background-color: #ff7eb6; }
+  :root:not([data-theme="light"]) .filter[data-filter="strategy"].is-active { background-color: #f1c21b; }
+  :root:not([data-theme="light"]) .filter[data-filter="strategy"]:hover { background-color: #f1c21b; }
+  :root:not([data-theme="light"]) .filter[data-filter="social"].is-active { background-color: #ff8389; }
+  :root:not([data-theme="light"]) .filter[data-filter="social"]:hover { background-color: #ff8389; }
 }
-:root[data-theme="dark"] .filter[data-filter="all"].is-active { background-color: #76b2fa; }
-:root[data-theme="dark"] .filter[data-filter="all"]:hover { background-color: #76b2fa; }
-:root[data-theme="dark"] .filter[data-filter="web"].is-active { background-color: #96d9ab; }
-:root[data-theme="dark"] .filter[data-filter="web"]:hover { background-color: #96d9ab; }
-:root[data-theme="dark"] .filter[data-filter="mobile"].is-active { background-color: #b197d8; }
-:root[data-theme="dark"] .filter[data-filter="mobile"]:hover { background-color: #b197d8; }
-:root[data-theme="dark"] .filter[data-filter="ecommerce"].is-active { background-color: #83e4ed; }
-:root[data-theme="dark"] .filter[data-filter="ecommerce"]:hover { background-color: #83e4ed; }
-:root[data-theme="dark"] .filter[data-filter="brand"].is-active { background-color: #deac92; }
-:root[data-theme="dark"] .filter[data-filter="brand"]:hover { background-color: #deac92; }
-:root[data-theme="dark"] .filter[data-filter="product"].is-active { background-color: #97bfd8; }
-:root[data-theme="dark"] .filter[data-filter="product"]:hover { background-color: #97bfd8; }
-:root[data-theme="dark"] .filter[data-filter="editorial"].is-active { background-color: #d8ae97; }
-:root[data-theme="dark"] .filter[data-filter="editorial"]:hover { background-color: #d8ae97; }
-:root[data-theme="dark"] .filter[data-filter="strategy"].is-active { background-color: #cfdc93; }
-:root[data-theme="dark"] .filter[data-filter="strategy"]:hover { background-color: #cfdc93; }
-:root[data-theme="dark"] .filter[data-filter="social"].is-active { background-color: #ffc570; }
-:root[data-theme="dark"] .filter[data-filter="social"]:hover { background-color: #ffc570; }
+:root[data-theme="dark"] .filter[data-filter="all"].is-active { background-color: #78a9ff; }
+:root[data-theme="dark"] .filter[data-filter="all"]:hover { background-color: #78a9ff; }
+:root[data-theme="dark"] .filter[data-filter="web"].is-active { background-color: #42be65; }
+:root[data-theme="dark"] .filter[data-filter="web"]:hover { background-color: #42be65; }
+:root[data-theme="dark"] .filter[data-filter="mobile"].is-active { background-color: #a56eff; }
+:root[data-theme="dark"] .filter[data-filter="mobile"]:hover { background-color: #a56eff; }
+:root[data-theme="dark"] .filter[data-filter="ecommerce"].is-active { background-color: #08bdba; }
+:root[data-theme="dark"] .filter[data-filter="ecommerce"]:hover { background-color: #08bdba; }
+:root[data-theme="dark"] .filter[data-filter="brand"].is-active { background-color: #ff832b; }
+:root[data-theme="dark"] .filter[data-filter="brand"]:hover { background-color: #ff832b; }
+:root[data-theme="dark"] .filter[data-filter="product"].is-active { background-color: #33b1ff; }
+:root[data-theme="dark"] .filter[data-filter="product"]:hover { background-color: #33b1ff; }
+:root[data-theme="dark"] .filter[data-filter="editorial"].is-active { background-color: #ff7eb6; }
+:root[data-theme="dark"] .filter[data-filter="editorial"]:hover { background-color: #ff7eb6; }
+:root[data-theme="dark"] .filter[data-filter="strategy"].is-active { background-color: #f1c21b; }
+:root[data-theme="dark"] .filter[data-filter="strategy"]:hover { background-color: #f1c21b; }
+:root[data-theme="dark"] .filter[data-filter="social"].is-active { background-color: #ff8389; }
+:root[data-theme="dark"] .filter[data-filter="social"]:hover { background-color: #ff8389; }
 
 /* The dark palette sets colour at a higher specificity than .is-active can
    reach, so the chosen pill kept its own hue for both fill and type and went
