@@ -441,7 +441,7 @@ PROJECTS = [
                  "b003": (0.02, 0.088, 0.10, 0.088)},
   "year": "2021 to 2022",
   "cover": "drop03",
-  "group": "brand", "short": "Art direction and animation",
+  "group": "brand", "short": "Art direction, animation, packaging design and brand",
   "meta": "Alexander Wang, Senior Designer and Art Director, 2021 to 2022, Brand and Packaging Design",
   "desc": ["–Developed seasonal promotional campaigns (spring, summer, autumn) spanning static and dynamic digital media and print.",
            "–Originated and launched branding, campaign, and packaging design for AW Bodywear.",
