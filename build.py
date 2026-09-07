@@ -209,6 +209,7 @@ def is_portrait(item):
 GRID_SIZES = "(max-width: 767px) 100vw, calc((100vw - 108px) / 2)"
 # Portrait tiles cap at 415px (css .grid-item.is-portrait img); a few carry a
 # per-tile cap in the stylesheet, mirrored here so the srcset hint matches.
+WIDE_TILES = {"willow-and-wu/b100"}   # landscape tiles the stylesheet spans across both columns
 PORTRAIT_TILE_PX = {"verizon/i001": 312, "verizon/drop12": 374, "isaac-howell/drop10": 913}
 def portrait_sizes(key):
     return f"(max-width: 767px) 62vw, {PORTRAIT_TILE_PX.get(key, 415)}px"
@@ -255,6 +256,8 @@ for proj in PROJECTS:
         wide = item["w"] > 4 * item["h"]
         cls = "grid-item is-portrait" if port else ("grid-item is-wide" if wide else "grid-item")
         sizes = portrait_sizes(f"{slug}/{item['stem']}") if port else GRID_SIZES
+        if wide or f"{slug}/{item['stem']}" in WIDE_TILES:
+            sizes = "(max-width: 767px) 100vw, calc(100vw - 72px)"
         tiles.append(
             f'<a class="{cls}" href="projects/{slug}.html" '
             f'data-tile="{slug}/{item["stem"]}" '

@@ -881,8 +881,7 @@ PROJECTS = [
   "cover": "b100",
   "group": "brand", "short": "Film identity and titles",
   "meta": "Kathy Meng, Film Identity and Titles",
-  "desc": ["I designed the identity for <em>Willow and Wu</em>, a short independent film directed by Kathy Meng. A heavy condensed wordmark stacks into a block against the stills, with a full credit line under it.",
-           "It carries through the poster and the title sequence on screen."],
+  "desc": ["I designed the identity for <em>Willow and Wu</em>, a short independent film directed by Kathy Meng."],
   "pages": [
     ("B", 100, "Willow and Wu – wordmark", ["brand"], {"crop": False}),
     ("IMG", "willow-and-wu/poster.png", "Poster design", ["brand"],

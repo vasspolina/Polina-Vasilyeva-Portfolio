@@ -1188,4 +1188,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .grid-item[data-tile="verizon/drop12"].is-portrait img { max-width: 374px; }
 .grid-item[data-tile="isaac-howell/drop10"].is-portrait img { max-width: 913px; }
 .grid-item[data-tile="isaac-howell/drop10"] { grid-column: 1 / -1; }
+/* The Willow and Wu wordmark runs the full measure in the gallery; the
+   front page keeps it in its card. */
+.grid-item[data-tile="willow-and-wu/b100"] { grid-column: 1 / -1; }
 
