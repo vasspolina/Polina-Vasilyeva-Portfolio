@@ -25,53 +25,12 @@
     reflect();
   }
 
-  // ---- masonry (index grid) ----
+  // ---- index grid ----
+  // The grid sets in true rows now (css grid-auto-rows: auto), so nothing
+  // here packs it; the filters and the view switch below still need the
+  // grid element.
   var grid = document.querySelector(".grid");
   if (grid) {
-    var ROW = 1; // matches grid-auto-rows: exact spans, so columns stay in step
-    function layout() {
-      var items = [].filter.call(
-        grid.querySelectorAll(".grid-item"),
-        function (i) { return !i.classList.contains("is-hidden"); }
-      );
-      // A single column packs nothing, so leave the rows alone: on a phone
-      // the browser fires resize on every scroll as its bar shows and hides,
-      // and laying out every tile each time made the page stick.
-      if (getComputedStyle(grid).gridAutoRows === "auto") {
-        items.forEach(function (i) { i.style.gridRowEnd = ""; });
-        return;
-      }
-      // collapse all tracks first so scrollHeight reports content height.
-      // scrollHeight leaves out the bottom padding, so add it back or the
-      // gap under a caption is only the rounding slack.
-      items.forEach(function (i) { i.style.gridRowEnd = "span 1"; });
-      var heights = items.map(function (i) {
-        return i.scrollHeight + parseFloat(getComputedStyle(i).paddingBottom);
-      });
-      items.forEach(function (i, k) {
-        i.style.gridRowEnd = "span " + Math.ceil(heights[k] / ROW);
-      });
-    }
-    var pending;
-    function schedule() {
-      cancelAnimationFrame(pending);
-      pending = requestAnimationFrame(layout);
-    }
-    // Only a change of width can change the packing; a height-only resize
-    // is the mobile address bar and happens on every scroll.
-    var lastWidth = innerWidth;
-    addEventListener("resize", function () {
-      if (innerWidth === lastWidth) return;
-      lastWidth = innerWidth;
-      schedule();
-    });
-    addEventListener("load", layout);
-    grid.querySelectorAll("img").forEach(function (img) {
-      if (img.complete) return;
-      img.addEventListener("load", schedule);
-    });
-    layout();
-
     // ---- filters ----
     // Clicking changes what is on the page in place, without scrolling. The
     // project overview narrows to the projects that work in that discipline
@@ -110,7 +69,6 @@
         heading.textContent = key === "all" ? "Everything" : label;
       }
       if (empty) empty.hidden = shown > 0;
-      layout();
     }
 
     // ---- covers or index ----
@@ -131,7 +89,6 @@
       if (indexView) indexView.hidden = kind !== "index";
       if (allHeading) allHeading.hidden = kind === "index";
       if (grid) grid.hidden = kind === "index";
-      if (kind === "grid") layout();
     }
     views.forEach(function (v) {
       v.addEventListener("click", function () { showView(v.dataset.view); });
