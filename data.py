@@ -84,7 +84,7 @@ PROJECTS = [
   "year": "2022 to 2023",
   # The signage slices come off pages of different heights; one width
   # sets them level, two to a row.
-  "piece_width": {"drop65": 30, "drop08": 48, "drop13": 46,
+  "piece_width": {"drop65": 39, "drop08": 48, "drop13": 46,
                   "drop01": 100, "drop02": 100, "drop03": 100, "drop04": 48, "drop05": 48,
                   "i001": 39, "drop12": 32, "drop09": 39,
                   "c003-1": 48, "c003-2": 48, "c004-1": 48, "c004-2": 48},
