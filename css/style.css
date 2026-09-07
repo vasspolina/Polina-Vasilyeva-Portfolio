@@ -84,6 +84,12 @@ a:focus-visible, button:focus-visible {
   outline: 1px solid var(--accent);
   outline-offset: 2px;
 }
+/* A hovered work tile, cover card or index row shows the same ring as focus,
+   so the pointer and the keyboard mark a selection the same way. */
+.grid-item:hover, .ov-card:hover, .idx-row:hover {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
 
 .skip {
   position: absolute;
