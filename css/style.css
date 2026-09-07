@@ -885,9 +885,10 @@ em, i, cite, address, dfn, var { font-style: normal; }
    fill as well as by hue. currentColor cannot do this: it resolves against the
    element's own colour, which this rule is also setting, so both ended up the
    page ground and the pill vanished. The fill is named per filter below. */
-.filter:hover { color: var(--bg); }
-/* The chosen chip is not filled: it wears the focus ring in its own hue. */
-.filter.is-active { outline: 1px solid currentColor; outline-offset: 2px; }
+/* Hover and the chosen chip thicken the line to 2px: an inset shadow adds
+   the second pixel inside the 1px border, so nothing shifts. No fill. */
+.filter:hover,
+.filter.is-active { box-shadow: inset 0 0 0 1px currentColor; }
 
 @media (prefers-color-scheme: dark) {
   
@@ -947,36 +948,9 @@ em, i, cite, address, dfn, var { font-style: normal; }
 }
 
 
-.filter[data-filter="all"]:hover { background-color: #0f62fe; }
-.filter[data-filter="web"]:hover { background-color: #198038; }
-.filter[data-filter="mobile"]:hover { background-color: #8a3ffc; }
-.filter[data-filter="ecommerce"]:hover { background-color: #007d79; }
-.filter[data-filter="brand"]:hover { background-color: #ba4e00; }
-.filter[data-filter="product"]:hover { background-color: #0072c3; }
-.filter[data-filter="editorial"]:hover { background-color: #d02670; }
-.filter[data-filter="strategy"]:hover { background-color: #8e6a00; }
-.filter[data-filter="social"]:hover { background-color: #da1e28; }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .filter[data-filter="all"]:hover { background-color: #78a9ff; }
-  :root:not([data-theme="light"]) .filter[data-filter="web"]:hover { background-color: #42be65; }
-  :root:not([data-theme="light"]) .filter[data-filter="mobile"]:hover { background-color: #a56eff; }
-  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"]:hover { background-color: #08bdba; }
-  :root:not([data-theme="light"]) .filter[data-filter="brand"]:hover { background-color: #ff832b; }
-  :root:not([data-theme="light"]) .filter[data-filter="product"]:hover { background-color: #33b1ff; }
-  :root:not([data-theme="light"]) .filter[data-filter="editorial"]:hover { background-color: #ff7eb6; }
-  :root:not([data-theme="light"]) .filter[data-filter="strategy"]:hover { background-color: #f1c21b; }
-  :root:not([data-theme="light"]) .filter[data-filter="social"]:hover { background-color: #ff8389; }
 }
-:root[data-theme="dark"] .filter[data-filter="all"]:hover { background-color: #78a9ff; }
-:root[data-theme="dark"] .filter[data-filter="web"]:hover { background-color: #42be65; }
-:root[data-theme="dark"] .filter[data-filter="mobile"]:hover { background-color: #a56eff; }
-:root[data-theme="dark"] .filter[data-filter="ecommerce"]:hover { background-color: #08bdba; }
-:root[data-theme="dark"] .filter[data-filter="brand"]:hover { background-color: #ff832b; }
-:root[data-theme="dark"] .filter[data-filter="product"]:hover { background-color: #33b1ff; }
-:root[data-theme="dark"] .filter[data-filter="editorial"]:hover { background-color: #ff7eb6; }
-:root[data-theme="dark"] .filter[data-filter="strategy"]:hover { background-color: #f1c21b; }
-:root[data-theme="dark"] .filter[data-filter="social"]:hover { background-color: #ff8389; }
 
 /* The dark palette sets colour at a higher specificity than .is-active can
    reach, so the chosen pill kept its own hue for both fill and type and went
@@ -1144,14 +1118,6 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .project-title, .ov-h, .all-h, .ov-name, .about-role, .idx-name {
   text-wrap: balance;
 }
-
-/* Dark mode names each hue at a much higher specificity than the plain
-   .filter:hover / .is-active rules, so the text colour has to be restated
-   at that same weight or the label paints its hue on its own fill. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .filter:hover { color: var(--bg); }
-}
-:root[data-theme="dark"] .filter:hover { color: var(--bg); }
 
 /* One tile shows at its own size. The portrait cap suits a phone mockup;
    a printed sheet needs the extra third to be legible in the listing. */
