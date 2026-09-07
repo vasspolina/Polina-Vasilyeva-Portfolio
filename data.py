@@ -878,7 +878,7 @@ PROJECTS = [
  {
   "slug": "willow-and-wu", "title": "Willow and Wu",
   "year": "2024",
-  "piece_width": {"poster": 42, "b102": 100},
+  "piece_width": {"poster": 42, "b100": 100, "b102": 100},
   "piece_crop": {"b100": (0.145, 0, 0.145, 0)},
   "cover": "b100",
   "group": "brand", "short": "Film identity and titles",
