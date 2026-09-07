@@ -225,7 +225,7 @@ a:focus-visible, button:focus-visible {
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-1);
+  gap: 6px;
 }
 /* A pill rather than a word in a row: the set reads as one control, and the
    chosen one is filled instead of merely recoloured, so it is legible without
