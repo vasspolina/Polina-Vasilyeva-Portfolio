@@ -84,12 +84,6 @@ a:focus-visible, button:focus-visible {
   outline: 1px solid var(--accent);
   outline-offset: 2px;
 }
-/* A hovered work tile, cover card or index row shows the same ring as focus,
-   so the pointer and the keyboard mark a selection the same way. */
-.grid-item:hover, .ov-card:hover, .idx-row:hover {
-  outline: 1px solid var(--accent);
-  outline-offset: 2px;
-}
 
 .skip {
   position: absolute;
@@ -275,14 +269,18 @@ a:focus-visible, button:focus-visible {
   max-width: 415px;
   margin: 0;
 }
-.grid-item:hover img { opacity: 0.92; transition: opacity var(--dur); }
 .caption {
   display: block;
   font-size: 24px;
   color: var(--muted);
   padding-top: var(--space-1);
 }
-.grid-item:hover .caption { color: var(--accent); }
+.grid-item:hover .caption {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+}
 
 @media (max-width: 1023px) {
   :root { --page-pad: 20px; }
@@ -680,7 +678,6 @@ a:focus-visible, button:focus-visible {
   height: auto;
   display: block;
 }
-.ov-card:hover .ov-frame img { opacity: 0.92; transition: opacity var(--dur); }
 /* An A2 poster reads bigger than a book: the Isaac Howell cover gets a
    taller frame, so it is 30% wider than the other portrait covers. */
 @media (min-width: 768px) {
@@ -692,7 +689,12 @@ a:focus-visible, button:focus-visible {
   letter-spacing: 0.4pt;
   padding-top: var(--space-1);
 }
-.ov-card:hover .ov-name { color: var(--accent); }
+.ov-card:hover .ov-name {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+}
 .ov-short {
   display: block;
   font-size: 24px;
@@ -989,6 +991,11 @@ em, i, cite, address, dfn, var { font-style: normal; }
 }
 .idx-row { color: var(--fg); text-decoration: none; }
 .idx-row:hover { color: var(--accent); }
+.idx-row:hover .idx-name {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+}
 .idx-row:hover .idx-work, .idx-row:hover .idx-year { color: var(--accent); }
 .idx-name { font-size: 24px; letter-spacing: 0.4pt; }
 .idx-work { font-size: 18px; color: var(--muted); letter-spacing: 0.4pt; }
