@@ -82,12 +82,12 @@ a:not([class]) {
   /* Below the descenders, not through them, and unbroken: skip-ink would
      notch the line around every p and g rather than clearing them. */
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
+  text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
 }
 a:hover { color: var(--accent); }
 a:focus-visible, button:focus-visible {
-  outline: 0.9px solid var(--accent);
+  outline: 1px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -141,7 +141,7 @@ a:focus-visible, button:focus-visible {
   /* A fixed size: tied to the em it grew to 112px against the 36px nav. */
   width: 56px;
   height: 32px;
-  border: 0.9px solid var(--accent);
+  border: 1px solid var(--accent);
   border-radius: 999px;
   background: transparent;
   transition: background var(--dur);
@@ -153,7 +153,7 @@ a:focus-visible, button:focus-visible {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  border: 0.9px solid var(--accent);
+  border: 1px solid var(--accent);
   border-radius: 50%;
   background: var(--bg);
   transition: left var(--dur), background var(--dur), border-color var(--dur);
@@ -183,8 +183,8 @@ a:focus-visible, button:focus-visible {
   /* The switch alone: its shape says what it does and the aria-label names it. */
   .switch-label { position: absolute; width: 1px; height: 1px; overflow: hidden;
                   clip-path: inset(50%); white-space: nowrap; }
-  .switch { width: 48px; height: 27px; border-width: 0.9px; }
-  .knob { width: 18px; height: 18px; border-width: 0.9px; }
+  .switch { width: 48px; height: 27px; border-width: 1px; }
+  .knob { width: 18px; height: 18px; border-width: 1px; }
   .theme-toggle[aria-checked="true"] .knob { left: calc(100% - 21px); }
 }
 .theme-toggle:hover { color: var(--accent); }
@@ -206,7 +206,7 @@ a:focus-visible, button:focus-visible {
 .intro-note a {
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
+  text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
 }
 
@@ -236,7 +236,7 @@ a:focus-visible, button:focus-visible {
   appearance: none;
   -webkit-appearance: none;
   background: transparent;
-  border: 0.9px solid currentColor;
+  border: 1px solid currentColor;
   border-radius: 999px;
   color: var(--fg);
   font-family: inherit;
@@ -285,7 +285,7 @@ a:focus-visible, button:focus-visible {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
+  text-decoration-thickness: 1px;
 }
 
 @media (max-width: 1023px) {
@@ -307,8 +307,8 @@ a:focus-visible, button:focus-visible {
   .theme-toggle .switch { border-color: var(--accent); }
   .theme-toggle .knob { border-color: var(--accent); }
   .theme-toggle[aria-checked="true"] .switch { background: var(--accent); }
-  .switch { width: 48px; height: 27px; border-width: 0.9px; }
-  .knob { width: 18px; height: 18px; border-width: 0.9px; }
+  .switch { width: 48px; height: 27px; border-width: 1px; }
+  .knob { width: 18px; height: 18px; border-width: 1px; }
   .theme-toggle[aria-checked="true"] .knob { left: calc(100% - 21px); }
 }
 @media (max-width: 767px) {
@@ -430,7 +430,7 @@ a:focus-visible, button:focus-visible {
   gap: var(--space-2);
   margin-top: var(--space-4);
   padding-top: var(--space-2);
-  border-top: 0.9px solid var(--hairline);
+  border-top: 1px solid var(--hairline);
   font-size: 18px;
 }
 /* The arrow reads as a direction, not as part of the title, so it takes its
@@ -453,7 +453,7 @@ a:focus-visible, button:focus-visible {
 .footer {
   margin-top: var(--space-4);
   padding: var(--space-3) 0;
-  border-top: 0.9px solid var(--hairline);
+  border-top: 1px solid var(--hairline);
   font-size: 16px;
 }
 .footer p + p { margin-top: var(--space-1); }
@@ -487,7 +487,7 @@ a:focus-visible, button:focus-visible {
   gap: var(--space-3);
   margin-top: var(--space-4);
   padding-top: var(--space-3);
-  border-top: 0.9px solid var(--hairline);
+  border-top: 1px solid var(--hairline);
 }
 .about-h {
   font-size: 18px;
@@ -514,7 +514,7 @@ a:focus-visible, button:focus-visible {
 .about-list a:hover {
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
+  text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
 }
 
@@ -563,13 +563,13 @@ a:focus-visible, button:focus-visible {
   gap: var(--space-1) var(--space-2);
   font-size: 16px;
   letter-spacing: 0.4pt;
-  border-top: 0.9px solid var(--hairline);
+  border-top: 1px solid var(--hairline);
   padding-top: var(--space-2);
 }
 .spec-facts dt { color: var(--muted); }
 
 .spec-block {
-  border-top: 0.9px solid var(--hairline);
+  border-top: 1px solid var(--hairline);
   padding: var(--space-3) 0 var(--space-4);
 }
 .spec-bar {
@@ -631,7 +631,7 @@ a:focus-visible, button:focus-visible {
   border-radius: 50%;
   background: var(--accent);
 }
-.spec-slider input:focus-visible { outline: 0.9px solid var(--accent); outline-offset: 4px; }
+.spec-slider input:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
 
 .spec-stage {
   font-family: var(--spec-face, "Dada"), "PP Telegraf", sans-serif;
@@ -645,7 +645,7 @@ a:focus-visible, button:focus-visible {
   overflow-wrap: anywhere;
   outline: none;
 }
-.spec-stage:focus-visible { outline: 0.9px solid var(--accent); outline-offset: 6px; }
+.spec-stage:focus-visible { outline: 1px solid var(--accent); outline-offset: 6px; }
 
 .spec-caps {
   display: flex;
@@ -692,7 +692,7 @@ a:focus-visible, button:focus-visible {
   letter-spacing: 0.4pt;
   color: var(--rule);
   padding-bottom: var(--space-1);
-  border-bottom: 0.9px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
   margin-bottom: var(--space-2);
 }
 /* One height, natural widths: every cover is reproduced at the same scale and
@@ -754,7 +754,7 @@ a:focus-visible, button:focus-visible {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
+  text-decoration-thickness: 1px;
 }
 .ov-short {
   display: block;
@@ -785,7 +785,7 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 0.9px solid #198038;
+  border: 1px solid #198038;
   border-radius: 8px;
   color: #198038;
   font-size: 14px;
@@ -801,7 +801,7 @@ a:focus-visible, button:focus-visible {
   letter-spacing: 0.4pt;
   color: var(--rule);
   padding-bottom: var(--space-1);
-  border-bottom: 0.9px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
   margin-bottom: var(--space-2);
 }
 
@@ -868,15 +868,15 @@ em, i, cite, address, dfn, var { font-style: normal; }
    clears AA. The chosen one is marked by a ring as well as by fill, so the
    state is not carried by colour alone. */
 .filter { color: #ffffff; }   /* replaced by the outline rules below */
-.filter[data-filter="all"] { background: transparent; border: 0.9px solid #0f62fe; color: #0f62fe; }
-.filter[data-filter="web"] { background: transparent; border: 0.9px solid #198038; color: #198038; }
-.filter[data-filter="mobile"] { background: transparent; border: 0.9px solid #8a3ffc; color: #8a3ffc; }
-.filter[data-filter="ecommerce"] { background: transparent; border: 0.9px solid #007d79; color: #007d79; }
-.filter[data-filter="brand"] { background: transparent; border: 0.9px solid #ba4e00; color: #ba4e00; }
-.filter[data-filter="product"] { background: transparent; border: 0.9px solid #0072c3; color: #0072c3; }
-.filter[data-filter="editorial"] { background: transparent; border: 0.9px solid #d02670; color: #d02670; }
-.filter[data-filter="strategy"] { background: transparent; border: 0.9px solid #8e6a00; color: #8e6a00; }
-.filter[data-filter="social"] { background: transparent; border: 0.9px solid #da1e28; color: #da1e28; }
+.filter[data-filter="all"] { background: transparent; border: 1px solid #0f62fe; color: #0f62fe; }
+.filter[data-filter="web"] { background: transparent; border: 1px solid #198038; color: #198038; }
+.filter[data-filter="mobile"] { background: transparent; border: 1px solid #8a3ffc; color: #8a3ffc; }
+.filter[data-filter="ecommerce"] { background: transparent; border: 1px solid #007d79; color: #007d79; }
+.filter[data-filter="brand"] { background: transparent; border: 1px solid #ba4e00; color: #ba4e00; }
+.filter[data-filter="product"] { background: transparent; border: 1px solid #0072c3; color: #0072c3; }
+.filter[data-filter="editorial"] { background: transparent; border: 1px solid #d02670; color: #d02670; }
+.filter[data-filter="strategy"] { background: transparent; border: 1px solid #8e6a00; color: #8e6a00; }
+.filter[data-filter="social"] { background: transparent; border: 1px solid #da1e28; color: #da1e28; }
 
 /* The chosen one is filled with its own colour, so the state is carried by
    fill as well as by hue. currentColor cannot do this: it resolves against the
@@ -887,30 +887,30 @@ em, i, cite, address, dfn, var { font-style: normal; }
 
 @media (prefers-color-scheme: dark) {
   
-  :root:not([data-theme="light"]) .filter[data-filter="all"] { background: transparent; border: 0.9px solid #78a9ff; color: #78a9ff; }
-  :root:not([data-theme="light"]) .filter[data-filter="web"] { background: transparent; border: 0.9px solid #42be65; color: #42be65; }
-  :root:not([data-theme="light"]) .filter[data-filter="mobile"] { background: transparent; border: 0.9px solid #a56eff; color: #a56eff; }
-  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"] { background: transparent; border: 0.9px solid #08bdba; color: #08bdba; }
-  :root:not([data-theme="light"]) .filter[data-filter="brand"] { background: transparent; border: 0.9px solid #ff832b; color: #ff832b; }
-  :root:not([data-theme="light"]) .filter[data-filter="product"] { background: transparent; border: 0.9px solid #33b1ff; color: #33b1ff; }
-  :root:not([data-theme="light"]) .filter[data-filter="editorial"] { background: transparent; border: 0.9px solid #ff7eb6; color: #ff7eb6; }
-  :root:not([data-theme="light"]) .filter[data-filter="strategy"] { background: transparent; border: 0.9px solid #f1c21b; color: #f1c21b; }
-  :root:not([data-theme="light"]) .filter[data-filter="social"] { background: transparent; border: 0.9px solid #ff8389; color: #ff8389; }
+  :root:not([data-theme="light"]) .filter[data-filter="all"] { background: transparent; border: 1px solid #78a9ff; color: #78a9ff; }
+  :root:not([data-theme="light"]) .filter[data-filter="web"] { background: transparent; border: 1px solid #42be65; color: #42be65; }
+  :root:not([data-theme="light"]) .filter[data-filter="mobile"] { background: transparent; border: 1px solid #a56eff; color: #a56eff; }
+  :root:not([data-theme="light"]) .filter[data-filter="ecommerce"] { background: transparent; border: 1px solid #08bdba; color: #08bdba; }
+  :root:not([data-theme="light"]) .filter[data-filter="brand"] { background: transparent; border: 1px solid #ff832b; color: #ff832b; }
+  :root:not([data-theme="light"]) .filter[data-filter="product"] { background: transparent; border: 1px solid #33b1ff; color: #33b1ff; }
+  :root:not([data-theme="light"]) .filter[data-filter="editorial"] { background: transparent; border: 1px solid #ff7eb6; color: #ff7eb6; }
+  :root:not([data-theme="light"]) .filter[data-filter="strategy"] { background: transparent; border: 1px solid #f1c21b; color: #f1c21b; }
+  :root:not([data-theme="light"]) .filter[data-filter="social"] { background: transparent; border: 1px solid #ff8389; color: #ff8389; }
 }
 
 :root[data-theme="dark"] { --mobile-nav: #a56eff; } /* Carbon Purple 40 */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) { --mobile-nav: #a56eff; }
 }
-:root[data-theme="dark"] .filter[data-filter="all"] { background: transparent; border: 0.9px solid #78a9ff; color: #78a9ff; }
-:root[data-theme="dark"] .filter[data-filter="web"] { background: transparent; border: 0.9px solid #42be65; color: #42be65; }
-:root[data-theme="dark"] .filter[data-filter="mobile"] { background: transparent; border: 0.9px solid #a56eff; color: #a56eff; }
-:root[data-theme="dark"] .filter[data-filter="ecommerce"] { background: transparent; border: 0.9px solid #08bdba; color: #08bdba; }
-:root[data-theme="dark"] .filter[data-filter="brand"] { background: transparent; border: 0.9px solid #ff832b; color: #ff832b; }
-:root[data-theme="dark"] .filter[data-filter="product"] { background: transparent; border: 0.9px solid #33b1ff; color: #33b1ff; }
-:root[data-theme="dark"] .filter[data-filter="editorial"] { background: transparent; border: 0.9px solid #ff7eb6; color: #ff7eb6; }
-:root[data-theme="dark"] .filter[data-filter="strategy"] { background: transparent; border: 0.9px solid #f1c21b; color: #f1c21b; }
-:root[data-theme="dark"] .filter[data-filter="social"] { background: transparent; border: 0.9px solid #ff8389; color: #ff8389; }
+:root[data-theme="dark"] .filter[data-filter="all"] { background: transparent; border: 1px solid #78a9ff; color: #78a9ff; }
+:root[data-theme="dark"] .filter[data-filter="web"] { background: transparent; border: 1px solid #42be65; color: #42be65; }
+:root[data-theme="dark"] .filter[data-filter="mobile"] { background: transparent; border: 1px solid #a56eff; color: #a56eff; }
+:root[data-theme="dark"] .filter[data-filter="ecommerce"] { background: transparent; border: 1px solid #08bdba; color: #08bdba; }
+:root[data-theme="dark"] .filter[data-filter="brand"] { background: transparent; border: 1px solid #ff832b; color: #ff832b; }
+:root[data-theme="dark"] .filter[data-filter="product"] { background: transparent; border: 1px solid #33b1ff; color: #33b1ff; }
+:root[data-theme="dark"] .filter[data-filter="editorial"] { background: transparent; border: 1px solid #ff7eb6; color: #ff7eb6; }
+:root[data-theme="dark"] .filter[data-filter="strategy"] { background: transparent; border: 1px solid #f1c21b; color: #f1c21b; }
+:root[data-theme="dark"] .filter[data-filter="social"] { background: transparent; border: 1px solid #ff8389; color: #ff8389; }
 
 /* A piece that runs the full window, past the page margin. */
 /* Out to the page edge, by cancelling the page padding rather than by
@@ -1038,7 +1038,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .view.is-on {
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
+  text-decoration-thickness: 1px;
 }
 .views { gap: var(--space-2); }
 
@@ -1049,7 +1049,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
   gap: var(--space-3);
   align-items: baseline;
   padding: var(--space-2) 0;
-  border-bottom: 0.9px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 .idx-head {
   color: var(--rule);
@@ -1061,7 +1061,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .idx-row:hover .idx-name {
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  text-decoration-thickness: 0.5px; /* draws as one device pixel, the same as the 0.9px rules; 0.9 here rounds up to two */
+  text-decoration-thickness: 1px;
 }
 .idx-row:hover .idx-work, .idx-row:hover .idx-year { color: var(--accent); }
 .idx-name { font-size: 36px; letter-spacing: 0.4pt; }
