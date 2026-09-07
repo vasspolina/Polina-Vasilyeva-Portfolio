@@ -738,6 +738,7 @@ a:focus-visible, button:focus-visible {
   .ov-card[href$="spiritual-labour.html"] .ov-frame { height: calc(var(--ov-h) * 1.3); }
   /* Willow and Wu spans both columns but sits 30% under the full measure. */
   .ov-card[href$="willow-and-wu.html"] .ov-frame { height: calc(var(--ov-h) * 0.84); }
+  .ov-card[href$="wsj.html"] .ov-frame { height: calc(var(--ov-h) * 1.2); }
   /* A spread or a character sheet is as wide as its column already, so it
      spans both columns to grow. */
   .ov-card[href$="literature-paper.html"],
