@@ -911,8 +911,8 @@ PROJECTS = [
 # Compass takes the slot beside Indoor Plant Care; the three identity-and-
 # website practices, Van Meekren, BTS and Lenka Ilic, sit together after.
 ORDER = ["verizon", "haworth", "alexander-wang", "bts-advocaten",
-         "indoor-plant-care", "compass", "van-meekren", "wsj", "lenka-ilic",
-         "willow-and-wu",
+         "indoor-plant-care", "compass", "van-meekren", "wsj", "willow-and-wu",
+         "lenka-ilic",
          "clinique", "chobani", "furniture", "florida-blue",
          "pratt", "sasha-sedelnikov", "sarah-crowner", "isaac-howell", "literature-paper",
          "dada", "spiritual-labour"]
