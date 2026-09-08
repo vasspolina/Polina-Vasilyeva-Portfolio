@@ -225,7 +225,7 @@ a:focus-visible, button:focus-visible {
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 6px;
 }
 /* A pill rather than a word in a row: the set reads as one control, and the
    chosen one is filled instead of merely recoloured, so it is legible without
@@ -245,7 +245,7 @@ a:focus-visible, button:focus-visible {
   line-height: 1.2;
   letter-spacing: 0.4pt;
   cursor: pointer;
-  padding: 1px 6px;
+  padding: 5px 6px;
   transition: background var(--dur), color var(--dur);
 }
 
@@ -318,7 +318,7 @@ a:focus-visible, button:focus-visible {
   .nav { font-size: 18px; gap: var(--space-2); }
   .theme-toggle { font-size: 18px; }
   .intro { font-size: 24px; }
-  .filter { font-size: 18px; padding: 1px 6px; }
+  .filter { font-size: 18px; padding: 5px 6px; }
   .caption { font-size: 16px; }
   .grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
   .grid-item.is-portrait img { max-width: 50%; }
