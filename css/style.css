@@ -225,7 +225,7 @@ a:focus-visible, button:focus-visible {
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 4px;
 }
 /* A pill rather than a word in a row: the set reads as one control, and the
    chosen one is filled instead of merely recoloured, so it is legible without
@@ -887,10 +887,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
    fill as well as by hue. currentColor cannot do this: it resolves against the
    element's own colour, which this rule is also setting, so both ended up the
    page ground and the pill vanished. The fill is named per filter below. */
-/* Hover and the chosen chip thicken the line to 2px: an inset shadow adds
-   the second pixel inside the 1px border, so nothing shifts. No fill. */
-.filter:hover,
-.filter.is-active { box-shadow: inset 0 0 0 2px currentColor; }
+
 
 @media (prefers-color-scheme: dark) {
   
@@ -989,12 +986,16 @@ em, i, cite, address, dfn, var { font-style: normal; }
   text-underline-offset: 0.3em;
   text-decoration-thickness: 1px;
 }
+.view:hover { color: var(--accent); }
 .views { gap: var(--space-2); }
 
 .index-view { margin-bottom: var(--space-4); }
 .idx-head, .idx-row {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 9fr) max-content; /* the year never wraps */
+  /* Each row is its own grid, so the year column is a fixed width, or the
+     Work column would shift with the length of the year beside it. 13ch
+     holds "2022 to 2023" at 36px on one line. */
+  grid-template-columns: minmax(0, 5fr) minmax(0, 9fr) 13ch;
   gap: var(--space-3);
   align-items: baseline;
   padding: var(--space-2) 0;
@@ -1131,3 +1132,9 @@ em, i, cite, address, dfn, var { font-style: normal; }
    front page keeps it in its card. */
 .grid-item[data-tile="willow-and-wu/b100"] { grid-column: 1 / -1; }
 
+/* Carbon's selectable tag: the 1px outline stays, and hover lays a soft
+   tint of the chip's own hue behind the label; the chosen chip holds a
+   slightly stronger tint. Set last, at the weight of the per-hue dark-mode
+   rules that paint the ground transparent, so the tint wins. */
+:root .filter[data-filter]:hover { background-color: color-mix(in srgb, currentColor 12%, transparent); }
+:root .filter[data-filter].is-active { background-color: color-mix(in srgb, currentColor 22%, transparent); }
