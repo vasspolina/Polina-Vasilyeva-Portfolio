@@ -155,6 +155,7 @@ def nav(depth, here="work"):
   <a class="nav-name" href="{pre}index.html">{data.NAME}</a>
   {link("work", pre + "index.html", "Work")}
   {link("about", pre + "about.html", "About")}
+  {link("resume", pre + "resume.html", "Resume")}
   {link("contact", pre + "contact.html", "Contact")}
   <button class="theme-toggle" type="button" role="switch" aria-checked="false"
           aria-label="Dark mode">
@@ -417,6 +418,53 @@ about = head(f"About, {data.NAME}", 0, data.ABOUT[0]) + nav(0, "about") + f"""<m
 </main>
 """ + footer(0)
 open(os.path.join(ROOT, "about.html"), "w").write(about)
+
+
+# ---------------------------------------------------------------- resume
+import resume
+
+
+def cv_table(title, rows):
+    body = "\n".join(
+        f'    <div class="cv-row">\n'
+        f'      <span class="cv-where">{esc(where)}</span>\n'
+        f'      <span class="cv-when">{esc(when)}</span>\n'
+        f'      <span class="cv-what">{esc(what)}</span>\n'
+        f'      <span class="cv-how">{no_orphan(esc(how))}</span>\n'
+        f'    </div>'
+        for where, when, what, how in rows)
+    return f"""  <section class="cv-section">
+    <h2 class="cv-h">{title} <span class="cv-count">{len(rows)}</span></h2>
+    <div class="cv-head" aria-hidden="true">
+      <span>where</span><span>when</span><span>what</span><span>how</span>
+    </div>
+{body}
+  </section>"""
+
+
+skills = ", ".join(resume.SKILLS)
+cv = head(f"Resume, {data.NAME}", 0, resume.SUMMARY) + nav(0, "resume") + f"""<main id="main">
+<article class="cv">
+  <h1 class="about-role">{data.ROLE}, {data.LOCATION}</h1>
+  <div class="about-bio">
+    <p>{no_orphan(resume.TAGLINE)}.</p>
+    <p>{no_orphan(resume.SUMMARY)}.</p>
+  </div>
+{cv_table("Roles", resume.ROLES)}
+{cv_table("Teaching", resume.TEACHING)}
+{cv_table("Education", resume.EDUCATION)}
+  <section class="cv-section">
+    <h2 class="cv-h">Tools</h2>
+    <p class="cv-text">{no_orphan(resume.TOOLS)}</p>
+  </section>
+  <section class="cv-section">
+    <h2 class="cv-h">Skills</h2>
+    <p class="cv-text">{no_orphan(skills)}</p>
+  </section>
+</article>
+</main>
+""" + footer(0)
+open(os.path.join(ROOT, "resume.html"), "w").write(cv)
 
 def span_of(item):
     """How many of the project grid's four columns a piece should occupy.

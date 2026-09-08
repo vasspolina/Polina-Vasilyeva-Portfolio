@@ -1138,3 +1138,39 @@ em, i, cite, address, dfn, var { font-style: normal; }
    rules that paint the ground transparent, so the tint wins. */
 :root .filter[data-filter]:hover { background-color: color-mix(in srgb, currentColor 12%, transparent); }
 :root .filter[data-filter].is-active { background-color: color-mix(in srgb, currentColor 22%, transparent); }
+
+
+/* ---- resume: where, when, what, how ---- */
+.cv { max-width: none; }
+.cv-section { margin-top: var(--space-4); }
+.cv-h {
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 0.4pt;
+  line-height: 1.2;
+  margin-bottom: var(--space-2);
+}
+.cv-count { font-size: 18px; color: var(--muted); margin-left: var(--space-1); }
+.cv-head, .cv-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 2fr) minmax(0, 6fr);
+  gap: var(--space-3);
+  align-items: start;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 18px;
+  letter-spacing: 0.4pt;
+  line-height: 1.2;
+}
+.cv-head { color: var(--muted); border-top: 1px solid var(--rule); }
+.cv-where, .cv-what { color: var(--fg); }
+.cv-when { color: var(--muted); }
+.cv-how { color: var(--fg); }
+.cv-text { font-size: 18px; letter-spacing: 0.4pt; line-height: 1.2; max-width: 60ch; }
+@media (max-width: 767px) {
+  .cv-head { display: none; }
+  .cv-row { grid-template-columns: 1fr; gap: var(--space-1); }
+  .cv-when { order: 1; }
+  .cv-what { order: 2; }
+  .cv-how { order: 3; }
+}
