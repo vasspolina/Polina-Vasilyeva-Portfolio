@@ -745,7 +745,7 @@ a:focus-visible, button:focus-visible {
   .ov-card[href$="compass.html"] .ov-frame img { max-height: calc(var(--ov-h) * 1.2); }
   /* Clinique is as wide as its column, so it comes down by width. */
   .ov-card[href$="clinique.html"] .ov-frame img { max-width: 72%; }
-  .ov-card[href$="lenka-ilic.html"] .ov-frame img { max-width: 70%; }
+  .ov-card[href$="lenka-ilic.html"] .ov-frame img { max-width: 77%; }
   /* A spread is as wide as its column already, so it spans both to grow. */
   .ov-card[href$="literature-paper.html"] { grid-column: 1 / -1; }
 }
