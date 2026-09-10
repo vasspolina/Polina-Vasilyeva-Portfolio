@@ -1163,6 +1163,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
   line-height: 1.2;
 }
 .cv-head { color: var(--muted); border-top: 1px solid var(--rule); }
+.cv-top { border-top: 1px solid var(--rule); } /* the rule a section keeps when its header row goes */
 .cv-where, .cv-what { color: var(--fg); }
 .cv-when { color: var(--muted); }
 .cv-how { color: var(--fg); }

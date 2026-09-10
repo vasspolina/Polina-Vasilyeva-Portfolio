@@ -424,7 +424,7 @@ open(os.path.join(ROOT, "about.html"), "w").write(about)
 import resume
 
 
-def cv_table(title, rows):
+def cv_table(title, rows, header=True):
     body = "\n".join(
         f'    <div class="cv-row">\n'
         f'      <span class="cv-where">{esc(where)}</span>\n'
@@ -433,12 +433,12 @@ def cv_table(title, rows):
         f'      <span class="cv-how">{no_orphan(esc(how))}</span>\n'
         f'    </div>'
         for where, when, what, how in rows)
+    head_row = ('    <div class="cv-head" aria-hidden="true">\n'
+                '      <span>where</span><span>when</span><span>what</span><span>how</span>\n'
+                '    </div>\n') if header else '    <div class="cv-top" aria-hidden="true"></div>\n'
     return f"""  <section class="cv-section">
     <h2 class="cv-h">{title} <span class="cv-count">{len(rows)}</span></h2>
-    <div class="cv-head" aria-hidden="true">
-      <span>where</span><span>when</span><span>what</span><span>how</span>
-    </div>
-{body}
+{head_row}{body}
   </section>"""
 
 
@@ -452,7 +452,7 @@ cv = head(f"Resume, {data.NAME}", 0, resume.SUMMARY) + nav(0, "resume") + f"""<m
   </div>
 {cv_table("Roles", resume.ROLES)}
 {cv_table("Teaching", resume.TEACHING)}
-{cv_table("Education", resume.EDUCATION)}
+{cv_table("Education", resume.EDUCATION, header=False)}
   <section class="cv-section">
     <h2 class="cv-h">Tools</h2>
     <p class="cv-text">{no_orphan(resume.TOOLS)}</p>
