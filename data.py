@@ -25,6 +25,29 @@ CLIENTS = ["PayPal", "Apple", "Optum", "Google / Fitbit", "McKinsey", "Verizon",
            "Florida Blue", "Wolff Olins", "HUGE", "Chobani", "Furniture.com",
            "Tomo", "Pratt Institute"]
 
+# Where each client name on the About page goes: its project page when the
+# site has one, otherwise the client's own site. Apartamento Studios opens
+# the Haworth rebrand made there. Tomo has no link yet.
+CLIENT_LINKS = {
+    "PayPal": "https://www.paypal.com",
+    "Apple": "https://www.apple.com",
+    "Optum": "https://www.optum.com",
+    "Google / Fitbit": "https://www.fitbit.com",
+    "McKinsey": "https://www.mckinsey.com",
+    "Verizon": "projects/verizon.html",
+    "Alexander Wang": "projects/alexander-wang.html",
+    "WSJ": "projects/wsj.html",
+    "Haworth": "projects/haworth.html",
+    "Apartamento Studios": "projects/haworth.html",
+    "frog design": "https://www.frog.co",
+    "Florida Blue": "projects/florida-blue.html",
+    "Wolff Olins": "https://www.wolffolins.com",
+    "HUGE": "https://www.hugeinc.com",
+    "Chobani": "projects/chobani.html",
+    "Furniture.com": "projects/furniture.html",
+    "Pratt Institute": "projects/pratt.html",
+}
+
 TEACHING = [
     ("NYU", "Visiting Critic, 2021 to present"),
     ("Pratt Institute", "Adjunct Professor, 2017 to 2020"),
@@ -735,7 +758,8 @@ PROJECTS = [
   # pages beside it. The two broker covers pair, black beside white.
   "piece_width": {"drop09": 100, "drop10": 100,
                   "drop04": 60, "drop05": 48, "drop06": 48,
-                  "d005": 48, "d006": 48, "d007": 48, "d008": 48,
+                  # the banner system and the call-out stats, 40% up and stacked
+                  "d005": 67, "d006": 67, "d007": 48, "d008": 48,
                   # both cards are small objects and are shown as such
                   "drop02": 30, "drop03": 30,
                   "drop12": 30, "drop13": 30, "drop14": 30},

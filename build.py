@@ -372,7 +372,15 @@ open(os.path.join(ROOT, "index.html"), "w").write(index)
 
 # ---------------------------------------------------------------- about
 bio = "\n".join(f"    <p>{no_orphan(p)}</p>" for p in data.ABOUT)
-clients = "\n".join(f"      <li>{c}</li>" for c in data.CLIENTS)
+def client_item(c):
+    href = data.CLIENT_LINKS.get(c)
+    if not href:
+        return f"      <li>{c}</li>"
+    ext = ' rel="noopener"' if href.startswith("http") else ""
+    return f'      <li><a href="{href}"{ext}>{c}</a></li>'
+
+
+clients = "\n".join(client_item(c) for c in data.CLIENTS)
 teaching = "\n".join(
     f"      <li>{where}<span class=\"about-note\">{no_orphan(what)}</span></li>"
     for where, what in data.TEACHING)
