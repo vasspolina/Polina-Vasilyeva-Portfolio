@@ -18,6 +18,13 @@
       --cookie-crumb:#ddb783;
       --cookie-light:#ffe5bd;
       --cookie-shadow:#100804;
+      --cookie-toast:#935421;
+      --cookie-hover-edge:#e8c59f;
+      --cookie-hover-surface:#563c2b;
+      --cookie-honey:#f0c98f;
+      --cookie-caramel:#c99862;
+      --cookie-cocoa:#a5744c;
+      --cookie-biscuit:#f3dfb6;
       --background:var(--cds-background);
       --foreground:var(--cds-text-primary);
       --muted-foreground:var(--cds-text-secondary);
@@ -157,9 +164,10 @@
     ::selection { background:#76563d; color:#f1dcc0; }
     * { box-sizing:border-box; }
     html { background:var(--cds-background); }
-    body { margin:0; min-width:320px; color:var(--cds-text-primary); background:var(--cds-background); font:300 14px/20px var(--cc-font-family); font-synthesis:none; }
-    body *,body *::before,body *::after { font-family:var(--cc-font-family)!important; font-weight:300!important; font-synthesis:none; }
+    body { margin:0; min-width:320px; color:var(--cds-text-primary); background:var(--cds-background); font:300 14px/1.2 var(--cc-font-family); letter-spacing:.7pt; font-synthesis:none; }
+    body *,body *::before,body *::after { font-family:var(--cc-font-family)!important; font-weight:300!important; letter-spacing:.7pt!important; line-height:1.2!important; font-synthesis:none; }
     button, input, select { font:inherit; }
+    .cds--btn,.cds--link,.cds--select-input { outline-width:1px!important; }
     .page-header { position:relative; background:#281c14; }
     .page-header .cds--header__name { font-size:14px; line-height:20px; padding:0 32px; font-weight:300; letter-spacing:.01em; }
     .page-header .header-context { display:flex; align-items:center; padding:0 24px; border-left:1px solid var(--cds-border-subtle-01); color:var(--cds-text-secondary); font-size:14px; line-height:20px; }
@@ -192,8 +200,10 @@
     .cc-explainer-base { color:var(--cds-text-secondary); font-size:14px; line-height:20px; }
     .cc-tag p,.cc-tooltip p { margin:8px 0 0; color:var(--cds-text-secondary); font-size:14px; line-height:20px; }
     .cc-group-tag { position:absolute; pointer-events:none; transform:translate(-50%,-100%); white-space:nowrap; padding:4px 8px; background:var(--cds-layer-01); border:1px solid var(--cds-border-subtle-02); font-size:14px; line-height:20px; color:var(--cds-text-secondary); }
-    .cc-tooltip { position:absolute; pointer-events:none; width:max-content; max-width:min(360px,calc(100% - 16px)); padding:16px; background:var(--cds-layer-01); border:1px solid var(--cds-border-subtle-02); border-left:3px solid var(--cds-border-interactive); box-shadow:0 4px 12px rgba(16,8,4,.42); color:var(--cds-text-primary); font-size:14px; line-height:20px; z-index:4; }
-    .cc-tooltip .cc-tip-value { color:var(--cds-link-primary); }
+    .cc-tooltip { position:absolute; pointer-events:none; width:max-content; max-width:min(360px,calc(100% - 16px)); padding:16px; background:var(--cds-layer-01); border:1px solid var(--cookie-hover-edge); box-shadow:0 12px 28px rgba(16,8,4,.65); color:var(--cds-text-primary); font-size:14px; line-height:20px; z-index:4; }
+    .cc-tooltip:not([hidden]) { animation:cc-tooltip-enter 180ms ease-out; }
+    @keyframes cc-tooltip-enter { from { opacity:0; translate:0 6px; } to { opacity:1; translate:0 0; } }
+    .cc-tooltip .cc-tip-value { color:var(--cookie-hover-edge); }
     .cc-tooltip .cc-tip-action { color:var(--cds-link-primary); font-size:14px; line-height:20px; }
     .cc-row-tooltip { position:fixed; max-width:min(360px,calc(100vw - 24px)); z-index:30; }
     .camera-bar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:8px 0 16px; }
@@ -202,10 +212,12 @@
     .camera-bar .cds--btn--ghost:hover { background:var(--cds-background-hover); }
     .camera-bar .cds--btn--ghost:hover .cds--btn__icon { fill:var(--cds-icon-interactive); }
     .gesture-note { color:var(--cds-text-secondary); font-size:14px; line-height:20px; margin:0 0 24px; }
-    .selected-result { padding:16px 24px 20px; background:var(--cds-layer-01); border-left:2px solid var(--cds-interactive); min-height:108px; }
-    .selected-result .eyebrow { margin-bottom:8px; }
-    .cc-readout { color:var(--cds-text-secondary); font-size:14px; line-height:20px; max-width:740px; }
-    .cc-readout strong { display:block; font-size:20px; line-height:28px; font-weight:300; color:var(--cds-text-primary); margin-bottom:8px; }
+    .cc-status { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .cookie-fact { display:grid; grid-template-columns:140px minmax(0,1fr); gap:24px; padding:24px; background:var(--cds-layer-01); border-left:1px solid var(--cds-interactive); }
+    .cookie-fact-number { color:var(--cds-link-primary); font-size:32px; }
+    .cookie-fact h3 { margin:0 0 12px; font-size:20px; font-weight:300; }
+    .cookie-fact p { margin:0 0 12px; color:var(--cds-text-secondary); font-size:14px; }
+    .cookie-fact p:last-child { margin-bottom:0; }
     .country-context { margin-top:24px; padding-top:24px; border-top:1px solid var(--cds-border-subtle-01); }
     .country-heading { display:flex; justify-content:space-between; align-items:flex-start; gap:24px; }
     .country-heading h3 { margin:0 0 8px; font-size:20px; line-height:28px; font-weight:300; }
@@ -229,23 +241,25 @@
     .group-divider { border-top:1px solid var(--cds-border-subtle-02); }
     .column-labels { display:grid; grid-template-columns:minmax(0,1fr) 56px 48px; gap:12px; padding:0 24px 8px; color:var(--cds-text-secondary); font-size:14px; line-height:20px; }
     .column-labels span:nth-child(n+2) { text-align:right; }
-    .result-choice { appearance:none; width:100%; display:grid; grid-template-columns:minmax(0,1fr) 56px 48px; gap:12px; align-items:center; padding:14px 24px 14px 21px; min-height:52px; border:0; border-left:3px solid transparent; border-top:1px solid var(--cds-border-subtle-02); border-radius:0; background:transparent; color:var(--cds-text-primary); cursor:pointer; text-align:left; transition:background-color 110ms,border-left-color 110ms; }
-    .result-choice:hover,.result-choice[data-previewed="true"] { background:var(--cds-layer-hover-01); }
-    .result-choice:hover,.result-choice[data-previewed="true"] { border-left-color:var(--cds-border-interactive); }
+    .result-choice { appearance:none; width:100%; display:grid; grid-template-columns:minmax(0,1fr) 56px 48px; gap:12px; align-items:center; padding:14px 24px 14px 23px; min-height:52px; border:0; border-left:1px solid transparent; border-top:1px solid var(--cds-border-subtle-02); border-radius:0; background:transparent; color:var(--cds-text-primary); cursor:pointer; text-align:left; transition:background-color 160ms,border-left-color 160ms,box-shadow 160ms; }
+    .result-choice:hover,.result-choice[data-previewed="true"] { background:var(--cookie-hover-surface); }
+    .result-choice:hover,.result-choice[data-previewed="true"] { border-left-color:var(--cookie-hover-edge); box-shadow:inset 0 0 0 1px rgba(232,197,159,.25); }
     .result-choice[aria-pressed="true"] { background:var(--cds-layer-selected-01); border-left-color:var(--cds-interactive); }
-    .result-choice[aria-pressed="true"]:hover,.result-choice[aria-pressed="true"][data-previewed="true"] { background:var(--cds-layer-selected-hover-01); }
-    .result-choice:focus-visible { outline:2px solid var(--cds-focus); outline-offset:-2px; }
-    .result-choice .result-label { font-size:14px; line-height:20px; }
+    .result-choice[aria-pressed="true"]:hover,.result-choice[aria-pressed="true"][data-previewed="true"] { background:var(--cookie-hover-surface); border-left-color:var(--cookie-hover-edge); }
+    .result-choice:focus-visible { outline:1px solid var(--cds-focus); outline-offset:-1px; }
+    .result-choice .result-label { display:flex; align-items:center; gap:8px; font-size:14px; line-height:20px; transition:translate 160ms; }
+    .result-label::before { content:''; display:block; flex:none; width:8px; height:8px; background:var(--result-color); border:1px solid var(--result-color); border-radius:50%; }
+    .result-choice:hover .result-label,.result-choice[data-previewed="true"] .result-label { translate:3px 0; }
     .result-choice .result-count { font-size:14px; line-height:20px; font-variant-numeric:tabular-nums; text-align:right; }
     .result-choice .result-share { font-size:14px; line-height:20px; font-variant-numeric:tabular-nums; text-align:right; color:var(--cds-text-secondary); }
-    .result-choice:hover .result-share,.result-choice[data-previewed="true"] .result-share { color:var(--cds-link-primary); }
+    .result-choice:hover .result-share,.result-choice[data-previewed="true"] .result-share,.result-choice:hover .result-count,.result-choice[data-previewed="true"] .result-count { color:var(--cookie-hover-edge); }
     .results-footnote { padding:16px 24px 24px; border-top:1px solid var(--cds-border-subtle-02); color:var(--cds-text-secondary); font-size:14px; line-height:20px; }
     .study-notes { margin-top:32px; border-top:1px solid var(--cds-border-subtle-01); border-bottom:1px solid var(--cds-border-subtle-01); }
     .study-notes summary { display:flex; align-items:center; gap:12px; min-height:56px; padding:16px 0; font-size:14px; line-height:20px; cursor:pointer; list-style:none; }
     .study-notes summary::-webkit-details-marker { display:none; }
     .study-notes summary:hover { background:var(--cds-background-hover); }
     .study-notes summary:hover svg { fill:var(--cds-icon-interactive); }
-    .study-notes summary:focus-visible { outline:2px solid var(--cds-focus); outline-offset:-2px; }
+    .study-notes summary:focus-visible { outline:1px solid var(--cds-focus); outline-offset:-1px; }
     .study-notes summary svg { fill:currentColor; width:16px; height:16px; flex:none; transition:transform 100ms; }
     .study-notes[open] summary svg { transform:rotate(90deg); }
     .notes-content { display:grid; grid-template-columns:1fr 1fr; gap:32px; padding:8px 28px 32px; }
@@ -262,7 +276,7 @@
     @media(min-width:1500px) { .page { padding-left:64px; padding-right:64px; } }
     @media(max-width:1056px) { .page { padding:32px; } .workbench { grid-template-columns:minmax(0,1fr) 320px; gap:24px; } .figure-heading { flex-wrap:wrap; gap:8px; } .camera-bar .cds--btn { padding-right:28px; } .camera-bar .cds--btn__icon { display:none; } }
     @media(max-width:900px) { .workbench { grid-template-columns:1fr; } .cc-view { height:440px; } .results-panel { display:grid; grid-template-columns:1fr 1fr; } .panel-heading,.results-footnote { grid-column:1/-1; } .result-group { border-top:1px solid var(--cds-border-subtle-02); } .result-group + .result-group { border-left:1px solid var(--cds-border-subtle-02); } .gesture-note { margin-bottom:16px; } }
-    @media(max-width:640px) { .page { padding:24px 16px 32px; } .page-header .cds--header__name { padding-left:16px; } .header-context { display:none!important; } .page-header .header-meta { padding-right:8px; } h1 { font-size:32px; line-height:40px; } .intro p { font-size:14px; line-height:20px; } .figure-heading h2 { font-size:20px; line-height:28px; } .cookie-pies { grid-template-columns:1fr; gap:0; } .cc-view { height:340px; } .camera-bar { padding-bottom:12px; gap:4px 0; } .camera-bar .cds--btn { padding-right:16px; min-height:44px; } .selected-result { padding:16px; } .results-panel { display:block; } .result-group + .result-group { border-left:0; } .notes-content { grid-template-columns:1fr; padding:8px 16px 24px; gap:16px; } .page-footer { flex-direction:column; gap:16px; } }
+    @media(max-width:640px) { .page { padding:24px 16px 32px; } .page-header .cds--header__name { padding-left:16px; } .header-context { display:none!important; } .page-header .header-meta { padding-right:8px; } h1 { font-size:32px; line-height:40px; } .intro p { font-size:14px; line-height:20px; } .figure-heading h2 { font-size:20px; line-height:28px; } .cookie-pies { grid-template-columns:1fr; gap:0; } .cc-view { height:340px; } .camera-bar { padding-bottom:12px; gap:4px 0; } .camera-bar .cds--btn { padding-right:16px; min-height:44px; } .cookie-fact { grid-template-columns:1fr; gap:12px; padding:20px 16px; } .results-panel { display:block; } .result-group + .result-group { border-left:0; } .notes-content { grid-template-columns:1fr; padding:8px 16px 24px; gap:16px; } .page-footer { flex-direction:column; gap:16px; } }
     @media(max-width:640px) { .country-heading { flex-direction:column; gap:16px; } .country-heading .cds--select { width:100%; } .country-heading .cds--select-input { font-size:20px; line-height:28px; min-height:44px; } .country-summary { padding-top:16px; } }
     @media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; } }
   </style>
@@ -311,10 +325,15 @@
             <button type="button" class="cds--btn cds--btn--ghost cds--btn--sm" data-camera="out">Zoom out<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M4 6H9V7H4z" /><path d="M10.7,10C11.5,9,12,7.8,12,6.5C12,3.5,9.5,1,6.5,1S1,3.5,1,6.5S3.5,12,6.5,12c1.3,0,2.5-0.5,3.5-1.3l3.8,3.8l0.7-0.7 L10.7,10z M6.5,11C4,11,2,9,2,6.5S4,2,6.5,2S11,4,11,6.5S9,11,6.5,11L6.5,11z" /></svg></button>
           </div>
           <p class="gesture-note">Hover over a slice or row for more detail. Select a slice to pull it out. Drag to rotate; scroll or pinch to zoom. Select a row to change the result or test.</p>
-          <div class="selected-result">
-            <div class="eyebrow">Selected result</div>
-            <div id="cc-readout" class="cc-readout" aria-live="polite" aria-atomic="true"></div>
-          </div>
+          <div id="cc-readout" class="cc-status" aria-live="polite" aria-atomic="true"></div>
+          <section class="cookie-fact" aria-labelledby="cookie-fact-title">
+            <div class="cookie-fact-number">1 in 16</div>
+            <div>
+              <h3 id="cookie-fact-title">Even the buttons did not always close the banner</h3>
+              <p>Our tool activated every labelled button directly. On 344 of 5,619 page-covering banners, the banner stayed open.</p>
+              <p>These are automated results. A manual check of 240 websites is under way.</p>
+            </div>
+          </section>
           <section class="country-context" aria-labelledby="country-title">
             <div class="country-heading">
               <div>
@@ -463,6 +482,8 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     {id:'unclear',group:'reader',name:'Another pop-up or an unclear result',label:'Other pop-up or unclear',rowLabel:'Other pop-up or unclear',n:7,total:578,hint:'Another pop-up appeared, or the result was too unclear to classify.',detail:'7 of 578 sites (1.2%). Another pop-up appeared, or the result was too unclear to classify.'}
   ];
   const byId=new Map(results.map(r=>[r.id,r]));
+  const toneNames=['honey','caramel','cocoa','biscuit'];
+  results.forEach((r,i)=>r.toneVariable='--cookie-'+toneNames[i%4]);
   const groups=['keyboard','reader'],selected={keyboard:'blocked',reader:'reader-open'};
   for(const group of groups){
     const list=results.filter(r=>r.group===group),total=list[0].total;
@@ -473,6 +494,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   }
   for(const r of results){
     const b=document.createElement('button');b.type='button';b.className='result-choice';b.dataset.result=r.id;
+    b.style.setProperty('--result-color','var('+r.toneVariable+')');
     b.setAttribute('aria-pressed',String(r.id==='blocked'));
     b.setAttribute('aria-label',r.name+', '+fmt(r.n)+' of '+fmt(r.total)+', '+percent(r.n,r.total));
     for(const [className,text] of [['result-label',r.rowLabel],['result-count',fmt(r.n)],['result-share',percent(r.n,r.total)]]){const s=document.createElement('span');s.className=className;s.textContent=text;b.appendChild(s);}
@@ -484,7 +506,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   const colorCanvas=document.createElement('canvas');colorCanvas.width=colorCanvas.height=1;
   const colorCtx=colorCanvas.getContext('2d',{willReadFrequently:true});
   function resolve(variable){probe.style.color=`var(${variable})`;colorCtx.clearRect(0,0,1,1);colorCtx.fillStyle=getComputedStyle(probe).color;colorCtx.fillRect(0,0,1,1);const d=colorCtx.getImageData(0,0,1,1).data;return new THREE.Color().setRGB(d[0]/255,d[1]/255,d[2]/255,THREE.SRGBColorSpace);}
-  const theme={bg:resolve('--background'),fg:resolve('--foreground'),warm:resolve('--cookie-dough'),gold:resolve('--cookie-crumb'),hover:resolve('--cds-border-interactive'),light:resolve('--cookie-light'),shadow:resolve('--cookie-shadow')};
+  const theme={bg:resolve('--background'),fg:resolve('--foreground'),warm:resolve('--cookie-dough'),gold:resolve('--cookie-crumb'),hover:resolve('--cookie-hover-edge'),toast:resolve('--cookie-toast'),light:resolve('--cookie-light'),shadow:resolve('--cookie-shadow')};
   const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
   theme.light.multiplyScalar(1/Math.max(theme.light.r,theme.light.g,theme.light.b,.01));theme.dark=theme.bg.clone();
   const golden=theme.warm.clone().lerp(theme.gold,.48).lerp(theme.light,.19).lerp(theme.dark,.14);
@@ -589,25 +611,33 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   function addMesh(chart,r,geo,mat){const m=new THREE.Mesh(geo,mat);m.castShadow=m.receiveShadow=true;m.userData.resultId=r.id;r.piece.add(m);chart.hitMeshes.push(m);return m;}
   function buildPiece(chart,r,index){
     r.piece=new THREE.Group();chart.cookie.add(r.piece);
-    addMesh(chart,r,topGeometry(r),doughMat);addMesh(chart,r,topGeometry(r,true),crustMat);
-    addMesh(chart,r,crustGeometry(r),crustMat);addMesh(chart,r,brokenFaceGeometry(r.startFracture,false),cutMat);addMesh(chart,r,brokenFaceGeometry(r.endFracture,true),cutMat);
+    // Each piece has its own materials so only the hovered piece toasts.
+    r.toastMaterials=[];
+    function roastable(base,strength){
+      const material=base.clone(),plain=base.color.clone().lerp(resolve(r.toneVariable),.78),roasted=plain.clone().lerp(theme.toast,strength);
+      material.color.copy(plain);
+      r.toastMaterials.push({material,plain,roasted});return material;
+    }
+    const dough=roastable(doughMat,.72),crust=roastable(crustMat,.80),cut=roastable(cutMat,.50),crumbs=roastable(crumbMat,.44);
+    addMesh(chart,r,topGeometry(r),dough);addMesh(chart,r,topGeometry(r,true),crust);
+    addMesh(chart,r,crustGeometry(r),crust);addMesh(chart,r,brokenFaceGeometry(r.startFracture,false),cut);addMesh(chart,r,brokenFaceGeometry(r.endFracture,true),cut);
     const decorations=[];
     for(let i=0;i<32;i++){
       const a=relativeAngle(hash(i+7,chart.seed)*TAU),rad=Math.sqrt(hash(i+71,34))*(R-.45),size=.19+hash(i+17,21)*.15;
       if(a<r.start||a>=r.end||rad<.65||boundaryDistance(a,r.start,rad)<size*1.4||boundaryDistance(a,r.end,rad)<size*1.4)continue;
       const {x,z}=piecePoint(r,rad/R,(a-r.start)/r.span),chip=addMesh(chart,r,chipGeo,chocolateMat);chip.position.set(x,surface(x,z)-size*.08,z);chip.scale.set(size,size*(.75+.25*hash(i,16)),size*(.8+.25*hash(i,6)));chip.rotation.set(.06*Math.sin(i*2),i*2.394,.055*Math.cos(i*3));decorations.push({x,z,size});
     }
-    const count=Math.max(6,Math.round(1550*r.n/r.total)),grains=new THREE.InstancedMesh(crumbGeo,crumbMat,count);
+    const count=Math.max(6,Math.round(1550*r.n/r.total)),grains=new THREE.InstancedMesh(crumbGeo,crumbs,count);
     for(let i=0;i<count;i++){
       const {x,z}=piecePoint(r,Math.sqrt(hash(i+29,index+93))*(1-.025/R),hash(i+11,index+34)),size=.013+Math.pow(hash(i+17,index+43),2)*.040;
       const covered=decorations.some(d=>Math.hypot(x-d.x,z-d.z)<d.size);
       dummy.position.set(x,surface(x,z)+size*.12,z);dummy.rotation.set(i*2.3,i*1.1,i*.51);dummy.scale.set(size,size*.58,size*.88);if(covered)dummy.scale.setScalar(0);dummy.updateMatrix();grains.setMatrixAt(i,dummy.matrix);const tint=.68+.46*hash(i+7,19);grains.setColorAt(i,new THREE.Color(tint,tint,tint));
     }
     grains.castShadow=grains.receiveShadow=true;r.piece.add(grains);
-    const edgeCount=Math.max(5,Math.round(650*r.n/r.total)),edgeGrains=new THREE.InstancedMesh(crumbGeo,crumbMat,edgeCount);
+    const edgeCount=Math.max(5,Math.round(650*r.n/r.total)),edgeGrains=new THREE.InstancedMesh(crumbGeo,crumbs,edgeCount);
     for(let i=0;i<edgeCount;i++){const a=r.start+hash(i+21,index+27)*r.span,t=hash(i+11,39),bow=Math.sin(Math.PI*t),rad=edge(a)+.066*bow-.04*t*t,size=.014+hash(i+17,69)*.035,y=mix(surface(Math.cos(a)*edge(a),Math.sin(a)*edge(a)),BOTTOM,t)+.018*Math.sin(a*27)*bow;dummy.position.set(Math.cos(a)*(rad+.003),y,Math.sin(a)*(rad+.003));dummy.rotation.set(i*.4,i*1.6,i*.9);dummy.scale.set(size,size*.72,size*.59);dummy.updateMatrix();edgeGrains.setMatrixAt(i,dummy.matrix);const tint=.55+.40*hash(i+3,15);edgeGrains.setColorAt(i,new THREE.Color(tint,tint,tint));}
     edgeGrains.castShadow=edgeGrains.receiveShadow=true;r.piece.add(edgeGrains);
-    const fracturedCrumbs=new THREE.InstancedMesh(crumbGeo,crumbMat,48);
+    const fracturedCrumbs=new THREE.InstancedMesh(crumbGeo,crumbs,48);
     for(let i=0;i<48;i++){
       const profile=i<24?r.startFracture:r.endFracture,q=.06+hash(i+15,index+83)*.91,point=fracturePoint(profile,q),side=i<24?-1:1,top=surface(point.x,point.z);
       const size=Math.min(.025+hash(i+31,index+41)*.065,Math.max(.008,point.rad*r.span*.18)),out=size*.38;
@@ -620,14 +650,8 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     for(let i=0;i<=radialSteps;i++)traceFracture(r.startFracture,i/radialSteps);
     for(let i=1;i<=arcSteps;i++){const a=r.start+r.span*i/arcSteps;trace(a,edge(a));}
     for(let i=radialSteps-1;i>0;i--)traceFracture(r.endFracture,i/radialSteps);
-    const outlineCurve=new THREE.CatmullRomCurve3(outlinePoints,true,'centripetal');
-    // Caramel matches the page's interactive border color.
-    // A translucent coat preserves the baked texture beneath the hover color.
-    r.hoverMaterial=new THREE.MeshBasicMaterial({color:theme.hover,transparent:true,opacity:0,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2,toneMapped:false});
-    r.hoverSkin=new THREE.Group();
-    for(const body of r.piece.children.slice(0,5)){const skin=new THREE.Mesh(body.geometry,r.hoverMaterial);skin.renderOrder=1;r.hoverSkin.add(skin);}
-    r.hoverSkin.visible=false;r.piece.add(r.hoverSkin);
-    r.outline=new THREE.Mesh(new THREE.TubeGeometry(outlineCurve,outlinePoints.length*2,.026,5,true),new THREE.MeshBasicMaterial({color:theme.hover,transparent:true,opacity:0,depthWrite:false,toneMapped:false}));
+    // A brighter caramel edge follows the broken contour while it toasts.
+    r.outline=new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(outlinePoints),new THREE.LineBasicMaterial({color:theme.hover,transparent:true,opacity:0,depthWrite:false,linewidth:1,toneMapped:false}));
     r.outline.visible=false;r.outline.renderOrder=2;r.piece.add(r.outline);
     // Keep the original footprint clickable while the visual piece lifts.
     r.restHit=new THREE.Group();
@@ -653,7 +677,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   function updatePieces(chart){
     for(const r of chart.list){
       const active=selected[r.group]===r.id,hover=chart.hoverId===r.id;
-      const target={out:.16+(active ? .32 : 0)+(hover ? .32 : 0),lift:(active ? .10 : 0)+(hover ? .26 : 0),outline:hover ? 1 : 0,tint:hover ? .22 : 0};
+      const target={out:.16+(active ? .32 : 0)+(hover ? .50 : 0),lift:(active ? .10 : 0)+(hover ? .55 : 0),outline:hover ? 1 : 0,toast:hover ? 1 : 0};
       if(!r.motion)r.motion={...target};r.target=target;
       const rest=.16+(active ? .32 : 0);r.restHit.position.set(Math.cos(r.mid)*rest,active ? .10 : 0,Math.sin(r.mid)*rest);r.restHit.updateMatrixWorld(true);
     }
@@ -661,15 +685,15 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     fillExplanation(chart.tag,byId.get(selected[chart.group]),false);
   }
   function updateMotion(chart,dt){
-    const blend=reducedMotion.matches?1:1-Math.exp(-dt/ .07);let moving=false;
+    const blend=reducedMotion.matches?1:1-Math.exp(-dt/ .09),toastBlend=reducedMotion.matches?1:1-Math.exp(-dt/ .14);let moving=false;
     for(const r of chart.list){
-      for(const key of ['out','lift','outline','tint']){
-        r.motion[key]+= (r.target[key]-r.motion[key])*blend;
+      for(const key of ['out','lift','outline','toast']){
+        r.motion[key]+= (r.target[key]-r.motion[key])*(key==='toast'?toastBlend:blend);
         if(Math.abs(r.target[key]-r.motion[key])<.001)r.motion[key]=r.target[key];else moving=true;
       }
       r.piece.position.set(Math.cos(r.mid)*r.motion.out,r.motion.lift,Math.sin(r.mid)*r.motion.out);
       r.outline.material.opacity=r.motion.outline;r.outline.visible=r.motion.outline>.002;
-      r.hoverMaterial.opacity=r.motion.tint;r.hoverSkin.visible=r.motion.tint>.002;
+      for(const {material,plain,roasted} of r.toastMaterials)material.color.copy(plain).lerp(roasted,r.motion.toast);
     }
     return moving;
   }
