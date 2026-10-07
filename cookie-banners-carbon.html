@@ -32,7 +32,6 @@
     .figure { min-width:0; }
     .figure-heading { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:0 0 16px; border-bottom:1px solid var(--cds-border-subtle-01); }
     .figure-heading h2 { font-size:20px; line-height:28px; font-weight:300; margin:0; }
-    .figure-unit { color:var(--cds-text-secondary); font-size:14px; line-height:20px; text-align:right; }
     .cookie-pies { display:grid; grid-template-columns:1fr; gap:0; }
     .cookie-pie[hidden] { display:none; }
     .cookie-pie { min-width:0; padding-top:24px; }
@@ -117,7 +116,7 @@
     .source-links .cds--link:hover,.country-context .cds--link:hover { text-decoration:underline; text-underline-offset:3px; }
     .render-error { margin:24px; color:var(--cds-support-error); font-size:14px; line-height:20px; }
     @media(min-width:1500px) { .page { padding-left:64px; padding-right:64px; } }
-    @media(max-width:1056px) { .page { padding:32px; } .workbench { grid-template-columns:minmax(0,1fr) 320px; gap:24px; } .figure-heading { flex-wrap:wrap; gap:8px; } .figure-unit { text-align:left; } .camera-bar .cds--btn { padding-right:28px; } .camera-bar .cds--btn__icon { display:none; } }
+    @media(max-width:1056px) { .page { padding:32px; } .workbench { grid-template-columns:minmax(0,1fr) 320px; gap:24px; } .figure-heading { flex-wrap:wrap; gap:8px; } .camera-bar .cds--btn { padding-right:28px; } .camera-bar .cds--btn__icon { display:none; } }
     @media(max-width:900px) { .workbench { grid-template-columns:1fr; } .cc-view { height:440px; } .results-panel { display:grid; grid-template-columns:1fr 1fr; } .panel-heading,.results-footnote { grid-column:1/-1; } .result-group { border-top:1px solid var(--cds-border-subtle-02); } .result-group + .result-group { border-left:1px solid var(--cds-border-subtle-02); } .gesture-note { margin-bottom:16px; } }
     @media(max-width:640px) { .page { padding:24px 16px 32px; } .page-header .cds--header__name { padding-left:16px; } .header-context { display:none!important; } .page-header .header-meta { padding-right:8px; } h1 { font-size:32px; line-height:40px; } .intro p { font-size:14px; line-height:20px; } .figure-heading h2 { font-size:20px; line-height:28px; } .cookie-pies { grid-template-columns:1fr; gap:0; } .cc-view { height:340px; } .camera-bar { padding-bottom:12px; gap:4px 0; } .camera-bar .cds--btn { padding-right:16px; min-height:44px; } .selected-result { padding:16px; } .results-panel { display:block; } .result-group + .result-group { border-left:0; } .notes-content { grid-template-columns:1fr; padding:8px 16px 24px; gap:16px; } .page-footer { flex-direction:column; gap:16px; } }
     @media(max-width:640px) { .country-heading { flex-direction:column; gap:16px; } .country-heading .cds--select { width:100%; } .country-heading .cds--select-input { font-size:20px; line-height:28px; min-height:44px; } .country-summary { padding-top:16px; } }
@@ -142,7 +141,6 @@
         <section class="figure" aria-labelledby="figure-title">
           <div class="figure-heading">
             <h2 id="figure-title">All EU results, one slice at a time</h2>
-            <span class="figure-unit">Slice angle = share of the test group</span>
           </div>
           <div class="cookie-pies">
             <section class="cookie-pie" data-pie-group="keyboard" aria-labelledby="keyboard-pie-title">
@@ -309,7 +307,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   describeCountry();
   const percent=(n,t)=>(100*n/t).toFixed(1)+'%';
   const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),mix=(a,b,t)=>a+(b-a)*t;
-  const TAU=Math.PI*2,R=4.35,BOTTOM=-.20;
+  const TAU=Math.PI*2,R=4.35,BOTTOM=-.20,FRACTURE_STEPS=72;
   const results=[
     {id:'accept',group:'keyboard',name:'Accept closed the banner first',label:'Accept first',rowLabel:'Accept closed first',n:2824,total:5628,hint:'Accept or Accept all was the first button that worked in the keyboard test.',detail:'2,824 of 5,628 covering banners (50.2%). Among the 4,608 banners the keyboard could close, Accept worked first on 61.3%.'},
     {id:'reject',group:'keyboard',name:'Reject closed the banner first',label:'Reject first',rowLabel:'Reject closed first',n:1413,total:5628,hint:'Reject or Only necessary was the first button that worked in the keyboard test.',detail:'1,413 of 5,628 covering banners (25.1%). Among banners the keyboard could close, Reject or Only necessary worked first on 30.7%.'},
@@ -353,6 +351,19 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   function noise(x,y){const i=Math.floor(x),j=Math.floor(y);let u=x-i,v=y-j;u=u*u*(3-2*u);v=v*v*(3-2*v);return mix(mix(hash(i,j),hash(i+1,j),u),mix(hash(i,j+1),hash(i+1,j+1),u),v);}
   function fbm(x,y){return noise(x,y)*.56+noise(x*2.13+3.4,y*2.13)*.28+noise(x*4.37,y*4.37+1.2)*.16;}
   function cells(x,z){const ix=Math.floor(x),iz=Math.floor(z);let a=10,b=10;for(let j=-1;j<=1;j++)for(let i=-1;i<=1;i++){const cx=ix+i,cz=iz+j,dx=cx+.12+.76*hash(cx+9,cz+7)-x,dz=cz+.12+.76*hash(cx+39,cz+21)-z,d=dx*dx+dz*dz;if(d<a){b=a;a=d;}else if(d<b)b=d;}return Math.sqrt(b)-Math.sqrt(a);}
+  function jagged(t,seed,segments){const f=t*segments,i=Math.min(segments-1,Math.floor(f));return mix(hash(i,seed)*2-1,hash(i+1,seed)*2-1,f-i);}
+  function makeFracture(angle,limit,seed){
+    const raw=[],values=[];let weighted=0,weight=0,peak=0;
+    for(let i=0;i<=FRACTURE_STEPS;i++){const t=i/FRACTURE_STEPS,v=.68*jagged(t,seed,9)+.23*jagged(t,seed+29,23)+.09*jagged(t,seed+57,53),w=t*Math.sin(Math.PI*t);raw.push(v);weighted+=v*w;weight+=w;}
+    const mean=weighted/weight;
+    for(let i=0;i<=FRACTURE_STEPS;i++){const t=i/FRACTURE_STEPS,v=i===0||i===FRACTURE_STEPS?0:Math.sin(Math.PI*t)*(raw[i]-mean);values.push(v);peak=Math.max(peak,Math.abs(v));}
+    return{angle,seed,values:values.map(v=>v*limit/Math.max(peak,1))};
+  }
+  // Neighbouring pieces share the same fracture path. Small pieces stay intact.
+  for(const group of groups){const list=results.filter(r=>r.group===group);list.forEach((r,i)=>{const previous=list[(i+list.length-1)%list.length];r.startFracture=makeFracture(r.start,Math.min(.115,Math.min(r.span,previous.span)*.22),i*47+(group==='keyboard'?71:193));});list.forEach((r,i)=>r.endFracture=list[(i+1)%list.length].startFracture);}
+  function fractureOffset(profile,t){const f=clamp(t,0,1)*FRACTURE_STEPS,i=Math.min(FRACTURE_STEPS-1,Math.floor(f));return mix(profile.values[i],profile.values[i+1],f-i);}
+  function fracturePoint(profile,t){const a=profile.angle+fractureOffset(profile,t),rad=edge(a)*t;return{x:Math.cos(a)*rad,z:Math.sin(a)*rad,a,rad};}
+  function piecePoint(r,t,f){const a=r.start+r.span*f+mix(fractureOffset(r.startFracture,t),fractureOffset(r.endFracture,t),f),rad=edge(a)*t;return{x:Math.cos(a)*rad,z:Math.sin(a)*rad};}
   function edge(a){return R+.060*Math.sin(a*5+.2)+.042*Math.cos(a*11-.4)+.025*Math.sin(a*19)+.014*Math.cos(a*43+.7);}
   function surface(x,z){
     const r=Math.hypot(x,z)/R;
@@ -396,8 +407,8 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   const crumbMat=new THREE.MeshStandardMaterial({color:golden.clone().lerp(toasted,.5),roughness:.97});
   function geometry(p,uv,idx){const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(p,3));g.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));g.setIndex(idx);g.computeVertexNormals();return g;}
   function topGeometry(r,bottom=false){
-    const rings=72,sectors=Math.max(4,Math.ceil(r.span/TAU*288)),p=[],uv=[],idx=[];
-    for(let j=0;j<=rings;j++)for(let i=0;i<=sectors;i++){const a=r.start+r.span*i/sectors,rad=edge(a)*j/rings,x=Math.cos(a)*rad,z=Math.sin(a)*rad;p.push(x,bottom?BOTTOM:surface(x,z),z);uv.push(.5+x/(R*2.08),.5+z/(R*2.08));}
+    const rings=FRACTURE_STEPS,sectors=Math.max(4,Math.ceil(r.span/TAU*288)),p=[],uv=[],idx=[];
+    for(let j=0;j<=rings;j++)for(let i=0;i<=sectors;i++){const {x,z}=piecePoint(r,j/rings,i/sectors);p.push(x,bottom?BOTTOM:surface(x,z),z);uv.push(.5+x/(R*2.08),.5+z/(R*2.08));}
     for(let j=0;j<rings;j++)for(let i=0;i<sectors;i++){const a=j*(sectors+1)+i,b=a+1,c=a+sectors+1,d=c+1;if(bottom)idx.push(a,c,b,b,c,d);else idx.push(a,b,c,b,d,c);}
     return geometry(p,uv,idx);
   }
@@ -407,9 +418,13 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     for(let j=0;j<steps;j++)for(let i=0;i<sectors;i++){const a=j*(sectors+1)+i,b=a+1,c=a+sectors+1,d=c+1;idx.push(a,b,c,b,d,c);}
     return geometry(p,uv,idx);
   }
-  function cutGeometry(a,end){
-    const rings=72,steps=18,p=[],uv=[],idx=[];
-    for(let j=0;j<=steps;j++)for(let i=0;i<=rings;i++){const t=j/steps,rad=edge(a)*i/rings,x=Math.cos(a)*rad,z=Math.sin(a)*rad;p.push(x,mix(surface(x,z),BOTTOM,t),z);uv.push(i/rings,t);}
+  function brokenFaceGeometry(profile,end){
+    const rings=FRACTURE_STEPS,steps=24,p=[],uv=[],idx=[];
+    for(let j=0;j<=steps;j++)for(let i=0;i<=rings;i++){
+      const t=j/steps,q=i/rings,point=fracturePoint(profile,q),bow=Math.sin(Math.PI*t)*Math.sin(Math.PI*q),sign=end?1:-1;
+      const rough=bow*(noise(q*27+profile.seed,t*13+7)-.5)*.11,x=point.x-Math.sin(point.a)*rough*sign,z=point.z+Math.cos(point.a)*rough*sign;
+      p.push(x,mix(surface(point.x,point.z),BOTTOM,t)+bow*(noise(q*43+7,t*19+profile.seed)-.5)*.05,z);uv.push(q,t);
+    }
     for(let j=0;j<steps;j++)for(let i=0;i<rings;i++){const a=j*(rings+1)+i,b=a+1,c=a+rings+1,d=c+1;if(end)idx.push(a,c,b,b,c,d);else idx.push(a,b,c,b,d,c);}
     return geometry(p,uv,idx);
   }
@@ -431,16 +446,16 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   function buildPiece(chart,r,index){
     r.piece=new THREE.Group();chart.cookie.add(r.piece);
     addMesh(chart,r,topGeometry(r),doughMat);addMesh(chart,r,topGeometry(r,true),crustMat);
-    addMesh(chart,r,crustGeometry(r),crustMat);addMesh(chart,r,cutGeometry(r.start,false),cutMat);addMesh(chart,r,cutGeometry(r.end,true),cutMat);
+    addMesh(chart,r,crustGeometry(r),crustMat);addMesh(chart,r,brokenFaceGeometry(r.startFracture,false),cutMat);addMesh(chart,r,brokenFaceGeometry(r.endFracture,true),cutMat);
     const decorations=[];
     for(let i=0;i<32;i++){
       const a=relativeAngle(hash(i+7,chart.seed)*TAU),rad=Math.sqrt(hash(i+71,34))*(R-.45),size=.19+hash(i+17,21)*.15;
-      if(a<r.start||a>=r.end||rad<.65||boundaryDistance(a,r.start,rad)<size*1.1||boundaryDistance(a,r.end,rad)<size*1.1)continue;
-      const x=Math.cos(a)*rad,z=Math.sin(a)*rad,chip=addMesh(chart,r,chipGeo,chocolateMat);chip.position.set(x,surface(x,z)-size*.08,z);chip.scale.set(size,size*(.75+.25*hash(i,16)),size*(.8+.25*hash(i,6)));chip.rotation.set(.06*Math.sin(i*2),i*2.394,.055*Math.cos(i*3));decorations.push({x,z,size});
+      if(a<r.start||a>=r.end||rad<.65||boundaryDistance(a,r.start,rad)<size*1.4||boundaryDistance(a,r.end,rad)<size*1.4)continue;
+      const {x,z}=piecePoint(r,rad/R,(a-r.start)/r.span),chip=addMesh(chart,r,chipGeo,chocolateMat);chip.position.set(x,surface(x,z)-size*.08,z);chip.scale.set(size,size*(.75+.25*hash(i,16)),size*(.8+.25*hash(i,6)));chip.rotation.set(.06*Math.sin(i*2),i*2.394,.055*Math.cos(i*3));decorations.push({x,z,size});
     }
     const count=Math.max(6,Math.round(1550*r.n/r.total)),grains=new THREE.InstancedMesh(crumbGeo,crumbMat,count);
     for(let i=0;i<count;i++){
-      const a=r.start+hash(i+11,index+34)*r.span,rad=Math.sqrt(hash(i+29,index+93))*(R-.025),x=Math.cos(a)*rad,z=Math.sin(a)*rad,size=.013+Math.pow(hash(i+17,index+43),2)*.040;
+      const {x,z}=piecePoint(r,Math.sqrt(hash(i+29,index+93))*(1-.025/R),hash(i+11,index+34)),size=.013+Math.pow(hash(i+17,index+43),2)*.040;
       const covered=decorations.some(d=>Math.hypot(x-d.x,z-d.z)<d.size);
       dummy.position.set(x,surface(x,z)+size*.12,z);dummy.rotation.set(i*2.3,i*1.1,i*.51);dummy.scale.set(size,size*.58,size*.88);if(covered)dummy.scale.setScalar(0);dummy.updateMatrix();grains.setMatrixAt(i,dummy.matrix);const tint=.68+.46*hash(i+7,19);grains.setColorAt(i,new THREE.Color(tint,tint,tint));
     }
@@ -448,11 +463,19 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     const edgeCount=Math.max(5,Math.round(650*r.n/r.total)),edgeGrains=new THREE.InstancedMesh(crumbGeo,crumbMat,edgeCount);
     for(let i=0;i<edgeCount;i++){const a=r.start+hash(i+21,index+27)*r.span,t=hash(i+11,39),bow=Math.sin(Math.PI*t),rad=edge(a)+.066*bow-.04*t*t,size=.014+hash(i+17,69)*.035,y=mix(surface(Math.cos(a)*edge(a),Math.sin(a)*edge(a)),BOTTOM,t)+.018*Math.sin(a*27)*bow;dummy.position.set(Math.cos(a)*(rad+.003),y,Math.sin(a)*(rad+.003));dummy.rotation.set(i*.4,i*1.6,i*.9);dummy.scale.set(size,size*.72,size*.59);dummy.updateMatrix();edgeGrains.setMatrixAt(i,dummy.matrix);const tint=.55+.40*hash(i+3,15);edgeGrains.setColorAt(i,new THREE.Color(tint,tint,tint));}
     edgeGrains.castShadow=edgeGrains.receiveShadow=true;r.piece.add(edgeGrains);
-    const outlinePoints=[],radialSteps=36,arcSteps=Math.max(6,Math.ceil(r.span/TAU*180));
+    const fracturedCrumbs=new THREE.InstancedMesh(crumbGeo,crumbMat,48);
+    for(let i=0;i<48;i++){
+      const profile=i<24?r.startFracture:r.endFracture,q=.06+hash(i+15,index+83)*.91,point=fracturePoint(profile,q),side=i<24?-1:1,top=surface(point.x,point.z);
+      const size=Math.min(.025+hash(i+31,index+41)*.065,Math.max(.008,point.rad*r.span*.18)),out=size*.38;
+      dummy.position.set(point.x-Math.sin(point.a)*out*side,mix(top-.02,BOTTOM+.07,hash(i+51,index+91)),point.z+Math.cos(point.a)*out*side);dummy.rotation.set(i*1.1,i*2.2,i*.7);dummy.scale.set(size,size*(.65+.55*hash(i,23)),size*(.65+.50*hash(i,29)));dummy.updateMatrix();fracturedCrumbs.setMatrixAt(i,dummy.matrix);const tint=.65+.55*hash(i+23,index+7);fracturedCrumbs.setColorAt(i,new THREE.Color(tint,tint,tint));
+    }
+    fracturedCrumbs.castShadow=fracturedCrumbs.receiveShadow=true;r.piece.add(fracturedCrumbs);
+    const outlinePoints=[],radialSteps=FRACTURE_STEPS,arcSteps=Math.max(6,Math.ceil(r.span/TAU*180));
     function trace(a,rad){const x=Math.cos(a)*rad,z=Math.sin(a)*rad;outlinePoints.push(new THREE.Vector3(x,surface(x,z)+.035,z));}
-    for(let i=0;i<=radialSteps;i++)trace(r.start,edge(r.start)*i/radialSteps);
+    function traceFracture(profile,t){const {x,z}=fracturePoint(profile,t);outlinePoints.push(new THREE.Vector3(x,surface(x,z)+.035,z));}
+    for(let i=0;i<=radialSteps;i++)traceFracture(r.startFracture,i/radialSteps);
     for(let i=1;i<=arcSteps;i++){const a=r.start+r.span*i/arcSteps;trace(a,edge(a));}
-    for(let i=radialSteps-1;i>0;i--)trace(r.end,edge(r.end)*i/radialSteps);
+    for(let i=radialSteps-1;i>0;i--)traceFracture(r.endFracture,i/radialSteps);
     const outlineCurve=new THREE.CatmullRomCurve3(outlinePoints,true,'centripetal');
     // Carbon Blue 50 comes from the active dark-theme border token.
     // A translucent coat preserves the baked texture beneath the hover color.
@@ -518,7 +541,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   }
   function updateLabel(chart){
     if(chart.tag.hidden)return;
-    const r=byId.get(selected[chart.group]),rad=R*.66,x=Math.cos(r.mid)*rad,z=Math.sin(r.mid)*rad;
+    const r=byId.get(selected[chart.group]),{x,z}=piecePoint(r,.66,.5);
     const p=new THREE.Vector3(x,surface(x,z)+.48,z).add(r.piece.position).project(chart.camera),w=chart.view.clientWidth,h=chart.view.clientHeight,px=(p.x+1)*w/2,py=(1-p.y)*h/2,tw=chart.tag.offsetWidth,th=chart.tag.offsetHeight;
     chart.tag.style.setProperty('--cc-label-half-width',tw/2+'px');chart.tag.style.setProperty('--cc-label-height',th+'px');chart.tag.style.setProperty('--cc-label-x',px+'px');chart.tag.style.setProperty('--cc-label-y',py+'px');chart.tag.style.visibility=state.pitch>0&&p.z>-1&&p.z<1&&px>0&&px<w&&py>0&&py<h?'visible':'hidden';
   }
