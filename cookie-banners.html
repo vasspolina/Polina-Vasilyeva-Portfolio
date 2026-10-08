@@ -40,9 +40,9 @@
     .figure-heading{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:24px}
     .figure-heading p{color:var(--muted-foreground)}
     .workbench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:32px;align-items:start}
-    .cookie-pie{min-width:0}
+    .chart-content,.chart-tools{grid-column:1;min-width:0}.results-panel{grid-column:2;grid-row:1 / span 2}.cookie-pie{min-width:0}
     .cc-view{position:relative;width:100%;height:clamp(380px,39vw,550px);overflow:hidden;touch-action:auto}
-    .cc-view canvas{display:block;width:100%;height:100%;touch-action:auto}
+    .cc-fallback{position:absolute;inset:0;width:100%;height:100%}.cc-fallback [data-fallback-result]{cursor:pointer}.cc-fallback [data-selected=true]{filter:brightness(.83)}.cc-fallback [data-fallback-result]:hover{filter:brightness(.75)}.cc-view[data-rendered=true] .cc-fallback{visibility:hidden}.cc-view[data-rendered=false] canvas{display:none}.cc-view canvas{display:block;width:100%;height:100%;touch-action:auto}
     .cc-view[data-drag=true] canvas{touch-action:pinch-zoom}
     .cc-tag{position:absolute;pointer-events:none;transform:translate(-50%,-100%);left:clamp(calc(var(--cc-label-half-width,80px) + 5px),var(--cc-label-x,50%),calc(100% - var(--cc-label-half-width,80px) - 5px));top:clamp(calc(var(--cc-label-height,50px) + 5px),var(--cc-label-y,50%),calc(100% - 5px));width:max-content;max-width:min(330px,calc(100% - 16px));padding:16px;background:var(--surface);border:1px solid var(--line);box-shadow:0 4px 12px #10080470}
     .cc-tag strong,.cc-tooltip strong{display:block;font-size:var(--medium)}
@@ -52,7 +52,7 @@
     .cc-tag p,.cc-tooltip p{margin-top:12px;color:var(--muted-foreground)}
     .cc-tip-caveat{padding-top:12px;border-top:1px solid var(--line)}
     .cc-tooltip{position:absolute;pointer-events:auto;z-index:4;width:max-content;max-width:min(330px,calc(100% - 16px));padding:16px;background:var(--surface);border:1px solid var(--line);box-shadow:0 12px 28px #100804a6}
-    .cc-tooltip::after{content:'';position:absolute;inset:-8px;z-index:-1}
+    .cc-tooltip{max-height:calc(100vh - 40px);overflow:auto}.cc-tooltip::after{content:'';position:absolute;inset:-8px;z-index:-1}
     .cc-row-tooltip{position:fixed;max-width:min(330px,calc(100vw - 24px));z-index:20}
     .cc-tip-value{color:var(--cookie-hover-edge)}
     .cc-tip-action{color:var(--foreground)!important}
@@ -94,7 +94,7 @@
     .page-footer{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted-foreground)}
     .render-error{padding:24px;color:var(--foreground)}
     @media(max-width:1000px){.workbench{grid-template-columns:minmax(0,1fr) 340px;gap:24px}.page{padding:32px}.results-panel{padding:20px}.intro{align-items:flex-start}}
-    @media(max-width:820px){.workbench{grid-template-columns:1fr}.results-panel{order:2}.intro{display:block}.intro p{margin-top:20px}.cc-view{height:430px}.result-choice{padding:16px 12px}.figure-heading{flex-wrap:wrap}}
+    @media(max-width:820px){.workbench{grid-template-columns:1fr}.chart-content,.chart-tools,.results-panel{grid-column:auto;grid-row:auto}.intro{display:block}.intro p{margin-top:20px}.cc-view{height:430px}.result-choice{padding:16px 12px}.figure-heading{flex-wrap:wrap}}
     @media(max-width:480px){.page{padding:24px 16px}.page-header{padding:16px}.header-note{max-width:13ch;text-align:right}.cc-view{height:360px}.results-panel{padding:20px 16px}.result-choice{gap:8px;padding:16px 6px}.test-switch{gap:8px}.test-switch button{padding:14px 16px}.figure-heading{margin-bottom:12px}.camera-bar button{padding:12px}.cc-tag,.cc-tooltip{max-width:min(300px,calc(100% - 16px))}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
     @media(forced-colors:active){.cc-view,#cc-camera-controls{display:none}.result-label::before{background:CanvasText}.result-choice[aria-pressed=true]{border:1px solid Highlight}.test-switch button[aria-pressed=true]{color:HighlightText;background:Highlight}.drag-option input:checked{background:Highlight}.drag-option input:checked::after{color:HighlightText}.cc-tooltip{color:CanvasText;background:Canvas}}
@@ -117,34 +117,17 @@
       <section aria-labelledby="figure-title">
         <div class="figure-heading"><h2 id="figure-title">Can a keyboard close the banner?</h2><p id="cc-test-note">5,628 banners covering the page</p></div>
         <div class="workbench">
-          <div>
+          <div class="chart-content">
             <figure id="keyboard-chart" class="cookie-pie" data-pie-group="keyboard" aria-label="Keyboard results" aria-describedby="cc-chart-guide">
-              <div id="cc-view-keyboard" class="cc-view" aria-hidden="true"><div id="cc-tag-keyboard" class="cc-tag"></div><div id="cc-tooltip-keyboard" class="cc-tooltip" hidden></div></div>
+              <div id="cc-view-keyboard" class="cc-view" aria-hidden="true"><svg class="cc-fallback" viewBox="0 0 320 320" aria-hidden="true" focusable="false"><defs><clipPath id="clip-keyboard-0"><path d="M160 160 L160.00 32.00 L165.91 30.73 L171.84 30.77 L177.71 31.61 L183.72 31.65 L189.97 31.10 L195.99 32.04 L201.26 35.44 L206.08 39.61 L211.23 42.53 L216.83 44.40 L222.17 46.90 L226.96 50.37 L232.00 53.40 L237.94 55.25 L243.98 57.28 L248.65 61.15 L251.83 66.57 L254.93 71.86 L258.81 76.33 L262.57 80.89 L265.22 86.26 L267.56 91.73 L271.26 96.32 L276.24 100.34 L280.43 104.99 L282.49 110.68 L283.49 116.72 L285.08 122.48 L286.91 128.17 L287.35 134.18 L286.41 140.33 L286.18 146.24 L288.01 151.93 L290.50 157.75 L291.42 163.74 L290.68 169.70 L290.02 175.65 L289.97 181.71 L288.93 187.64 L285.77 193.04 L281.90 198.05 L279.54 203.40 L278.77 209.37 L277.64 215.33 L275.09 220.70 L272.19 225.89 L270.06 231.59 L267.82 237.37 L263.85 241.96 L258.25 245.10 L252.85 248.16 L248.73 252.31 L245.05 256.98 L240.61 260.88 L235.69 264.13 L231.29 268.14 L227.38 273.13 L222.80 277.33 L216.98 279.24 L210.65 279.77 L204.75 280.95 L199.26 283.11 L193.57 284.71 L187.62 285.11 L181.81 285.84 L176.24 288.31 L170.56 291.38 L164.58 292.65 L158.53 291.62 Z"/></clipPath><clipPath id="clip-keyboard-1"><path d="M160 160 L158.53 291.62 L152.67 290.18 L146.82 289.61 L140.99 288.94 L135.43 286.79 L130.15 283.86 L124.65 282.21 L118.56 282.33 L112.30 282.35 L106.64 280.52 L101.57 277.37 L96.41 274.50 L91.00 272.04 L86.19 268.57 L82.56 263.54 L79.26 258.38 L74.92 254.63 L69.50 251.96 L64.40 248.77 L60.44 244.42 L56.80 239.80 L52.49 235.64 L48.25 231.33 L45.71 225.90 L44.96 219.59 L44.10 213.56 L41.66 208.34 L38.48 203.36 L36.25 197.96 L34.94 192.28 L32.99 186.74 L30.02 181.30 L27.85 175.58 L28.18 169.54 L30.13 163.53 L31.44 157.70 Z"/></clipPath><clipPath id="clip-keyboard-2"><path d="M160 160 L31.44 157.70 L31.44 151.84 L31.64 145.96 L33.09 140.23 L34.56 134.56 L34.51 128.54 L33.74 122.16 L34.54 116.08 L37.68 110.82 L41.50 105.97 L44.45 100.82 L47.13 95.54 L50.90 90.92 L55.44 86.92 L59.05 82.37 L61.20 76.60 L63.42 70.62 L67.20 65.93 L72.17 62.46 L77.00 58.92 L81.45 54.92 L86.48 51.70 L92.47 50.07 L98.46 48.76 L103.50 45.89 L107.95 41.60 Z"/></clipPath><clipPath id="clip-keyboard-3"><path d="M160 160 L107.95 41.60 L112.89 37.87 L118.55 35.82 L124.36 34.24 L129.99 31.91 L135.77 29.88 L141.93 29.97 L148.16 31.78 L154.14 32.86 L160.00 32.00 Z"/></clipPath></defs><g data-fallback-result="accept" transform="translate(5.00 0.03)"><path d="M160 160 L160.00 32.00 L165.91 30.73 L171.84 30.77 L177.71 31.61 L183.72 31.65 L189.97 31.10 L195.99 32.04 L201.26 35.44 L206.08 39.61 L211.23 42.53 L216.83 44.40 L222.17 46.90 L226.96 50.37 L232.00 53.40 L237.94 55.25 L243.98 57.28 L248.65 61.15 L251.83 66.57 L254.93 71.86 L258.81 76.33 L262.57 80.89 L265.22 86.26 L267.56 91.73 L271.26 96.32 L276.24 100.34 L280.43 104.99 L282.49 110.68 L283.49 116.72 L285.08 122.48 L286.91 128.17 L287.35 134.18 L286.41 140.33 L286.18 146.24 L288.01 151.93 L290.50 157.75 L291.42 163.74 L290.68 169.70 L290.02 175.65 L289.97 181.71 L288.93 187.64 L285.77 193.04 L281.90 198.05 L279.54 203.40 L278.77 209.37 L277.64 215.33 L275.09 220.70 L272.19 225.89 L270.06 231.59 L267.82 237.37 L263.85 241.96 L258.25 245.10 L252.85 248.16 L248.73 252.31 L245.05 256.98 L240.61 260.88 L235.69 264.13 L231.29 268.14 L227.38 273.13 L222.80 277.33 L216.98 279.24 L210.65 279.77 L204.75 280.95 L199.26 283.11 L193.57 284.71 L187.62 285.11 L181.81 285.84 L176.24 288.31 L170.56 291.38 L164.58 292.65 L158.53 291.62 Z" fill="var(--cookie-honey)"/><g clip-path="url(#clip-keyboard-0)"><ellipse cx="168" cy="141" rx="7" ry="7" fill="#422718"/><ellipse cx="109" cy="79" rx="7" ry="5" fill="#422718"/><ellipse cx="269" cy="41" rx="6" ry="8" fill="#422718"/><ellipse cx="243" cy="226" rx="8" ry="7" fill="#422718"/><ellipse cx="255" cy="163" rx="7" ry="8" fill="#422718"/><ellipse cx="70" cy="176" rx="5" ry="6" fill="#422718"/><ellipse cx="243" cy="237" rx="6" ry="6" fill="#422718"/><ellipse cx="260" cy="215" rx="6" ry="7" fill="#422718"/><ellipse cx="173" cy="66" rx="5" ry="7" fill="#422718"/><ellipse cx="139" cy="55" rx="8" ry="6" fill="#422718"/><ellipse cx="209" cy="242" rx="8" ry="7" fill="#422718"/><ellipse cx="39" cy="145" rx="7" ry="5" fill="#422718"/><ellipse cx="264" cy="227" rx="7" ry="5" fill="#422718"/><ellipse cx="280" cy="157" rx="7" ry="5" fill="#422718"/><ellipse cx="257" cy="138" rx="6" ry="5" fill="#422718"/><ellipse cx="177" cy="89" rx="6" ry="7" fill="#422718"/><ellipse cx="49" cy="103" rx="5" ry="7" fill="#422718"/><ellipse cx="84" cy="226" rx="6" ry="7" fill="#422718"/><ellipse cx="203" cy="113" rx="7" ry="7" fill="#422718"/><ellipse cx="78" cy="120" rx="5" ry="7" fill="#422718"/><ellipse cx="120" cy="37" rx="5" ry="7" fill="#422718"/><ellipse cx="39" cy="154" rx="7" ry="8" fill="#422718"/></g></g><g data-fallback-result="reject" transform="translate(-3.59 3.48)"><path d="M160 160 L158.53 291.62 L152.67 290.18 L146.82 289.61 L140.99 288.94 L135.43 286.79 L130.15 283.86 L124.65 282.21 L118.56 282.33 L112.30 282.35 L106.64 280.52 L101.57 277.37 L96.41 274.50 L91.00 272.04 L86.19 268.57 L82.56 263.54 L79.26 258.38 L74.92 254.63 L69.50 251.96 L64.40 248.77 L60.44 244.42 L56.80 239.80 L52.49 235.64 L48.25 231.33 L45.71 225.90 L44.96 219.59 L44.10 213.56 L41.66 208.34 L38.48 203.36 L36.25 197.96 L34.94 192.28 L32.99 186.74 L30.02 181.30 L27.85 175.58 L28.18 169.54 L30.13 163.53 L31.44 157.70 Z" fill="var(--cookie-caramel)"/><g clip-path="url(#clip-keyboard-1)"><ellipse cx="81" cy="66" rx="8" ry="7" fill="#422718"/><ellipse cx="96" cy="85" rx="8" ry="8" fill="#422718"/><ellipse cx="81" cy="157" rx="7" ry="8" fill="#422718"/><ellipse cx="262" cy="102" rx="6" ry="7" fill="#422718"/><ellipse cx="265" cy="212" rx="5" ry="7" fill="#422718"/><ellipse cx="168" cy="207" rx="6" ry="6" fill="#422718"/><ellipse cx="78" cy="95" rx="6" ry="7" fill="#422718"/><ellipse cx="182" cy="164" rx="6" ry="8" fill="#422718"/><ellipse cx="90" cy="218" rx="7" ry="7" fill="#422718"/><ellipse cx="36" cy="122" rx="8" ry="6" fill="#422718"/><ellipse cx="232" cy="221" rx="8" ry="7" fill="#422718"/><ellipse cx="186" cy="181" rx="7" ry="7" fill="#422718"/><ellipse cx="188" cy="216" rx="7" ry="5" fill="#422718"/><ellipse cx="107" cy="157" rx="6" ry="8" fill="#422718"/><ellipse cx="210" cy="238" rx="6" ry="6" fill="#422718"/><ellipse cx="87" cy="200" rx="8" ry="6" fill="#422718"/><ellipse cx="139" cy="166" rx="8" ry="5" fill="#422718"/><ellipse cx="268" cy="215" rx="6" ry="7" fill="#422718"/><ellipse cx="171" cy="251" rx="7" ry="8" fill="#422718"/><ellipse cx="57" cy="160" rx="6" ry="8" fill="#422718"/><ellipse cx="73" cy="160" rx="5" ry="6" fill="#422718"/><ellipse cx="200" cy="58" rx="7" ry="6" fill="#422718"/></g></g><g data-fallback-result="blocked" transform="translate(-4.16 -2.77)"><path d="M160 160 L31.44 157.70 L31.44 151.84 L31.64 145.96 L33.09 140.23 L34.56 134.56 L34.51 128.54 L33.74 122.16 L34.54 116.08 L37.68 110.82 L41.50 105.97 L44.45 100.82 L47.13 95.54 L50.90 90.92 L55.44 86.92 L59.05 82.37 L61.20 76.60 L63.42 70.62 L67.20 65.93 L72.17 62.46 L77.00 58.92 L81.45 54.92 L86.48 51.70 L92.47 50.07 L98.46 48.76 L103.50 45.89 L107.95 41.60 Z" fill="var(--cookie-cocoa)"/><g clip-path="url(#clip-keyboard-2)"><ellipse cx="208" cy="46" rx="5" ry="6" fill="#422718"/><ellipse cx="135" cy="123" rx="7" ry="6" fill="#422718"/><ellipse cx="187" cy="101" rx="5" ry="7" fill="#422718"/><ellipse cx="140" cy="118" rx="7" ry="5" fill="#422718"/><ellipse cx="232" cy="118" rx="7" ry="5" fill="#422718"/><ellipse cx="180" cy="193" rx="6" ry="5" fill="#422718"/><ellipse cx="270" cy="86" rx="5" ry="8" fill="#422718"/><ellipse cx="134" cy="256" rx="5" ry="5" fill="#422718"/><ellipse cx="141" cy="39" rx="5" ry="8" fill="#422718"/><ellipse cx="228" cy="253" rx="8" ry="8" fill="#422718"/><ellipse cx="203" cy="111" rx="6" ry="8" fill="#422718"/><ellipse cx="94" cy="233" rx="5" ry="6" fill="#422718"/><ellipse cx="134" cy="84" rx="6" ry="6" fill="#422718"/><ellipse cx="195" cy="161" rx="5" ry="8" fill="#422718"/><ellipse cx="36" cy="279" rx="8" ry="8" fill="#422718"/><ellipse cx="187" cy="65" rx="8" ry="8" fill="#422718"/><ellipse cx="129" cy="144" rx="6" ry="5" fill="#422718"/><ellipse cx="97" cy="58" rx="5" ry="8" fill="#422718"/><ellipse cx="131" cy="150" rx="5" ry="7" fill="#422718"/><ellipse cx="274" cy="67" rx="8" ry="7" fill="#422718"/><ellipse cx="150" cy="138" rx="7" ry="6" fill="#422718"/><ellipse cx="153" cy="147" rx="7" ry="7" fill="#422718"/></g></g><g data-fallback-result="other" transform="translate(-1.03 -4.89)"><path d="M160 160 L107.95 41.60 L112.89 37.87 L118.55 35.82 L124.36 34.24 L129.99 31.91 L135.77 29.88 L141.93 29.97 L148.16 31.78 L154.14 32.86 L160.00 32.00 Z" fill="var(--cookie-biscuit)"/><g clip-path="url(#clip-keyboard-3)"><ellipse cx="266" cy="220" rx="6" ry="7" fill="#422718"/><ellipse cx="207" cy="197" rx="5" ry="7" fill="#422718"/><ellipse cx="181" cy="266" rx="6" ry="5" fill="#422718"/><ellipse cx="140" cy="139" rx="5" ry="5" fill="#422718"/><ellipse cx="67" cy="116" rx="8" ry="8" fill="#422718"/><ellipse cx="140" cy="88" rx="6" ry="7" fill="#422718"/><ellipse cx="195" cy="267" rx="7" ry="7" fill="#422718"/><ellipse cx="144" cy="58" rx="8" ry="8" fill="#422718"/><ellipse cx="55" cy="87" rx="6" ry="5" fill="#422718"/><ellipse cx="86" cy="59" rx="5" ry="6" fill="#422718"/><ellipse cx="99" cy="212" rx="7" ry="7" fill="#422718"/><ellipse cx="211" cy="100" rx="6" ry="5" fill="#422718"/><ellipse cx="266" cy="40" rx="7" ry="6" fill="#422718"/><ellipse cx="254" cy="250" rx="6" ry="6" fill="#422718"/><ellipse cx="49" cy="38" rx="7" ry="7" fill="#422718"/><ellipse cx="70" cy="212" rx="7" ry="8" fill="#422718"/><ellipse cx="267" cy="74" rx="7" ry="8" fill="#422718"/><ellipse cx="75" cy="77" rx="8" ry="5" fill="#422718"/><ellipse cx="211" cy="67" rx="8" ry="7" fill="#422718"/><ellipse cx="92" cy="64" rx="5" ry="6" fill="#422718"/><ellipse cx="146" cy="79" rx="6" ry="5" fill="#422718"/><ellipse cx="64" cy="235" rx="7" ry="5" fill="#422718"/></g></g></svg><div id="cc-tag-keyboard" class="cc-tag"></div><div id="cc-tooltip-keyboard" class="cc-tooltip" hidden></div></div>
               <figcaption class="figure-caption">Each piece shows a share of the 5,628 banners. The result buttons give every count and percentage.</figcaption>
             </figure>
             <figure id="reader-chart" class="cookie-pie" data-pie-group="reader" aria-label="Screen-reader results" aria-describedby="cc-chart-guide" hidden>
-              <div id="cc-view-reader" class="cc-view" aria-hidden="true"><div id="cc-tag-reader" class="cc-tag"></div><div id="cc-tooltip-reader" class="cc-tooltip" hidden></div></div>
+              <div id="cc-view-reader" class="cc-view" aria-hidden="true"><svg class="cc-fallback" viewBox="0 0 320 320" aria-hidden="true" focusable="false"><defs><clipPath id="clip-reader-0"><path d="M160 160 L160.00 32.00 L165.90 30.73 L171.83 30.77 L177.69 31.61 L183.69 31.65 L189.93 31.10 L195.94 32.03 L201.22 35.40 L206.03 39.58 L211.17 42.50 L216.76 44.38 L222.10 46.86 L226.89 50.32 L231.91 53.36 L237.84 55.22 L243.88 57.23 L248.58 61.06 L251.77 66.46 L254.86 71.75 L258.71 76.23 L262.49 80.78 L265.16 86.12 L267.49 91.59 L271.13 96.20 L276.09 100.22 L280.33 104.83 L282.45 110.49 L283.46 116.53 L285.02 122.29 L286.86 127.97 L287.37 133.96 L286.45 140.11 L286.15 146.02 L287.91 151.71 L290.42 157.51 L291.42 163.49 L290.72 169.45 L290.03 175.39 L289.98 181.43 L289.02 187.38 L285.96 192.80 L282.07 197.81 L279.61 203.12 L278.80 209.06 L277.74 215.03 L275.25 220.43 L272.34 225.60 L270.16 231.26 L267.99 237.06 L264.14 241.74 L258.60 244.94 L253.14 247.95 L248.96 252.03 L245.29 256.70 L240.93 260.66 L236.01 263.91 L231.56 267.83 L227.65 272.79 L223.16 277.11 L217.42 279.18 L211.09 279.73 L205.16 280.82 L199.66 282.94 L194.01 284.64 L188.08 285.09 L182.25 285.72 L176.68 288.06 L171.03 291.18 L165.07 292.65 L159.02 291.75 L153.08 290.26 L147.17 289.63 L141.25 288.99 L135.60 286.88 L130.26 283.91 L124.69 282.21 L118.53 282.33 L112.20 282.33 L106.48 280.44 L101.36 277.24 L96.11 274.37 L90.64 271.85 L85.86 268.22 L82.26 263.04 L78.87 257.90 L74.32 254.29 L68.79 251.61 L63.77 248.21 L59.89 243.69 L56.13 239.07 L51.67 234.91 L47.59 230.38 L45.45 224.64 L44.86 218.21 L43.68 212.29 L40.88 207.14 L37.78 202.03 L35.86 196.44 L34.51 190.70 L32.17 185.15 L29.16 179.59 L27.67 173.68 L28.76 167.54 L30.74 161.51 L31.54 155.64 L31.39 149.75 L32.04 143.89 L33.72 138.21 L34.74 132.45 L34.20 126.25 L33.74 119.87 L35.47 114.06 L39.13 109.03 L42.71 104.11 L45.40 98.83 L48.38 93.71 L52.60 89.39 Z"/></clipPath><clipPath id="clip-reader-1"><path d="M160 160 L52.60 89.39 L57.01 85.32 L60.01 80.27 L61.95 74.19 L64.70 68.57 L69.13 64.46 L74.20 61.10 L78.82 57.29 L83.41 53.40 L88.91 50.85 L95.09 49.61 L100.75 47.78 L105.44 44.10 L110.00 39.79 L115.25 36.82 L121.03 35.20 L126.73 33.35 L132.33 30.91 L138.24 29.61 L144.45 30.61 Z"/></clipPath><clipPath id="clip-reader-2"><path d="M160 160 L144.45 30.61 L146.42 31.22 L148.36 31.84 L150.27 32.35 Z"/></clipPath><clipPath id="clip-reader-3"><path d="M160 160 L150.27 32.35 L153.54 32.84 L156.77 32.67 L160.00 32.00 Z"/></clipPath></defs><g data-fallback-result="reader-open" transform="translate(2.37 4.40)"><path d="M160 160 L160.00 32.00 L165.90 30.73 L171.83 30.77 L177.69 31.61 L183.69 31.65 L189.93 31.10 L195.94 32.03 L201.22 35.40 L206.03 39.58 L211.17 42.50 L216.76 44.38 L222.10 46.86 L226.89 50.32 L231.91 53.36 L237.84 55.22 L243.88 57.23 L248.58 61.06 L251.77 66.46 L254.86 71.75 L258.71 76.23 L262.49 80.78 L265.16 86.12 L267.49 91.59 L271.13 96.20 L276.09 100.22 L280.33 104.83 L282.45 110.49 L283.46 116.53 L285.02 122.29 L286.86 127.97 L287.37 133.96 L286.45 140.11 L286.15 146.02 L287.91 151.71 L290.42 157.51 L291.42 163.49 L290.72 169.45 L290.03 175.39 L289.98 181.43 L289.02 187.38 L285.96 192.80 L282.07 197.81 L279.61 203.12 L278.80 209.06 L277.74 215.03 L275.25 220.43 L272.34 225.60 L270.16 231.26 L267.99 237.06 L264.14 241.74 L258.60 244.94 L253.14 247.95 L248.96 252.03 L245.29 256.70 L240.93 260.66 L236.01 263.91 L231.56 267.83 L227.65 272.79 L223.16 277.11 L217.42 279.18 L211.09 279.73 L205.16 280.82 L199.66 282.94 L194.01 284.64 L188.08 285.09 L182.25 285.72 L176.68 288.06 L171.03 291.18 L165.07 292.65 L159.02 291.75 L153.08 290.26 L147.17 289.63 L141.25 288.99 L135.60 286.88 L130.26 283.91 L124.69 282.21 L118.53 282.33 L112.20 282.33 L106.48 280.44 L101.36 277.24 L96.11 274.37 L90.64 271.85 L85.86 268.22 L82.26 263.04 L78.87 257.90 L74.32 254.29 L68.79 251.61 L63.77 248.21 L59.89 243.69 L56.13 239.07 L51.67 234.91 L47.59 230.38 L45.45 224.64 L44.86 218.21 L43.68 212.29 L40.88 207.14 L37.78 202.03 L35.86 196.44 L34.51 190.70 L32.17 185.15 L29.16 179.59 L27.67 173.68 L28.76 167.54 L30.74 161.51 L31.54 155.64 L31.39 149.75 L32.04 143.89 L33.72 138.21 L34.74 132.45 L34.20 126.25 L33.74 119.87 L35.47 114.06 L39.13 109.03 L42.71 104.11 L45.40 98.83 L48.38 93.71 L52.60 89.39 Z" fill="var(--cookie-honey)"/><g clip-path="url(#clip-reader-0)"><ellipse cx="168" cy="141" rx="7" ry="7" fill="#422718"/><ellipse cx="109" cy="79" rx="7" ry="5" fill="#422718"/><ellipse cx="269" cy="41" rx="6" ry="8" fill="#422718"/><ellipse cx="243" cy="226" rx="8" ry="7" fill="#422718"/><ellipse cx="255" cy="163" rx="7" ry="8" fill="#422718"/><ellipse cx="70" cy="176" rx="5" ry="6" fill="#422718"/><ellipse cx="243" cy="237" rx="6" ry="6" fill="#422718"/><ellipse cx="260" cy="215" rx="6" ry="7" fill="#422718"/><ellipse cx="173" cy="66" rx="5" ry="7" fill="#422718"/><ellipse cx="139" cy="55" rx="8" ry="6" fill="#422718"/><ellipse cx="209" cy="242" rx="8" ry="7" fill="#422718"/><ellipse cx="39" cy="145" rx="7" ry="5" fill="#422718"/><ellipse cx="264" cy="227" rx="7" ry="5" fill="#422718"/><ellipse cx="280" cy="157" rx="7" ry="5" fill="#422718"/><ellipse cx="257" cy="138" rx="6" ry="5" fill="#422718"/><ellipse cx="177" cy="89" rx="6" ry="7" fill="#422718"/><ellipse cx="49" cy="103" rx="5" ry="7" fill="#422718"/><ellipse cx="84" cy="226" rx="6" ry="7" fill="#422718"/><ellipse cx="203" cy="113" rx="7" ry="7" fill="#422718"/><ellipse cx="78" cy="120" rx="5" ry="7" fill="#422718"/><ellipse cx="120" cy="37" rx="5" ry="7" fill="#422718"/><ellipse cx="39" cy="154" rx="7" ry="8" fill="#422718"/></g></g><g data-fallback-result="reader-closed" transform="translate(-2.63 -4.25)"><path d="M160 160 L52.60 89.39 L57.01 85.32 L60.01 80.27 L61.95 74.19 L64.70 68.57 L69.13 64.46 L74.20 61.10 L78.82 57.29 L83.41 53.40 L88.91 50.85 L95.09 49.61 L100.75 47.78 L105.44 44.10 L110.00 39.79 L115.25 36.82 L121.03 35.20 L126.73 33.35 L132.33 30.91 L138.24 29.61 L144.45 30.61 Z" fill="var(--cookie-caramel)"/><g clip-path="url(#clip-reader-1)"><ellipse cx="81" cy="66" rx="8" ry="7" fill="#422718"/><ellipse cx="96" cy="85" rx="8" ry="8" fill="#422718"/><ellipse cx="81" cy="157" rx="7" ry="8" fill="#422718"/><ellipse cx="262" cy="102" rx="6" ry="7" fill="#422718"/><ellipse cx="265" cy="212" rx="5" ry="7" fill="#422718"/><ellipse cx="168" cy="207" rx="6" ry="6" fill="#422718"/><ellipse cx="78" cy="95" rx="6" ry="7" fill="#422718"/><ellipse cx="182" cy="164" rx="6" ry="8" fill="#422718"/><ellipse cx="90" cy="218" rx="7" ry="7" fill="#422718"/><ellipse cx="36" cy="122" rx="8" ry="6" fill="#422718"/><ellipse cx="232" cy="221" rx="8" ry="7" fill="#422718"/><ellipse cx="186" cy="181" rx="7" ry="7" fill="#422718"/><ellipse cx="188" cy="216" rx="7" ry="5" fill="#422718"/><ellipse cx="107" cy="157" rx="6" ry="8" fill="#422718"/><ellipse cx="210" cy="238" rx="6" ry="6" fill="#422718"/><ellipse cx="87" cy="200" rx="8" ry="6" fill="#422718"/><ellipse cx="139" cy="166" rx="8" ry="5" fill="#422718"/><ellipse cx="268" cy="215" rx="6" ry="7" fill="#422718"/><ellipse cx="171" cy="251" rx="7" ry="8" fill="#422718"/><ellipse cx="57" cy="160" rx="6" ry="8" fill="#422718"/><ellipse cx="73" cy="160" rx="5" ry="6" fill="#422718"/><ellipse cx="200" cy="58" rx="7" ry="6" fill="#422718"/></g></g><g data-fallback-result="only-banner" transform="translate(-0.49 -4.98)"><path d="M160 160 L144.45 30.61 L146.42 31.22 L148.36 31.84 L150.27 32.35 Z" fill="var(--cookie-cocoa)"/><g clip-path="url(#clip-reader-2)"><ellipse cx="208" cy="46" rx="5" ry="6" fill="#422718"/><ellipse cx="135" cy="123" rx="7" ry="6" fill="#422718"/><ellipse cx="187" cy="101" rx="5" ry="7" fill="#422718"/><ellipse cx="140" cy="118" rx="7" ry="5" fill="#422718"/><ellipse cx="232" cy="118" rx="7" ry="5" fill="#422718"/><ellipse cx="180" cy="193" rx="6" ry="5" fill="#422718"/><ellipse cx="270" cy="86" rx="5" ry="8" fill="#422718"/><ellipse cx="134" cy="256" rx="5" ry="5" fill="#422718"/><ellipse cx="141" cy="39" rx="5" ry="8" fill="#422718"/><ellipse cx="228" cy="253" rx="8" ry="8" fill="#422718"/><ellipse cx="203" cy="111" rx="6" ry="8" fill="#422718"/><ellipse cx="94" cy="233" rx="5" ry="6" fill="#422718"/><ellipse cx="134" cy="84" rx="6" ry="6" fill="#422718"/><ellipse cx="195" cy="161" rx="5" ry="8" fill="#422718"/><ellipse cx="36" cy="279" rx="8" ry="8" fill="#422718"/><ellipse cx="187" cy="65" rx="8" ry="8" fill="#422718"/><ellipse cx="129" cy="144" rx="6" ry="5" fill="#422718"/><ellipse cx="97" cy="58" rx="5" ry="8" fill="#422718"/><ellipse cx="131" cy="150" rx="5" ry="7" fill="#422718"/><ellipse cx="274" cy="67" rx="8" ry="7" fill="#422718"/><ellipse cx="150" cy="138" rx="7" ry="6" fill="#422718"/><ellipse cx="153" cy="147" rx="7" ry="7" fill="#422718"/></g></g><g data-fallback-result="unclear" transform="translate(-0.19 -5.00)"><path d="M160 160 L150.27 32.35 L153.54 32.84 L156.77 32.67 L160.00 32.00 Z" fill="var(--cookie-biscuit)"/><g clip-path="url(#clip-reader-3)"><ellipse cx="266" cy="220" rx="6" ry="7" fill="#422718"/><ellipse cx="207" cy="197" rx="5" ry="7" fill="#422718"/><ellipse cx="181" cy="266" rx="6" ry="5" fill="#422718"/><ellipse cx="140" cy="139" rx="5" ry="5" fill="#422718"/><ellipse cx="67" cy="116" rx="8" ry="8" fill="#422718"/><ellipse cx="140" cy="88" rx="6" ry="7" fill="#422718"/><ellipse cx="195" cy="267" rx="7" ry="7" fill="#422718"/><ellipse cx="144" cy="58" rx="8" ry="8" fill="#422718"/><ellipse cx="55" cy="87" rx="6" ry="5" fill="#422718"/><ellipse cx="86" cy="59" rx="5" ry="6" fill="#422718"/><ellipse cx="99" cy="212" rx="7" ry="7" fill="#422718"/><ellipse cx="211" cy="100" rx="6" ry="5" fill="#422718"/><ellipse cx="266" cy="40" rx="7" ry="6" fill="#422718"/><ellipse cx="254" cy="250" rx="6" ry="6" fill="#422718"/><ellipse cx="49" cy="38" rx="7" ry="7" fill="#422718"/><ellipse cx="70" cy="212" rx="7" ry="8" fill="#422718"/><ellipse cx="267" cy="74" rx="7" ry="8" fill="#422718"/><ellipse cx="75" cy="77" rx="8" ry="5" fill="#422718"/><ellipse cx="211" cy="67" rx="8" ry="7" fill="#422718"/><ellipse cx="92" cy="64" rx="5" ry="6" fill="#422718"/><ellipse cx="146" cy="79" rx="6" ry="5" fill="#422718"/><ellipse cx="64" cy="235" rx="7" ry="5" fill="#422718"/></g></g></svg><div id="cc-tag-reader" class="cc-tag"></div><div id="cc-tooltip-reader" class="cc-tooltip" hidden></div></div>
               <figcaption class="figure-caption">Each piece shows a share of 578 flagged websites checked with software that reads pages aloud.</figcaption>
             </figure>
             <p id="cc-chart-guide" class="gesture-note">Hover over a piece or focus a result button for an explanation. Select one to pull out its piece. Escape closes the preview.</p>
             <p id="cc-visual-status" role="status" class="sr-only"></p>
-            <div id="cc-camera-controls" hidden>
-              <div class="camera-bar" role="group" aria-label="Change the cookie view">
-                <button type="button" data-camera="left">Rotate left<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M2,28V16a2.0023,2.0023,0,0,1,2-2H16a2.0023,2.0023,0,0,1,2,2V28a2.0023,2.0023,0,0,1-2,2H4A2.0023,2.0023,0,0,1,2,28ZM4,16,3.9988,28H16V16Z" /><path d="M17,2l1.41,1.41L15.83,6H21a7.0078,7.0078,0,0,1,7,7v5H26V13a5.0057,5.0057,0,0,0-5-5H15.83l2.58,2.59L17,12,12,7Z" /></svg></button><button type="button" data-camera="right">Rotate right<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M28,30H16a2.0023,2.0023,0,0,1-2-2V16a2.0023,2.0023,0,0,1,2-2H28a2.0023,2.0023,0,0,1,2,2V28A2.0023,2.0023,0,0,1,28,30ZM16,16V28H28.0012L28,16Z" /><path d="M15,2,13.59,3.41,16.17,6H11a7.0078,7.0078,0,0,0-7,7v5H6V13a5.0057,5.0057,0,0,1,5-5h5.17l-2.58,2.59L15,12l5-5Z" /></svg></button>
-                <button type="button" data-camera="up">Tilt up<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M8 5 13 10 12.3 10.7 8 6.4 3.7 10.7 3 10z" /></svg></button><button type="button" data-camera="down">Tilt down<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M8 11 3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z" /></svg></button>
-                <button type="button" data-camera="in">Zoom in<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M9 6 7 6 7 4 6 4 6 6 4 6 4 7 6 7 6 9 7 9 7 7 9 7z" /><path d="M10.7,10C11.5,9,12,7.8,12,6.5C12,3.5,9.5,1,6.5,1S1,3.5,1,6.5S3.5,12,6.5,12c1.3,0,2.5-0.5,3.5-1.3l3.8,3.8l0.7-0.7 L10.7,10z M6.5,11C4,11,2,9,2,6.5S4,2,6.5,2S11,4,11,6.5S9,11,6.5,11L6.5,11z" /></svg></button><button type="button" data-camera="out">Zoom out<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M4 6H9V7H4z" /><path d="M10.7,10C11.5,9,12,7.8,12,6.5C12,3.5,9.5,1,6.5,1S1,3.5,1,6.5S3.5,12,6.5,12c1.3,0,2.5-0.5,3.5-1.3l3.8,3.8l0.7-0.7 L10.7,10z M6.5,11C4,11,2,9,2,6.5S4,2,6.5,2S11,4,11,6.5S9,11,6.5,11L6.5,11z" /></svg></button>
-                <button type="button" data-camera="reset">Reset view</button>
-              </div>
-              <label class="drag-option"><input id="cc-drag" type="checkbox">Rotate by dragging</label>
-              <p class="gesture-note">You can also use the view buttons. The page scrolls normally.</p>
-              <p id="cc-camera-status" role="status" class="sr-only"></p>
-            </div>
-            <section id="cc-detail" class="explanation" aria-labelledby="cc-detail-title">
-              <p class="eyebrow">This piece means</p><h3 id="cc-detail-title">Could not close</h3>
-              <div class="detail-stats"><span id="cc-detail-share" class="detail-share">18.1%</span><span id="cc-detail-count" class="detail-count">1,020 of 5,628 banners</span></div>
-              <p id="cc-detail-hint">The banner stayed over the page after using Tab and Enter.</p>
-              <p id="cc-detail-caveat">This is an automated warning. Other keyboard methods still need checking.</p>
-            </section>
           </div>
           <section class="results-panel" aria-labelledby="results-title">
             <div class="panel-heading"><h3 id="results-title">Choose a cookie piece</h3><p>Select a result, or use Tab, then Enter or Space.</p></div>
@@ -168,6 +151,25 @@
             </section>
             <div id="cc-row-tooltip" class="cc-tooltip cc-row-tooltip" aria-hidden="true" hidden></div>
           </section>
+          <div class="chart-tools">
+            <div id="cc-camera-controls" hidden>
+              <div class="camera-bar" role="group" aria-label="Change the cookie view">
+                <button type="button" data-camera="left">Rotate left<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M2,28V16a2.0023,2.0023,0,0,1,2-2H16a2.0023,2.0023,0,0,1,2,2V28a2.0023,2.0023,0,0,1-2,2H4A2.0023,2.0023,0,0,1,2,28ZM4,16,3.9988,28H16V16Z" /><path d="M17,2l1.41,1.41L15.83,6H21a7.0078,7.0078,0,0,1,7,7v5H26V13a5.0057,5.0057,0,0,0-5-5H15.83l2.58,2.59L17,12,12,7Z" /></svg></button><button type="button" data-camera="right">Rotate right<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M28,30H16a2.0023,2.0023,0,0,1-2-2V16a2.0023,2.0023,0,0,1,2-2H28a2.0023,2.0023,0,0,1,2,2V28A2.0023,2.0023,0,0,1,28,30ZM16,16V28H28.0012L28,16Z" /><path d="M15,2,13.59,3.41,16.17,6H11a7.0078,7.0078,0,0,0-7,7v5H6V13a5.0057,5.0057,0,0,1,5-5h5.17l-2.58,2.59L15,12l5-5Z" /></svg></button>
+                <button type="button" data-camera="up">Tilt up<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M8 5 13 10 12.3 10.7 8 6.4 3.7 10.7 3 10z" /></svg></button><button type="button" data-camera="down">Tilt down<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M8 11 3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z" /></svg></button>
+                <button type="button" data-camera="in">Zoom in<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M9 6 7 6 7 4 6 4 6 6 4 6 4 7 6 7 6 9 7 9 7 7 9 7z" /><path d="M10.7,10C11.5,9,12,7.8,12,6.5C12,3.5,9.5,1,6.5,1S1,3.5,1,6.5S3.5,12,6.5,12c1.3,0,2.5-0.5,3.5-1.3l3.8,3.8l0.7-0.7 L10.7,10z M6.5,11C4,11,2,9,2,6.5S4,2,6.5,2S11,4,11,6.5S9,11,6.5,11L6.5,11z" /></svg></button><button type="button" data-camera="out">Zoom out<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" class="cds--btn__icon"><path d="M4 6H9V7H4z" /><path d="M10.7,10C11.5,9,12,7.8,12,6.5C12,3.5,9.5,1,6.5,1S1,3.5,1,6.5S3.5,12,6.5,12c1.3,0,2.5-0.5,3.5-1.3l3.8,3.8l0.7-0.7 L10.7,10z M6.5,11C4,11,2,9,2,6.5S4,2,6.5,2S11,4,11,6.5S9,11,6.5,11L6.5,11z" /></svg></button>
+                <button type="button" data-camera="reset">Reset view</button>
+              </div>
+              <label class="drag-option"><input id="cc-drag" type="checkbox">Rotate by dragging</label>
+              <p class="gesture-note">You can also use the view buttons. The page scrolls normally.</p>
+              <p id="cc-camera-status" role="status" class="sr-only"></p>
+            </div>
+            <section id="cc-detail" class="explanation" aria-labelledby="cc-detail-title">
+              <p class="eyebrow">This piece means</p><h3 id="cc-detail-title">Could not close</h3>
+              <div class="detail-stats"><span id="cc-detail-share" class="detail-share">18.1%</span><span id="cc-detail-count" class="detail-count">1,020 of 5,628 banners</span></div>
+              <p id="cc-detail-hint">The banner stayed over the page after using Tab and Enter.</p>
+              <p id="cc-detail-caveat">This is an automated warning. Other keyboard methods still need checking.</p>
+            </section>
+          </div>
         </div>
       </section>
       <p id="cc-readout" role="status" class="sr-only" aria-atomic="true"></p>
@@ -175,7 +177,7 @@
     </div>
     <footer class="page-footer"><p>These are two different test groups. Piece size shows the share of its group; chocolate chips and crumbs are decorative.</p></footer>
   </main>
-  <script data-engine="three-r160">
+  <script type="text/plain" id="cc-three-engine">
 console.warn('Scripts "build/three.js" and "build/three.min.js" are deprecated with r150+, and will be removed with r160. Please use ES Modules or alternatives: https://threejs.org/docs/index.html#manual/en/introduction/Installation'),
 /**
  * @license
@@ -186,7 +188,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
 
 </script>
   <script>
-(() => {
+(async () => {
   'use strict';
   const root=document.getElementById('cookie-chip-data');
   const readout=document.getElementById('cc-readout');
@@ -194,7 +196,8 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   const fmt=n=>n.toLocaleString('en-US');
   const percent=(n,t)=>(100*n/t).toFixed(1)+'%';
   const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),mix=(a,b,t)=>a+(b-a)*t;
-  const TAU=Math.PI*2,R=4.35,BOTTOM=-.20,FRACTURE_STEPS=72;
+  const mobile=matchMedia('(max-width:820px)').matches;
+  const TAU=Math.PI*2,R=4.35,BOTTOM=-.20,FRACTURE_STEPS=mobile?24:72;
   const results=[
     {id:'accept',group:'keyboard',name:'Accept closed the banner first',label:'Accept first',rowLabel:'Accept closed first',n:2824,total:5628,hint:'Accept or Accept all was the first button that worked in the keyboard test.',detail:'2,824 of 5,628 covering banners (50.2%). Among the 4,608 banners the keyboard could close, Accept worked first on 61.3%.'},
     {id:'reject',group:'keyboard',name:'Reject closed the banner first',label:'Reject first',rowLabel:'Reject closed first',n:1413,total:5628,hint:'Reject or Only necessary was the first button that worked in the keyboard test.',detail:'1,413 of 5,628 covering banners (25.1%). Among banners the keyboard could close, Reject or Only necessary worked first on 30.7%.'},
@@ -236,12 +239,56 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   }
   const charts=[];
   const state={yaw:.06,pitch:.93,zoom:1,activeGroup:'keyboard'};
+  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+  let queued=false,lastFrame=0,hideTimer,dismissedPreview=null;
+  let rendererReady=false;
+  function ensureChart(){if(rendererReady&&!charts.some(c=>c.group===state.activeGroup)){createChart(state.activeGroup);charts.forEach(resize);}const active=charts.find(c=>c.group===state.activeGroup);document.getElementById('cc-camera-controls').hidden=!active||active.view.dataset.rendered!=='true';}
+  document.getElementById('cc-drag').addEventListener('change',event=>{for(const chart of charts)chart.view.dataset.drag=String(event.target.checked);});
+  root.querySelectorAll('[data-camera]').forEach(b=>b.addEventListener('click',()=>{
+    const a=b.dataset.camera;if(a==='left')state.yaw-=.25;if(a==='right')state.yaw+=.25;
+    if(a==='up')state.pitch=clamp(state.pitch+.13,-.65,1.49);if(a==='down')state.pitch=clamp(state.pitch-.13,-.65,1.49);
+    if(a==='in')state.zoom=clamp(state.zoom*1.2,.65,3);if(a==='out')state.zoom=clamp(state.zoom/1.2,.65,3);
+    if(a==='reset'){state.yaw=.06;state.pitch=.93;state.zoom=1;}
+    root.querySelector('[data-camera="in"]').disabled=state.zoom>=3;
+    root.querySelector('[data-camera="out"]').disabled=state.zoom<=.65;
+    root.querySelector('[data-camera="up"]').disabled=state.pitch>=1.49;
+    root.querySelector('[data-camera="down"]').disabled=state.pitch<=-.65;
+    document.getElementById('cc-camera-status').textContent=a==='reset'?'Cookie view reset.':b.textContent.trim()+'. Zoom '+Math.round(state.zoom*100)+' percent.';
+    hideTooltips();requestRender();
+  }));
+  root.querySelectorAll('[data-test]').forEach(b=>{b.disabled=false;b.addEventListener('click',()=>selectResult(selected[b.dataset.test]));});
+  results.forEach(r=>{
+    r.button.addEventListener('click',()=>selectResult(r.id));
+    r.button.addEventListener('mouseenter',()=>previewRow(r));
+    r.button.addEventListener('mouseleave',leavePreview);
+    r.button.addEventListener('focus',()=>previewRow(r,'focus'));
+    r.button.addEventListener('blur',()=>{hideTooltips();dismissedPreview=null;});
+  });
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){dismissedPreview=rowTooltip.hidden?charts.find(c=>c.hoverId)?.hoverId:rowTooltip.dataset.result;hideTooltips();}});
+  reducedMotion.addEventListener('change',()=>{charts.forEach(updatePieces);requestRender();});
+  document.addEventListener('scroll',()=>{
+    if(!rowTooltip.hidden&&rowTooltip.dataset.previewSource==='focus'){
+      const r=byId.get(rowTooltip.dataset.result),box=r.button.getBoundingClientRect();
+      if(document.activeElement===r.button&&box.bottom>0&&box.top<innerHeight){positionRowTooltip(r);return;}
+    }
+    hideTooltips();
+  },true);
+  window.addEventListener('resize',()=>{
+    if(!rowTooltip.hidden&&rowTooltip.dataset.previewSource==='focus'){
+      const r=byId.get(rowTooltip.dataset.result);
+      if(document.activeElement===r.button){positionRowTooltip(r);return;}
+    }
+    hideTooltips();
+  });
+  root.querySelectorAll('[data-fallback-result]').forEach(p=>{p.addEventListener('click',()=>selectResult(p.dataset.fallbackResult));});
+  selectResult('blocked',false);
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+  if(!window.THREE){const engine=document.createElement('script');engine.textContent=document.getElementById('cc-three-engine').textContent;document.body.appendChild(engine);engine.remove();}
   const probe=document.createElement('span');probe.style.cssText='position:absolute;visibility:hidden;pointer-events:none';root.appendChild(probe);
   const colorCanvas=document.createElement('canvas');colorCanvas.width=colorCanvas.height=1;
   const colorCtx=colorCanvas.getContext('2d',{willReadFrequently:true});
   function resolve(variable){probe.style.color=`var(${variable})`;colorCtx.clearRect(0,0,1,1);colorCtx.fillStyle=getComputedStyle(probe).color;colorCtx.fillRect(0,0,1,1);const d=colorCtx.getImageData(0,0,1,1).data;return new THREE.Color().setRGB(d[0]/255,d[1]/255,d[2]/255,THREE.SRGBColorSpace);}
   const theme={bg:resolve('--background'),fg:resolve('--foreground'),warm:resolve('--cookie-dough'),gold:resolve('--cookie-crumb'),toast:resolve('--cookie-toast'),light:resolve('--cookie-light'),shadow:resolve('--cookie-shadow')};
-  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
   theme.light.multiplyScalar(1/Math.max(theme.light.r,theme.light.g,theme.light.b,.01));theme.dark=theme.bg.clone();
   const golden=theme.warm.clone().lerp(theme.gold,.48).lerp(theme.light,.19).lerp(theme.dark,.14);
   const toasted=theme.warm.clone().lerp(theme.gold,.32).lerp(theme.light,.075).lerp(theme.dark,.30);
@@ -300,26 +347,26 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;
     return {map,bumpMap:new THREE.CanvasTexture(bump)};
   }
-  const topTexture=texture(768,768,'top'),crustTexture=texture(768,192,'crust'),cutTexture=texture(512,256,'cut');
+  const topTexture=texture(mobile?256:768,mobile?256:768,'top'),crustTexture=texture(mobile?256:768,mobile?64:192,'crust'),cutTexture=texture(mobile?128:512,mobile?64:256,'cut');
   const doughMat=new THREE.MeshStandardMaterial({color:theme.light,map:topTexture.map,bumpMap:topTexture.bumpMap,bumpScale:.095,roughness:.90});
   const crustMat=new THREE.MeshStandardMaterial({color:theme.light,map:crustTexture.map,bumpMap:crustTexture.bumpMap,bumpScale:.068,roughness:.97});
   const cutMat=new THREE.MeshStandardMaterial({color:theme.light,map:cutTexture.map,bumpMap:cutTexture.bumpMap,bumpScale:.08,roughness:.98});
   const crumbMat=new THREE.MeshStandardMaterial({color:golden.clone().lerp(toasted,.5),roughness:.97});
   function geometry(p,uv,idx){const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(p,3));g.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));g.setIndex(idx);g.computeVertexNormals();return g;}
   function topGeometry(r,bottom=false){
-    const rings=FRACTURE_STEPS,sectors=Math.max(4,Math.ceil(r.span/TAU*288)),p=[],uv=[],idx=[];
+    const rings=FRACTURE_STEPS,sectors=Math.max(4,Math.ceil(r.span/TAU*(mobile?96:288))),p=[],uv=[],idx=[];
     for(let j=0;j<=rings;j++)for(let i=0;i<=sectors;i++){const {x,z}=piecePoint(r,j/rings,i/sectors);p.push(x,bottom?BOTTOM:surface(x,z),z);uv.push(.5+x/(R*2.08),.5+z/(R*2.08));}
     for(let j=0;j<rings;j++)for(let i=0;i<sectors;i++){const a=j*(sectors+1)+i,b=a+1,c=a+sectors+1,d=c+1;if(bottom)idx.push(a,c,b,b,c,d);else idx.push(a,b,c,b,d,c);}
     return geometry(p,uv,idx);
   }
   function crustGeometry(r){
-    const sectors=Math.max(4,Math.ceil(r.span/TAU*288)),steps=24,p=[],uv=[],idx=[];
+    const sectors=Math.max(4,Math.ceil(r.span/TAU*(mobile?96:288))),steps=mobile?8:24,p=[],uv=[],idx=[];
     for(let j=0;j<=steps;j++)for(let i=0;i<=sectors;i++){const a=r.start+r.span*i/sectors,t=j/steps,bow=Math.sin(Math.PI*t),rad=edge(a)+.065*bow-.04*t*t+(noise(a*21+8,t*13+7)-.5)*.04*bow,x=Math.cos(a)*rad,z=Math.sin(a)*rad,y=mix(surface(Math.cos(a)*edge(a),Math.sin(a)*edge(a)),BOTTOM,t)+.018*Math.sin(a*27)*bow;p.push(x,y,z);uv.push((a+Math.PI/2)/TAU,t);}
     for(let j=0;j<steps;j++)for(let i=0;i<sectors;i++){const a=j*(sectors+1)+i,b=a+1,c=a+sectors+1,d=c+1;idx.push(a,b,c,b,d,c);}
     return geometry(p,uv,idx);
   }
   function brokenFaceGeometry(profile,end){
-    const rings=FRACTURE_STEPS,steps=24,p=[],uv=[],idx=[];
+    const rings=FRACTURE_STEPS,steps=mobile?8:24,p=[],uv=[],idx=[];
     for(let j=0;j<=steps;j++)for(let i=0;i<=rings;i++){
       const t=j/steps,q=i/rings,point=fracturePoint(profile,q),bow=Math.sin(Math.PI*t)*Math.sin(Math.PI*q),sign=end?1:-1;
       const rough=bow*(noise(q*27+profile.seed,t*13+7)-.5)*.11,x=point.x-Math.sin(point.a)*rough*sign,z=point.z+Math.cos(point.a)*rough*sign;
@@ -329,7 +376,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     return geometry(p,uv,idx);
   }
   function chipGeometry(){
-    const rows=24,sectors=48,p=[],uv=[],idx=[];
+    const rows=mobile?8:24,sectors=mobile?16:48,p=[],uv=[],idx=[];
     for(let j=0;j<=rows;j++)for(let i=0;i<=sectors;i++){const t=j/rows,a=i/sectors*TAU,outline=1+.042*Math.sin(a*3+.4)+.022*Math.cos(a*7-.1),rad=Math.pow(1-t,.64)*(1+.10*Math.sin(Math.PI*t))*outline,crease=.032*Math.sin(a*5+t*8)*Math.sin(Math.PI*t)*rad;p.push(Math.cos(a)*(rad+crease)+.30*t*t*t,.74*t+.022*Math.sin(a*4+.2)*Math.sin(Math.PI*t),Math.sin(a)*(rad+crease)+.11*t*t*t);uv.push(i/sectors,t);}
     for(let j=0;j<rows;j++)for(let i=0;i<sectors;i++){const a=j*(sectors+1)+i,b=a+1,c=a+sectors+1,d=c+1;idx.push(a,c,b,b,c,d);}
     return geometry(p,uv,idx);
@@ -384,20 +431,20 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   }
   function createChart(group){
     const view=document.getElementById('cc-view-'+group),tag=document.getElementById('cc-tag-'+group),tooltip=document.getElementById('cc-tooltip-'+group);
-    let renderer;try{renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch(error){const m=document.createElement('p');m.className='render-error';m.textContent='All cookie results are available in the result buttons.';view.replaceChildren(m);document.getElementById('cc-visual-status').textContent='The 3D view is unavailable. All values and explanations remain available in the result buttons.';return;}
-    renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.84;
-    renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.setClearColor(theme.bg,0);renderer.domElement.setAttribute('aria-hidden','true');view.prepend(renderer.domElement);
+    let renderer;try{renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch(error){document.getElementById('cc-visual-status').textContent='The 3D view is unavailable. All values and explanations remain available in the result buttons.';return;}
+    renderer.setPixelRatio(Math.min(devicePixelRatio||1,mobile?1:2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.84;
+    renderer.shadowMap.enabled=!mobile;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.setClearColor(theme.bg,0);renderer.domElement.setAttribute('aria-hidden','true');view.prepend(renderer.domElement);renderer.domElement.addEventListener('webglcontextlost',event=>{event.preventDefault();view.dataset.rendered='false';document.getElementById('cc-visual-status').textContent='Showing the simple cookie chart. All results remain available.';if(state.activeGroup===group)document.getElementById('cc-camera-controls').hidden=true;});
     const scene=new THREE.Scene(),cookie=new THREE.Group();scene.add(cookie);
     const camera=new THREE.PerspectiveCamera(35,1,.1,100),target=new THREE.Vector3(0,.35,0);
     const chart={group,view,tag,tooltip,renderer,scene,cookie,camera,target,aspect:1,hitMeshes:[],restHitMeshes:[],hoverId:null,seed:group==='keyboard'?41:83,list:results.filter(r=>r.group===group),raycaster:new THREE.Raycaster(),pointer:new THREE.Vector2()};
     const hemi=new THREE.HemisphereLight(theme.light,theme.warm.clone().lerp(theme.light,.35),1.05);scene.add(hemi);
-    const key=new THREE.DirectionalLight(theme.light,2.9);key.position.set(-5,9,6);key.castShadow=true;key.shadow.mapSize.set(1024,1024);Object.assign(key.shadow.camera,{left:-7,right:7,top:7,bottom:-7});key.shadow.normalBias=.008;key.shadow.bias=-.0002;key.shadow.radius=3;scene.add(key);
+    const key=new THREE.DirectionalLight(theme.light,2.9);key.position.set(-5,9,6);key.castShadow=true;key.shadow.mapSize.set(mobile?512:1024,mobile?512:1024);Object.assign(key.shadow.camera,{left:-7,right:7,top:7,bottom:-7});key.shadow.normalBias=.008;key.shadow.bias=-.0002;key.shadow.radius=3;scene.add(key);
     const fill=new THREE.DirectionalLight(theme.light,.8);fill.position.set(6,4,-5);scene.add(fill);const rim=new THREE.DirectionalLight(theme.light,1.2);rim.position.set(1,3,-7);scene.add(rim);
     chart.list.forEach((r,i)=>buildPiece(chart,r,i));
     const crumbs=new THREE.InstancedMesh(crumbGeo,crumbMat,36);
     for(let i=0;i<36;i++){const a=hash(i,chart.seed)*TAU,rad=R+.28+hash(i,31)*.52,size=.025+hash(i,15)*.035;dummy.position.set(Math.cos(a)*rad,BOTTOM+size*.65,Math.sin(a)*rad);dummy.rotation.set(i,i*1.3,i*.7);dummy.scale.set(size,size*.66,size*.77);dummy.updateMatrix();crumbs.setMatrixAt(i,dummy.matrix);}crumbs.castShadow=crumbs.receiveShadow=true;cookie.add(crumbs);
     const ground=new THREE.Mesh(new THREE.PlaneGeometry(24,24),new THREE.ShadowMaterial({color:theme.shadow,opacity:.28}));ground.rotation.x=-Math.PI/2;ground.position.y=BOTTOM-.025;ground.receiveShadow=true;scene.add(ground);
-    charts.push(chart);updatePieces(chart);wireCanvas(chart);new ResizeObserver(()=>resize(chart)).observe(view);return chart;
+    view.dataset.rendered='true';charts.push(chart);updatePieces(chart);wireCanvas(chart);new ResizeObserver(()=>resize(chart)).observe(view);return chart;
   }
   function updatePieces(chart){
     for(const r of chart.list){
@@ -438,7 +485,8 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     results.forEach(item=>item.button.setAttribute('aria-pressed',String(item.id===id)));
     document.getElementById('figure-title').textContent=r.group==='keyboard'?'Can a keyboard close the banner?':'Can a screen reader read the page?';
     document.getElementById('cc-test-note').textContent=r.group==='keyboard'?'5,628 banners covering the page':'578 flagged websites checked';
-    describe(r,announce);hideTooltips();const chart=charts.find(c=>c.group===r.group);if(chart){updatePieces(chart);resize(chart);}requestRender();
+    root.querySelectorAll('[data-fallback-result]').forEach(p=>p.dataset.selected=String(p.dataset.fallbackResult===id));
+    describe(r,announce);hideTooltips();ensureChart();const chart=charts.find(c=>c.group===r.group);if(chart){updatePieces(chart);resize(chart);}requestRender();
   }
   function updateCamera(chart){
     const tangent=Math.tan(THREE.MathUtils.degToRad(17.5));
@@ -452,7 +500,6 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     const p=new THREE.Vector3(x,surface(x,z)+.48,z).add(r.piece.position).project(chart.camera),w=chart.view.clientWidth,h=chart.view.clientHeight,px=(p.x+1)*w/2,py=(1-p.y)*h/2,tw=chart.tag.offsetWidth,th=chart.tag.offsetHeight;
     chart.tag.style.setProperty('--cc-label-half-width',tw/2+'px');chart.tag.style.setProperty('--cc-label-height',th+'px');chart.tag.style.setProperty('--cc-label-x',px+'px');chart.tag.style.setProperty('--cc-label-y',py+'px');chart.tag.style.visibility=state.pitch>0&&p.z>-1&&p.z<1&&px>0&&px<w&&py>0&&py<h?'visible':'hidden';
   }
-  let queued=false,lastFrame=0;
   function requestRender(){
     if(queued)return;queued=true;
     requestAnimationFrame(time=>{
@@ -477,7 +524,6 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     }
     if(changed)requestRender();
   }
-  let hideTimer,dismissedPreview=null;
   function hideTooltips(){
     clearTimeout(hideTimer);rowTooltip.hidden=true;
     for(const chart of charts)chart.tooltip.hidden=true;
@@ -485,7 +531,9 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   }
   function fillExplanation(t,r,actionable=true){
     t.replaceChildren();const title=document.createElement('strong'),stats=document.createElement('div'),value=document.createElement('span'),base=document.createElement('span'),hint=document.createElement('p');
-    title.textContent=r.name;stats.className='cc-explainer-stats';value.className=actionable?'cc-tip-value':'cc-tag-value';value.textContent=percent(r.n,r.total);base.className='cc-explainer-base';base.textContent=fmt(r.n)+' of '+fmt(r.total)+(r.group==='keyboard'?' banners':' websites');stats.append(value,base);hint.textContent=r.hint;t.append(title,stats,hint);
+    title.textContent=r.name;stats.className='cc-explainer-stats';value.className=actionable?'cc-tip-value':'cc-tag-value';value.textContent=percent(r.n,r.total);base.className='cc-explainer-base';base.textContent=fmt(r.n)+' of '+fmt(r.total)+(r.group==='keyboard'?' banners':' websites');stats.append(value,base);t.append(title,stats);
+    if(!actionable)return;
+    hint.textContent=r.hint;t.append(hint);
     const caveat=document.createElement('p');caveat.className='cc-tip-caveat';caveat.textContent=r.caveat;t.append(caveat);
     if(actionable){const action=document.createElement('p');action.className='cc-tip-action';action.textContent='Select this piece for its explanation';t.append(action);}
   }
@@ -535,47 +583,14 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     canvas.addEventListener('pointercancel',()=>{gesture=null;hideTooltips();});
     canvas.addEventListener('pointerleave',event=>{if(!gesture)leavePreview(event);});
   }
-  groups.forEach(createChart);
+
   document.getElementById('cc-camera-controls').hidden=charts.length===0;
-  document.getElementById('cc-drag').addEventListener('change',event=>{for(const chart of charts)chart.view.dataset.drag=String(event.target.checked);});
-  root.querySelectorAll('[data-camera]').forEach(b=>b.addEventListener('click',()=>{
-    const a=b.dataset.camera;if(a==='left')state.yaw-=.25;if(a==='right')state.yaw+=.25;
-    if(a==='up')state.pitch=clamp(state.pitch+.13,-.65,1.49);if(a==='down')state.pitch=clamp(state.pitch-.13,-.65,1.49);
-    if(a==='in')state.zoom=clamp(state.zoom*1.2,.65,3);if(a==='out')state.zoom=clamp(state.zoom/1.2,.65,3);
-    if(a==='reset'){state.yaw=.06;state.pitch=.93;state.zoom=1;}
-    root.querySelector('[data-camera="in"]').disabled=state.zoom>=3;
-    root.querySelector('[data-camera="out"]').disabled=state.zoom<=.65;
-    root.querySelector('[data-camera="up"]').disabled=state.pitch>=1.49;
-    root.querySelector('[data-camera="down"]').disabled=state.pitch<=-.65;
-    document.getElementById('cc-camera-status').textContent=a==='reset'?'Cookie view reset.':b.textContent.trim()+'. Zoom '+Math.round(state.zoom*100)+' percent.';
-    hideTooltips();requestRender();
-  }));
-  root.querySelectorAll('[data-test]').forEach(b=>{b.disabled=false;b.addEventListener('click',()=>selectResult(selected[b.dataset.test]));});
-  results.forEach(r=>{
-    r.button.addEventListener('click',()=>selectResult(r.id));
-    r.button.addEventListener('mouseenter',()=>previewRow(r));
-    r.button.addEventListener('mouseleave',leavePreview);
-    r.button.addEventListener('focus',()=>previewRow(r,'focus'));
-    r.button.addEventListener('blur',()=>{hideTooltips();dismissedPreview=null;});
-  });
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'){dismissedPreview=rowTooltip.hidden?charts.find(c=>c.hoverId)?.hoverId:rowTooltip.dataset.result;hideTooltips();}});
-  reducedMotion.addEventListener('change',()=>{charts.forEach(updatePieces);requestRender();});
-  document.addEventListener('scroll',()=>{
-    if(!rowTooltip.hidden&&rowTooltip.dataset.previewSource==='focus'){
-      const r=byId.get(rowTooltip.dataset.result),box=r.button.getBoundingClientRect();
-      if(document.activeElement===r.button&&box.bottom>0&&box.top<innerHeight){positionRowTooltip(r);return;}
-    }
-    hideTooltips();
-  },true);
-  window.addEventListener('resize',()=>{
-    if(!rowTooltip.hidden&&rowTooltip.dataset.previewSource==='focus'){
-      const r=byId.get(rowTooltip.dataset.result);
-      if(document.activeElement===r.button){positionRowTooltip(r);return;}
-    }
-    hideTooltips();
-  });
-  selectResult('blocked',false);charts.forEach(resize);if(document.fonts)document.fonts.ready.then(requestRender);
-})();
+  rendererReady=true;ensureChart();if(document.fonts)document.fonts.ready.then(requestRender);
+})().catch(()=>{
+  document.getElementById('cc-visual-status').textContent='Showing the simple cookie chart. All values and explanations remain available in the result buttons.';
+  document.getElementById('cc-camera-controls').hidden=true;
+  document.querySelectorAll('.cc-view').forEach(view=>view.dataset.rendered='false');
+});
 
 </script>
   <!--
