@@ -510,4 +510,642 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     return geometry(p,uv,idx);
   }
   const chocolateBumpCanvas=document.createElement('canvas'),chocolateRoughCanvas=document.createElement('canvas');chocolateBumpCanvas.width=chocolateBumpCanvas.height=256;chocolateRoughCanvas.width=chocolateRoughCanvas.height=256;
-  const bc=chocolateBumpCanvas.getContext('2d'),rc=chocolateRoughCanvas.getContext('2d'),bd=bc.cre
+  const bc=chocolateBumpCanvas.getContext('2d'),rc=chocolateRoughCanvas.getContext('2d'),bd=bc.createImageData(256,256),rd=rc.createImageData(256,256);
+  for(let y=0;y<256;y++)for(let x=0;x<256;x++){const u=x/256,v=y/256,n=noise(u*37,v*21),gr=hash(x+17,y+21),scratch=Math.pow(Math.max(0,Math.sin(u*117+v*9)),20),b=clamp(.48+(n-.5)*.22+(gr-.5)*.05-scratch*.045,0,1)*255,k=(y*256+x)*4;bd.data[k]=bd.data[k+1]=bd.data[k+2]=b;bd.data[k+3]=255;rd.data[k]=rd.data[k+1]=rd.data[k+2]=(.48+noise(u*6+13,v*7)*.27)*255;rd.data[k+3]=255;}
+  bc.putImageData(bd,0,0);rc.putImageData(rd,0,0);
+  const chocolateMat=new THREE.MeshPhysicalMaterial({color:theme.warm.clone().lerp(theme.dark,.88),roughness:.69,roughnessMap:new THREE.CanvasTexture(chocolateRoughCanvas),clearcoat:.27,clearcoatRoughness:.32,bumpMap:new THREE.CanvasTexture(chocolateBumpCanvas),bumpScale:.012});
+  const chipGeo=chipGeometry(),crumbGeo=new THREE.IcosahedronGeometry(1,1),dummy=new THREE.Object3D();
+  function relativeAngle(a){while(a<-Math.PI/2)a+=TAU;while(a>=Math.PI*1.5)a-=TAU;return a;}
+  function boundaryDistance(a,b,rad){const diff=a-b;return Math.cos(diff)>0?Math.abs(Math.sin(diff))*rad:rad;}
+  function addMesh(chart,r,geo,mat){const m=new THREE.Mesh(geo,mat);m.castShadow=m.receiveShadow=true;m.userData.resultId=r.id;r.piece.add(m);chart.hitMeshes.push(m);return m;}
+  function buildPiece(chart,r,index){
+    r.piece=new THREE.Group();chart.cookie.add(r.piece);
+    // Each piece has its own materials so only the hovered piece toasts.
+    r.toastMaterials=[];
+    function roastable(base,strength){
+      const material=base.clone(),plain=base.color.clone().lerp(resolve(r.toneVariable),.78),roasted=plain.clone().lerp(theme.toast,strength);
+      material.color.copy(plain);
+      r.toastMaterials.push({material,plain,roasted});return material;
+    }
+    const dough=roastable(doughMat,.72),crust=roastable(crustMat,.80),cut=roastable(cutMat,.50),crumbs=roastable(crumbMat,.44);
+    addMesh(chart,r,topGeometry(r),dough);addMesh(chart,r,topGeometry(r,true),crust);
+    addMesh(chart,r,crustGeometry(r),crust);addMesh(chart,r,brokenFaceGeometry(r.startFracture,false),cut);addMesh(chart,r,brokenFaceGeometry(r.endFracture,true),cut);
+    const decorations=[];
+    for(let i=0;i<32;i++){
+      const a=relativeAngle(hash(i+7,chart.seed)*TAU),rad=Math.sqrt(hash(i+71,34))*(R-.45),size=.19+hash(i+17,21)*.15;
+      if(a<r.start||a>=r.end||rad<.65||boundaryDistance(a,r.start,rad)<size*1.4||boundaryDistance(a,r.end,rad)<size*1.4)continue;
+      const {x,z}=piecePoint(r,rad/R,(a-r.start)/r.span),chip=addMesh(chart,r,chipGeo,chocolateMat);chip.position.set(x,surface(x,z)-size*.08,z);chip.scale.set(size,size*(.75+.25*hash(i,16)),size*(.8+.25*hash(i,6)));chip.rotation.set(.06*Math.sin(i*2),i*2.394,.055*Math.cos(i*3));chip.userData.factId=facts[i%facts.length].id;decorations.push({x,z,size});
+    }
+    const count=Math.max(6,Math.round(1550*r.n/r.total)),grains=new THREE.InstancedMesh(crumbGeo,crumbs,count);
+    for(let i=0;i<count;i++){
+      const {x,z}=piecePoint(r,Math.sqrt(hash(i+29,index+93))*(1-.025/R),hash(i+11,index+34)),size=.013+Math.pow(hash(i+17,index+43),2)*.040;
+      const covered=decorations.some(d=>Math.hypot(x-d.x,z-d.z)<d.size);
+      dummy.position.set(x,surface(x,z)+size*.12,z);dummy.rotation.set(i*2.3,i*1.1,i*.51);dummy.scale.set(size,size*.58,size*.88);if(covered)dummy.scale.setScalar(0);dummy.updateMatrix();grains.setMatrixAt(i,dummy.matrix);const tint=.68+.46*hash(i+7,19);grains.setColorAt(i,new THREE.Color(tint,tint,tint));
+    }
+    grains.castShadow=grains.receiveShadow=true;r.piece.add(grains);
+    const edgeCount=Math.max(5,Math.round(650*r.n/r.total)),edgeGrains=new THREE.InstancedMesh(crumbGeo,crumbs,edgeCount);
+    for(let i=0;i<edgeCount;i++){const a=r.start+hash(i+21,index+27)*r.span,t=hash(i+11,39),bow=Math.sin(Math.PI*t),rad=edge(a)+.066*bow-.04*t*t,size=.014+hash(i+17,69)*.035,y=mix(surface(Math.cos(a)*edge(a),Math.sin(a)*edge(a)),BOTTOM,t)+.018*Math.sin(a*27)*bow;dummy.position.set(Math.cos(a)*(rad+.003),y,Math.sin(a)*(rad+.003));dummy.rotation.set(i*.4,i*1.6,i*.9);dummy.scale.set(size,size*.72,size*.59);dummy.updateMatrix();edgeGrains.setMatrixAt(i,dummy.matrix);const tint=.55+.40*hash(i+3,15);edgeGrains.setColorAt(i,new THREE.Color(tint,tint,tint));}
+    edgeGrains.castShadow=edgeGrains.receiveShadow=true;r.piece.add(edgeGrains);
+    const fracturedCrumbs=new THREE.InstancedMesh(crumbGeo,crumbs,48);
+    for(let i=0;i<48;i++){
+      const profile=i<24?r.startFracture:r.endFracture,q=.06+hash(i+15,index+83)*.91,point=fracturePoint(profile,q),side=i<24?-1:1,top=surface(point.x,point.z);
+      const size=Math.min(.025+hash(i+31,index+41)*.065,Math.max(.008,point.rad*r.span*.18)),out=size*.38;
+      dummy.position.set(point.x-Math.sin(point.a)*out*side,mix(top-.02,BOTTOM+.07,hash(i+51,index+91)),point.z+Math.cos(point.a)*out*side);dummy.rotation.set(i*1.1,i*2.2,i*.7);dummy.scale.set(size,size*(.65+.55*hash(i,23)),size*(.65+.50*hash(i,29)));dummy.updateMatrix();fracturedCrumbs.setMatrixAt(i,dummy.matrix);const tint=.65+.55*hash(i+23,index+7);fracturedCrumbs.setColorAt(i,new THREE.Color(tint,tint,tint));
+    }
+    fracturedCrumbs.castShadow=fracturedCrumbs.receiveShadow=true;r.piece.add(fracturedCrumbs);
+    // Keep the original footprint clickable while the visual piece lifts.
+    r.restHit=new THREE.Group();
+    for(const mesh of r.piece.children){if(!mesh.isMesh||mesh.isInstancedMesh||!mesh.userData.resultId)continue;const copy=mesh.clone();r.restHit.add(copy);chart.restHitMeshes.push(copy);}
+  }
+  function createChart(group){
+    const view=document.getElementById('cc-view-'+group),tag=document.getElementById('cc-tag-'+group),tooltip=document.getElementById('cc-tooltip-'+group);
+    let renderer;try{renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch(error){document.getElementById('cc-visual-status').textContent='The 3D view is unavailable. All values and explanations remain available in the result buttons.';return;}
+    renderer.setPixelRatio(Math.min(devicePixelRatio||1,mobile?1:2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.84;
+    renderer.shadowMap.enabled=!mobile;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.setClearColor(theme.bg,0);renderer.domElement.setAttribute('aria-hidden','true');view.prepend(renderer.domElement);renderer.domElement.addEventListener('webglcontextlost',event=>{event.preventDefault();view.dataset.rendered='false';document.getElementById('cc-visual-status').textContent='Showing the simple cookie chart. All results remain available.';if(state.activeGroup===group)document.getElementById('cc-camera-controls').hidden=true;});
+    renderer.domElement.addEventListener('webglcontextrestored',()=>{view.dataset.rendered='true';if(state.activeGroup===group){document.getElementById('cc-camera-controls').hidden=false;document.getElementById('cc-visual-status').textContent='The 3D cookie view is available again.';}requestRender();});
+    const scene=new THREE.Scene(),cookie=new THREE.Group();scene.add(cookie);
+    const camera=new THREE.PerspectiveCamera(35,1,.1,100),target=new THREE.Vector3(0,.35,0);
+    const chart={group,view,tag,tooltip,renderer,scene,cookie,camera,target,aspect:1,hitMeshes:[],restHitMeshes:[],hoverId:null,seed:group==='keyboard'?41:83,list:results.filter(r=>r.group===group),raycaster:new THREE.Raycaster(),pointer:new THREE.Vector2()};
+    const hemi=new THREE.HemisphereLight(theme.light,theme.warm.clone().lerp(theme.light,.35),1.05);scene.add(hemi);
+    const key=new THREE.DirectionalLight(theme.light,2.9);key.position.set(-5,9,6);key.castShadow=true;key.shadow.mapSize.set(mobile?512:1024,mobile?512:1024);Object.assign(key.shadow.camera,{left:-7,right:7,top:7,bottom:-7});key.shadow.normalBias=.008;key.shadow.bias=-.0002;key.shadow.radius=3;scene.add(key);
+    const fill=new THREE.DirectionalLight(theme.light,.8);fill.position.set(6,4,-5);scene.add(fill);const rim=new THREE.DirectionalLight(theme.light,1.2);rim.position.set(1,3,-7);scene.add(rim);
+    chart.list.forEach((r,i)=>buildPiece(chart,r,i));
+    const crumbs=new THREE.InstancedMesh(crumbGeo,crumbMat,36);
+    for(let i=0;i<36;i++){const a=hash(i,chart.seed)*TAU,rad=R+.28+hash(i,31)*.52,size=.025+hash(i,15)*.035;dummy.position.set(Math.cos(a)*rad,BOTTOM+size*.65,Math.sin(a)*rad);dummy.rotation.set(i,i*1.3,i*.7);dummy.scale.set(size,size*.66,size*.77);dummy.updateMatrix();crumbs.setMatrixAt(i,dummy.matrix);}crumbs.castShadow=crumbs.receiveShadow=true;cookie.add(crumbs);
+    const ground=new THREE.Mesh(new THREE.PlaneGeometry(24,24),new THREE.ShadowMaterial({color:theme.shadow,opacity:.28}));ground.rotation.x=-Math.PI/2;ground.position.y=BOTTOM-.025;ground.receiveShadow=true;scene.add(ground);
+    view.dataset.rendered='true';charts.push(chart);updatePieces(chart);wireCanvas(chart);new ResizeObserver(()=>resize(chart)).observe(view);return chart;
+  }
+  function updatePieces(chart){
+    for(const r of chart.list){
+      const active=selected[r.group]===r.id,hover=chart.hoverId===r.id;
+      const target={out:.16+(active ? .32 : 0),lift:(active ? .10 : 0),toast:hover ? 1 : 0};
+      if(!r.motion)r.motion={...target};r.target=target;
+      const rest=.16+(active ? .32 : 0);r.restHit.position.set(Math.cos(r.mid)*rest,active ? .10 : 0,Math.sin(r.mid)*rest);r.restHit.updateMatrixWorld(true);
+    }
+    chart.tag.hidden=Boolean(chart.hoverId);
+    fillExplanation(chart.tag,byId.get(selected[chart.group]),false);
+  }
+  function updateMotion(chart,dt){
+    const blend=reducedMotion.matches?1:1-Math.exp(-dt/ .09),toastBlend=reducedMotion.matches?1:1-Math.exp(-dt/ .14);let moving=false;
+    for(const r of chart.list){
+      for(const key of ['out','lift','toast']){
+        r.motion[key]+= (r.target[key]-r.motion[key])*(key==='toast'?toastBlend:blend);
+        if(Math.abs(r.target[key]-r.motion[key])<.001)r.motion[key]=r.target[key];else moving=true;
+      }
+      r.piece.position.set(Math.cos(r.mid)*r.motion.out,r.motion.lift,Math.sin(r.mid)*r.motion.out);
+      for(const {material,plain,roasted} of r.toastMaterials)material.color.copy(plain).lerp(roasted,r.motion.toast);
+    }
+    return moving;
+  }
+  function describe(r,announce=false){
+    document.getElementById('cc-detail-title').textContent=r.rowLabel;
+    document.getElementById('cc-detail-share').textContent=percent(r.n,r.total);
+    document.getElementById('cc-detail-count').textContent=fmt(r.n)+' of '+fmt(r.total)+(r.group==='keyboard'?' banners':' websites');
+    document.getElementById('cc-detail-hint').textContent=r.hint;
+    document.getElementById('cc-detail-caveat').textContent=r.caveat;
+    document.getElementById('cc-detail').dataset.result=r.id;
+    if(announce)readout.textContent=r.rowLabel+'. '+fmt(r.n)+' of '+fmt(r.total)+', '+percent(r.n,r.total)+'. '+r.hint;
+  }
+  function selectResult(id,announce=true){
+    const r=byId.get(id);selected[r.group]=id;state.activeGroup=r.group;
+    root.querySelectorAll('[data-pie-group]').forEach(panel=>panel.hidden=panel.dataset.pieGroup!==r.group);
+    root.querySelectorAll('[data-result-group]').forEach(panel=>panel.hidden=panel.dataset.resultGroup!==r.group);
+    root.querySelectorAll('[data-test]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.test===r.group)));
+    results.forEach(item=>item.button.setAttribute('aria-pressed',String(item.id===id)));
+    document.getElementById('figure-title').textContent=r.group==='keyboard'?'Can a keyboard close the banner?':'How much has been tested?';
+    document.getElementById('cc-test-note').textContent=r.group==='keyboard'?'3,161 loaded websites with recognised banners':'18,712 websites · 56% with recorded visits';
+    root.querySelectorAll('[data-fallback-result]').forEach(p=>p.dataset.selected=String(p.dataset.fallbackResult===id));
+    describe(r,announce);hideTooltips();ensureChart();const chart=charts.find(c=>c.group===r.group);if(chart){updatePieces(chart);resize(chart);}requestRender();
+  }
+  function updateCamera(chart){
+    const tangent=Math.tan(THREE.MathUtils.degToRad(17.5));
+    const halfHeight=R*Math.abs(Math.sin(state.pitch))+.85*Math.abs(Math.cos(state.pitch))+.45;
+    const distance=Math.max(5.15/(tangent*chart.aspect),halfHeight/tangent)*1.08/state.zoom;
+    chart.camera.position.set(Math.sin(state.yaw)*Math.cos(state.pitch)*distance,chart.target.y+Math.sin(state.pitch)*distance,Math.cos(state.yaw)*Math.cos(state.pitch)*distance);chart.camera.lookAt(chart.target);chart.camera.updateMatrixWorld();
+  }
+  function updateLabel(chart){
+    if(chart.tag.hidden)return;
+    const r=byId.get(selected[chart.group]),{x,z}=piecePoint(r,.66,.5);
+    const p=new THREE.Vector3(x,surface(x,z)+.48,z).add(r.piece.position).project(chart.camera),w=chart.view.clientWidth,h=chart.view.clientHeight,px=(p.x+1)*w/2,py=(1-p.y)*h/2,tw=chart.tag.offsetWidth,th=chart.tag.offsetHeight;
+    chart.tag.style.setProperty('--cc-label-half-width',tw/2+'px');chart.tag.style.setProperty('--cc-label-height',th+'px');chart.tag.style.setProperty('--cc-label-x',px+'px');chart.tag.style.setProperty('--cc-label-y',py+'px');chart.tag.style.visibility=state.pitch>0&&p.z>-1&&p.z<1&&px>0&&px<w&&py>0&&py<h?'visible':'hidden';
+  }
+  function requestRender(){
+    if(queued)return;queued=true;
+    requestAnimationFrame(time=>{
+      queued=false;const dt=lastFrame?Math.min((time-lastFrame)/1000,.06):1/60;lastFrame=time;let moving=false;
+      for(const chart of charts){if(chart.group!==state.activeGroup)continue;moving=updateMotion(chart,dt)||moving;updateCamera(chart);chart.renderer.render(chart.scene,chart.camera);updateLabel(chart);}
+      if(moving)requestRender();else lastFrame=0;
+    });
+  }
+  function resize(chart){const w=chart.view.clientWidth,h=chart.view.clientHeight;if(!w||!h)return;chart.aspect=w/h;chart.camera.aspect=chart.aspect;chart.camera.updateProjectionMatrix();chart.renderer.setSize(w,h,false);chart.tooltip.hidden=true;updateCamera(chart);updateLabel(chart);requestRender();}
+  function hitObjectAt(chart,x,y){
+    const box=chart.renderer.domElement.getBoundingClientRect();chart.pointer.set((x-box.left)/box.width*2-1,-(y-box.top)/box.height*2+1);chart.raycaster.setFromCamera(chart.pointer,chart.camera);
+    // The stationary footprint keeps hover targets stable during selection animations.
+    const rest=chart.raycaster.intersectObjects(chart.restHitMeshes,false)[0]?.object;
+    const visible=chart.raycaster.intersectObjects(chart.hitMeshes,false)[0]?.object;
+    if(rest?.userData.factId)return rest;
+    if(visible?.userData.factId&&(!rest||visible.userData.resultId===rest.userData.resultId))return visible;
+    if(rest)return rest;
+    if(visible)return visible;
+    return null;
+  }
+  function hitAt(chart,x,y){return byId.get(hitObjectAt(chart,x,y)?.userData.resultId);}
+  function setPreview(r){
+    for(const item of results)item.button.dataset.previewed=String(Boolean(r&&item.id===r.id));
+    let changed=false;
+    for(const chart of charts){
+      const id=r&&r.group===chart.group&&chart.group===state.activeGroup?r.id:null;
+      if(chart.hoverId===id)continue;
+      chart.hoverId=id;chart.view.dataset.hoveredResult=id||'';updatePieces(chart);changed=true;
+    }
+    if(changed)requestRender();
+  }
+  function hideTooltips(){
+    clearTimeout(hideTimer);hideTimer=null;rowTooltip.hidden=true;
+    for(const chart of charts)chart.tooltip.hidden=true;
+    setPreview(null);
+  }
+  function fillExplanation(t,r,actionable=true){
+    delete t.dataset.fact;t.dataset.previewId=r.id;
+    t.replaceChildren();const title=document.createElement('strong'),stats=document.createElement('div'),value=document.createElement('span'),base=document.createElement('span'),hint=document.createElement('p');
+    title.textContent=r.name;stats.className='cc-explainer-stats';value.className=actionable?'cc-tip-value':'cc-tag-value';value.textContent=percent(r.n,r.total);base.className='cc-explainer-base';base.textContent=fmt(r.n)+' of '+fmt(r.total)+(r.group==='keyboard'?' banners':' websites');stats.append(value,base);t.append(title,stats);
+    if(!actionable)return;
+    hint.textContent=r.hint;t.append(hint);
+    const caveat=document.createElement('p');caveat.className='cc-tip-caveat';caveat.textContent=r.caveat;t.append(caveat);
+    if(actionable){const action=document.createElement('p');action.className='cc-tip-action';action.textContent='Select this piece for its explanation';t.append(action);}
+  }
+  function showFactTooltip(chart,f,x,y){fillFact(chart.tooltip,f);chart.tooltip.hidden=false;const box=chart.view.getBoundingClientRect(),t=chart.tooltip;t.style.left=clamp(x-box.left+12,5,Math.max(5,box.width-t.offsetWidth-5))+'px';t.style.top=clamp(y-box.top+12,5,Math.max(5,box.height-t.offsetHeight-5))+'px';}
+  function showTooltip(chart,r,x,y){
+    const t=chart.tooltip;fillExplanation(t,r);t.hidden=false;
+    const box=chart.view.getBoundingClientRect();t.style.left=clamp(x-box.left+12,5,Math.max(5,box.width-t.offsetWidth-5))+'px';t.style.top=clamp(y-box.top+12,5,Math.max(5,box.height-t.offsetHeight-5))+'px';
+  }
+  function positionRowTooltip(r){
+    const box=r.button.getBoundingClientRect(),w=rowTooltip.offsetWidth,beside=box.left-w-12>=12;
+    rowTooltip.style.maxHeight=(beside?innerHeight-24:Math.max(60,box.top-24,innerHeight-box.bottom-24))+'px';
+    const h=rowTooltip.offsetHeight;
+    const x=beside?box.left-w-12:clamp(box.left,12,innerWidth-w-12);
+    const y=beside?clamp(box.top+(box.height-h)/2,12,innerHeight-h-12):(box.top-h-12>=12?box.top-h-12:clamp(box.bottom+12,12,innerHeight-h-12));
+    rowTooltip.style.left=x+'px';rowTooltip.style.top=y+'px';
+  }
+  function previewRow(r,source='pointer'){
+    clearTimeout(hideTimer);hideTimer=null;if(dismissedPreview===r.id)return;dismissedPreview=null;hideTooltips();setPreview(r);fillExplanation(rowTooltip,r);rowTooltip.hidden=false;rowTooltip.dataset.previewSource=source;rowTooltip.dataset.result=r.id;positionRowTooltip(r);
+  }
+  function leavePreview(event){
+    if(event.relatedTarget?.closest?.('.cc-tooltip'))return;
+    hideTimer=setTimeout(()=>{hideTooltips();dismissedPreview=null;},180);
+  }
+  root.querySelectorAll('.cc-tooltip').forEach(tip=>{
+    tip.addEventListener('pointerenter',()=>{clearTimeout(hideTimer);hideTimer=null;});
+    tip.addEventListener('pointerleave',event=>{if(event.relatedTarget?.closest?.('button[data-result],canvas'))return;leavePreview(event);});
+    tip.addEventListener('click',()=>{if(tip.dataset.fact)selectFact(tip.dataset.fact);else if(byId.has(tip.dataset.result))selectResult(tip.dataset.result);});
+  });
+  function wireCanvas(chart){
+    const canvas=chart.renderer.domElement;let gesture=null;
+    canvas.addEventListener('pointerdown',e=>{
+      if(e.button!==0)return;hideTooltips();
+      gesture={id:e.pointerId,x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,moved:false};
+      if(document.getElementById('cc-drag').checked)canvas.setPointerCapture(e.pointerId);
+    });
+    canvas.addEventListener('pointermove',e=>{
+      if(gesture&&gesture.id===e.pointerId){
+        if(Math.hypot(e.clientX-gesture.x,e.clientY-gesture.y)>6)gesture.moved=true;
+        if(gesture.moved&&document.getElementById('cc-drag').checked){state.yaw-=(e.clientX-gesture.lastX)*.008;state.pitch=clamp(state.pitch+(e.clientY-gesture.lastY)*.006,-.65,1.49);canvas.style.cursor='grabbing';requestRender();}
+        gesture.lastX=e.clientX;gesture.lastY=e.clientY;return;
+      }
+      const object=hitObjectAt(chart,e.clientX,e.clientY),fact=factById.get(object?.userData.factId);rowTooltip.hidden=true;
+      if(fact){if(dismissedPreview==='fact:'+fact.id)return;dismissedPreview=null;clearTimeout(hideTimer);hideTimer=null;setPreview(byId.get(object.userData.resultId));if(chart.tooltip.hidden||chart.tooltip.dataset.fact!==fact.id)showFactTooltip(chart,fact,e.clientX,e.clientY);canvas.style.cursor='pointer';return;}
+      const r=byId.get(object?.userData.resultId);
+      if(r&&dismissedPreview===r.id)return;
+      if(!r||dismissedPreview!==r.id)dismissedPreview=null;
+      canvas.style.cursor=r?'pointer':'';
+      if(r){clearTimeout(hideTimer);hideTimer=null;setPreview(r);if(chart.tooltip.dataset.result!==r.id||chart.tooltip.hidden){showTooltip(chart,r,e.clientX,e.clientY);chart.tooltip.dataset.result=r.id;}}
+      else if(!hideTimer){hideTimer=setTimeout(()=>{hideTimer=null;hideTooltips();dismissedPreview=null;},180);}
+    });
+    canvas.addEventListener('pointerup',e=>{if(!gesture||gesture.id!==e.pointerId)return;const click=!gesture.moved;gesture=null;canvas.style.cursor='';if(click){const object=hitObjectAt(chart,e.clientX,e.clientY);if(object?.userData.factId){selectFact(object.userData.factId);showFactTooltip(chart,factById.get(object.userData.factId),e.clientX,e.clientY);}else if(object)selectResult(object.userData.resultId);}});
+    canvas.addEventListener('pointercancel',()=>{gesture=null;hideTooltips();});
+    canvas.addEventListener('pointerleave',event=>{if(!gesture)leavePreview(event);});
+  }
+
+  document.getElementById('cc-camera-controls').hidden=charts.length===0;
+  rendererReady=true;ensureChart();if(document.fonts)document.fonts.ready.then(requestRender);
+})().catch(()=>{
+  document.getElementById('cc-visual-status').textContent='Showing the simple cookie chart. All values and explanations remain available in the result buttons.';
+  document.getElementById('cc-camera-controls').hidden=true;
+  document.querySelectorAll('.cc-view').forEach(view=>view.dataset.rendered='false');
+});
+
+</script>
+  <!--
+DEPENDENCY LICENSES
+Carbon styles — Apache 2.0
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "{}"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright 2015 IBM Corp.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+Carbon icons — Apache 2.0
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "{}"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright 2015 IBM Corp.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+-->
+</body>
+</html>
+
+<!-- Hover previews use stable targets; only selected cookie pieces move. -->
