@@ -578,7 +578,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   function updatePieces(chart){
     for(const r of chart.list){
       const active=selected[r.group]===r.id,hover=chart.hoverId===r.id;
-      const target={out:.16+(active ? .32 : 0)+(hover&&!reducedMotion.matches ? .50 : 0),lift:(active ? .10 : 0)+(hover&&!reducedMotion.matches ? .55 : 0),toast:hover ? 1 : 0};
+      const target={out:.16+(active ? .32 : 0),lift:(active ? .10 : 0),toast:hover ? 1 : 0};
       if(!r.motion)r.motion={...target};r.target=target;
       const rest=.16+(active ? .32 : 0);r.restHit.position.set(Math.cos(r.mid)*rest,active ? .10 : 0,Math.sin(r.mid)*rest);r.restHit.updateMatrixWorld(true);
     }
@@ -640,7 +640,13 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   function resize(chart){const w=chart.view.clientWidth,h=chart.view.clientHeight;if(!w||!h)return;chart.aspect=w/h;chart.camera.aspect=chart.aspect;chart.camera.updateProjectionMatrix();chart.renderer.setSize(w,h,false);chart.tooltip.hidden=true;updateCamera(chart);updateLabel(chart);requestRender();}
   function hitObjectAt(chart,x,y){
     const box=chart.renderer.domElement.getBoundingClientRect();chart.pointer.set((x-box.left)/box.width*2-1,-(y-box.top)/box.height*2+1);chart.raycaster.setFromCamera(chart.pointer,chart.camera);
-    const hit=chart.raycaster.intersectObjects([...chart.hitMeshes,...chart.restHitMeshes],false)[0];if(hit)return hit.object;
+    // The stationary footprint keeps hover targets stable during selection animations.
+    const rest=chart.raycaster.intersectObjects(chart.restHitMeshes,false)[0]?.object;
+    const visible=chart.raycaster.intersectObjects(chart.hitMeshes,false)[0]?.object;
+    if(rest?.userData.factId)return rest;
+    if(visible?.userData.factId&&(!rest||visible.userData.resultId===rest.userData.resultId))return visible;
+    if(rest)return rest;
+    if(visible)return visible;
     return null;
   }
   function hitAt(chart,x,y){return byId.get(hitObjectAt(chart,x,y)?.userData.resultId);}
@@ -655,7 +661,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     if(changed)requestRender();
   }
   function hideTooltips(){
-    clearTimeout(hideTimer);rowTooltip.hidden=true;
+    clearTimeout(hideTimer);hideTimer=null;rowTooltip.hidden=true;
     for(const chart of charts)chart.tooltip.hidden=true;
     setPreview(null);
   }
@@ -682,14 +688,14 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     rowTooltip.style.left=x+'px';rowTooltip.style.top=y+'px';
   }
   function previewRow(r,source='pointer'){
-    clearTimeout(hideTimer);if(dismissedPreview===r.id)return;dismissedPreview=null;hideTooltips();setPreview(r);fillExplanation(rowTooltip,r);rowTooltip.hidden=false;rowTooltip.dataset.previewSource=source;rowTooltip.dataset.result=r.id;positionRowTooltip(r);
+    clearTimeout(hideTimer);hideTimer=null;if(dismissedPreview===r.id)return;dismissedPreview=null;hideTooltips();setPreview(r);fillExplanation(rowTooltip,r);rowTooltip.hidden=false;rowTooltip.dataset.previewSource=source;rowTooltip.dataset.result=r.id;positionRowTooltip(r);
   }
   function leavePreview(event){
     if(event.relatedTarget?.closest?.('.cc-tooltip'))return;
     hideTimer=setTimeout(()=>{hideTooltips();dismissedPreview=null;},180);
   }
   root.querySelectorAll('.cc-tooltip').forEach(tip=>{
-    tip.addEventListener('pointerenter',()=>clearTimeout(hideTimer));
+    tip.addEventListener('pointerenter',()=>{clearTimeout(hideTimer);hideTimer=null;});
     tip.addEventListener('pointerleave',event=>{if(event.relatedTarget?.closest?.('button[data-result],canvas'))return;leavePreview(event);});
     tip.addEventListener('click',()=>{if(tip.dataset.fact)selectFact(tip.dataset.fact);else if(byId.has(tip.dataset.result))selectResult(tip.dataset.result);});
   });
@@ -707,13 +713,13 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
         gesture.lastX=e.clientX;gesture.lastY=e.clientY;return;
       }
       const object=hitObjectAt(chart,e.clientX,e.clientY),fact=factById.get(object?.userData.factId);rowTooltip.hidden=true;
-      if(fact){if(dismissedPreview==='fact:'+fact.id)return;dismissedPreview=null;clearTimeout(hideTimer);setPreview(null);if(chart.tooltip.hidden||chart.tooltip.dataset.fact!==fact.id)showFactTooltip(chart,fact,e.clientX,e.clientY);canvas.style.cursor='pointer';return;}
+      if(fact){if(dismissedPreview==='fact:'+fact.id)return;dismissedPreview=null;clearTimeout(hideTimer);hideTimer=null;setPreview(byId.get(object.userData.resultId));if(chart.tooltip.hidden||chart.tooltip.dataset.fact!==fact.id)showFactTooltip(chart,fact,e.clientX,e.clientY);canvas.style.cursor='pointer';return;}
       const r=byId.get(object?.userData.resultId);
       if(r&&dismissedPreview===r.id)return;
       if(!r||dismissedPreview!==r.id)dismissedPreview=null;
-      setPreview(r);canvas.style.cursor=r?'pointer':'';
-      if(r){clearTimeout(hideTimer);if(chart.tooltip.dataset.result!==r.id||chart.tooltip.hidden){showTooltip(chart,r,e.clientX,e.clientY);chart.tooltip.dataset.result=r.id;}}
-      else chart.tooltip.hidden=true;
+      canvas.style.cursor=r?'pointer':'';
+      if(r){clearTimeout(hideTimer);hideTimer=null;setPreview(r);if(chart.tooltip.dataset.result!==r.id||chart.tooltip.hidden){showTooltip(chart,r,e.clientX,e.clientY);chart.tooltip.dataset.result=r.id;}}
+      else if(!hideTimer){hideTimer=setTimeout(()=>{hideTimer=null;hideTooltips();dismissedPreview=null;},180);}
     });
     canvas.addEventListener('pointerup',e=>{if(!gesture||gesture.id!==e.pointerId)return;const click=!gesture.moved;gesture=null;canvas.style.cursor='';if(click){const object=hitObjectAt(chart,e.clientX,e.clientY);if(object?.userData.factId){selectFact(object.userData.factId);showFactTooltip(chart,factById.get(object.userData.factId),e.clientX,e.clientY);}else if(object)selectResult(object.userData.resultId);}});
     canvas.addEventListener('pointercancel',()=>{gesture=null;hideTooltips();});
