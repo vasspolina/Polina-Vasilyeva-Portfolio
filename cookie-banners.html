@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Explore cookie banner accessibility with an interactive cookie chart and simple explanations.">
-  <title>Cookie banners: can everyone get past them?</title>
+  <meta name="description" content="Keyboard results and testing coverage for cookie banners on 27 EU popularity lists.">
+  <title>Cookie banners: keyboard results and testing coverage</title>
   <style>
     :root{--font:'Helvetica Neue',Helvetica,Arial,sans-serif;--bg-grey:#e8e8e8;--label:#d6d6d6;--line:#bdbdbd;--white:#fff;
       --background:#e8e8e8;--foreground:#000;--muted:#444;
@@ -134,8 +134,8 @@
   <header class="page-header"><span>Cookies &amp; access</span><span class="header-note">27 EU countries</span></header>
   <main class="page" id="main" tabindex="-1">
     <div class="intro">
-      <div><p class="eyebrow">Cookie banners, at a glance</p><h1>Can everyone get past a cookie banner?</h1></div>
-      <p>10,470 website checks across 27 EU popularity lists. Explore the banner results and the gaps still to test.</p>
+      <div><p class="eyebrow">Cookie banners</p><h1>Cookie banner results across 27 EU countries</h1></div>
+      <p>10,470 website checks across 27 EU popularity lists. Banner results and the sites still to test.</p>
     </div>
     <div id="cookie-chip-data">
       <div class="test-switch" role="group" aria-label="Choose a test">
@@ -144,7 +144,7 @@
       </div>
       <p id="reader-definition" hidden>Coverage shows page loads, visit problems and websites still awaiting a verified result.</p>
       <section aria-labelledby="figure-title">
-        <div class="figure-heading"><h2 id="figure-title">Can a keyboard close the banner?</h2><p id="cc-test-note">3,161 loaded websites with recognised banners</p></div>
+        <div class="figure-heading"><h2 id="figure-title">Keyboard route to closing the banner</h2><p id="cc-test-note">3,161 loaded websites with recognised banners</p></div>
         <div class="workbench">
           <div class="chart-content">
             <figure id="keyboard-chart" class="cookie-pie" data-pie-group="keyboard" aria-label="Keyboard results" aria-describedby="cc-chart-guide">
@@ -188,7 +188,7 @@
                 <button type="button" data-camera="reset">Reset view</button>
               </div>
               <label class="drag-option"><input id="cc-drag" type="checkbox">Rotate by dragging</label>
-              <p class="gesture-note">You can also use the view buttons. The page scrolls normally.</p>
+              <p class="gesture-note">The view buttons also work. The page scrolls normally.</p>
               <p id="cc-camera-status" role="status" class="sr-only"></p>
             </div>
             <section id="cc-detail" class="explanation" aria-labelledby="cc-detail-title">
@@ -198,7 +198,7 @@
               <p id="cc-detail-caveat">A review candidate, not a confirmed keyboard trap or screen-reader lockout.</p>
             </section>
             <section class="chip-facts" aria-labelledby="chip-facts-title">
-              <h3 id="chip-facts-title">Facts in the chocolate</h3>
+              <h3 id="chip-facts-title">Facts</h3>
               <p>Hover over or tap a chocolate chip, or choose a fact below.</p>
               <div class="fact-options" role="group" aria-label="Choose a chocolate fact">
                 <button type="button" data-fact="choices" aria-pressed="true" aria-controls="cc-fact-content" disabled>Rejection routes</button>
@@ -638,7 +638,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     root.querySelectorAll('[data-result-group]').forEach(panel=>panel.hidden=panel.dataset.resultGroup!==r.group);
     root.querySelectorAll('[data-test]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.test===r.group)));
     results.forEach(item=>item.button.setAttribute('aria-pressed',String(item.id===id)));
-    document.getElementById('figure-title').textContent=r.group==='keyboard'?'Can a keyboard close the banner?':'How much has been tested?';
+    document.getElementById('figure-title').textContent=r.group==='keyboard'?'Keyboard route to closing the banner':'Testing coverage';
     document.getElementById('cc-test-note').textContent=r.group==='keyboard'?'3,161 loaded websites with recognised banners':'18,712 websites · 56% with recorded visits';
     root.querySelectorAll('[data-fallback-result]').forEach(p=>p.dataset.selected=String(p.dataset.fallbackResult===id));
     describe(r,announce);hideTooltips();ensureChart();const chart=charts.find(c=>c.group===r.group);if(chart){updatePieces(chart);resize(chart);}requestRender();
