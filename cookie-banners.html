@@ -11,7 +11,7 @@
 *{box-sizing:border-box}html{background:var(--paper)}body{margin:0;color:var(--white);background:var(--paper);font:400 var(--small)/1.2 var(--font);letter-spacing:.7pt}button{font:inherit;letter-spacing:inherit;line-height:inherit;color:inherit;border-radius:0;cursor:pointer}h1,h2,h3,p,figure{margin:0}h1,h2,h3,strong{font-weight:400}a{color:inherit;text-underline-offset:5px}button:focus-visible,a:focus-visible{outline:1px solid currentColor;outline-offset:5px}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}.skip-link{position:absolute;left:24px;top:-100px;z-index:60;padding:16px;background:#fff;color:#111}.skip-link:focus{top:16px}
 .page-header{display:flex;justify-content:space-between;gap:20px;padding:22px 0;margin:0 32px;color:#111;border-bottom:1px solid #111}.page{margin:24px 32px 48px}.intro{display:grid;grid-template-columns:1fr 1fr;background:var(--ink);min-height:340px}.intro-title{padding:40px 48px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line);gap:48px}.eyebrow{font-size:var(--small)}h1{font-size:var(--medium);line-height:1.2;text-decoration:underline;text-underline-offset:7px;text-decoration-thickness:1px;max-width:24ch}.intro p.dek{font-size:var(--medium);max-width:40ch;padding:40px 48px;line-height:1.2}.intro .intro-note{max-width:40ch;font-size:var(--small)}
 .tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:16px 0}.tabs button{display:flex;flex-direction:column;justify-content:space-between;gap:32px;text-align:left;border:0;background:#111;color:#eee;padding:20px;min-height:112px;font-size:var(--small)}.tabs button{position:relative;padding-right:92px}.tab-glyph{position:absolute;right:16px;bottom:16px;width:64px;height:64px;pointer-events:none}.tabs button::before{content:attr(data-index);color:#aaa}.tabs button[aria-pressed=true]{text-decoration:underline;text-underline-offset:5px}.tabs button[aria-pressed=true]::before{color:#fff;content:attr(data-index) ' / selected'}.tabs button:hover{background:#252525}
-.workbench{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(340px,1fr);gap:16px;align-items:start}.visual-column{min-width:0}.stage{position:relative;background:#000;padding:24px 12px 12px;min-width:0}.plate-label{padding:0 20px;display:flex;justify-content:space-between;gap:16px;color:#c4c4c4}.stage svg{display:block;width:100%;height:auto;aspect-ratio:640/520}.figure-note{color:#bbb;padding:16px 20px 24px;max-width:62ch}.readout{padding:32px;background:#111;min-height:192px;margin-top:16px}.readout .big{font-size:var(--large);line-height:1.2;margin:12px 0}.readout p{max-width:52ch}.readout .meta{margin-top:20px;color:#c4c4c4}.sheet{background:#111;min-width:0;padding:32px}.sheet h2{font-size:var(--medium);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px;margin-bottom:28px}.sheet-note{margin-bottom:24px;color:#bbb}table{width:100%;border-collapse:collapse}th,td{padding:0;text-align:left;font-weight:400;border-bottom:1px solid #555;font-size:var(--small)}th{color:#bbb;padding:12px 0}th.n,td.n{text-align:right;font-variant-numeric:tabular-nums}td.n{padding-left:12px;white-space:nowrap}td button{width:100%;min-height:44px;border:0;background:transparent;text-align:left;padding:14px 0;display:block}tr:hover td{background:#272727}tr[aria-selected=true] td{background:#333}tr[aria-selected=true] td:first-child button::before{content:'→ ';}tr.eu td{border-bottom-color:#ddd}
+.workbench{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(340px,1fr);gap:16px;align-items:start}.visual-column{min-width:0}.stage{position:relative;background:#000;padding:24px 12px 12px;min-width:0}.plate-label{padding:0 20px;display:flex;justify-content:space-between;gap:16px;color:#c4c4c4}.stage svg{display:block;width:100%;height:auto;aspect-ratio:640/520}.figure-note{color:#bbb;padding:16px 20px 24px;max-width:62ch}.readout{padding:32px;background:#111;min-height:192px;margin-top:16px}.readout .big{font-size:var(--large);line-height:1.2;margin:12px 0}.readout p{max-width:52ch}.readout .meta{margin-top:20px;color:#c4c4c4}.sheet{background:#111;min-width:0;padding:32px}.sheet h2{font-size:var(--medium);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px;margin-bottom:28px}.sheet-note{margin-bottom:24px;color:#bbb}table{width:100%;border-collapse:collapse}th,td{padding:0;text-align:left;font-weight:400;border-bottom:1px solid #555;font-size:var(--small)}th{color:#bbb;padding:12px 0}th.n,td.n{text-align:right;font-variant-numeric:tabular-nums}td.n{padding-left:12px;white-space:nowrap}td button{width:100%;min-height:44px;border:0;background:transparent;text-align:left;padding:10px 0;display:block}tr:hover td{background:#272727}tr[aria-selected=true] td{background:#333}tr[aria-selected=true] td:first-child button::before{content:'→ ';}tr.eu td{border-bottom-color:#ddd}
 .page-footer{display:grid;grid-template-columns:1fr 1fr;margin-top:16px;background:#fff;color:#111}.page-footer p{padding:32px 48px;max-width:64ch}.page-footer p+p{border-left:1px solid #777}.tip{position:fixed;z-index:50;background:#f3f3f0;color:#111;border:1px solid #111;padding:20px;width:300px;max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);overflow:auto}.tip strong{display:block;font-size:var(--medium)}.tip .v{display:block;font-size:var(--large);margin:16px 0}.tip p{margin-top:12px}.part{cursor:pointer}.part ellipse,.part path.vis{vector-effect:non-scaling-stroke}.part:hover ellipse,.part.hot ellipse,.part:focus-visible ellipse{stroke:#fff!important;stroke-width:1px!important;fill:#fff;fill-opacity:.17!important}.part:focus{outline:none}.part:focus-visible ellipse{stroke-dasharray:3 3}.part.measure:hover .vis,.part.measure:focus-visible .vis{stroke-opacity:1!important;stroke-width:1px!important;stroke-dasharray:4 3}.hit{fill:#fff;fill-opacity:0;pointer-events:all}.hit:hover{fill-opacity:.06}
 @media(min-width:1600px){.page{max-width:1600px;margin-left:auto;margin-right:auto}.page-header{max-width:1600px;margin:auto}}
 @media(max-width:1050px){.intro-title,.intro p.dek{padding:32px}.workbench{grid-template-columns:minmax(0,1fr) minmax(310px,.8fr)}.sheet{padding:24px}}
@@ -26,6 +26,7 @@ body{color:var(--ink)}.page-header{color:var(--ink);border-color:var(--ink)}.int
 .workbench{column-gap:16px;background:var(--blue)}.visual-column{align-self:stretch;background:var(--teal)}.stage{background:var(--teal)}.plate-label,.figure-note{color:var(--ink)}.readout{background:var(--teal);border-top:1px solid #367e80}.readout .meta{color:var(--ink)}.sheet{background:var(--silver)}.sheet-note,th{color:#3f5359}th,td{border-color:#77888f}tr:hover td{background:#b4c2c8}tr[aria-selected=true] td{background:#9aafb8}tr.eu td{border-bottom-color:#102b2d}
 .page-footer{background:#e6e7e8;color:var(--ink)}.page-footer p+p{border-color:#77888f}.tip{background:#e8ecee;color:var(--ink);border-color:var(--ink)}.part rect,.part path.vis{vector-effect:non-scaling-stroke}.part:hover rect,.part.hot rect,.part:focus-visible rect{stroke:#102b2d!important;stroke-width:1px!important;fill:#102b2d;fill-opacity:.16!important}.part:focus-visible rect{stroke-dasharray:3 3}.hit{fill:#102b2d}.hit:hover{fill-opacity:.06}
 @media(max-width:760px){.intro{gap:12px}.intro-title{border:0}.workbench{background:transparent}}
+.room-code{font:400 14px/1.2 var(--font);letter-spacing:0}@media(max-width:760px){.room-code{display:none}}
 </style>
 </head>
 <body>
@@ -41,9 +42,9 @@ body{color:var(--ink)}.page-header{color:var(--ink);border-color:var(--ink)}.int
     <div class="workbench">
       <div class="visual-column">
         <figure class="stage" aria-labelledby="plate-title">
-          <figcaption class="plate-label"><span id="plate-title">01 / Keyboard results</span><span>27 country lists</span></figcaption>
+          <figcaption class="plate-label"><span id="plate-title">01 / Keyboard results</span><span id="plate-selection">All 27 country lists</span></figcaption>
           <svg id="cookie" viewBox="0 0 640 520" aria-labelledby="cookie-title"><title id="cookie-title">Cookie</title></svg>
-          <p class="figure-note">The separated arc shows the selected share. Each small room is a country; its area follows that country’s share. The four outer lines show the pooled measures.</p>
+          <p class="figure-note">One room per country, arranged alphabetically. Each interior line shows the share on the same 0–100% scale. Select a room to see its exact result. The outer boundary is decorative.</p>
         </figure>
         <div class="readout" role="status" aria-live="polite" aria-atomic="true"><p>Selected result</p>
           <div class="big" id="big"></div>
@@ -77,7 +78,7 @@ function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const
 function P(r,a,ox=0,oy=0){return[CX+ox+RX*r*Math.cos(a),CY+oy+RY*r*Math.sin(a)]}
 function path(pts){return'M'+pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join('L')}
 function arc(r,a0,a1,rnd,ox=0,oy=0,wob=0){const n=Math.max(4,Math.ceil(Math.abs(a1-a0)*96)),pts=[];for(let i=0;i<=n;i++){const a=a0+(a1-a0)*i/n;pts.push(P(r*(1+(rnd()-.5)*wob*2),a,ox,oy))}return pts}
-let tipTimer=null,dismissedNode=null;
+let tipTimer=null,dismissedNode=null,focusPreview=null;
 function showTip(lines,node){
   clearTimeout(tipTimer);if(dismissedNode===node)return;
   if(tip.dataset.preview===lines.join('|')&&!tip.hidden)return;
@@ -97,12 +98,12 @@ function bind(node,lines,onClick,label){
   node.addEventListener('mouseleave',leaveTip);
   node.addEventListener('click',()=>{hideTip();onClick()});
   if(label){node.setAttribute('tabindex','0');node.setAttribute('role','button');node.setAttribute('aria-label',label);
-    node.addEventListener('focus',()=>{showTip(lines,node);const r=node.getBoundingClientRect();place(r.right,r.bottom)});
-    node.addEventListener('blur',hideTip);
+    node.addEventListener('focus',()=>{focusPreview={node,lines};showTip(lines,node);const r=node.getBoundingClientRect();place(r.right,r.bottom)});
+    node.addEventListener('blur',()=>{focusPreview=null;hideTip()});
     node.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onClick()}});}
 }
 tip.addEventListener('mouseenter',()=>clearTimeout(tipTimer));tip.addEventListener('mouseleave',leaveTip);
-window.addEventListener('scroll',hideTip,{passive:true});window.addEventListener('resize',hideTip);
+window.addEventListener('scroll',()=>{if(focusPreview&&document.activeElement===focusPreview.node){const r=focusPreview.node.getBoundingClientRect();showTip(focusPreview.lines,focusPreview.node);place(r.right,r.bottom)}else hideTip()},{passive:true});window.addEventListener('resize',hideTip);
 function retainFocus(change){const active=document.activeElement,country=active?.dataset.country,measure=active?.dataset.measure,isSvg=active?.namespaceURI===NS;change();let selector;if(country)selector=(isSvg?'#cookie [tabindex]':'#rows button')+'[data-country="'+country+'"]';else if(measure)selector=(isSvg?'#cookie [tabindex]':'#tabs button')+'[data-measure="'+measure+'"]';if(selector)document.querySelector(selector)?.focus({preventScroll:true});}
 function selectCountry(name){retainFocus(()=>{state.sel=name;renderRows();draw()})}
 function selectMeasure(k){retainFocus(()=>{state.m=k;renderTabs();renderRows();draw()})}
@@ -110,54 +111,43 @@ function draw(){
   const m=M[state.m],row=state.sel==='EU'?null:m.rows.find(r=>r[0]===state.sel);
   const share=row?row[3]:m.eu,n=row?row[1]:m.euA,N=row?row[2]:m.euB,who=row?row[0]:'EU';
   svg.replaceChildren();hideTip();
-  const t=el('title',{id:'cookie-title'},svg);t.textContent=who+': '+pct(share)+' '+m.phrase;
+  const title=el('title',{id:'cookie-title'},svg);title.textContent=who+': '+pct(share)+' '+m.phrase;
+  const desc=el('desc',{},svg);desc.textContent='27 country rooms inside a decorative diamond boundary. Each interior line uses the same zero to one hundred percent scale. Select a room for its exact count and share, also available in the country index.';
   el('rect',{width:640,height:520,fill:'#00a5a3'},svg);
-  const rnd=rng(7+state.m*13),a0=-Math.PI/2,a1=a0+TAU*share,mid=(a0+a1)/2,out=22,ox=Math.cos(mid)*out*1.2,oy=Math.sin(mid)*out*.7;
-  // hit areas for the two big parts
-  const hits=el('g',{},svg);
-  if(share<1){const pts=[P(0,0),...arc(1,a1,a0+TAU,rnd,0,0,0)];
-    const b=el('path',{d:path(pts)+'Z',class:'hit body'},hits);
-    bind(b,[who+': the rest',pct(1-share),fmt(N-n)+' of '+fmt(N)+' not marked'],()=>{});}
-  if(share>0){const pts=[P(0,0,ox,oy),...arc(1,a0,a1,rnd,ox,oy,0)];
-    const w=el('path',{d:path(pts)+'Z',class:'hit wedge'},hits);
-    bind(w,[who+' · '+m.label,pct(share),fmt(n)+' of '+fmt(N),m.phrase],()=>{});}
-  const g=el('g',{fill:'none','pointer-events':'none','stroke-linejoin':'round'},svg);
-  const stroke=(grp,pts,col,w=1,op=1)=>el('path',{d:path(pts),stroke:col,'stroke-width':1,'stroke-opacity':op,'vector-effect':'non-scaling-stroke'},grp);
-  if(share<1){stroke(g,arc(1,a1,a0+TAU,rnd),'#102b2d');stroke(g,[P(1,a1),P(0,0),P(1,a0)],'#102b2d');}
-  if(share>0){stroke(g,arc(1,a0,a1,rnd,ox,oy),'#102b2d');stroke(g,[P(1,a0,ox,oy),P(0,0,ox,oy),P(1,a1,ox,oy)],'#102b2d');}
-  // country chips: size follows the share
-  const maxS=Math.max(...m.rows.map(r=>r[3])),chips=el('g',{'stroke-linecap':'butt',fill:'none'},svg);
-  const rowCounts=[3,5,5,5,5,4];
+  const ink='#102b2d',frame=el('g',{fill:'none',stroke:ink,'stroke-width':1,'vector-effect':'non-scaling-stroke','pointer-events':'none'},svg);
+  // A single continuous boundary. It carries no numeric value.
+  el('path',{d:'M320 32L548 260L320 488L92 260Z','vector-effect':'non-scaling-stroke'},frame);
+  const codes={Austria:'AT',Belgium:'BE',Bulgaria:'BG',Croatia:'HR',Cyprus:'CY',Czechia:'CZ',Denmark:'DK',Estonia:'EE',Finland:'FI',France:'FR',Germany:'DE',Greece:'GR',Hungary:'HU',Ireland:'IE',Italy:'IT',Latvia:'LV',Lithuania:'LT',Luxembourg:'LU',Malta:'MT',Netherlands:'NL',Poland:'PL',Portugal:'PT',Romania:'RO',Slovakia:'SK',Slovenia:'SI',Spain:'ES',Sweden:'SE'};
+  const countries=el('g',{},svg),CW=46,CH=42;
+  const positions=[{x:320-CW/2,y:260-3.5*CH}];
+  for(let rr=0;rr<5;rr++)for(let cc=0;cc<5;cc++)positions.push({x:320+(cc-2.5)*CW,y:260+(rr-2.5)*CH});
+  positions.push({x:320-CW/2,y:260+2.5*CH});
+  const walls=new Map();
+  function wall(x1,y1,x2,y2){const key=[x1,y1,x2,y2].join(',');walls.set(key,[x1,y1,x2,y2]);}
   names.forEach((name,i)=>{
-    const r=m.rows.find(x=>x[0]===name);let rowIndex=0,colIndex=i;
-    while(colIndex>=rowCounts[rowIndex]){colIndex-=rowCounts[rowIndex];rowIndex++;}
-    const bx=(colIndex-(rowCounts[rowIndex]-1)/2)*43,by=(rowIndex-2.5)*38,ang=Math.atan2(by,bx);
-    const rel=(((ang-a0)%TAU)+TAU)%TAU,inW=rel<TAU*share,x=[CX+bx+(inW?ox:0),CY+by+(inW?oy:0)];
-    const rx=16*Math.sqrt(r[3]/maxS),ry=rx,isSel=r[0]===state.sel,col='#102b2d';
-    const c=el('g',{class:'part chip','data-country':name},chips);
-    el('rect',{x:x[0]-rx,y:x[1]-ry,width:rx*2,height:ry*2,stroke:col,'stroke-width':1,fill:col,'fill-opacity':isSel?.18:0,'pointer-events':'all'},c);
-    el('path',{d:path([[x[0]-rx,x[1]+ry],[x[0]-rx-7,x[1]+ry],[x[0]-rx-7,x[1]+ry+9]]),stroke:col,'stroke-width':1,'vector-effect':'non-scaling-stroke','pointer-events':'none'},c);
-    bind(c,[r[0],pct(r[3]),fmt(r[1])+' of '+fmt(r[2]),m.phrase],()=>selectCountry(r[0]),r[0]+', '+pct(r[3])+', '+fmt(r[1])+' of '+fmt(r[2]));
+    const r=m.rows.find(x=>x[0]===name),pos=positions[i],x=pos.x,y=pos.y,on=name===state.sel;
+    const room=el('g',{class:'part chip room','data-country':name,'aria-pressed':String(on)},countries);
+    el('rect',{x,y,width:CW,height:CH,fill:ink,'fill-opacity':on?.18:0,'pointer-events':'all',class:'room-hit'},room);
+    const code=el('text',{x:x+8,y:y+17,fill:ink,'font-size':14,'letter-spacing':0,class:'room-code','aria-hidden':'true','pointer-events':'none'},room);code.textContent=codes[name];
+    // The measured mark has a fixed 30-unit track in every room.
+    const bx=x+8,by=y+CH-11,length=30*r[3];
+    el('path',{d:'M'+bx+' '+by+'h30',fill:'none',stroke:ink,'stroke-opacity':.38,'stroke-dasharray':'1 3','stroke-width':1,'vector-effect':'non-scaling-stroke','pointer-events':'none'},room);
+    el('path',{d:'M'+bx+' '+(by-3)+'v6 M'+bx+' '+by+'h'+length+' M'+(bx+length)+' '+(by-3)+'v6',fill:'none',stroke:ink,'stroke-width':1,'vector-effect':'non-scaling-stroke','pointer-events':'none'},room);
+    bind(room,[r[0],pct(r[3]),fmt(r[1])+' of '+fmt(r[2]),m.phrase],()=>selectCountry(name),name+', '+pct(r[3])+', '+fmt(r[1])+' of '+fmt(r[2]));
+    wall(x,y,x+CW,y);wall(x,y+CH,x+CW,y+CH);wall(x,y,x,y+CH);wall(x+CW,y,x+CW,y+CH);
   });
-  // four blue arcs: the EU share of each measure
-  const arcs=el('g',{'stroke-linecap':'butt',fill:'none'},svg);
-  M.forEach((mm,k)=>{
-    const radius=RX*(1.15+.1*k),corners=[[CX,CY-radius],[CX+radius,CY],[CX,CY+radius],[CX-radius,CY],[CX,CY-radius]],steps=mm.eu*4,full=Math.floor(steps),points=corners.slice(0,full+1),part=steps-full;
-    if(full<4)points.push([corners[full][0]+(corners[full+1][0]-corners[full][0])*part,corners[full][1]+(corners[full+1][1]-corners[full][1])*part]);
-    const d=path(points),on=k===state.m;
-    const a=el('g',{class:'part measure','data-measure':String(k)},arcs);
-    el('path',{d,class:'vis',stroke:BLUE,'stroke-width':1,'stroke-opacity':1,'pointer-events':'none'},a);
-    el('path',{d,stroke:'transparent','stroke-width':16,'pointer-events':'stroke'},a);
-    bind(a,[mm.label,'EU '+pct(mm.eu),fmt(mm.euA)+' of '+fmt(mm.euB),mm.phrase,'Select to show this measure'],()=>selectMeasure(k),mm.label+', EU '+pct(mm.eu));
-  });
+  // Shared walls are drawn once, so every seam has the same weight.
+  const wallGroup=el('g',{fill:'none',stroke:ink,'stroke-width':1,'pointer-events':'none'},svg);
+  for(const [x1,y1,x2,y2]of walls.values())el('path',{d:'M'+x1+' '+y1+'L'+x2+' '+y2,'vector-effect':'non-scaling-stroke'},wallGroup);
   document.getElementById('plate-title').textContent=String(state.m+1).padStart(2,'0')+' / '+m.label;
+  document.getElementById('plate-selection').textContent=who==='EU'?'All 27 country lists':who;
   document.getElementById('big').textContent=pct(share);
   document.getElementById('phrase').textContent=m.phrase;
   document.getElementById('meta').textContent=row?row[0]+' · '+fmt(row[1])+' of '+fmt(row[2]):'EU · '+fmt(m.euA)+' of '+fmt(m.euB)+', all 27 country lists pooled';
 }
 function renderTabs(){
   const t=document.getElementById('tabs');t.replaceChildren();
-  M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.dataset.measure=String(i);b.dataset.index=String(i+1).padStart(2,'0');b.textContent=m.label;b.setAttribute('aria-pressed',String(i===state.m));b.onclick=()=>selectMeasure(i);const glyph=el('svg',{viewBox:'0 0 88 88',class:'tab-glyph','aria-hidden':'true',focusable:'false'},null);el('path',{d:'M14 8V82',fill:'none',stroke:'#477578','stroke-width':1,'vector-effect':'non-scaling-stroke'},glyph);const c=[[44,10],[78,44],[44,78],[10,44],[44,10]],v=m.eu*4,j=Math.floor(v),ps=c.slice(0,j+1);if(j<4)ps.push([c[j][0]+(c[j+1][0]-c[j][0])*(v-j),c[j][1]+(c[j+1][1]-c[j][1])*(v-j)]);el('path',{d:path(ps),fill:'none',stroke:'#102b2d','stroke-width':1,'vector-effect':'non-scaling-stroke'},glyph);b.appendChild(glyph);t.appendChild(b)});
+  M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.dataset.measure=String(i);b.dataset.index=String(i+1).padStart(2,'0');b.textContent=m.label;b.setAttribute('aria-pressed',String(i===state.m));b.onclick=()=>selectMeasure(i);const glyph=el('svg',{viewBox:'0 0 88 88',class:'tab-glyph','aria-hidden':'true',focusable:'false'},null);el('rect',{x:16,y:16,width:56,height:56,fill:'none',stroke:'#102b2d','stroke-width':1,'vector-effect':'non-scaling-stroke'},glyph);el('path',{d:'M26 54h36',stroke:'#102b2d','stroke-opacity':.4,'stroke-dasharray':'1 3','stroke-width':1,'vector-effect':'non-scaling-stroke'},glyph);el('path',{d:'M26 50v8 M26 54h'+(36*m.eu)+' M'+(26+36*m.eu)+' 50v8',stroke:'#102b2d','stroke-width':1,'vector-effect':'non-scaling-stroke'},glyph);b.appendChild(glyph);t.appendChild(b)});
 }
 function renderRows(){
   const m=M[state.m],tb=document.getElementById('rows');tb.replaceChildren();
