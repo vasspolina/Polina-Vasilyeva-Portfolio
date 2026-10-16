@@ -9,12 +9,12 @@ figure{width:100%;flex:1;display:flex;flex-direction:column;min-height:360px}
 .bar{flex:1;min-height:180px;height:auto}
 .note{margin-bottom:0}
 @media(max-width:600px){body{padding:40px}header{padding:0;gap:16px}main{padding:40px 0 0;margin:0}figure{padding:20px 16px 16px;min-height:320px}.bar{height:auto;min-height:160px}.intro{margin-bottom:32px}}
-</style></head><body><header><p>Cookie banners — Keyboard test</p><p>27 EU country lists</p></header><main>
-<h1>About 1 in 5 banners stayed open.</h1>
-<p class="intro">The automated keyboard test could not close them with Tab and Enter.</p>
-<figure aria-labelledby="chart-title"><div class="rule" aria-hidden="true"></div><div class="chart-labels" aria-hidden="true"><span><span class="number">20.7%</span>Stayed open</span><span class="rest">Other test outcomes</span></div>
-<button class="bar" type="button" aria-label="20.7 percent of covering banner tests did not close the banner: 1,634 of 7,896. Show test details." aria-controls="method" aria-expanded="false"><span class="measured" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="0" y1="0" x2="100" y2="100"/><line x1="0" y1="100" x2="100" y2="0"/></svg></span></button>
-<div class="axis" aria-hidden="true"><span>0%</span><span>100%</span></div><p class="count" id="chart-title">1,634 of 7,896 covering banner tests.</p><figcaption>Magenta marks the share the test could not close.</figcaption></figure>
-<details id="method"><summary>What was tested?</summary><p>An automated tool tried to close banners covering the page using Tab and Enter. Other keyboard routes may still work. The remaining share is labelled “other test outcomes”, not an accessibility pass.</p></details>
-<p class="note">Automated tests · September–October 2026.<br>A website can appear in more than one country list.</p></main><script>const b=document.querySelector('.bar'),d=document.getElementById('method');b.addEventListener('click',()=>{d.open=!d.open;b.setAttribute('aria-expanded',String(d.open))});d.addEventListener('toggle',()=>b.setAttribute('aria-expanded',String(d.open)));</script></body></html>
+</style></head><body><header><p>Cookie banners</p><p>27 EU country lists</p></header><main>
+<h1>About 1 in 5 cookie banners stayed open.</h1>
+<p class="intro">Tested with Tab and Enter.</p>
+<figure aria-labelledby="chart-title"><div class="rule" aria-hidden="true"></div><div class="chart-labels" aria-hidden="true"><span><span class="number">20.7%</span>Stayed open</span><span class="rest">Remaining tests</span></div>
+<button class="bar" type="button" aria-label="20.7 percent: 1,634 of 7,896 banner tests left the banner open. Show test details." aria-controls="method" aria-expanded="false"><span class="measured" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="0" y1="0" x2="100" y2="100"/><line x1="0" y1="100" x2="100" y2="0"/></svg></span></button>
+<div class="axis" aria-hidden="true"><span>0%</span><span>100%</span></div><p class="count" id="chart-title">1,634 of 7,896 banner tests.</p></figure>
+<details id="method"><summary>About the test</summary><p>The automated test used Tab and Enter on banners covering the page. Other keys may work.</p></details>
+<p class="note">Automated tests, September–October 2026.<br>Websites may appear in several country lists.</p></main><script>const b=document.querySelector('.bar'),d=document.getElementById('method');b.addEventListener('click',()=>{d.open=!d.open;b.setAttribute('aria-expanded',String(d.open))});d.addEventListener('toggle',()=>b.setAttribute('aria-expanded',String(d.open)));</script></body></html>
 
