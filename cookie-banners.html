@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#111111">
+  <meta name="theme-color" content="#00a5a3">
   <meta name="description" content="Results of keyboard tests on cookie banners across the 1,000 most visited websites of each EU country.">
   <title>Cookie banners: keyboard results by EU country</title>
   <style>
@@ -18,6 +18,14 @@
 @media(max-width:760px){.page-header{margin:0 16px;padding:20px 0}.page{margin:16px}.intro{grid-template-columns:1fr;min-height:0}.intro-title{min-height:250px;border-right:0;border-bottom:1px solid #747474;padding:28px}.intro p.dek{padding:28px;max-width:40ch}.tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.tabs button{padding:16px;min-height:148px}.tab-glyph{top:12px;bottom:auto;right:12px;width:42px;height:42px}.workbench{grid-template-columns:1fr;gap:12px}.stage{padding:20px 0 0}.plate-label{padding:0 20px}.readout{margin-top:12px;padding:28px}.sheet{padding:28px 16px}.page-footer{grid-template-columns:1fr;margin-top:12px}.page-footer p{padding:28px}.page-footer p+p{border-left:0;border-top:1px solid #777}.figure-note{padding:12px 20px 24px}td.n{padding-left:8px}.tip{width:280px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 @media(forced-colors:active){button{border:1px solid ButtonText!important}.stage svg{forced-color-adjust:none}.tip{background:Canvas;color:CanvasText;border-color:CanvasText}tr[aria-selected=true] button{text-decoration:underline}}
+
+/* Palette and plan linework from the supplied book reference. */
+:root{--paper:#d5d5d5;--ink:#153638;--white:#153638;--line:#477578;--teal:#00a5a3;--silver:#c9cdd5;--blue:#008dc4}
+body{color:var(--ink)}.page-header{color:var(--ink);border-color:var(--ink)}.intro{background:var(--blue);gap:16px}.intro-title{background:var(--teal);border:0}.intro p.dek{background:var(--silver);max-width:none}.intro-note{color:var(--ink)}
+.tabs button{background:var(--silver);color:var(--ink)}.tabs button:nth-child(2n){background:var(--teal)}.tabs button::before,.tabs button[aria-pressed=true]::before{color:var(--ink)}.tabs button:hover{background:#b1c2c9}.tabs button[aria-pressed=true]{box-shadow:inset 0 -2px 0 var(--ink)}
+.workbench{column-gap:16px;background:var(--blue)}.visual-column{align-self:stretch;background:var(--teal)}.stage{background:var(--teal)}.plate-label,.figure-note{color:var(--ink)}.readout{background:var(--teal);border-top:1px solid #367e80}.readout .meta{color:var(--ink)}.sheet{background:var(--silver)}.sheet-note,th{color:#3f5359}th,td{border-color:#77888f}tr:hover td{background:#b4c2c8}tr[aria-selected=true] td{background:#9aafb8}tr.eu td{border-bottom-color:#153638}
+.page-footer{background:#e6e7e8;color:var(--ink)}.page-footer p+p{border-color:#77888f}.tip{background:#e8ecee;color:var(--ink);border-color:var(--ink)}.part rect,.part path.vis{vector-effect:non-scaling-stroke}.part:hover rect,.part.hot rect,.part:focus-visible rect{stroke:#153638!important;stroke-width:1px!important;fill:#153638;fill-opacity:.16!important}.part:focus-visible rect{stroke-dasharray:3 3}.hit{fill:#153638}.hit:hover{fill-opacity:.06}
+@media(max-width:760px){.intro{gap:12px}.intro-title{border:0}.workbench{background:transparent}}
 </style>
 </head>
 <body>
@@ -28,14 +36,14 @@
       <div class="intro-title"><h1>Cookie banners,<br>at a glance</h1><p class="intro-note">An interactive study of keyboard access.<br>27 EU country lists.</p></div>
       <p class="dek">A cookie banner asks for a choice. Can someone make that choice using a keyboard?<br><br>Explore four automated checks across the most visited websites in each EU country. Choose a measure, then a country.</p>
     </div>
-    <noscript><p style="background:#111;padding:28px">Enable JavaScript to explore the interactive country results.</p></noscript>
+    <noscript><p style="background:#c9cdd5;color:#153638;padding:28px">Enable JavaScript to explore the interactive country results.</p></noscript>
     <div class="tabs" id="tabs" role="group" aria-label="Choose a measure"></div>
     <div class="workbench">
       <div class="visual-column">
         <figure class="stage" aria-labelledby="plate-title">
           <figcaption class="plate-label"><span id="plate-title">01 / Keyboard results</span><span>27 country lists</span></figcaption>
           <svg id="cookie" viewBox="0 0 640 520" aria-labelledby="cookie-title"><title id="cookie-title">Cookie</title></svg>
-          <p class="figure-note">The separated arc shows the selected share. Each small circle is a country; its area follows that country’s share. The four outer arcs show the pooled measures.</p>
+          <p class="figure-note">The separated arc shows the selected share. Each small room is a country; its area follows that country’s share. The four outer lines show the pooled measures.</p>
         </figure>
         <div class="readout" role="status" aria-live="polite" aria-atomic="true"><p>Selected result</p>
           <div class="big" id="big"></div>
@@ -62,7 +70,7 @@ const M=[{"key":"keyboard_cannot_close","label":"Keyboard can’t close it","phr
 const NS='http://www.w3.org/2000/svg',svg=document.getElementById('cookie'),stage=document.querySelector('.stage'),tip=document.getElementById('tip');
 const fmt=n=>n.toLocaleString('en-US'),pct=x=>(100*x).toFixed(1)+'%';
 const state={m:0,sel:'EU'};
-const CX=320,CY=260,RX=157,RY=157,TAU=Math.PI*2,THICK=0,RED='#fff',BLUE='#ddd';
+const CX=320,CY=260,RX=157,RY=157,TAU=Math.PI*2,THICK=0,RED='#153638',BLUE='#153638';
 const names=M[0].rows.map(r=>r[0]).sort();
 function rng(seed){let s=seed>>>0||1;return()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296}}
 function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
@@ -103,7 +111,7 @@ function draw(){
   const share=row?row[3]:m.eu,n=row?row[1]:m.euA,N=row?row[2]:m.euB,who=row?row[0]:'EU';
   svg.replaceChildren();hideTip();
   const t=el('title',{id:'cookie-title'},svg);t.textContent=who+': '+pct(share)+' '+m.phrase;
-  el('rect',{width:640,height:520,fill:'#000'},svg);
+  el('rect',{width:640,height:520,fill:'#00a5a3'},svg);
   const rnd=rng(7+state.m*13),a0=-Math.PI/2,a1=a0+TAU*share,mid=(a0+a1)/2,out=22,ox=Math.cos(mid)*out*1.2,oy=Math.sin(mid)*out*.7;
   // hit areas for the two big parts
   const hits=el('g',{},svg);
@@ -115,23 +123,28 @@ function draw(){
     bind(w,[who+' · '+m.label,pct(share),fmt(n)+' of '+fmt(N),m.phrase],()=>{});}
   const g=el('g',{fill:'none','pointer-events':'none','stroke-linejoin':'round'},svg);
   const stroke=(grp,pts,col,w=1,op=1)=>el('path',{d:path(pts),stroke:col,'stroke-width':1,'stroke-opacity':op,'vector-effect':'non-scaling-stroke'},grp);
-  if(share<1){stroke(g,arc(1,a1,a0+TAU,rnd),'#eee');stroke(g,[P(1,a1),P(0,0),P(1,a0)],'#eee');}
-  if(share>0){stroke(g,arc(1,a0,a1,rnd,ox,oy),'#fff');stroke(g,[P(1,a0,ox,oy),P(0,0,ox,oy),P(1,a1,ox,oy)],'#fff');}
+  if(share<1){stroke(g,arc(1,a1,a0+TAU,rnd),'#153638');stroke(g,[P(1,a1),P(0,0),P(1,a0)],'#153638');}
+  if(share>0){stroke(g,arc(1,a0,a1,rnd,ox,oy),'#153638');stroke(g,[P(1,a0,ox,oy),P(0,0,ox,oy),P(1,a1,ox,oy)],'#153638');}
   // country chips: size follows the share
   const maxS=Math.max(...m.rows.map(r=>r[3])),chips=el('g',{'stroke-linecap':'butt',fill:'none'},svg);
+  const rowCounts=[3,5,5,5,5,4];
   names.forEach((name,i)=>{
-    const r=m.rows.find(x=>x[0]===name),rr=Math.sqrt((i+.5)/names.length)*.74+.06,ang=i*2.39996323;
-    const rel=(((ang-a0)%TAU)+TAU)%TAU,inW=rel<TAU*share,x=P(rr,ang,inW?ox:0,inW?oy:0);
-    const rx=20*Math.sqrt(r[3]/maxS),ry=rx,isSel=r[0]===state.sel,col=inW?RED:'#fff';
+    const r=m.rows.find(x=>x[0]===name);let rowIndex=0,colIndex=i;
+    while(colIndex>=rowCounts[rowIndex]){colIndex-=rowCounts[rowIndex];rowIndex++;}
+    const bx=(colIndex-(rowCounts[rowIndex]-1)/2)*43,by=(rowIndex-2.5)*38,ang=Math.atan2(by,bx);
+    const rel=(((ang-a0)%TAU)+TAU)%TAU,inW=rel<TAU*share,x=[CX+bx+(inW?ox:0),CY+by+(inW?oy:0)];
+    const rx=16*Math.sqrt(r[3]/maxS),ry=rx,isSel=r[0]===state.sel,col='#153638';
     const c=el('g',{class:'part chip','data-country':name},chips);
-    el('ellipse',{cx:x[0].toFixed(1),cy:x[1].toFixed(1),rx:rx.toFixed(1),ry:ry.toFixed(1),stroke:isSel?'#fff':col,'stroke-width':1,fill:'#fff','fill-opacity':isSel?.2:0,'pointer-events':'all'},c);
-    el('path',{d:path([[x[0]-rx,x[1]+ry],[x[0]-rx,x[1]-ry*1.5]]),stroke:col,'stroke-width':1,'stroke-opacity':.65,'vector-effect':'non-scaling-stroke','pointer-events':'none'},c);
+    el('rect',{x:x[0]-rx,y:x[1]-ry,width:rx*2,height:ry*2,stroke:col,'stroke-width':1,fill:col,'fill-opacity':isSel?.18:0,'pointer-events':'all'},c);
+    el('path',{d:path([[x[0]-rx,x[1]+ry],[x[0]-rx-7,x[1]+ry],[x[0]-rx-7,x[1]+ry+9]]),stroke:col,'stroke-width':1,'vector-effect':'non-scaling-stroke','pointer-events':'none'},c);
     bind(c,[r[0],pct(r[3]),fmt(r[1])+' of '+fmt(r[2]),m.phrase],()=>selectCountry(r[0]),r[0]+', '+pct(r[3])+', '+fmt(r[1])+' of '+fmt(r[2]));
   });
   // four blue arcs: the EU share of each measure
   const arcs=el('g',{'stroke-linecap':'butt',fill:'none'},svg);
   M.forEach((mm,k)=>{
-    const d=path(arc(1.12+.11*k,a0,a0+TAU*mm.eu,rnd,0,0,0)),on=k===state.m;
+    const radius=RX*(1.15+.1*k),corners=[[CX,CY-radius],[CX+radius,CY],[CX,CY+radius],[CX-radius,CY],[CX,CY-radius]],steps=mm.eu*4,full=Math.floor(steps),points=corners.slice(0,full+1),part=steps-full;
+    if(full<4)points.push([corners[full][0]+(corners[full+1][0]-corners[full][0])*part,corners[full][1]+(corners[full+1][1]-corners[full][1])*part]);
+    const d=path(points),on=k===state.m;
     const a=el('g',{class:'part measure','data-measure':String(k)},arcs);
     el('path',{d,class:'vis',stroke:BLUE,'stroke-width':1,'stroke-opacity':on?1:.55,'pointer-events':'none'},a);
     el('path',{d,stroke:'transparent','stroke-width':16,'pointer-events':'stroke'},a);
@@ -144,7 +157,7 @@ function draw(){
 }
 function renderTabs(){
   const t=document.getElementById('tabs');t.replaceChildren();
-  M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.dataset.measure=String(i);b.dataset.index=String(i+1).padStart(2,'0');b.textContent=m.label;b.setAttribute('aria-pressed',String(i===state.m));b.onclick=()=>selectMeasure(i);const glyph=el('svg',{viewBox:'0 0 88 88',class:'tab-glyph','aria-hidden':'true',focusable:'false'},null);el('path',{d:'M14 8V82',fill:'none',stroke:'#aaa','stroke-width':1,'vector-effect':'non-scaling-stroke'},glyph);const a=-Math.PI/2,e=a+TAU*m.eu,xx=44+30*Math.cos(e),yy=44+30*Math.sin(e);el('path',{d:'M44 14 A30 30 0 '+(m.eu>.5?1:0)+' 1 '+xx+' '+yy,fill:'none',stroke:'#eee','stroke-width':1,'vector-effect':'non-scaling-stroke'},glyph);b.appendChild(glyph);t.appendChild(b)});
+  M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.dataset.measure=String(i);b.dataset.index=String(i+1).padStart(2,'0');b.textContent=m.label;b.setAttribute('aria-pressed',String(i===state.m));b.onclick=()=>selectMeasure(i);const glyph=el('svg',{viewBox:'0 0 88 88',class:'tab-glyph','aria-hidden':'true',focusable:'false'},null);el('path',{d:'M14 8V82',fill:'none',stroke:'#477578','stroke-width':1,'vector-effect':'non-scaling-stroke'},glyph);const c=[[44,10],[78,44],[44,78],[10,44],[44,10]],v=m.eu*4,j=Math.floor(v),ps=c.slice(0,j+1);if(j<4)ps.push([c[j][0]+(c[j+1][0]-c[j][0])*(v-j),c[j][1]+(c[j+1][1]-c[j][1])*(v-j)]);el('path',{d:path(ps),fill:'none',stroke:'#153638','stroke-width':1,'vector-effect':'non-scaling-stroke'},glyph);b.appendChild(glyph);t.appendChild(b)});
 }
 function renderRows(){
   const m=M[state.m],tb=document.getElementById('rows');tb.replaceChildren();
