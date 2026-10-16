@@ -146,7 +146,7 @@ function draw(){
     if(full<4)points.push([corners[full][0]+(corners[full+1][0]-corners[full][0])*part,corners[full][1]+(corners[full+1][1]-corners[full][1])*part]);
     const d=path(points),on=k===state.m;
     const a=el('g',{class:'part measure','data-measure':String(k)},arcs);
-    el('path',{d,class:'vis',stroke:BLUE,'stroke-width':1,'stroke-opacity':on?1:.55,'pointer-events':'none'},a);
+    el('path',{d,class:'vis',stroke:BLUE,'stroke-width':1,'stroke-opacity':1,'pointer-events':'none'},a);
     el('path',{d,stroke:'transparent','stroke-width':16,'pointer-events':'stroke'},a);
     bind(a,[mm.label,'EU '+pct(mm.eu),fmt(mm.euA)+' of '+fmt(mm.euB),mm.phrase,'Select to show this measure'],()=>selectMeasure(k),mm.label+', EU '+pct(mm.eu));
   });
