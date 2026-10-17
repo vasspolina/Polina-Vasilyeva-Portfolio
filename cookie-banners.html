@@ -27,6 +27,18 @@ body{color:var(--ink)}.page-header{color:var(--ink);border-color:var(--ink)}.int
 .page-footer{background:#e6e7e8;color:var(--ink)}.page-footer p+p{border-color:#77888f}.tip{background:#e8ecee;color:var(--ink);border-color:var(--ink)}.part rect,.part path.vis{vector-effect:non-scaling-stroke}.part:hover rect,.part.hot rect,.part:focus-visible rect{stroke:#102b2d!important;stroke-width:1px!important;fill:#102b2d;fill-opacity:.16!important}.part:focus-visible rect{stroke-dasharray:3 3}.hit{fill:#102b2d}.hit:hover{fill-opacity:.06}
 @media(max-width:760px){.intro{gap:12px}.intro-title{border:0}.workbench{background:transparent}}
 .room-code{font:400 14px/1.2 var(--font);letter-spacing:0}@media(max-width:760px){.room-code{display:none}}
+
+/* Motion: slower, and the info block is revealed only once it is positioned. */
+.tip{opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .3s ease}
+.tip.on{opacity:1;transform:none}
+.tabs button{transition:background-color .35s ease,box-shadow .35s ease}
+td{transition:background-color .3s ease}
+.part rect{transition:fill-opacity .35s ease,stroke .35s ease}
+.mark.grow{transform-box:fill-box;transform-origin:left center;animation:grow 1.1s cubic-bezier(.22,.7,.2,1) both;animation-delay:calc(var(--i,0)*45ms)}
+@keyframes grow{from{transform:scaleX(0);opacity:.25}to{transform:none;opacity:1}}
+.fadein{animation:fadein .6s ease both}
+@keyframes fadein{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.tip{transition:none;transform:none}.tabs button,td,.part rect{transition:none}.mark.grow,.fadein{animation:none}}
 </style>
 </head>
 <body>
@@ -47,7 +59,7 @@ body{color:var(--ink)}.page-header{color:var(--ink);border-color:var(--ink)}.int
           <p class="figure-note">One room per country, arranged alphabetically. Each interior line shows the share on the same 0–100% scale. Select a room to see its exact result. The outer boundary is decorative.</p>
         </figure>
         <div class="readout" role="status" aria-live="polite" aria-atomic="true"><p>Selected result</p>
-          <div class="big" id="big"></div>
+          <div class="big" id="big" aria-hidden="true"></div><span class="sr-only" id="big-sr"></span>
           <p id="phrase"></p>
           <p class="meta" id="meta"></p>
         </div>
@@ -78,23 +90,25 @@ function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const
 function P(r,a,ox=0,oy=0){return[CX+ox+RX*r*Math.cos(a),CY+oy+RY*r*Math.sin(a)]}
 function path(pts){return'M'+pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join('L')}
 function arc(r,a0,a1,rnd,ox=0,oy=0,wob=0){const n=Math.max(4,Math.ceil(Math.abs(a1-a0)*96)),pts=[];for(let i=0;i<=n;i++){const a=a0+(a1-a0)*i/n;pts.push(P(r*(1+(rnd()-.5)*wob*2),a,ox,oy))}return pts}
-let tipTimer=null,dismissedNode=null,focusPreview=null;
+let tipTimer=null,hideT=null,dismissedNode=null,focusPreview=null,bigVal=0,bigRaf=0;
 function showTip(lines,node){
   clearTimeout(tipTimer);if(dismissedNode===node)return;
-  if(tip.dataset.preview===lines.join('|')&&!tip.hidden)return;
+  if(tip.dataset.preview===lines.join('|')&&!tip.hidden&&tip.classList.contains('on'))return;
   tip.dataset.preview=lines.join('|');tip.replaceChildren();
   const t=document.createElement('strong');t.textContent=lines[0];tip.appendChild(t);
   if(lines[1]){const v=document.createElement('span');v.className='v';v.textContent=lines[1];tip.appendChild(v)}
-  lines.slice(2).forEach(l=>{const p=document.createElement('p');p.textContent=l;tip.appendChild(p)});tip.hidden=false;
+  lines.slice(2).forEach(l=>{const p=document.createElement('p');p.textContent=l;tip.appendChild(p)});clearTimeout(hideT);tip.hidden=false;
+  // Reveal only after the caller has positioned it, so the full block never flashes in the wrong place.
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{if(!tip.hidden)tip.classList.add('on')}));
 }
-function hideTip(){clearTimeout(tipTimer);tip.hidden=true}
+function hideTip(){clearTimeout(tipTimer);tip.classList.remove('on');clearTimeout(hideT);hideT=setTimeout(()=>{if(!tip.classList.contains('on'))tip.hidden=true},320)}
 function leaveTip(){clearTimeout(tipTimer);tipTimer=setTimeout(hideTip,180)}
 function place(x,y){const w=tip.offsetWidth,h=tip.offsetHeight;
   const left=x+w+24<innerWidth?x+16:x-w-16;
   const top=y+h+24<innerHeight?y+16:y-h-16;
   tip.style.left=Math.max(16,Math.min(left,innerWidth-w-16))+'px';tip.style.top=Math.max(16,Math.min(top,innerHeight-h-16))+'px';}
 function bind(node,lines,onClick,label){
-  node.addEventListener('mouseenter',e=>{dismissedNode=null;showTip(lines,node);place(e.clientX,e.clientY)});
+  node.addEventListener('mouseenter',e=>{dismissedNode=null;clearTimeout(tipTimer);const cx=e.clientX,cy=e.clientY;tipTimer=setTimeout(()=>{showTip(lines,node);place(cx,cy)},tip.classList.contains('on')?0:180)});
   node.addEventListener('mouseleave',leaveTip);
   node.addEventListener('click',()=>{hideTip();onClick()});
   if(label){node.setAttribute('tabindex','0');node.setAttribute('role','button');node.setAttribute('aria-label',label);
@@ -106,8 +120,13 @@ tip.addEventListener('mouseenter',()=>clearTimeout(tipTimer));tip.addEventListen
 window.addEventListener('scroll',()=>{if(focusPreview&&document.activeElement===focusPreview.node){const r=focusPreview.node.getBoundingClientRect();showTip(focusPreview.lines,focusPreview.node);place(r.right,r.bottom)}else hideTip()},{passive:true});window.addEventListener('resize',hideTip);
 function retainFocus(change){const active=document.activeElement,country=active?.dataset.country,measure=active?.dataset.measure,isSvg=active?.namespaceURI===NS;change();let selector;if(country)selector=(isSvg?'#cookie [tabindex]':'#rows button')+'[data-country="'+country+'"]';else if(measure)selector=(isSvg?'#cookie [tabindex]':'#tabs button')+'[data-measure="'+measure+'"]';if(selector)document.querySelector(selector)?.focus({preventScroll:true});}
 function selectCountry(name){retainFocus(()=>{state.sel=name;renderRows();draw()})}
-function selectMeasure(k){retainFocus(()=>{state.m=k;renderTabs();renderRows();draw()})}
-function draw(){
+function selectMeasure(k){retainFocus(()=>{state.m=k;renderTabs();renderRows();draw(true)})}
+const calm=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
+function countTo(v,dur){const out=document.getElementById('big');cancelAnimationFrame(bigRaf);document.getElementById('big-sr').textContent=pct(v);
+  if(calm()||!dur){out.textContent=pct(v);bigVal=v;return}
+  const from=bigVal,t0=performance.now();(function step(t){const k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3);out.textContent=pct(from+(v-from)*e);if(k<1)bigRaf=requestAnimationFrame(step);else bigVal=v})(t0)}
+function fadeIn(id){const n=document.getElementById(id);n.classList.remove('fadein');void n.offsetWidth;n.classList.add('fadein')}
+function draw(animate){
   const m=M[state.m],row=state.sel==='EU'?null:m.rows.find(r=>r[0]===state.sel);
   const share=row?row[3]:m.eu,n=row?row[1]:m.euA,N=row?row[2]:m.euB,who=row?row[0]:'EU';
   svg.replaceChildren();hideTip();
@@ -132,7 +151,7 @@ function draw(){
     // The measured mark has a fixed 30-unit track in every room.
     const bx=x+8,by=y+CH-11,length=30*r[3];
     el('path',{d:'M'+bx+' '+by+'h30',fill:'none',stroke:ink,'stroke-opacity':.38,'stroke-dasharray':'1 3','stroke-width':1,'vector-effect':'non-scaling-stroke','pointer-events':'none'},room);
-    el('path',{d:'M'+bx+' '+(by-3)+'v6 M'+bx+' '+by+'h'+length+' M'+(bx+length)+' '+(by-3)+'v6',fill:'none',stroke:ink,'stroke-width':1,'vector-effect':'non-scaling-stroke','pointer-events':'none'},room);
+    el('path',{class:animate?'mark grow':'mark',style:'--i:'+i,d:'M'+bx+' '+(by-3)+'v6 M'+bx+' '+by+'h'+length+' M'+(bx+length)+' '+(by-3)+'v6',fill:'none',stroke:ink,'stroke-width':1,'vector-effect':'non-scaling-stroke','pointer-events':'none'},room);
     bind(room,[r[0],pct(r[3]),fmt(r[1])+' of '+fmt(r[2]),m.phrase],()=>selectCountry(name),name+', '+pct(r[3])+', '+fmt(r[1])+' of '+fmt(r[2]));
     wall(x,y,x+CW,y);wall(x,y+CH,x+CW,y+CH);wall(x,y,x,y+CH);wall(x+CW,y,x+CW,y+CH);
   });
@@ -141,8 +160,8 @@ function draw(){
   for(const [x1,y1,x2,y2]of walls.values())el('path',{d:'M'+x1+' '+y1+'L'+x2+' '+y2,'vector-effect':'non-scaling-stroke'},wallGroup);
   document.getElementById('plate-title').textContent=String(state.m+1).padStart(2,'0')+' / '+m.label;
   document.getElementById('plate-selection').textContent=who==='EU'?'All 27 country lists':who;
-  document.getElementById('big').textContent=pct(share);
-  document.getElementById('phrase').textContent=m.phrase;
+  countTo(share,animate?1100:500);
+  document.getElementById('phrase').textContent=m.phrase;fadeIn('phrase');fadeIn('meta');
   document.getElementById('meta').textContent=row?row[0]+' · '+fmt(row[1])+' of '+fmt(row[2]):'EU · '+fmt(m.euA)+' of '+fmt(m.euB)+', all 27 country lists pooled';
 }
 function renderTabs(){
@@ -161,7 +180,7 @@ function renderRows(){
     tr.append(c1,c2,c3);tb.appendChild(tr)});
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){hideTip();dismissedNode=document.activeElement}});
-renderTabs();renderRows();draw();
+renderTabs();renderRows();draw(true);
 </script>
 </body>
 </html>
