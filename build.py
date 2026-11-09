@@ -43,6 +43,21 @@ JS_V = int(os.path.getmtime(os.path.join(ROOT, "js", "site.js")))
 # forever, which is what "the images went blurry again" always turns out to be.
 ASSET_V = int(os.path.getmtime(os.path.join(ROOT, "manifest.json")))
 
+# P22 Mackinac (user's instruction, 9 Nov 2026, the nearest licensable match to
+# Chobani Serif) comes from Adobe Fonts as a web project, not as files: Adobe
+# licenses it for the web only through its own hosted CSS. Make the project at
+# fonts.adobe.com (Web Projects, add P22 Mackinac Pro Book), paste its id here
+# and rebuild. Empty means no kit: the site then falls back to PP Telegraf
+# Light, which the stylesheet keeps as the second face in the stack.
+ADOBE_FONTS_KIT = ""
+
+
+def adobe_fonts():
+    if not ADOBE_FONTS_KIT:
+        return ""
+    return (f'<link rel="preconnect" href="https://use.typekit.net" crossorigin>\n'
+            f'<link rel="stylesheet" href="https://use.typekit.net/{ADOBE_FONTS_KIT}.css">\n')
+
 # Phone mockups and posters are tall and narrow. Left alone they would fill a
 # whole grid column and tower over the landscape shots, so they are capped and
 # centred instead of blown up to full width.
@@ -132,7 +147,7 @@ def head(title, depth, desc):
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:image" content="{pre}og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="{pre}fonts/PPTelegraf-Regular.otf" as="font" type="font/otf" crossorigin>
+{adobe_fonts()}<link rel="preload" href="{pre}fonts/PPTelegraf-Regular.otf" as="font" type="font/otf" crossorigin>
 <link rel="stylesheet" href="{pre}css/style.css?v={CSS_V}">
 <script>
 (function(){{var t=null;try{{t=localStorage.getItem('theme');}}catch(e){{}}document.documentElement.dataset.theme=(t==='light'||t==='dark')?t:'dark';}})();

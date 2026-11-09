@@ -1,5 +1,7 @@
 /* Polina Vasilyeva — portfolio
-   Type: PP Telegraf 400/500 only. Literal px sizes. 0.01em tracking.
+   Type: P22 Mackinac Pro from Adobe Fonts (user's instruction, 9 Nov 2026),
+   chosen as the nearest licensable match to Chobani Serif; PP Telegraf Light
+   is the fallback while the kit is not loaded. Literal px sizes. 0.01em tracking.
    Colour / spacing / motion via tokens. */
 
 @font-face {
@@ -67,7 +69,11 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: "PP Telegraf", "Helvetica Neue", Arial, sans-serif;
+  /* Adobe Fonts serves the family as "p22-mackinac-pro". Its lightest cut is
+     Book (400): a request for 300 resolves to it by the CSS matching rules, so
+     the one declared weight stays 300 and PP Telegraf Light still answers it
+     when the kit is absent. */
+  font-family: "p22-mackinac-pro", "PP Telegraf", Georgia, serif;
   font-weight: 300;
   font-size: 18px;
   line-height: 1.2;
