@@ -6,6 +6,13 @@ imagery, `build.py` writes the HTML. Rebuild with:
     python3 extract.py && python3 build.py
 
 ## Type
+- **P22 Mackinac Pro is the site face (user's instruction, 9 Nov 2026)**,
+  chosen as the nearest licensable match to Chobani Serif, which was never
+  released. It is an Adobe Fonts family and loads through a web project: the
+  kit id goes in `ADOBE_FONTS_KIT` in `build.py`, and until one is set the
+  site renders in PP Telegraf Light. Its lightest cut is Book (400); the one
+  declared weight stays 300 so Telegraf Light still answers it as fallback.
+  The Telegraf bullets below describe that fallback.
 - **PP Telegraf Light (300) only.** One weight across the whole site. Medium
   and Regular are not declared at all: leaving them declared once let a blanket
   edit register Medium as 300, where it won and the site rendered Medium.
