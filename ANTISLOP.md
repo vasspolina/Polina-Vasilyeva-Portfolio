@@ -97,6 +97,29 @@ together, from rate sheets to window signage" says it.
 - **Dashes inside project descriptions**, per `CLAUDE.md`. The em dash is a
   separator, and only in captions and `meta` lines.
 
+### Chat-style habits
+
+These come from the model's chat voice and leak into copy. They are banned
+on the page, and in the message that presents the copy to Polina.
+
+- **Opening praise or a restatement.** On the page: "Welcome to my
+  portfolio", "Hi, I'm Polina", "Here you'll find". In a message: "Great
+  question", "Absolutely", "You're asking about X". Start with the content.
+- **Closing offers and summaries.** On the page: "Feel free to reach out",
+  "Let's work together", "Thanks for stopping by", a last line that repeats
+  the paragraph. The contact page gives the address; it does not invite. In a
+  message: "Let me know if you'd like…", "Hope this helps", "In summary".
+  Stop when the content stops.
+- **Hedging.** "It's worth noting", "it's important to mention", "arguably",
+  "in many ways", "can help to", "aims to", "a range of", "various". Either
+  the source states it and the sentence states it plainly, or it is not
+  written. A hedge on a fact means the fact is not sourced; go back to §2.
+- **Over-formatting.** No bullets for things that read as a sentence, no
+  headings inside a `desc`, no bold or italic (the type has none), no colons
+  introducing a single item. Copy is prose in the slots §7 defines. In a
+  message, format only what Polina needs to check: the diff, the source
+  trace, the checklist.
+
 ## 6. Person, tense, credit
 
 - Past tense for finished roles. Present only for 2017–present and
@@ -160,6 +183,8 @@ Run this and report it:
 
 - [ ] Every clause traces to CV, deck, or visible image — sources named.
 - [ ] No banned word, no banned construction, no dash inside a `desc`.
+- [ ] No greeting, sign-off, invitation, hedge or added formatting, on the
+      page or in the message.
 - [ ] No current employer asserted; every date matches the CV.
 - [ ] Every number appears in the CV.
 - [ ] Names spelled the house way; the word "archive" absent.
